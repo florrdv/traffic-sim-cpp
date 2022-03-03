@@ -4,6 +4,8 @@
 // Description : XML Parser
 //============================================================================
 
+#include "../Simulation.h"
+
 #ifndef __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
 #define __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
 
@@ -26,7 +28,7 @@ class XMLParser {
     void validateNode(const pugi::xml_node& node, const std::string nam) const;
     int parseInteger(const std::string& s, const std::string name) const;
 public:
-    void parse();
+    void parse(Simulation& sim);
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_

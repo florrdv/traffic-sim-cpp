@@ -29,7 +29,7 @@ int XMLParser::parseInteger(const std::string& s, const std::string name) const 
     return value;
 }
 
-void XMLParser::parse() {
+void XMLParser::parse(Simulation& sim) {
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file("input/example.xml");
 
@@ -49,9 +49,14 @@ void XMLParser::parse() {
             // Extract values
             std::string roadName = nameNode.text().as_string();
             int roadLength = parseInteger(lengthNode.text().as_string(), "length");
- 
-            std::cout << roadName << std::endl;
-            std::cout << roadLength << std::endl;
+
+            // Make road object
+            Road* road = new Road;
+            road->setName(roadName);
+            road->setLength(roadLength);
+
+            // Register road
+            sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
@@ -69,7 +74,31 @@ void XMLParser::parse() {
             int cycle = parseInteger(cycleNode.text().as_string(), "cycle");
  
         } else if (name == "VOERTUIG") {
-            std::cout << "Found vehicle" << std::endl;
+            Vehicle vehicle;
+
+            // Fetch nodes
+            pugi::xml_node roadNode = node.child("baan");
+            pugi::xml_node posNode = node.child("positie");
+
+            // Check if the nodes exist
+            validateNode(roadNode, "baan");
+            validateNode(posNode, "positie");
+
+            // Extract values
+            std::string vehicleRoad = roadNode.text().as_string();
+            int vehiclePos = parseInteger(posNode.text().as_string(), "position");
+
+            // Set values
+            vehicle.setRoad(vehicleRoad);
+            vehicle.setPosition(vehiclePos);
+
+            Road* r = sim.findRoad(vehicleRoad);
+            if (r == NULL) {
+                throw std::runtime_error("XML: road for vehicle not found");
+            }
+
+            r->setVehicles(*vehicle);
+
         } else {
             throw std::runtime_error("XML: Unknown tag '" + name + "'");
         }

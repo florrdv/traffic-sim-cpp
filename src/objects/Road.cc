@@ -26,8 +26,8 @@ const std::vector<Vehicle *> &Road::getVehicles() const {
     return vehicles;
 }
 
-void Road::setVehicles(const std::vector<Vehicle *> &v) {
-    Road::vehicles = v;
+void Road::setVehicles(const Vehicle &v) {
+    vehicles.push_back(v);
 }
 
 const std::vector<TrafficLight *> &Road::getTrafficlights() const {

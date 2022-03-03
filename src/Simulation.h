@@ -8,6 +8,9 @@
 class Simulation {
 private:
     std::vector<Road*> roads;
+public:
+    void addRoad(Road* r);
+    Road* findRoad(string roadName);
 };
 
 
