@@ -1,0 +1,1 @@
+/usr/bin/clang++ -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -pthread CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o -o TrafficSim   -L/Users/florrdv/Projects/pse-traffic-sim/gtest/lib 

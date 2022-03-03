@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/gtest/include -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/gtest/include -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc"
+}
+]
