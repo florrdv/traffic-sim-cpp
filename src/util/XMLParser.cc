@@ -6,7 +6,7 @@ void XMLParser::parse() {
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file("input/example.xml");
 
-    if (!result) throw "Invalid XML";
+    if (!result) throw "XML: Invalid XML structure";
 
     for (pugi::xml_node tool : doc) {
         std::string name = tool.name();
@@ -18,6 +18,8 @@ void XMLParser::parse() {
         }
         else if (name == "VOERTUIG") {
             std::cout << "Found vehicle" << std::endl;
+        } else {
+            throw "XML: Unknown tag '" + name + "'";
         }
     }
 }
