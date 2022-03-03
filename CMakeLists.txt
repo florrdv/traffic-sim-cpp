@@ -12,16 +12,16 @@ include_directories(gtest/include)
 link_directories(gtest/lib)
 
 # Set source files for RELEASE target
-set(RELEASE_SOURCE_FILES src/TicTacToe.cpp src/TicTacToeMain.cpp)
+set(RELEASE_SOURCE_FILES src/TrafficSim.cc)
 
 # Set source files for DEBUG target
-set(DEBUG_SOURCE_FILES src/TicTacToe.cpp src/TicTacToeTests.cpp)
+set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc)
 
 # Create RELEASE target
-add_executable(ttt ${RELEASE_SOURCE_FILES})
+add_executable(build/TrafficSim ${RELEASE_SOURCE_FILES})
 
 # Create DEBUG target
-add_executable(ttt_debug ${DEBUG_SOURCE_FILES})
+add_executable(build/TrafficSimTests ${DEBUG_SOURCE_FILES})
 
 # Link library
-target_link_libraries(ttt_debug gtest)
+target_link_libraries(build/TrafficSimTests gtest)
