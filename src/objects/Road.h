@@ -20,6 +20,14 @@ private:
     int length;
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficlights;
+public:
+    const std::vector<Vehicle *> &getVehicles() const;
+
+    void setVehicles(const std::vector<Vehicle *> &vehicles);
+
+    const std::vector<TrafficLight *> &getTrafficlights() const;
+
+    void setTrafficlights(const std::vector<TrafficLight *> &trafficlights);
 };
 
 

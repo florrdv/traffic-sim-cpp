@@ -21,3 +21,19 @@ int Road::getLength() const {
 void Road::setLength(int l) {
     Road::length = l;
 }
+
+const std::vector<Vehicle *> &Road::getVehicles() const {
+    return vehicles;
+}
+
+void Road::setVehicles(const std::vector<Vehicle *> &vehicles) {
+    Road::vehicles = vehicles;
+}
+
+const std::vector<TrafficLight *> &Road::getTrafficlights() const {
+    return trafficlights;
+}
+
+void Road::setTrafficlights(const std::vector<TrafficLight *> &trafficlights) {
+    Road::trafficlights = trafficlights;
+}
