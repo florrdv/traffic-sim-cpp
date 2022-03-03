@@ -1,18 +1,8 @@
 #include "XMLParser.h"
+#include "../lib/pugixml/pugixml.hpp"
 
 void XMLParser::parse() {
-    TiXmlDocument doc;
-    // open file
-    if (!doc.LoadFile("test.xml")) {
-        std::cerr << doc.ErrorDesc() << std::endl;
-        return;
-    }
-    TiXmlElement* root = doc.FirstChildElement();
-    if (root == NULL) {
-        std::cerr << "Could not load XML file: No root element found." << std::endl;
-        doc.Clear();
-        return;
-    }
-    
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file("xgconsole.xml");
 
 }
