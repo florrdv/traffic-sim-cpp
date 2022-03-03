@@ -4,14 +4,14 @@ const std::string &Road::getName() const {
     return name;
 }
 
-void Road::setName(const std::string &name) {
-    Road::name = name;
+void Road::setName(const std::string &n) {
+    Road::name = n;
 }
 
 int Road::getLength() const {
     return length;
 }
 
-void Road::setLength(int length) {
-    Road::length = length;
+void Road::setLength(int l) {
+    Road::length = l;
 }
