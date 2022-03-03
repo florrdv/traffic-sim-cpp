@@ -16,7 +16,7 @@ include_directories(${CMAKE_SOURCE_DIR}/lib/TinyXML)
 link_directories(lib/gtest/lib)
 
 # Set source files for RELEASE target
-set(FILES src/util/XMLParser.cc src/util/XMLParser.h src/lib/TinyXML/tinystr.cpp src/lib/TinyXML/tinystr.h src/lib/TinyXML/tinyxml.cpp src/lib/TinyXML/tinyxml.h src/lib/TinyXML/tinyxmlerror.cpp src/lib/TinyXML/tinyxmlparser.cpp src/objects/Vehicle.cc src/objects/Vehicle.cc)
+set(FILES src/util/XMLParser.cc src/util/XMLParser.h src/lib/TinyXML/tinystr.cpp src/lib/TinyXML/tinystr.h src/lib/TinyXML/tinyxml.cpp src/lib/TinyXML/tinyxml.h src/lib/TinyXML/tinyxmlerror.cpp src/lib/TinyXML/tinyxmlparser.cpp src/objects/Vehicle.h src/objects/Vehicle.cc src/objects/Road.h src/objects/Road.cc src/objects/TrafficLight.h src/objects/TrafficLight.cc)
 set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${FILES})
 
 # Set source files for DEBUG target
