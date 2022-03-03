@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*
  * Project: PSE Traffic Simulator
  * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
@@ -8,15 +7,6 @@
  * -----
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
-
-
-=======
-//============================================================================
-// Name        : XMLParser.cc
-// Author      : Achraf Yandouzi, Flor Ronsmans De Vry
-// Description : XML Parser
-//============================================================================
->>>>>>> 19de6e576cb907168f9abce66ac8f1dc0051a882
 
 #include "XMLParser.h"
 #include "../objects/Road.h"
@@ -35,13 +25,11 @@ void XMLParser::parse() {
     for (pugi::xml_node tool : doc) {
         std::string name = tool.name();
         if (name == "BAAN") {
+            Road road;
             std::cout << "Found road" << std::endl;
         } else if (name == "VERKEERSLICHT") {
             std::cout << "Found traffic light" << std::endl;
-<<<<<<< HEAD
         } else if (name == "VOERTUIG") {
-=======
->>>>>>> 19de6e576cb907168f9abce66ac8f1dc0051a882
             std::cout << "Found vehicle" << std::endl;
         } else {
             throw std::runtime_error("XML: Unknown tag '" + name + "'");
