@@ -1,0 +1,4 @@
+/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSim.dir
+/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir
+/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/rebuild_cache.dir
