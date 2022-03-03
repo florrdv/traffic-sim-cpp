@@ -10,7 +10,7 @@ set(CMAKE_SOURCE_DIR src)
 
 # Set include dir
 include_directories(lib/gtest/include)
-include_directories(${CMAKE_SOURCE_DIR}/lib/TinyXML)
+include_directories(${CMAKE_SOURCE_DIR}/lib/**)
 
 # Set Library dir
 link_directories(lib/gtest/lib)
