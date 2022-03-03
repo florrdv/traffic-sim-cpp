@@ -12,10 +12,12 @@ include_directories(lib/gtest/include)
 link_directories(lib/gtest/lib)
 
 # Set source files for RELEASE target
-set(RELEASE_SOURCE_FILES src/TrafficSim.cc)
+FILE(GLOB_RECURSE CCSources *.cc)
+FILE(GLOB_RECURSE HSources *.h)
+set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${CCSources} ${HSources})
 
 # Set source files for DEBUG target
-set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc)
+set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc ${CCSources} ${HSources})
 
 # Create RELEASE target
 add_executable(TrafficSim ${RELEASE_SOURCE_FILES})

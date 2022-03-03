@@ -83,12 +83,12 @@ clean: CMakeFiles/TrafficSimTests.dir/clean
 CMakeFiles/TrafficSim.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=1,2 "Built target TrafficSim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=1,2,3,4 "Built target TrafficSim"
 .PHONY : CMakeFiles/TrafficSim.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrafficSim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrafficSim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 0
 .PHONY : CMakeFiles/TrafficSim.dir/rule
@@ -109,12 +109,12 @@ CMakeFiles/TrafficSim.dir/clean:
 CMakeFiles/TrafficSimTests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=3,4 "Built target TrafficSimTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=5,6,7,8 "Built target TrafficSimTests"
 .PHONY : CMakeFiles/TrafficSimTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrafficSimTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TrafficSimTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles 0
 .PHONY : CMakeFiles/TrafficSimTests.dir/rule

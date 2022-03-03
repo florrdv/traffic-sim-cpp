@@ -83,17 +83,49 @@ CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc -o CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s
 
+CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o: ../src/TrafficSim.cc
+CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o -MF CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o.d -o CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc
+
+CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc > CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.i
+
+CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc -o CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.s
+
+CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o: ../src/util/XMLParser.cc
+CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o -MF CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o.d -o CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc
+
+CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc > CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.i
+
+CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc -o CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s
+
 # Object files for target TrafficSimTests
 TrafficSimTests_OBJECTS = \
-"CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o"
+"CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o" \
+"CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o" \
+"CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"
 
 # External object files for target TrafficSimTests
 TrafficSimTests_EXTERNAL_OBJECTS =
 
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/build.make
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TrafficSimTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TrafficSimTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TrafficSimTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

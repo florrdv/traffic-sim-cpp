@@ -148,6 +148,7 @@ src/TrafficSim.o: src/TrafficSim.cc.o
 # target to build an object file
 src/TrafficSim.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o
 .PHONY : src/TrafficSim.cc.o
 
 src/TrafficSim.i: src/TrafficSim.cc.i
@@ -156,6 +157,7 @@ src/TrafficSim.i: src/TrafficSim.cc.i
 # target to preprocess a source file
 src/TrafficSim.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.i
 .PHONY : src/TrafficSim.cc.i
 
 src/TrafficSim.s: src/TrafficSim.cc.s
@@ -164,6 +166,7 @@ src/TrafficSim.s: src/TrafficSim.cc.s
 # target to generate assembly for a file
 src/TrafficSim.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.s
 .PHONY : src/TrafficSim.cc.s
 
 src/TrafficSimTests.o: src/TrafficSimTests.cc.o
@@ -171,6 +174,7 @@ src/TrafficSimTests.o: src/TrafficSimTests.cc.o
 
 # target to build an object file
 src/TrafficSimTests.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o
 .PHONY : src/TrafficSimTests.cc.o
 
@@ -179,6 +183,7 @@ src/TrafficSimTests.i: src/TrafficSimTests.cc.i
 
 # target to preprocess a source file
 src/TrafficSimTests.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.i
 .PHONY : src/TrafficSimTests.cc.i
 
@@ -187,8 +192,36 @@ src/TrafficSimTests.s: src/TrafficSimTests.cc.s
 
 # target to generate assembly for a file
 src/TrafficSimTests.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s
 .PHONY : src/TrafficSimTests.cc.s
+
+src/util/XMLParser.o: src/util/XMLParser.cc.o
+.PHONY : src/util/XMLParser.o
+
+# target to build an object file
+src/util/XMLParser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o
+.PHONY : src/util/XMLParser.cc.o
+
+src/util/XMLParser.i: src/util/XMLParser.cc.i
+.PHONY : src/util/XMLParser.i
+
+# target to preprocess a source file
+src/util/XMLParser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.i
+.PHONY : src/util/XMLParser.cc.i
+
+src/util/XMLParser.s: src/util/XMLParser.cc.s
+.PHONY : src/util/XMLParser.s
+
+# target to generate assembly for a file
+src/util/XMLParser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s
+.PHONY : src/util/XMLParser.cc.s
 
 # Help Target
 help:
@@ -206,6 +239,9 @@ help:
 	@echo "... src/TrafficSimTests.o"
 	@echo "... src/TrafficSimTests.i"
 	@echo "... src/TrafficSimTests.s"
+	@echo "... src/util/XMLParser.o"
+	@echo "... src/util/XMLParser.i"
+	@echo "... src/util/XMLParser.s"
 .PHONY : help
 
 
