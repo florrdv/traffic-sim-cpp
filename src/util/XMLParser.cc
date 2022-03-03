@@ -3,7 +3,7 @@
 void XMLParser::parse() {
     TiXmlDocument doc;
     // open file
-    if (!doc.LoadFile("test.xml")) {
+    if (!doc.LoadFile("example.xml")) {
         std::cerr << doc.ErrorDesc() << std::endl;
         return;
     }
@@ -13,6 +13,6 @@ void XMLParser::parse() {
         doc.Clear();
         return;
     }
-    
+
 
 }
