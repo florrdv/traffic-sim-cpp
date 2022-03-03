@@ -5,8 +5,12 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "-Wall -Werror -std=c++98")
 set(CMAKE_EXE_LINKER_FLAGS -pthread)
 
+# Set src dir
+set(CMAKE_SOURCE_DIR src)
+
 # Set include dir
 include_directories(lib/gtest/include)
+include_directories(${CMAKE_SOURCE_DIR}/lib/TinyXML)
 
 # Set Library dir
 link_directories(lib/gtest/lib)
