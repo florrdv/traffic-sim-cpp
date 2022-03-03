@@ -6,7 +6,7 @@
             "type": "lldb",
             "request": "launch",
             // Resolved by CMake Tools:
-            "program": "${command:cmake.buildDirectory}/engine",
+            "program": "${command:cmake.buildDirectory}/TrafficSim",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
