@@ -5,6 +5,7 @@
 #include "tinyxml.h"
 
 class XMLParser {
+public:
     void parse();
 };
 
