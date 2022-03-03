@@ -4,9 +4,9 @@
 # compile CXX with /usr/bin/clang++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/florrdv/Projects/pse-traffic-sim/gtest/include
+CXX_INCLUDES = -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include
 
-CXX_FLAGSarm64 = -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+CXX_FLAGSarm64 = -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
 
-CXX_FLAGS = -Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
+CXX_FLAGS = -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
 

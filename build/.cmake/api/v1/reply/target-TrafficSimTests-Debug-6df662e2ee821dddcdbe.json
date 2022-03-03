@@ -56,14 +56,17 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-Wall -Werror -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk"
+					"fragment" : "-Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk"
+				},
+				{
+					"fragment" : "-std=gnu++17"
 				}
 			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 4,
-					"path" : "/Users/florrdv/Projects/pse-traffic-sim/gtest/include"
+					"path" : "/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include"
 				}
 			],
 			"language" : "CXX",
@@ -73,7 +76,7 @@
 				[
 					1
 				],
-				"standard" : "98"
+				"standard" : "17"
 			},
 			"sourceIndexes" : 
 			[
@@ -87,7 +90,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-Wall -Werror -g",
+				"fragment" : "-Wall -Werror -std=c++98 -g",
 				"role" : "flags"
 			},
 			{
@@ -96,11 +99,11 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-L/Users/florrdv/Projects/pse-traffic-sim/gtest/lib",
+				"fragment" : "-L/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/lib",
 				"role" : "libraryPath"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/Users/florrdv/Projects/pse-traffic-sim/gtest/lib",
+				"fragment" : "-Wl,-rpath,/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/lib",
 				"role" : "libraries"
 			},
 			{
