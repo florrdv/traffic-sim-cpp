@@ -35,6 +35,9 @@ void XMLParser::parse(Simulation& sim) {
 
     if (!result) throw std::runtime_error("XML: invalid file");
 
+    // Parameters for validation
+    std::vector<Vehicle*> vehicles = {};
+
     for (pugi::xml_node node : doc) {
         std::string name = node.name();
         if (name == "BAAN") {
@@ -58,6 +61,7 @@ void XMLParser::parse(Simulation& sim) {
             // Register road
             sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
+            // TODO: achraf fix pls
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
             pugi::xml_node positionNode = node.child("position");
@@ -74,7 +78,7 @@ void XMLParser::parse(Simulation& sim) {
             int cycle = parseInteger(cycleNode.text().as_string(), "cycle");
  
         } else if (name == "VOERTUIG") {
-            Vehicle vehicle;
+            Vehicle* vehicle = new Vehicle;
 
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
@@ -89,21 +93,23 @@ void XMLParser::parse(Simulation& sim) {
             int vehiclePos = parseInteger(posNode.text().as_string(), "position");
 
             // Set values
-            vehicle.setRoad(vehicleRoad);
-            vehicle.setPosition(vehiclePos);
+            vehicle->setPosition(vehiclePos);
 
-            Road* r = sim.findRoad(vehicleRoad);
-            if (r == NULL) {
-                throw std::runtime_error("XML: road for vehicle not found");
-            }
-
-            r->setVehicles(*vehicle);
+            vehicles.push_back(vehicle);
 
         } else {
             throw std::runtime_error("XML: Unknown tag '" + name + "'");
         }
     }
 
-    
+    for (Vehicle* vehicle: vehicles) {
+        std::string roadName = vehicle->getRoad();
+        Road* road = sim.findRoad(roadName);
+        if (road == nullptr) {
+            throw std::runtime_error("XML: road not found'" + roadName + "'");
+        }
+
+        road->addVehicle(vehicle);
+    }
 }
 

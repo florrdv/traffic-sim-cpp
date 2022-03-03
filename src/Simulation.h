@@ -10,7 +10,7 @@ private:
     std::vector<Road*> roads;
 public:
     void addRoad(Road* r);
-    Road* findRoad(string roadName);
+    Road* findRoad(const std::string& roadName);
 };
 
 
