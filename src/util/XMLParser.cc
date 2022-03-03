@@ -1,4 +1,13 @@
+//============================================================================
+// Name        : XMLParser.cc
+// Author      : Achraf Yandouzi, Flor Ronsmans De Vry
+// Description : XML Parser
+//============================================================================
+
 #include "XMLParser.h"
+#include "../objects/Road.h"
+#include "../objects/TrafficLight.h"
+#include "../objects/Vehicle.h"
 
 #include "../lib/pugixml/pugixml.hpp"
 
@@ -15,8 +24,6 @@ void XMLParser::parse() {
         }
         else if (name == "VERKEERSLICHT") {
             std::cout << "Found traffic light" << std::endl;
-        }
-        else if (name == "VOERTUIG") {
             std::cout << "Found vehicle" << std::endl;
         } else {
             throw "XML: Unknown tag '" + name + "'";

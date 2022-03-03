@@ -2,6 +2,8 @@
 #define TRAFFICSIM_ROAD_H
 
 #include <string>
+#include <vector>
+#include "Vehicle.h"
 
 class Road {
 public:
@@ -16,6 +18,8 @@ public:
 private:
     std::string name;
     int length;
+    std::vector<Vehicle*> vehicles;
+    std::vector<TrafficLight*> trafficlights;
 };
 
 

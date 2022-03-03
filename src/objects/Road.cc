@@ -1,3 +1,9 @@
+//============================================================================
+// Name        : Road.cc
+// Author      : Achraf Yandouzi, Flor Ronsmans De Vry
+// Description : Road
+//============================================================================
+
 #include "Road.h"
 
 const std::string &Road::getName() const {
