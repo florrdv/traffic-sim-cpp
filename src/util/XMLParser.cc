@@ -16,7 +16,7 @@
 
 #include "../lib/pugixml/pugixml.hpp"
 
-void XMLParser::parse() {
+void XMLParser::parse(Simulation& sim) {
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file("input/example.xml");
 
@@ -25,8 +25,9 @@ void XMLParser::parse() {
     for (pugi::xml_node node : doc) {
         std::string name = node.name();
         if (name == "BAAN") {
+            // Make road object
             Road road;
-            std::cout << "Found road" << std::endl;
+
             // Fetch nodes
             pugi::xml_node nameNode = node.child("naam");
             pugi::xml_node lengthNode = node.child("lengte");
@@ -39,14 +40,16 @@ void XMLParser::parse() {
             std::string roadName = nameNode.text().as_string();
             std::string roadLengthRaw = lengthNode.text().as_string();
 
+            // Validate values
             int roadLength;
             try {
                 roadLength = std::stoi(roadLengthRaw);
             } catch (std::exception) { throw std::runtime_error("XML: length must be a string"); }
  
-            std::cout << roadName << std::endl;
-            std::cout << roadLength << std::endl;
->>>>>>> c2a2f011662b05591255d5b87a4f14f458698612
+            road.setName(roadName);
+            road.setLength(roadLength);
+
+            sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
             std::cout << "Found traffic light" << std::endl;
         } else if (name == "VOERTUIG") {

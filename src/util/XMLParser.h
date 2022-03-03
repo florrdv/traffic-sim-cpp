@@ -4,6 +4,8 @@
 // Description : XML Parser
 //============================================================================
 
+#include "Simulation.h"
+
 #ifndef __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
 #define __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
 
@@ -23,7 +25,7 @@
 
 class XMLParser {
 public:
-    void parse();
+    void parse(Simulation& sim);
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
