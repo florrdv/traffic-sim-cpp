@@ -97,19 +97,83 @@ CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc -o CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.s
 
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o: ../src/lib/TinyXML/tinystr.cpp
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o -MF CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o.d -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp > CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.i
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.s
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o: ../src/lib/TinyXML/tinyxml.cpp
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o -MF CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o.d -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp > CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.i
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.s
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o: ../src/lib/TinyXML/tinyxmlerror.cpp
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o -MF CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o.d -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp > CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.i
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.s
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o: CMakeFiles/TrafficSimTests.dir/flags.make
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o: ../src/lib/TinyXML/tinyxmlparser.cpp
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o: CMakeFiles/TrafficSimTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o -MF CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o.d -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp > CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.i
+
+CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.s
+
 # Object files for target TrafficSimTests
 TrafficSimTests_OBJECTS = \
 "CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o" \
-"CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"
+"CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o" \
+"CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o" \
+"CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o" \
+"CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o" \
+"CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o"
 
 # External object files for target TrafficSimTests
 TrafficSimTests_EXTERNAL_OBJECTS =
 
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o
+TrafficSimTests: CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/build.make
 TrafficSimTests: CMakeFiles/TrafficSimTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TrafficSimTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/florrdv/Projects/pse-traffic-sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable TrafficSimTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TrafficSimTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
