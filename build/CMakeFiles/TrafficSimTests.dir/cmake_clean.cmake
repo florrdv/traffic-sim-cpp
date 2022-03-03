@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o"
-  "CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o.d"
   "CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o"
   "CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o.d"
   "CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"

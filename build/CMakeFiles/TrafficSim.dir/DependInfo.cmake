@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc" "CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o" "gcc" "CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o.d"
-  "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc" "CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.o" "gcc" "CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.o.d"
   "/Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc" "CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.o" "gcc" "CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.o.d"
   )
 
