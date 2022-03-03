@@ -4,6 +4,7 @@
 #include <iostream>
 
 class XMLParser {
+public:
     void parse();
 };
 
