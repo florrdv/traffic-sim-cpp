@@ -8,6 +8,7 @@
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"
+#include "../Simulation.h"
 
 #include "../lib/pugixml/pugixml.hpp"
 
