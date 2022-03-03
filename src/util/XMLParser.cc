@@ -14,7 +14,17 @@
 #include "../objects/Vehicle.h"
 #include "../Simulation.h"
 
-#include "../lib/pugixml/pugixml.hpp"
+void XMLParser::validateNode(const pugi::xml_node& node, const std::string name) {
+    if (node.empty()) throw std::runtime_error("XML: no " + name + "child found");
+}
+
+int XMLParser::parseInteger(const std::string& s, const std::string name) {
+    try {
+         
+    } catch (std::exception) {
+
+    }
+}
 
 void XMLParser::parse() {
     pugi::xml_document doc;
@@ -30,13 +40,14 @@ void XMLParser::parse() {
             pugi::xml_node lengthNode = node.child("lengte");
 
             // Check if the nodes exist
-            if (nameNode.empty()) throw std::runtime_error("XML: no name child found");
-            if (lengthNode.empty()) throw std::runtime_error("XML: no length child found");
+            validateNode(nameNode, "name");
+            validateNode(lengthNode, "length");
 
             // Extract values
             std::string roadName = nameNode.text().as_string();
             std::string roadLengthRaw = lengthNode.text().as_string();
 
+            // Parse the value
             int roadLength;
             try {
                 roadLength = std::stoi(roadLengthRaw);
@@ -45,7 +56,29 @@ void XMLParser::parse() {
             std::cout << roadName << std::endl;
             std::cout << roadLength << std::endl;
         } else if (name == "VERKEERSLICHT") {
-            std::cout << "Found traffic light" << std::endl;
+            // Fetch nodes
+            pugi::xml_node roadNode = node.child("baan");
+            pugi::xml_node positionNode = node.child("position");
+            pugi::xml_node cycle = node.child("position");
+
+            // Check if the nodes exist
+            validateNode(roadNode, "road");
+            validateNode(positionNode, "position");
+            validateNode(cycle, "cycle");
+
+            // Extract values
+            std::string road = roadNode.text().as_string();
+            std::string position = positionNode.text().as_string();
+            std::string cycle = cycle.text().as_string();
+
+            // Parse the value
+            int roadLength;
+            try {
+                roadLength = std::stoi(roadLengthRaw);
+            } catch (std::exception) { throw std::runtime_error("XML: length must be a string"); }
+ 
+            std::cout << roadName << std::endl;
+            std::cout << roadLength << std::endl;
         } else if (name == "VOERTUIG") {
             std::cout << "Found vehicle" << std::endl;
         } else {
