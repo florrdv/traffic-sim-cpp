@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o"
   "CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o"
+  "CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o"
+  "CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o"
+  "CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o"
+  "CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o"
   "CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"
   "TrafficSimTests"
   "TrafficSimTests.pdb"

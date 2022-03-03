@@ -148,7 +148,6 @@ src/TrafficSim.o: src/TrafficSim.cc.o
 # target to build an object file
 src/TrafficSim.cc.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o
 .PHONY : src/TrafficSim.cc.o
 
 src/TrafficSim.i: src/TrafficSim.cc.i
@@ -157,7 +156,6 @@ src/TrafficSim.i: src/TrafficSim.cc.i
 # target to preprocess a source file
 src/TrafficSim.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.i
 .PHONY : src/TrafficSim.cc.i
 
 src/TrafficSim.s: src/TrafficSim.cc.s
@@ -166,7 +164,6 @@ src/TrafficSim.s: src/TrafficSim.cc.s
 # target to generate assembly for a file
 src/TrafficSim.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSim.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.s
 .PHONY : src/TrafficSim.cc.s
 
 src/TrafficSimTests.o: src/TrafficSimTests.cc.o
@@ -174,7 +171,6 @@ src/TrafficSimTests.o: src/TrafficSimTests.cc.o
 
 # target to build an object file
 src/TrafficSimTests.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o
 .PHONY : src/TrafficSimTests.cc.o
 
@@ -183,7 +179,6 @@ src/TrafficSimTests.i: src/TrafficSimTests.cc.i
 
 # target to preprocess a source file
 src/TrafficSimTests.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.i
 .PHONY : src/TrafficSimTests.cc.i
 
@@ -192,9 +187,116 @@ src/TrafficSimTests.s: src/TrafficSimTests.cc.s
 
 # target to generate assembly for a file
 src/TrafficSimTests.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s
 .PHONY : src/TrafficSimTests.cc.s
+
+src/lib/TinyXML/tinystr.o: src/lib/TinyXML/tinystr.cpp.o
+.PHONY : src/lib/TinyXML/tinystr.o
+
+# target to build an object file
+src/lib/TinyXML/tinystr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinystr.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o
+.PHONY : src/lib/TinyXML/tinystr.cpp.o
+
+src/lib/TinyXML/tinystr.i: src/lib/TinyXML/tinystr.cpp.i
+.PHONY : src/lib/TinyXML/tinystr.i
+
+# target to preprocess a source file
+src/lib/TinyXML/tinystr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinystr.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.i
+.PHONY : src/lib/TinyXML/tinystr.cpp.i
+
+src/lib/TinyXML/tinystr.s: src/lib/TinyXML/tinystr.cpp.s
+.PHONY : src/lib/TinyXML/tinystr.s
+
+# target to generate assembly for a file
+src/lib/TinyXML/tinystr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinystr.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.s
+.PHONY : src/lib/TinyXML/tinystr.cpp.s
+
+src/lib/TinyXML/tinyxml.o: src/lib/TinyXML/tinyxml.cpp.o
+.PHONY : src/lib/TinyXML/tinyxml.o
+
+# target to build an object file
+src/lib/TinyXML/tinyxml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxml.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o
+.PHONY : src/lib/TinyXML/tinyxml.cpp.o
+
+src/lib/TinyXML/tinyxml.i: src/lib/TinyXML/tinyxml.cpp.i
+.PHONY : src/lib/TinyXML/tinyxml.i
+
+# target to preprocess a source file
+src/lib/TinyXML/tinyxml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxml.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.i
+.PHONY : src/lib/TinyXML/tinyxml.cpp.i
+
+src/lib/TinyXML/tinyxml.s: src/lib/TinyXML/tinyxml.cpp.s
+.PHONY : src/lib/TinyXML/tinyxml.s
+
+# target to generate assembly for a file
+src/lib/TinyXML/tinyxml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxml.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.s
+.PHONY : src/lib/TinyXML/tinyxml.cpp.s
+
+src/lib/TinyXML/tinyxmlerror.o: src/lib/TinyXML/tinyxmlerror.cpp.o
+.PHONY : src/lib/TinyXML/tinyxmlerror.o
+
+# target to build an object file
+src/lib/TinyXML/tinyxmlerror.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlerror.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o
+.PHONY : src/lib/TinyXML/tinyxmlerror.cpp.o
+
+src/lib/TinyXML/tinyxmlerror.i: src/lib/TinyXML/tinyxmlerror.cpp.i
+.PHONY : src/lib/TinyXML/tinyxmlerror.i
+
+# target to preprocess a source file
+src/lib/TinyXML/tinyxmlerror.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlerror.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.i
+.PHONY : src/lib/TinyXML/tinyxmlerror.cpp.i
+
+src/lib/TinyXML/tinyxmlerror.s: src/lib/TinyXML/tinyxmlerror.cpp.s
+.PHONY : src/lib/TinyXML/tinyxmlerror.s
+
+# target to generate assembly for a file
+src/lib/TinyXML/tinyxmlerror.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlerror.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.s
+.PHONY : src/lib/TinyXML/tinyxmlerror.cpp.s
+
+src/lib/TinyXML/tinyxmlparser.o: src/lib/TinyXML/tinyxmlparser.cpp.o
+.PHONY : src/lib/TinyXML/tinyxmlparser.o
+
+# target to build an object file
+src/lib/TinyXML/tinyxmlparser.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlparser.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o
+.PHONY : src/lib/TinyXML/tinyxmlparser.cpp.o
+
+src/lib/TinyXML/tinyxmlparser.i: src/lib/TinyXML/tinyxmlparser.cpp.i
+.PHONY : src/lib/TinyXML/tinyxmlparser.i
+
+# target to preprocess a source file
+src/lib/TinyXML/tinyxmlparser.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlparser.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.i
+.PHONY : src/lib/TinyXML/tinyxmlparser.cpp.i
+
+src/lib/TinyXML/tinyxmlparser.s: src/lib/TinyXML/tinyxmlparser.cpp.s
+.PHONY : src/lib/TinyXML/tinyxmlparser.s
+
+# target to generate assembly for a file
+src/lib/TinyXML/tinyxmlparser.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlparser.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.s
+.PHONY : src/lib/TinyXML/tinyxmlparser.cpp.s
 
 src/util/XMLParser.o: src/util/XMLParser.cc.o
 .PHONY : src/util/XMLParser.o
@@ -239,6 +341,18 @@ help:
 	@echo "... src/TrafficSimTests.o"
 	@echo "... src/TrafficSimTests.i"
 	@echo "... src/TrafficSimTests.s"
+	@echo "... src/lib/TinyXML/tinystr.o"
+	@echo "... src/lib/TinyXML/tinystr.i"
+	@echo "... src/lib/TinyXML/tinystr.s"
+	@echo "... src/lib/TinyXML/tinyxml.o"
+	@echo "... src/lib/TinyXML/tinyxml.i"
+	@echo "... src/lib/TinyXML/tinyxml.s"
+	@echo "... src/lib/TinyXML/tinyxmlerror.o"
+	@echo "... src/lib/TinyXML/tinyxmlerror.i"
+	@echo "... src/lib/TinyXML/tinyxmlerror.s"
+	@echo "... src/lib/TinyXML/tinyxmlparser.o"
+	@echo "... src/lib/TinyXML/tinyxmlparser.i"
+	@echo "... src/lib/TinyXML/tinyxmlparser.s"
 	@echo "... src/util/XMLParser.o"
 	@echo "... src/util/XMLParser.i"
 	@echo "... src/util/XMLParser.s"

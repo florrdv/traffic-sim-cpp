@@ -130,91 +130,33 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-death-test.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-message.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-param-test.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-printers.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-spi.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-test-part.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest-typed-test.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest_pred_impl.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/gtest_prod.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-death-test-internal.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-filepath.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-internal.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-linked_ptr.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-param-util-generated.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-param-util.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-port.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-string.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-tuple.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
-		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/lib/gtest/include/gtest/internal/gtest-type-util.h">
-			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
-		</Unit>
 		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/TrafficSim.cc">
 			<Option target="TrafficSim"/>
-			<Option target="TrafficSimTests"/>
 		</Unit>
 		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/TrafficSimTests.cc">
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp">
+			<Option target="TrafficSim"/>
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinystr.h">
+			<Option target="TrafficSim"/>
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp">
+			<Option target="TrafficSim"/>
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxml.h">
+			<Option target="TrafficSim"/>
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp">
+			<Option target="TrafficSim"/>
+			<Option target="TrafficSimTests"/>
+		</Unit>
+		<Unit filename="/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp">
 			<Option target="TrafficSim"/>
 			<Option target="TrafficSimTests"/>
 		</Unit>

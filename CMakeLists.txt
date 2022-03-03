@@ -12,12 +12,11 @@ include_directories(lib/gtest/include)
 link_directories(lib/gtest/lib)
 
 # Set source files for RELEASE target
-FILE(GLOB_RECURSE CCSources *.cc)
-FILE(GLOB_RECURSE HSources *.h)
-set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${CCSources} ${HSources})
+set(FILES src/util/XMLParser.cc src/util/XMLParser.h src/lib/TinyXML/tinystr.cpp src/lib/TinyXML/tinystr.h src/lib/TinyXML/tinyxml.cpp src/lib/TinyXML/tinyxml.h src/lib/TinyXML/tinyxmlerror.cpp src/lib/TinyXML/tinyxmlparser.cpp)
+set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${FILES})
 
 # Set source files for DEBUG target
-set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc ${CCSources} ${HSources})
+set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc ${FILES})
 
 # Create RELEASE target
 add_executable(TrafficSim ${RELEASE_SOURCE_FILES})

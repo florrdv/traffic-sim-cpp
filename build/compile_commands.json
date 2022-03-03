@@ -6,13 +6,28 @@
 },
 {
   "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
-  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/TrafficSimTests.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc",
-  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSimTests.cc"
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc"
 },
 {
   "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
-  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/util/XMLParser.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc",
-  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc"
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinystr.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxml.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlerror.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSim.dir/src/lib/TinyXML/tinyxmlparser.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp"
 },
 {
   "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
@@ -21,12 +36,27 @@
 },
 {
   "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
-  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc",
-  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/TrafficSim.cc"
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc"
 },
 {
   "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
-  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o -c /Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc",
-  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/util/XMLParser.cc"
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp"
+},
+{
+  "directory": "/Users/florrdv/Projects/pse-traffic-sim/build",
+  "command": "/usr/bin/clang++  -I/Users/florrdv/Projects/pse-traffic-sim/lib/gtest/include -Wall -Werror -std=c++98 -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o -c /Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp",
+  "file": "/Users/florrdv/Projects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp"
 }
 ]

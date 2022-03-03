@@ -8,8 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/TrafficSim.cc" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/TrafficSim.cc.o"
   "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/TrafficSimTests.cc" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.o"
+  "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinystr.cpp" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinystr.cpp.o"
+  "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxml.cpp" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxml.cpp.o"
+  "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxmlerror.cpp" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlerror.cpp.o"
+  "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/lib/TinyXML/tinyxmlparser.cpp" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/lib/TinyXML/tinyxmlparser.cpp.o"
   "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/src/util/XMLParser.cc" "/mnt/c/Users/Achraf/CLionProjects/pse-traffic-sim/cmake-build-debug/CMakeFiles/TrafficSimTests.dir/src/util/XMLParser.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
