@@ -18,10 +18,10 @@ set(RELEASE_SOURCE_FILES src/TrafficSim.cc)
 set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc)
 
 # Create RELEASE target
-add_executable(build/TrafficSim ${RELEASE_SOURCE_FILES})
+add_executable(TrafficSim ${RELEASE_SOURCE_FILES})
 
 # Create DEBUG target
-add_executable(build/TrafficSimTests ${DEBUG_SOURCE_FILES})
+add_executable(TrafficSimTests ${DEBUG_SOURCE_FILES})
 
 # Link library
-target_link_libraries(build/TrafficSimTests gtest)
+target_link_libraries(TrafficSimTests gtest)
