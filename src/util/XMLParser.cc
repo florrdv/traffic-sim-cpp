@@ -22,11 +22,31 @@ void XMLParser::parse() {
 
     if (!result) throw std::runtime_error("XML: invalid file");
 
-    for (pugi::xml_node tool : doc) {
-        std::string name = tool.name();
+    for (pugi::xml_node node : doc) {
+        std::string name = node.name();
         if (name == "BAAN") {
             Road road;
             std::cout << "Found road" << std::endl;
+            // Fetch nodes
+            pugi::xml_node nameNode = node.child("naam");
+            pugi::xml_node lengthNode = node.child("lengte");
+
+            // Check if the nodes exist
+            if (nameNode.empty()) throw std::runtime_error("XML: no name child found");
+            if (lengthNode.empty()) throw std::runtime_error("XML: no length child found");
+
+            // Extract values
+            std::string roadName = nameNode.text().as_string();
+            std::string roadLengthRaw = lengthNode.text().as_string();
+
+            int roadLength;
+            try {
+                roadLength = std::stoi(roadLengthRaw);
+            } catch (std::exception) { throw std::runtime_error("XML: length must be a string"); }
+ 
+            std::cout << roadName << std::endl;
+            std::cout << roadLength << std::endl;
+>>>>>>> c2a2f011662b05591255d5b87a4f14f458698612
         } else if (name == "VERKEERSLICHT") {
             std::cout << "Found traffic light" << std::endl;
         } else if (name == "VOERTUIG") {

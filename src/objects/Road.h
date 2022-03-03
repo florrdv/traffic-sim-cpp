@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "Vehicle.h"
+#include "TrafficLight.h"
 
 class Road {
 public:
@@ -23,11 +24,11 @@ private:
 public:
     const std::vector<Vehicle *> &getVehicles() const;
 
-    void setVehicles(const std::vector<Vehicle *> &vehicles);
+    void setVehicles(const std::vector<Vehicle *> &v);
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
 
-    void setTrafficlights(const std::vector<TrafficLight *> &trafficlights);
+    void setTrafficlights(const std::vector<TrafficLight *> &l);
 };
 
 
