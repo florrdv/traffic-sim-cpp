@@ -23,8 +23,8 @@
 #include "../lib/pugixml/pugixml.hpp"
 
 class XMLParser {
-    void validateNode(const pugi::xml_node& node, const std::string nam);
-    int parseInteger(const std::string& s, const std::string name);
+    void validateNode(const pugi::xml_node& node, const std::string nam) const;
+    int parseInteger(const std::string& s, const std::string name) const;
 public:
     void parse();
 };
