@@ -24,7 +24,7 @@ private:
 public:
     const std::vector<Vehicle *> &getVehicles() const;
 
-    void setVehicles(const std::vector<Vehicle *> &v);
+    void setVehicles(const Vehicle &v);
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
 
