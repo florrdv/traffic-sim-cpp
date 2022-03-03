@@ -22,4 +22,6 @@ void XMLParser::parse() {
             throw "XML: Unknown tag '" + name + "'";
         }
     }
+
+    
 }
