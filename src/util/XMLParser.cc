@@ -38,6 +38,7 @@ void XMLParser::parse(Simulation& sim) {
 
     // Parameters for validation
     std::vector<Vehicle*> vehicles = {};
+    std::vector<TrafficLight*> trafficLights = {};
 
     for (pugi::xml_node node : doc) {
         std::string name = node.name();
@@ -55,7 +56,7 @@ void XMLParser::parse(Simulation& sim) {
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
 
             // Make road object
-            Road* road = new Road;
+            Road* road = new Road();
             road->setName(roadName);
             road->setLength(roadLength);
 
@@ -77,9 +78,12 @@ void XMLParser::parse(Simulation& sim) {
             std::string road = roadNode.text().as_string();
             int position = parsePositiveInteger(positionNode.text().as_string(), "position");
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
+
+            TrafficLight* trafficLight = new TrafficLight();
+            
+            trafficLights.push_back(trafficLight);
  
         } else if (name == "VOERTUIG") {
-            Vehicle* vehicle = new Vehicle;
 
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
@@ -93,23 +97,14 @@ void XMLParser::parse(Simulation& sim) {
             std::string vehicleRoad = roadNode.text().as_string();
             int vehiclePos = parsePositiveInteger(posNode.text().as_string(), "position");
 
-            // Set values
+            // Create vehicle
+            Vehicle* vehicle = new Vehicle();
             vehicle->setPosition(vehiclePos);
             vehicles.push_back(vehicle);
-            
+
         } else {
             throw std::runtime_error("XML: unknown tag '" + name + "'");
         }
-    }
-
-    for (Vehicle* vehicle: vehicles) {
-        std::string roadName = vehicle->getRoad();
-        Road* road = sim.findRoad(roadName);
-        if (road == nullptr) {
-            throw std::runtime_error("XML: road not found'" + roadName + "'");
-        }
-
-        road->addVehicle(vehicle);
     }
 }
 
