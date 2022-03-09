@@ -115,28 +115,28 @@ void XMLParser::parse(Simulation& sim) {
         } else {
             throw std::runtime_error("XML: unknown tag '" + name + "'");
         }
+    }
 
-        // Let's continue parsing the data
-        // We have to put every vehicle and traffic light
-        // on a road, while makings sure that the road exists.
+    // Let's continue parsing the data
+    // We have to put every vehicle and traffic light
+    // on a road, while makings sure that the road exists.
 
-        // Vehicles
-        for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
-            Road* road = sim.findRoad(p.first);
-            if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+    // Vehicles
+    for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
+        Road* road = sim.findRoad(p.first);
+        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
-            // Register the vehicle
-            for (Vehicle* v : p.second) road->addVehicle(v);
-        }
+        // Register the vehicle
+        for (Vehicle* v : p.second) road->addVehicle(v);
+    }
 
-        // Traffic lights
-        for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
-            Road* road = sim.findRoad(p.first);
-            if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
-            
-            // Register the traffic light
-            for (TrafficLight* t : p.second) road->addTrafficLight(t);
-        }
+    // Traffic lights
+    for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
+        Road* road = sim.findRoad(p.first);
+        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+        
+        // Register the traffic light
+        for (TrafficLight* t : p.second) road->addTrafficLight(t);
     }
 }
 
