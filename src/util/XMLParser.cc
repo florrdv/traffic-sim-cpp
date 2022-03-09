@@ -32,16 +32,21 @@ int XMLParser::parsePositiveInteger(const std::string& s, const std::string name
 }
 
 void XMLParser::parse(Simulation& sim) {
+    // Load input file
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file("input/example.xml");
-
+    // Make sure the file was loaded correctly
     if (!result) throw std::runtime_error("XML: invalid file");
 
     // Parameters for validation
     std::map<std::string, Vehicle*> vehicles = {};
     std::map<std::string, TrafficLight*> trafficLights = {};
 
+    // Loop over all nodes in the document
+    // we just loaded
     for (pugi::xml_node node : doc) {
+        // Extract the node's name, we'll use this to determine the 
+        // type of node we're dealding with
         std::string name = node.name();
         if (name == "BAAN") {
             // Fetch nodes
@@ -104,6 +109,10 @@ void XMLParser::parse(Simulation& sim) {
         } else {
             throw std::runtime_error("XML: unknown tag '" + name + "'");
         }
+
+        // Let's continue parsing the data
+        // We have to put every vehicle and traffic light
+        // on a road, while makings sure that the road exists.
     }
 }
 
