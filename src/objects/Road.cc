@@ -34,10 +34,10 @@ void Road::addVehicle(Vehicle *v) {
     vehicles.push_back(v);
 }
 
-const std::vector<TrafficLight *> &Road::getTrafficlights() const {
-    return trafficlights;
+void Road::addTrafficLight(TrafficLight *t) {
+    trafficLights.push_back(t);
 }
 
-void Road::setTrafficlights(const std::vector<TrafficLight *> &l) {
-    Road::trafficlights = l;
+const std::vector<TrafficLight *> &Road::getTrafficlights() const {
+    return trafficLights;
 }

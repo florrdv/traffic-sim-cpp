@@ -112,6 +112,21 @@ void XMLParser::parse(Simulation& sim) {
         // Let's continue parsing the data
         // We have to put every vehicle and traffic light
         // on a road, while makings sure that the road exists.
+
+        // Vehicles
+        for (std::pair<std::string, Vehicle*> p : vehicles) {
+            Road* road = sim.findRoad(p.first);
+            if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+
+            road->addVehicle(p.second);
+        }
+
+        // Traffic lights
+        for (std::pair<std::string, TrafficLight*> p : trafficLights) {
+            Road* road = sim.findRoad(p.first);
+            if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+            
+        }
     }
 }
 

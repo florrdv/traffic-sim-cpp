@@ -31,7 +31,7 @@ private:
     int length;
 
     std::vector<Vehicle*> vehicles;
-    std::vector<TrafficLight*> trafficlights;
+    std::vector<TrafficLight*> trafficLights;
 
 public:
     const std::vector<Vehicle *> &getVehicles() const;
@@ -40,7 +40,7 @@ public:
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
 
-    void setTrafficlights(const std::vector<TrafficLight *> &l);
+    void addTrafficLight(TrafficLight *t);
 };
 
 
