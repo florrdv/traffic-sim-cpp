@@ -8,6 +8,7 @@
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
 
+#include <map>
 #include "XMLParser.h"
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
@@ -37,8 +38,8 @@ void XMLParser::parse(Simulation& sim) {
     if (!result) throw std::runtime_error("XML: invalid file");
 
     // Parameters for validation
-    std::vector<Vehicle*> vehicles = {};
-    std::vector<TrafficLight*> trafficLights = {};
+    std::map<std::string, Vehicle*> vehicles = {};
+    std::map<std::string, TrafficLight*> trafficLights = {};
 
     for (pugi::xml_node node : doc) {
         std::string name = node.name();
