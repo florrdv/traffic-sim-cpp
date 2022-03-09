@@ -81,8 +81,7 @@ void XMLParser::parse(Simulation& sim) {
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
 
             TrafficLight* trafficLight = new TrafficLight();
-            
-            trafficLights.push_back(trafficLight);
+            trafficLights.insert({road, trafficLight});
  
         } else if (name == "VOERTUIG") {
 
@@ -95,13 +94,12 @@ void XMLParser::parse(Simulation& sim) {
             validateNode(posNode, "positie");
 
             // Extract values
-            std::string vehicleRoad = roadNode.text().as_string();
+            std::string road = roadNode.text().as_string();
             int vehiclePos = parsePositiveInteger(posNode.text().as_string(), "position");
 
             // Create vehicle
             Vehicle* vehicle = new Vehicle();
-            vehicle->setPosition(vehiclePos);
-            vehicles.push_back(vehicle);
+            vehicles.insert({road, vehicle});
 
         } else {
             throw std::runtime_error("XML: unknown tag '" + name + "'");
