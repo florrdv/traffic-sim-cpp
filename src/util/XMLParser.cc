@@ -16,7 +16,7 @@
 #include "../Simulation.h"
 
 void XMLParser::validateNode(const pugi::xml_node& node, const std::string name) const {
-    if (node.empty()) throw std::runtime_error("XML: no " + name + "child found");
+    if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
 }
 
 int XMLParser::parsePositiveInteger(const std::string& s, const std::string name) const {
