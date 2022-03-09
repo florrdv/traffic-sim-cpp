@@ -17,16 +17,9 @@
 #include "TrafficLight.h"
 
 class Road {
-public:
-    const std::string &getName() const;
-
-    void setName(const std::string &name);
-
-    int getLength() const;
-
-    void setLength(int length);
-
 private:
+    bool _init = false;
+
     std::string name;
     int length;
 
@@ -34,13 +27,28 @@ private:
     std::vector<TrafficLight*> trafficLights;
 
 public:
-    const std::vector<Vehicle *> &getVehicles() const;
+    // Constructors / destructors
+    Road() { _init = true; }
+    ~Road() {
+        for (Vehicle* vehicle : vehicles) delete vehicle;
+        for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
+    }
 
+    // Regular methods
+    const std::string &getName() const;
+    void setName(const std::string &name);
+
+    int getLength() const;
+    void setLength(int length);
+
+    const std::vector<Vehicle *> &getVehicles() const;
     void addVehicle(Vehicle *v);
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
-
     void addTrafficLight(TrafficLight *t);
+
+    // Safety specific
+    bool properlyInitialized() { return _init; }
 };
 
 

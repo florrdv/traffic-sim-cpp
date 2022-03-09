@@ -19,10 +19,19 @@
 #include "../lib/pugixml/pugixml.hpp"
 
 class XMLParser {
+    bool _init = false;
+    
     void validateNode(const pugi::xml_node& node, const std::string nam) const;
     int parsePositiveInteger(const std::string& s, const std::string name) const;
 public:
+    // Constructors / destructors
+    XMLParser() { _init = true; };
+
+    // Regular methods
     void parse(Simulation& sim);
+
+    // Safety specific
+    bool properlyInitialized() { return _init; }
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_

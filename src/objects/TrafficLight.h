@@ -14,20 +14,25 @@
 #include <string>
 
 class TrafficLight {
-public:
-    const std::string &getRoad() const;
-
-    int getPosition() const;
-
-    void setPosition(int position);
-
-    int getCycle() const;
-
-    void setCycle(int cycles);
-
 private:
+    bool _init = false;
+
     int position;
     int cycle;
+
+public:
+    // Constructors / destructors
+    TrafficLight() { _init = true; }
+
+    // Regular methods
+    const std::string &getRoad() const;
+    int getPosition() const;
+    void setPosition(int position);
+    int getCycle() const;
+    void setCycle(int cycles);
+
+    // Safety specific
+    bool properlyInitialized() { return _init; }
 };
 
 

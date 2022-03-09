@@ -14,13 +14,20 @@
 #include <string>
 
 class Vehicle {
-public:
-    int getPosition() const;
-
-    void setPosition(int position);
-
 private:
     int position;
+    bool _init = false;
+
+public:
+    // Constructors / destructors
+    Vehicle() { _init = true; }
+
+    // General methods
+    int getPosition() const;
+    void setPosition(int position);
+
+    // Safety specific
+    bool properlyInitialized() { return _init; }
 };
 
 
