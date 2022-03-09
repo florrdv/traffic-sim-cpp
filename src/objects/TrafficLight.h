@@ -15,14 +15,14 @@
 
 class TrafficLight {
 private:
-    bool _init = false;
+    TrafficLight* _init;
 
     int position;
     int cycle;
 
 public:
     // Constructors / destructors
-    TrafficLight() { _init = true; }
+    TrafficLight() { _init = this; }
 
     // Regular methods
     const std::string &getRoad() const;
@@ -32,7 +32,7 @@ public:
     void setCycle(int cycles);
 
     // Safety specific
-    bool properlyInitialized() { return _init; }
+    bool properlyInitialized() { return _init == this; }
 };
 
 

@@ -15,19 +15,20 @@
 
 class Vehicle {
 private:
+    Vehicle* _init;
+
     int position;
-    bool _init = false;
 
 public:
     // Constructors / destructors
-    Vehicle() { _init = true; }
+    Vehicle() { _init = this; }
 
     // General methods
     int getPosition() const;
     void setPosition(int position);
 
     // Safety specific
-    bool properlyInitialized() { return _init; }
+    bool properlyInitialized() { return _init == this; }
 };
 
 

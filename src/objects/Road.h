@@ -18,7 +18,7 @@
 
 class Road {
 private:
-    bool _init = false;
+    Road* _init;
 
     std::string name;
     int length;
@@ -28,7 +28,7 @@ private:
 
 public:
     // Constructors / destructors
-    Road() { _init = true; }
+    Road() { _init = this; }
     ~Road() {
         for (Vehicle* vehicle : vehicles) delete vehicle;
         for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
@@ -48,7 +48,7 @@ public:
     void addTrafficLight(TrafficLight *t);
 
     // Safety specific
-    bool properlyInitialized() { return _init; }
+    bool properlyInitialized() { return _init == this; }
 };
 
 

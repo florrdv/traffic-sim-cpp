@@ -7,12 +7,12 @@
 
 class Simulation {
 private:
-    bool _init = false;
+    Simulation* _init;
 
     std::vector<Road*> roads;
 public:
     // Constructors / destructors
-    Simulation() { _init = true; };
+    Simulation() { _init = this; };
     ~Simulation() {
         for (Road* road : roads) delete road;
     }
@@ -22,7 +22,7 @@ public:
     Road* findRoad(const std::string& roadName);
 
     // Safety specific
-    bool properlyInitialized() { return _init; }
+    bool properlyInitialized() { return _init == this; }
 };
 
 
