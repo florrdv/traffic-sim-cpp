@@ -19,5 +19,7 @@ int main() {
 
     XMLParser parser;
     parser.parse(sim);
+
+    std::cout << "Parsing succesful!" << std::endl;
     return 0;
 }

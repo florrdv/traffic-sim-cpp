@@ -71,8 +71,8 @@ void XMLParser::parse(Simulation& sim) {
         } else if (name == "VERKEERSLICHT") {
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
-            pugi::xml_node positionNode = node.child("position");
-            pugi::xml_node cycleNode = node.child("position");
+            pugi::xml_node positionNode = node.child("positie");
+            pugi::xml_node cycleNode = node.child("cyclus");
 
             // Check if the nodes exist
             validateNode(roadNode, "road");
