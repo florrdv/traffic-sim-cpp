@@ -10,10 +10,14 @@
 
 #include <iostream>
 #include "util/XMLParser.h"
+#include "Simulation.h"
 
 int main() {
-    std::cout << "Hello, world!" << std::endl;
+    std::cout << "Hello, simulation!" << std::endl;
+
+    Simulation sim = Simulation();
+
     XMLParser parser;
-    parser.parse();
+    parser.parse(sim);
     return 0;
 }
