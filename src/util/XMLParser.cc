@@ -99,7 +99,7 @@ void XMLParser::parse(Simulation& sim) {
             vehicles.push_back(vehicle);
 
         } else {
-            throw std::runtime_error("XML: Unknown tag '" + name + "'");
+            throw std::runtime_error("XML: unknown tag '" + name + "'");
         }
     }
 
