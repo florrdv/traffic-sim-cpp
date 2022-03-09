@@ -9,35 +9,52 @@
  */
 
 #include "Road.h"
+#include "../lib/DesignByContract.h"
 
 const std::string &Road::getName() const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     return name;
 }
 
 void Road::setName(const std::string &n) {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     Road::name = n;
 }
 
 int Road::getLength() const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     return length;
 }
 
 void Road::setLength(int l) {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     Road::length = l;
 }
 
 const std::vector<Vehicle *> &Road::getVehicles() const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     return vehicles;
 }
 
 void Road::addVehicle(Vehicle *v) {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     vehicles.push_back(v);
 }
 
 void Road::addTrafficLight(TrafficLight *t) {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+
     trafficLights.push_back(t);
 }
 
 const std::vector<TrafficLight *> &Road::getTrafficlights() const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    
     return trafficLights;
 }
