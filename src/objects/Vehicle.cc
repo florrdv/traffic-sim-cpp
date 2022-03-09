@@ -12,13 +12,13 @@
 #include "../lib/DesignByContract.h"
 
 int Vehicle::getPosition() const {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 
     return position;
 }
 
 void Vehicle::setPosition(int p) {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     
     Vehicle::position = p;
 }

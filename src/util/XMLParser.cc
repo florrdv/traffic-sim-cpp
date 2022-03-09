@@ -14,12 +14,15 @@
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"
 #include "../Simulation.h"
+#include "../lib/DesignByContract.h"
 
 void XMLParser::validateNode(const pugi::xml_node& node, const std::string name) const {
+    REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
 }
 
 int XMLParser::parsePositiveInteger(const std::string& s, const std::string name) const {
+    REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     int value;
     try {
         value = stoi(s);
@@ -32,6 +35,7 @@ int XMLParser::parsePositiveInteger(const std::string& s, const std::string name
 }
 
 void XMLParser::parse(Simulation& sim) {
+    REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file("input/example.xml");

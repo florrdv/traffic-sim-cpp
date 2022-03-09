@@ -12,21 +12,21 @@
 #include "../lib/DesignByContract.h"
 
 int TrafficLight::getPosition() const {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return position;
 }
 
 void TrafficLight::setPosition(int p) {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     TrafficLight::position = p;
 }
 
 int TrafficLight::getCycle() const {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return cycle;
 }
 
 void TrafficLight::setCycle(int c) {
-    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     TrafficLight::cycle = c;
 }

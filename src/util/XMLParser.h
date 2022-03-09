@@ -31,7 +31,7 @@ public:
     void parse(Simulation& sim);
 
     // Safety specific
-    bool properlyInitialized() { return _init == this; }
+    const bool properlyInitialized() const { return _init == this; }
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
