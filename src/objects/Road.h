@@ -19,8 +19,10 @@ public:
 private:
     std::string name;
     int length;
+    
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficlights;
+
 public:
     const std::vector<Vehicle *> &getVehicles() const;
 
