@@ -61,7 +61,7 @@ void XMLParser::parse(Simulation& sim) {
             std::string roadName = nameNode.text().as_string();
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
 
-            // Make road object
+            // Create road object
             Road* road = new Road();
             road->setName(roadName);
             road->setLength(roadLength);
@@ -69,7 +69,6 @@ void XMLParser::parse(Simulation& sim) {
             // Register road
             sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
-            // TODO: achraf fix pls
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
             pugi::xml_node positionNode = node.child("position");
@@ -85,11 +84,11 @@ void XMLParser::parse(Simulation& sim) {
             int position = parsePositiveInteger(positionNode.text().as_string(), "position");
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
 
+            // Create traffic light object
             TrafficLight* trafficLight = new TrafficLight();
             trafficLights.insert({road, trafficLight});
  
         } else if (name == "VOERTUIG") {
-
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
             pugi::xml_node posNode = node.child("positie");
@@ -102,7 +101,7 @@ void XMLParser::parse(Simulation& sim) {
             std::string road = roadNode.text().as_string();
             int vehiclePos = parsePositiveInteger(posNode.text().as_string(), "position");
 
-            // Create vehicle
+            // Create vehicle object
             Vehicle* vehicle = new Vehicle();
             vehicles.insert({road, vehicle});
 
