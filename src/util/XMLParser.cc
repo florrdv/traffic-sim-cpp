@@ -118,6 +118,7 @@ void XMLParser::parse(Simulation& sim) {
             Road* road = sim.findRoad(p.first);
             if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
+            // Register the vehicle
             road->addVehicle(p.second);
         }
 
@@ -126,6 +127,8 @@ void XMLParser::parse(Simulation& sim) {
             Road* road = sim.findRoad(p.first);
             if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
             
+            // Register the traffic light
+            road->addTrafficLight(p.second);
         }
     }
 }
