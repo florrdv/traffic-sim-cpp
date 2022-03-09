@@ -18,12 +18,13 @@ void XMLParser::validateNode(const pugi::xml_node& node, const std::string name)
     if (node.empty()) throw std::runtime_error("XML: no " + name + "child found");
 }
 
-int XMLParser::parseInteger(const std::string& s, const std::string name) const {
+int XMLParser::parsePositiveInteger(const std::string& s, const std::string name) const {
     int value;
     try {
         value = stoi(s);
+        if (value < 0) throw std::runtime_error("XML: " + name + " must be positive");
     } catch (std::exception) {
-        throw "XML: "+ name + " must be an integer";
+        throw std::runtime_error("XML: "+ name + " must be an integer");
     }
 
     return value;
@@ -51,7 +52,7 @@ void XMLParser::parse(Simulation& sim) {
 
             // Extract values
             std::string roadName = nameNode.text().as_string();
-            int roadLength = parseInteger(lengthNode.text().as_string(), "length");
+            int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
 
             // Make road object
             Road* road = new Road;
@@ -74,8 +75,8 @@ void XMLParser::parse(Simulation& sim) {
 
             // Extract values
             std::string road = roadNode.text().as_string();
-            int position = parseInteger(positionNode.text().as_string(), "position");
-            int cycle = parseInteger(cycleNode.text().as_string(), "cycle");
+            int position = parsePositiveInteger(positionNode.text().as_string(), "position");
+            int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
  
         } else if (name == "VOERTUIG") {
             Vehicle* vehicle = new Vehicle;
@@ -90,7 +91,7 @@ void XMLParser::parse(Simulation& sim) {
 
             // Extract values
             std::string vehicleRoad = roadNode.text().as_string();
-            int vehiclePos = parseInteger(posNode.text().as_string(), "position");
+            int vehiclePos = parsePositiveInteger(posNode.text().as_string(), "position");
 
             // Set values
             vehicle->setPosition(vehiclePos);
