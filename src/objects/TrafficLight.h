@@ -21,13 +21,13 @@ public:
 
     void setPosition(int position);
 
-    int getCycles() const;
+    int getCycle() const;
 
-    void setCycles(int cycles);
+    void setCycle(int cycles);
 
 private:
     int position;
-    int cycles;
+    int cycle;
 };
 
 

@@ -81,11 +81,13 @@ void XMLParser::parse(Simulation& sim) {
 
             // Extract values
             std::string road = roadNode.text().as_string();
-            int position = parsePositiveInteger(positionNode.text().as_string(), "position");
+            int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
 
             // Create traffic light object
             TrafficLight* trafficLight = new TrafficLight();
+            trafficLight->setPosition(pos);
+            trafficLight->setCycle(cycle);
             trafficLights.insert({road, trafficLight});
  
         } else if (name == "VOERTUIG") {
@@ -99,10 +101,11 @@ void XMLParser::parse(Simulation& sim) {
 
             // Extract values
             std::string road = roadNode.text().as_string();
-            int vehiclePos = parsePositiveInteger(posNode.text().as_string(), "position");
+            int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
             // Create vehicle object
             Vehicle* vehicle = new Vehicle();
+            vehicle->setPosition(pos);
             vehicles.insert({road, vehicle});
 
         } else {

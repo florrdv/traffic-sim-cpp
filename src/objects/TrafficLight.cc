@@ -18,10 +18,10 @@ void TrafficLight::setPosition(int p) {
     TrafficLight::position = p;
 }
 
-int TrafficLight::getCycles() const {
-    return cycles;
+int TrafficLight::getCycle() const {
+    return cycle;
 }
 
-void TrafficLight::setCycles(int c) {
-    TrafficLight::cycles = c;
+void TrafficLight::setCycle(int c) {
+    TrafficLight::cycle = c;
 }
