@@ -1,12 +1,14 @@
+/*
+ * Project: PSE Traffic Simulator
+ * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
+ * Description: 
+ * Version: 1.0
+ * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+ * -----
+ * File Created: Thursday, 3rd March 2022 3:43:38 pm
+ */
+
 #include "TrafficLight.h"
-
-const std::string &TrafficLight::getRoad() const {
-    return road;
-}
-
-void TrafficLight::setRoad(const std::string &r) {
-    TrafficLight::road = r;
-}
 
 int TrafficLight::getPosition() const {
     return position;

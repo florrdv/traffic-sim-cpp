@@ -1,6 +1,16 @@
 #ifndef TRAFFICSIM_ROAD_H
 #define TRAFFICSIM_ROAD_H
 
+/*
+ * Project: PSE Traffic Simulator
+ * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
+ * Description: 
+ * Version: 1.0
+ * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+ * -----
+ * File Created: Thursday, 3rd March 2022 5:12:46 pm
+ */
+
 #include <string>
 #include <vector>
 #include "Vehicle.h"
@@ -19,7 +29,7 @@ public:
 private:
     std::string name;
     int length;
-    
+
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficlights;
 
