@@ -17,8 +17,8 @@ class TrafficLight {
 private:
     TrafficLight* _init;
 
-    int position;
-    int cycle;
+    int position{};
+    int cycle{};
 
 public:
     // Constructors / destructors
