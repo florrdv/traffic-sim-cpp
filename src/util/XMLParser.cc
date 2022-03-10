@@ -50,7 +50,7 @@ void XMLParser::parse(Simulation& sim) {
     // we just loaded
     for (pugi::xml_node node : doc) {
         // Extract the node's name, we'll use this to determine the
-        // type of node we're dealding with
+        // type of node we're dealing with
         std::string name = node.name();
         if (name == "BAAN") {
             // Fetch nodes
@@ -123,7 +123,7 @@ void XMLParser::parse(Simulation& sim) {
 
     // Let's continue parsing the data
     // We have to put every vehicle and traffic light
-    // on a road, while makings sure that the road exists.
+    // on a road, while making sure that the road exists.
 
     // Vehicles
     for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
