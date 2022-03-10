@@ -25,7 +25,6 @@ public:
     TrafficLight() { _init = this; }
 
     // Regular methods
-    const std::string &getRoad() const;
     int getPosition() const;
     void setPosition(int position);
     int getCycle() const;
