@@ -48,7 +48,7 @@ public:
     void addTrafficLight(TrafficLight *t);
 
     // Safety specific
-    const bool properlyInitialized() const { return _init == this; }
+    bool properlyInitialized() const { return _init == this; }
 };
 
 
