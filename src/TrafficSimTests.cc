@@ -7,3 +7,19 @@
  * -----
  * File Created: Thursday, 3rd March 2022 2:17:51 pm
  */
+
+#include <iostream>
+#include "util/XMLParser.h"
+#include "Simulation.h"
+
+int main() {
+    std::cout << "Hello, simulation!" << std::endl;
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    parser.parse(sim);
+
+    std::cout << "Parsing succesful!" << std::endl;
+    return 0;
+}
