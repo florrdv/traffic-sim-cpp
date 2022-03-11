@@ -8,9 +8,18 @@
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
 
-#include <gtest/gtest.h>
+#include <iostream>
+#include "util/XMLParser.h"
+#include "Simulation.h"
 
-int main(int argc, char** argv) {
-    testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+int main() {
+    std::cout << "Hello, simulation!" << std::endl;
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    parser.parse(sim);
+
+    std::cout << "Parsing succesful!" << std::endl;
+    return 0;
 }
