@@ -27,7 +27,7 @@ int XMLParser::parsePositiveInteger(const std::string& s, const std::string name
     try {
         value = stoi(s);
         if (value < 0) throw std::runtime_error("XML: " + name + " must be positive");
-    } catch (std::exception) {
+    } catch (std::exception& e) {
         throw std::runtime_error("XML: "+ name + " must be an integer");
     }
 
@@ -49,8 +49,8 @@ void XMLParser::parse(Simulation& sim) {
     // Loop over all nodes in the document
     // we just loaded
     for (pugi::xml_node node : doc) {
-        // Extract the node's name, we'll use this to determine the 
-        // type of node we're dealding with
+        // Extract the node's name, we'll use this to determine the
+        // type of node we're dealing with
         std::string name = node.name();
         if (name == "BAAN") {
             // Fetch nodes
@@ -95,7 +95,7 @@ void XMLParser::parse(Simulation& sim) {
 
             if (trafficLights.find(road) == trafficLights.end()) trafficLights.insert({road, {}});
             trafficLights[road].push_back(trafficLight);
- 
+
         } else if (name == "VOERTUIG") {
             // Fetch nodes
             pugi::xml_node roadNode = node.child("baan");
@@ -123,7 +123,7 @@ void XMLParser::parse(Simulation& sim) {
 
     // Let's continue parsing the data
     // We have to put every vehicle and traffic light
-    // on a road, while makings sure that the road exists.
+    // on a road, while making sure that the road exists.
 
     // Vehicles
     for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
@@ -138,7 +138,7 @@ void XMLParser::parse(Simulation& sim) {
     for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
         Road* road = sim.findRoad(p.first);
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
-        
+
         // Register the traffic light
         for (TrafficLight* t : p.second) road->addTrafficLight(t);
     }

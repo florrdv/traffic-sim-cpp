@@ -17,15 +17,14 @@ class TrafficLight {
 private:
     TrafficLight* _init;
 
-    int position;
-    int cycle;
+    int position{};
+    int cycle{};
 
 public:
     // Constructors / destructors
     TrafficLight() { _init = this; }
 
     // Regular methods
-    const std::string &getRoad() const;
     int getPosition() const;
     void setPosition(int position);
     int getCycle() const;
