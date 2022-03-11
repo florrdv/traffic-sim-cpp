@@ -9,6 +9,7 @@
  */
 
 #include <gtest/gtest.h>
+#include "./SimulationTests.cc"
 
 int main(int argc, char** argv) {
     testing::InitGoogleTest(&argc, argv);
