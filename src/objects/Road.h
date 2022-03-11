@@ -14,6 +14,7 @@
 #include <string>
 #include <vector>
 #include "Vehicle.h"
+#include "VehicleGenerator.h"
 #include "TrafficLight.h"
 
 class Road {
@@ -25,7 +26,7 @@ private:
 
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
-
+    std::vector<VehicleGenerator*> generators;
 public:
     // Constructors / destructors
     Road() { _init = this; }
@@ -46,6 +47,9 @@ public:
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
     void addTrafficLight(TrafficLight *t);
+
+    const std::vector<VehicleGenerator*> &getGenerators() const;
+    void addGenerator(VehicleGenerator *g);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

@@ -17,7 +17,7 @@ class Vehicle {
 private:
     Vehicle* _init;
 
-    int position;
+    int position{};
 
 public:
     // Constructors / destructors

@@ -13,28 +13,29 @@
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"
+#include "../objects/VehicleGenerator.h"
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
 
-void XMLParser::validateNode(const pugi::xml_node& node, const std::string name) const {
+void XMLParser::validateNode(const pugi::xml_node &node, const std::string name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
 }
 
-int XMLParser::parsePositiveInteger(const std::string& s, const std::string name) const {
+int XMLParser::parsePositiveInteger(const std::string &s, const std::string name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     int value;
     try {
         value = stoi(s);
         if (value < 0) throw std::runtime_error("XML: " + name + " must be positive");
-    } catch (std::exception& e) {
-        throw std::runtime_error("XML: "+ name + " must be an integer");
+    } catch (std::exception &e) {
+        throw std::runtime_error("XML: " + name + " must be an integer");
     }
 
     return value;
 }
 
-void XMLParser::parse(Simulation& sim) {
+void XMLParser::parse(Simulation &sim) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
     pugi::xml_document doc;
@@ -43,12 +44,13 @@ void XMLParser::parse(Simulation& sim) {
     if (!result) throw std::runtime_error("XML: invalid file");
 
     // Parameters for validation
-    std::map<std::string, std::vector<TrafficLight*>> trafficLights = {};
-    std::map<std::string, std::vector<Vehicle*>> vehicles = {};
+    std::map<std::string, std::vector<TrafficLight *>> trafficLights = {};
+    std::map<std::string, std::vector<Vehicle *>> vehicles = {};
+    std::map<std::string, std::vector<VehicleGenerator *>> generators = {};
 
     // Loop over all nodes in the document
     // we just loaded
-    for (pugi::xml_node node : doc) {
+    for (pugi::xml_node node: doc) {
         // Extract the node's name, we'll use this to determine the
         // type of node we're dealing with
         std::string name = node.name();
@@ -66,7 +68,7 @@ void XMLParser::parse(Simulation& sim) {
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
 
             // Create road object
-            Road* road = new Road();
+            Road *road = new Road();
             road->setName(roadName);
             road->setLength(roadLength);
 
@@ -89,7 +91,7 @@ void XMLParser::parse(Simulation& sim) {
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
 
             // Create traffic light object
-            TrafficLight* trafficLight = new TrafficLight();
+            TrafficLight *trafficLight = new TrafficLight();
             trafficLight->setPosition(pos);
             trafficLight->setCycle(cycle);
 
@@ -110,37 +112,65 @@ void XMLParser::parse(Simulation& sim) {
             int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
             // Create vehicle object
-            Vehicle* vehicle = new Vehicle();
+            Vehicle *vehicle = new Vehicle();
             vehicle->setPosition(pos);
 
             if (vehicles.find(road) == vehicles.end()) vehicles.insert({road, {}});
             vehicles[road].push_back(vehicle);
 
+        } else if (name == "VOERTUIGGENERATOR") {
+            // Fetch nodes
+            pugi::xml_node roadNode = node.child("baan");
+            pugi::xml_node freqNode = node.child("frequentie");
+
+            // Check if the nodes exist
+            validateNode(roadNode, "baan");
+            validateNode(freqNode, "frequentie");
+
+            // Extract values
+            std::string road = roadNode.text().as_string();
+            int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency");
+
+            // Create vehicle generator object
+            VehicleGenerator *generator = new VehicleGenerator();
+            generator->setFrequency(freq);
+
+            if (generators.find(road) == generators.end()) generators.insert({road, {}});
+            generators[road].push_back(generator);
         } else {
             throw std::runtime_error("XML: unknown tag '" + name + "'");
         }
     }
+
 
     // Let's continue parsing the data
     // We have to put every vehicle and traffic light
     // on a road, while making sure that the road exists.
 
     // Vehicles
-    for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
-        Road* road = sim.findRoad(p.first);
+    for (std::pair<std::string, std::vector<Vehicle *>> p: vehicles) {
+        Road *road = sim.findRoad(p.first);
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
         // Register the vehicle
-        for (Vehicle* v : p.second) road->addVehicle(v);
+        for (Vehicle *v: p.second) road->addVehicle(v);
     }
 
     // Traffic lights
-    for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
-        Road* road = sim.findRoad(p.first);
+    for (std::pair<std::string, std::vector<TrafficLight *>> p: trafficLights) {
+        Road *road = sim.findRoad(p.first);
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
         // Register the traffic light
-        for (TrafficLight* t : p.second) road->addTrafficLight(t);
+        for (TrafficLight *t: p.second) road->addTrafficLight(t);
+    }
+
+    // Vehicle generators
+    for (std::pair<std::string, std::vector<VehicleGenerator *>> p: generators) {
+        Road *road = sim.findRoad(p.first);
+        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+
+        for (VehicleGenerator *g: p.second) road->addGenerator(g);
     }
 }
 
