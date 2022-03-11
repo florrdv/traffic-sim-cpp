@@ -21,5 +21,7 @@ int main() {
     parser.parse(sim);
 
     std::cout << "Parsing succesful!" << std::endl;
+
+    sim.writeOn(std::cout);
     return 0;
 }
