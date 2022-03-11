@@ -32,7 +32,7 @@ public:
     void setCycle(int cycles);
 
     // Safety specific
-    const bool properlyInitialized() const { return _init == this; }
+    bool properlyInitialized() const { return _init == this; }
 };
 
 

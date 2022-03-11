@@ -28,7 +28,7 @@ public:
     void setPosition(int position);
 
     // Safety specific
-    const bool properlyInitialized() const { return _init == this; }
+    bool properlyInitialized() const { return _init == this; }
 };
 
 
