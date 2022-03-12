@@ -14,9 +14,9 @@ Road *Simulation::findRoad(const std::string& roadName) {
     return nullptr;
 }
 
-void Simulation::writeOn(std::ostream& onStream) {
-    onStream << "-------------PRINTING--SIMULATION-----------" << std::endl;
-    int timestamp = 0;
+void Simulation::writeOn(std::ostream& onStream, int timestamp) {
+    // SHOULD BE DIFFERENT BREAK STATEMENT
+    if (timestamp>2) return;
     double speed = 16.6; //HARDCODED FOR NOW
     onStream << "Time: " << timestamp << std::endl;
     for (Road* r: roads) {
@@ -29,4 +29,6 @@ void Simulation::writeOn(std::ostream& onStream) {
             vehicleNumber++;
         }
     }
+    timestamp++;
+    writeOn(onStream, timestamp);
 }
