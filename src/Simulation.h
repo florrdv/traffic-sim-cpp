@@ -10,7 +10,6 @@ private:
     Simulation* _init;
 
     std::vector<Road*> roads;
-    int timestamp=0;
 public:
     // Constructors / destructors
     Simulation() { _init = this; };
