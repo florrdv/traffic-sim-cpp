@@ -17,4 +17,5 @@ Road *Simulation::findRoad(const std::string& roadName) {
 void Simulation::writeOn(std::ostream& onStream) {
     onStream << "Printing simulation..." << std::endl;
     onStream << "[TO BE IMPLEMENTED]" << std::endl;
+    onStream << "Time: " << timestamp << std::endl;
 }
