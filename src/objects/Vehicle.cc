@@ -24,5 +24,5 @@ void Vehicle::setPosition(int p) {
 }
 
 void Vehicle::tick() {
-
+    
 }

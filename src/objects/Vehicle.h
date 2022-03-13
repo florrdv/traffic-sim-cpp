@@ -12,12 +12,25 @@
  */
 
 #include <string>
+#include "../data/Constants.cc"
 
 class Vehicle {
 private:
     Vehicle* _init;
 
-    int position{};
+    double position = 0;
+
+    double speed = 0;
+    double acceleration = 0;
+
+    double length = VEHICLE_LENGTH;
+    double speedMax = SPEED_MAX;
+    double accelerationMax = ACCELERATION_MAX;
+    double brakeMax = BRAKE_MAX;
+    double followMin = FOLLOW_MIN;
+    double simTime = SIM_TIME;
+    double decelerationDistance = DECELERATION_DISTANCE;
+    double decelerationFactor = 0.4;
 
 public:
     // Constructors / destructors
