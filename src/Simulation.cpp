@@ -22,13 +22,13 @@ void Simulation::writeOn(std::ostream& onStream) {
     while (true) {
         double speed = 16.6; //HARDCODED FOR NOW
         onStream << "Time: " << timestamp << std::endl;
-        for (Road* r : roads) {
+        for (Road* road : roads) {
             int vehicleNumber = 0;
-            for (Vehicle* v : r->getVehicles()) {
-                v->tick();
+            for (Vehicle* vehicle : road->getVehicles()) {
+                vehicle->tick(road->getLeadingVehicle(vehicle));
                 onStream << "Vehicle " << vehicleNumber << std::endl;
-                onStream << "-> Road: " << r->getName() << std::endl;
-                onStream << "-> Position: " << v->getPosition() << std::endl;
+                onStream << "-> Road: " << road->getName() << std::endl;
+                onStream << "-> Position: " << vehicle->getPosition() << std::endl;
                 onStream << "-> Speed: " << speed << std::endl;
                 vehicleNumber++;
             }

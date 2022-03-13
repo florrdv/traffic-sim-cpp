@@ -50,7 +50,7 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
         double followDistance = leadingVehicle->getPosition() - position - leadingVehicle->getLength();
         double speedDifference = speed - leadingVehicle->getSpeed();
 
-            delta = followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)));
+            delta = (followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) / followDistance;
     }
 
     acceleration = accelerationMax * (1 - std::pow(speed / speedMax, 4)) - delta * delta;

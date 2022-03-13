@@ -71,7 +71,7 @@ void Road::addGenerator(VehicleGenerator *g) {
 
 Vehicle* Road::getLeadingVehicle(Vehicle *v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    Vehicle* leadingVehicle;
+    Vehicle* leadingVehicle = nullptr;
     for (Vehicle* candidate : vehicles) { 
         if (candidate->getPosition() <= v->getPosition()) continue;
 
