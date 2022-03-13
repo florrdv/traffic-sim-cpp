@@ -34,7 +34,7 @@ void Simulation::writeOn(std::ostream& onStream) {
 
             int vehicleNumber = 0;
             for (Vehicle* vehicle : vehicles) {
-
+                onStream << "Vehicle " << vehicleNumber << std::endl;
                 onStream << "-> Road: " << road->getName() << std::endl;
                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
                 onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
@@ -43,6 +43,6 @@ void Simulation::writeOn(std::ostream& onStream) {
         }
         timestamp++;
 
-        std::this_thread::sleep_for(std::chrono::milliseconds((int) (SIM_TIME * 1000)));
+        std::this_thread::sleep_for(std::chrono::milliseconds((int) (SIM_TIME * 1000 / SPEEDUP)));
     }
 }
