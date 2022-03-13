@@ -27,6 +27,8 @@ public:
     int getPosition() const;
     void setPosition(int position);
 
+    void tick();
+
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };

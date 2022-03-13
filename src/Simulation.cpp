@@ -25,6 +25,7 @@ void Simulation::writeOn(std::ostream& onStream) {
         for (Road* r : roads) {
             int vehicleNumber = 0;
             for (Vehicle* v : r->getVehicles()) {
+                v->tick();
                 onStream << "Vehicle " << vehicleNumber << std::endl;
                 onStream << "-> Road: " << r->getName() << std::endl;
                 onStream << "-> Position: " << v->getPosition() << std::endl;
