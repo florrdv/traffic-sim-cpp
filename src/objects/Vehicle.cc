@@ -36,7 +36,7 @@ double Vehicle::getSpeed() const {
 
 
 void Vehicle::updateSpeed() {
-    double newSpeed = speed + acceleration * simTime < 0;
+    double newSpeed = speed + acceleration * simTime;
     if (newSpeed < 0) position -= speed * speed / (2 * acceleration);
     else {
         speed = newSpeed;

@@ -4,6 +4,8 @@
 #include <chrono>
 #include <thread>
 
+#include "./data/Constants.cc"
+
 void Simulation::addRoad(Road* r) {
     roads.push_back(r);
 }
@@ -20,8 +22,7 @@ Road* Simulation::findRoad(const std::string& roadName) {
 void Simulation::writeOn(std::ostream& onStream) {
     int timestamp = 0;
     while (true) {
-        double speed = 16.6; //HARDCODED FOR NOW
-        onStream << "Time: " << timestamp << std::endl;
+        onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             int vehicleNumber = 0;
             for (Vehicle* vehicle : road->getVehicles()) {
@@ -29,12 +30,12 @@ void Simulation::writeOn(std::ostream& onStream) {
                 onStream << "Vehicle " << vehicleNumber << std::endl;
                 onStream << "-> Road: " << road->getName() << std::endl;
                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                onStream << "-> Speed: " << speed << std::endl;
+                onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
                 vehicleNumber++;
             }
         }
         timestamp++;
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::this_thread::sleep_for(std::chrono::milliseconds((int) (SIM_TIME * 1000)));
     }
 }
