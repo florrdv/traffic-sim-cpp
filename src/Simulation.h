@@ -21,7 +21,7 @@ public:
     void addRoad(Road* r);
     Road* findRoad(const std::string& roadName);
 
-    void writeOn(std::ostream& onStream, int timestamp=0);
+    void writeOn(std::ostream& onStream);
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }
