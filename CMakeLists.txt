@@ -17,7 +17,7 @@ link_directories(gtest/lib)
 
 # Set source files for RELEASE target
 set(FILES src/util/XMLParser.cc src/util/XMLParser.h src/lib/DesignByContract.h src/lib/pugixml/pugiconfig.hpp src/lib/pugixml/pugixml.cpp src/lib/pugixml/pugixml.hpp src/objects/Vehicle.h src/objects/Vehicle.cc src/objects/Road.h src/objects/Road.cc src/objects/TrafficLight.h src/objects/TrafficLight.cc src/Simulation.cpp src/Simulation.h)
-set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${FILES})
+set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${FILES} src/objects/VehicleGenerator.cc src/objects/VehicleGenerator.h)
 
 # Set source files for DEBUG target
 set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc ${FILES})

@@ -55,6 +55,16 @@ void Road::addTrafficLight(TrafficLight *t) {
 
 const std::vector<TrafficLight *> &Road::getTrafficlights() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    
+
     return trafficLights;
+}
+
+const std::vector<VehicleGenerator *> &Road::getGenerators() const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    return generators;
+}
+
+void Road::addGenerator(VehicleGenerator *g) {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    generators.push_back(g);
 }

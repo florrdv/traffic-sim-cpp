@@ -1,6 +1,6 @@
 <BAAN>
     <naam>Middelheimlaan</naam>
-    <lengte>20</lengte>
+    <lengte>500</lengte>
 </BAAN>
 
 <VERKEERSLICHT>
@@ -18,3 +18,8 @@
     <baan>Middelheimlaan</baan>
     <positie>0</positie>
 </VOERTUIG>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>5</frequentie>
+</VOERTUIGGENERATOR>
