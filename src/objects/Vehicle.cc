@@ -9,9 +9,12 @@
  */
 
 #include "Vehicle.h"
+
+#include <cmath>
+
 #include "../lib/DesignByContract.h"
 
-int Vehicle::getPosition() const {
+double Vehicle::getPosition() const {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 
     return position;
@@ -19,10 +22,39 @@ int Vehicle::getPosition() const {
 
 void Vehicle::setPosition(int p) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    
+
     Vehicle::position = p;
 }
 
-void Vehicle::tick() {
-    
+double Vehicle::getLength() const {
+    return length;
+}
+
+double Vehicle::getSpeed() const {
+    return speed;
+}
+
+
+void Vehicle::updateSpeed() {
+    double newSpeed = speed + acceleration * simTime < 0;
+    if (newSpeed < 0) position -= speed * speed / (2 * acceleration);
+    else {
+        speed = newSpeed;
+        position += speed * simTime + acceleration * simTime * simTime / 2;
+    }
+}
+
+void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
+    double delta = 0;
+    if (leadingVehicle != nullptr) {
+        double followDistance = leadingVehicle->getPosition() - position - leadingVehicle->getLength();
+        double speedDifference = speed - leadingVehicle->getSpeed();
+
+        delta = followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)));
+    }
+}
+
+void Vehicle::tick(Vehicle* leadingVehicle) {
+    updateSpeed();
+    updateAcceleration(leadingVehicle);
 }

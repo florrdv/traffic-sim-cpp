@@ -32,15 +32,22 @@ private:
     double decelerationDistance = DECELERATION_DISTANCE;
     double decelerationFactor   = DECELERATION_FACTOR;
 
+    void updateSpeed();
+    void updateAcceleration(Vehicle* leadingVehicle);
+
 public:
     // Constructors / destructors
     Vehicle() { _init = this; }
 
     // General methods
-    int getPosition() const;
+    double getPosition() const;
     void setPosition(int position);
 
-    void tick();
+    double getLength() const;
+
+    double getSpeed() const;
+
+    void tick(Vehicle* leadingVehicle);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
