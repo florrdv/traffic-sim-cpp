@@ -52,6 +52,8 @@ public:
     const std::vector<VehicleGenerator*> &getGenerators() const;
     void addGenerator(VehicleGenerator *g);
 
+    void cleanup();
+
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };

@@ -81,3 +81,13 @@ Vehicle* Road::getLeadingVehicle(Vehicle *v) {
 
     return leadingVehicle;
 }
+
+void Road::cleanup() { 
+    std::vector<Vehicle *>::iterator vehicle = vehicles.begin();
+
+    while (vehicle != vehicles.end()) {
+        if ((*vehicle)->getPosition() > length) {
+            vehicles.erase(vehicle);
+        } else ++vehicle;
+    }
+}
