@@ -23,6 +23,7 @@ void Simulation::writeOn(std::ostream& onStream) {
     int timestamp = 0;
     bool done = false;
 
+    // TODO: fix dat de laatste iteration geen time cout
     while (!done) {
         done = true;
         onStream << "-------------------------------------------" << std::endl;
