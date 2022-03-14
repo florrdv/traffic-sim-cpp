@@ -43,7 +43,7 @@ const std::vector<Vehicle *> &Road::getVehicles() const {
 
 void Road::addVehicle(Vehicle *v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
+    v->setId(vehicles.size());
     vehicles.push_back(v);
 }
 

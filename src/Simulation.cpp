@@ -33,13 +33,11 @@ void Simulation::writeOn(std::ostream& onStream) {
             for (Vehicle* vehicle : vehicles) vehicle->tick(road->getLeadingVehicle(vehicle));
             road->cleanup();
 
-            int vehicleNumber = 0;
             for (Vehicle* vehicle : vehicles) {
-                onStream << "Vehicle " << vehicleNumber << std::endl;
+                onStream << "Vehicle " << vehicle->getId() << std::endl;
                 onStream << "-> Road: " << road->getName() << std::endl;
                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
                 onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
-                vehicleNumber++;
             }
         }
         timestamp++;

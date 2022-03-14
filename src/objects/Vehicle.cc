@@ -34,6 +34,13 @@ double Vehicle::getSpeed() const {
     return speed;
 }
 
+int Vehicle::getId() const {
+    return id;
+}
+
+void Vehicle::setId(int id_) {
+    Vehicle::id = id_;
+}
 
 void Vehicle::updateSpeed() {
     double newSpeed = speed + acceleration * simTime;
@@ -60,3 +67,5 @@ void Vehicle::tick(Vehicle* leadingVehicle) {
     updateSpeed();
     updateAcceleration(leadingVehicle);
 }
+
+

@@ -18,7 +18,9 @@ class Vehicle {
 private:
     Vehicle* _init;
 
+private:
     double position = 0;
+    int id;
 
     double speed = 0;
     double acceleration = 0;
@@ -42,6 +44,9 @@ public:
     // General methods
     double getPosition() const;
     void setPosition(int position);
+
+    int getId() const;
+    void setId(int id);
 
     double getLength() const;
 
