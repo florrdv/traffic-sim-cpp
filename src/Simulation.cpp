@@ -24,11 +24,12 @@ void Simulation::writeOn(std::ostream& onStream) {
     bool done = false;
 
     while (!done) {
+        done = true;
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<Vehicle*> vehicles = road->getVehicles();
-            if (vehicles.empty()) done = true;
+            if (!vehicles.empty()) done = false;
 
             for (Vehicle* vehicle : vehicles) vehicle->tick(road->getLeadingVehicle(vehicle));
             road->cleanup();
