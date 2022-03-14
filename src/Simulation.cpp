@@ -24,10 +24,11 @@ void Simulation::writeOn(std::ostream& onStream) {
     bool done = false;
 
     while (!done) {
+        onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<Vehicle*> vehicles = road->getVehicles();
-            if (vehicles.size() == 0) done = true;
+            if (vehicles.empty()) done = true;
 
             for (Vehicle* vehicle : vehicles) vehicle->tick(road->getLeadingVehicle(vehicle));
             road->cleanup();
@@ -42,7 +43,6 @@ void Simulation::writeOn(std::ostream& onStream) {
             }
         }
         timestamp++;
-
         std::this_thread::sleep_for(std::chrono::milliseconds((int) (SIM_TIME * 1000 / SPEEDUP)));
     }
 }
