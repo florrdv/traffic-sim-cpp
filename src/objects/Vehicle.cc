@@ -44,10 +44,10 @@ void Vehicle::setId(int id_) {
 
 void Vehicle::updateSpeed() {
     double newSpeed = speed + acceleration * simTime;
-    if (newSpeed < 0) position -= speed * speed / (2 * acceleration);
+    if (newSpeed < 0) position -= std::pow(speed, 2) / (2 * acceleration);
     else {
         speed = newSpeed;
-        position += speed * simTime + acceleration * simTime * simTime / 2;
+        position += speed * simTime + acceleration * std::pow(simTime, 2) / 2;
     }
 }
 
