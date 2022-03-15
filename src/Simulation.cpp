@@ -19,18 +19,22 @@ Road* Simulation::findRoad(const std::string& roadName) {
     return nullptr;
 }
 
+int Simulation::countVehicles() const {
+    int amnt = 0;
+    for (Road* road : roads) amnt += road->getVehicles().size();
+
+    return amnt;
+}
+
 void Simulation::writeOn(std::ostream& onStream) {
     int timestamp = 0;
-    bool done = false;
 
     // TODO: fix dat de laatste iteration geen time cout
-    while (!done) {
-        done = true;
+    while (countVehicles() > 0) {
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<Vehicle*> vehicles = road->getVehicles();
-            if (!vehicles.empty()) done = false;
 
             for (Vehicle* vehicle : vehicles) vehicle->tick(road->getLeadingVehicle(vehicle));
             road->cleanup();
