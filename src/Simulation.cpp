@@ -29,7 +29,6 @@ int Simulation::countVehicles() const {
 void Simulation::writeOn(std::ostream& onStream) {
     int timestamp = 0;
 
-    // TODO: fix dat de laatste iteration geen time cout
     while (countVehicles() > 0) {
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
