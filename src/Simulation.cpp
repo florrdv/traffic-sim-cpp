@@ -34,11 +34,11 @@ void Simulation::writeOn(std::ostream &onStream) {
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road *road: roads) {
-            std::vector<TrafficLight *> trafficlights = road->getTrafficlights();
+            std::vector<TrafficLight *> trafficLights = road->getTrafficlights();
             std::vector<Vehicle *> vehicles = road->getVehicles();
-            for (TrafficLight *trafficlight: trafficlights) {
-                if (cycleCounter > trafficlight->getCycle()) trafficlight->toggle(); cycleCounter=0;
-                if (trafficlight->getState()) {
+            for (TrafficLight *trafficLight: trafficLights) {
+                if (cycleCounter > trafficLight->getCycle()) trafficLight->toggle(); cycleCounter=0;
+                if (trafficLight->getState()) {
                     for (Vehicle *vehicle: vehicles) {
                         onStream << "Vehicle " << vehicle->getId() << std::endl;
                         onStream << "-> Road: " << road->getName() << std::endl;
@@ -46,7 +46,7 @@ void Simulation::writeOn(std::ostream &onStream) {
                         onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
                         vehicle->tick(road->getLeadingVehicle(vehicle));
                     }
-                } else if (vehicles[vehicles.size() - 1]->getPosition() + BRAKE_DISTANCE < trafficlight->getPosition())
+                } else if (vehicles[vehicles.size() - 1]->getPosition() + BRAKE_DISTANCE < trafficLight->getPosition())
                     vehicles[vehicles.size() - 1]->updateDeceleration();
             }
             road->cleanup();
