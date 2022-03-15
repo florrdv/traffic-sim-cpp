@@ -37,21 +37,26 @@ void Simulation::writeOn(std::ostream &onStream) {
             std::vector<TrafficLight *> trafficLights = road->getTrafficlights();
             std::vector<Vehicle *> vehicles = road->getVehicles();
             for (TrafficLight *trafficLight: trafficLights) {
-                if (cycleCounter > trafficLight->getCycle()) trafficLight->toggle(); cycleCounter=0;
-                if (trafficLight->getState()) {
-                    for (Vehicle *vehicle: vehicles) {
-                        onStream << "Vehicle " << vehicle->getId() << std::endl;
-                        onStream << "-> Road: " << road->getName() << std::endl;
-                        onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                        onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+                if (cycleCounter > trafficLight->getCycle()) {
+                    trafficLight->toggle();
+                    cycleCounter = 0;
+                }
+                for (Vehicle *vehicle: vehicles) {
+                    onStream << "Vehicle " << vehicle->getId() << std::endl;
+                    onStream << "-> Road: " << road->getName() << std::endl;
+                    onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+                    onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+                    if (trafficLight->getState()) {
                         vehicle->tick(road->getLeadingVehicle(vehicle));
-                    }
-                } else if (vehicles[vehicles.size() - 1]->getPosition() + BRAKE_DISTANCE < trafficLight->getPosition())
-                    vehicles[vehicles.size() - 1]->updateDeceleration();
+                    } else if (vehicles[vehicles.size() - 1]->getPosition() + BRAKE_DISTANCE <
+                               trafficLight->getPosition())
+                        vehicles[vehicles.size() - 1]->updateDeceleration();
+                }
             }
             road->cleanup();
         }
-        timestamp++; cycleCounter++;
+        timestamp++;
+        cycleCounter++;
         std::this_thread::sleep_for(std::chrono::milliseconds((int) (SIM_TIME * 1000 / SPEEDUP)));
     }
 }
