@@ -68,4 +68,8 @@ void Vehicle::tick(Vehicle* leadingVehicle) {
     updateAcceleration(leadingVehicle);
 }
 
+void Vehicle::updateDeceleration() {
+    acceleration = - brakeMax * speed / speedMax;
+}
+
 

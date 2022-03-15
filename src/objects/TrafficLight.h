@@ -19,6 +19,7 @@ private:
 
     int position{};
     int cycle{};
+    bool on=true;
 
 public:
     // Constructors / destructors
@@ -29,6 +30,9 @@ public:
     void setPosition(int position);
     int getCycle() const;
     void setCycle(int cycles);
+    bool getState() const;
+
+    void toggle();
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

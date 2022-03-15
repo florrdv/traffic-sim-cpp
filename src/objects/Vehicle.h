@@ -54,6 +54,8 @@ public:
 
     void tick(Vehicle* leadingVehicle);
 
+    void updateDeceleration();
+
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };

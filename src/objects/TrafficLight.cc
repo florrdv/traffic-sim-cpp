@@ -30,3 +30,11 @@ void TrafficLight::setCycle(int c) {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     TrafficLight::cycle = c;
 }
+
+void TrafficLight::toggle() {
+    on = !on;
+}
+
+bool TrafficLight::getState() const {
+    return on;
+}
