@@ -77,7 +77,7 @@ void Simulation::writeOn(std::ostream& onStream) {
 
 void Simulation::print(double time) {
     clear();
-    
+
     std::cout << "Time: T+ " << std::to_string(time) << std::endl;
     for (Road* road : roads) {
         std::cout << road->getName() << std::endl;
@@ -95,7 +95,7 @@ void Simulation::print(double time) {
         }
 
         for (int i = 0; i < width; i++) std::cout << repr[i];
-        std::cout << std::endl << std::endl << std::endl;
+        std::cout << std::endl << std::endl;
     }
 
 }
