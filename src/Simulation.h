@@ -11,6 +11,9 @@ private:
     Simulation* _init;
 
     std::vector<Road*> roads;
+
+    void print(double time);
+    void clear();
 public:
     // Constructors / destructors
     Simulation() { _init = this; };
@@ -24,8 +27,6 @@ public:
     int countVehicles() const;
 
     void writeOn(std::ostream& onStream);
-
-    void print();
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }

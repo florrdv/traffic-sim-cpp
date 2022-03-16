@@ -65,7 +65,7 @@ void Simulation::writeOn(std::ostream& onStream) {
                 // onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
             }
 
-            print();
+            print(timestamp * SIM_TIME);
 
             road->cleanup();
         }
@@ -75,31 +75,36 @@ void Simulation::writeOn(std::ostream& onStream) {
     }
 }
 
-void Simulation::print() {
-    int width = roads[0]->getLength();
-    TrafficLight* t = roads[0]->getTrafficlights()[0];
+void Simulation::print(double time) {
+    clear();
+    
+    std::cout << "Time: T+ " << std::to_string(time) << std::endl;
+    for (Road* road : roads) {
+        std::cout << road->getName() << std::endl;
+        int width = road->getLength();
 
-    for (int i = 0; i < width; i++) {
-        bool p = false;
-        if (t->getPosition() == i) {
-            if (t->isGreen()) std::cout << "g";
-            else std::cout << "r";
-            p = true;
-        }
-        for (auto v : roads[0]->getVehicles()) {
+        char* repr = new char[width];
+        for (int i = 0; i < width; i++) repr[i] = '-';
 
-            if (v != nullptr && std::abs(v->getPosition() - i) < 2) {
-                std::cout << "v";
-            p = true;
-            }
+        for (TrafficLight* trafficLight : road->getTrafficlights()) {
+            repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? 'G' : 'R';
         }
 
-        if (!p) std::cout << "-";
+        for (Vehicle* vehicle : road->getVehicles()) {
+            repr[(int)vehicle->getPosition()] = 'V';
+        }
 
+        for (int i = 0; i < width; i++) std::cout << repr[i];
+        std::cout << std::endl << std::endl << std::endl;
     }
 
-    std::cout << std::endl;
 }
 
-
-
+void Simulation::clear() {
+    // Clear console
+    #if defined(_WIN32)
+        system("cls");
+    #else
+        system("clear");
+    #endif  //finish
+}
