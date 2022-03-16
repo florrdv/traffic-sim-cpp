@@ -73,6 +73,7 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
 void Vehicle::tick(Vehicle* leadingVehicle) {
     updateSpeed();
     updateAcceleration(leadingVehicle);
+    stopping = false;
 }
 
 void Vehicle::stop() {
@@ -86,7 +87,6 @@ void Vehicle::decelerate() {
 
 void Vehicle::accelerate() {
     speedMax = SPEED_MAX;
-    stopping = false;
 }
 
 double Vehicle::getAcceleration() const {
