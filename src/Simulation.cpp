@@ -36,9 +36,9 @@ void Simulation::writeOn(std::ostream& onStream) {
         // onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<VehicleGenerator*> generators = road->getGenerators();
-            for (VehicleGenerator* generator: generators) {
+            for (VehicleGenerator* generator : generators) {
                 if (freqCounter * SIM_TIME > generator->getFrequency()) {
-                    Vehicle * v= new Vehicle;
+                    Vehicle* v = new Vehicle;
                     v->setPosition(0);
                     road->addVehicle(v);
                     freqCounter = 0;
@@ -58,14 +58,18 @@ void Simulation::writeOn(std::ostream& onStream) {
                 if (trafficLight->isGreen()) firstVehicle->accelerate();
                 else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
-
-                    if (distanceToLight < DECELERATION_DISTANCE) {
-                        firstVehicle->decelerate();
-                    }
+                    std::cout << firstVehicle->getId() << std::endl;
                     if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) {
                         firstVehicle->stop();
                     }
+                    else if (distanceToLight < DECELERATION_DISTANCE && distanceToLight > BRAKE_DISTANCE) {
+                        firstVehicle->decelerate();
+                    }
+
                 }
+
+                std::cout << firstVehicle->getSpeed() << std::endl;
+                std::cout << firstVehicle->getAcceleration() << std::endl;
             }
 
             for (Vehicle* vehicle : vehicles) {
@@ -101,6 +105,8 @@ void Simulation::print(double time) {
 
         for (TrafficLight* trafficLight : road->getTrafficlights()) {
             repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? 'G' : 'R';
+            for (int i = std::max(0, (int)(trafficLight->getPosition() - DECELERATION_DISTANCE)); i < trafficLight->getPosition(); i++) repr[i] = '=';
+            for (int i = std::max(0, (int)(trafficLight->getPosition() - BRAKE_DISTANCE)); i < trafficLight->getPosition(); i++) repr[i] = '|';
         }
 
         for (Vehicle* vehicle : road->getVehicles()) {

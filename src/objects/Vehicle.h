@@ -37,6 +37,7 @@ private:
 
     void updateSpeed();
     void updateAcceleration(Vehicle* leadingVehicle);
+    bool stopping = false;
 
 public:
     // Constructors / destructors
@@ -52,6 +53,7 @@ public:
     double getLength() const;
 
     double getSpeed() const;
+    double getAcceleration() const;
 
     void tick(Vehicle* leadingVehicle);
 
