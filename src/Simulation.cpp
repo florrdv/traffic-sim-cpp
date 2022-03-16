@@ -31,8 +31,8 @@ void Simulation::writeOn(std::ostream& onStream) {
     int cycleCounter = 0;
 
     while (countVehicles() > 0) {
-        onStream << "-------------------------------------------" << std::endl;
-        onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
+        // onStream << "-------------------------------------------" << std::endl;
+        // onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
@@ -48,9 +48,9 @@ void Simulation::writeOn(std::ostream& onStream) {
                 if (trafficLight->isGreen()) firstVehicle->accelerate();
                 else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
-                    
-                    if (distanceToLight < DECELERATION_DISTANCE) { 
-                        if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) firstVehicle->stop();
+
+                    if (distanceToLight < DECELERATION_DISTANCE) {
+                        if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
                         else firstVehicle->decelerate();
                     }
                 }
@@ -59,11 +59,13 @@ void Simulation::writeOn(std::ostream& onStream) {
             for (Vehicle* vehicle : vehicles) {
                 vehicle->tick(road->getLeadingVehicle(vehicle));
 
-                onStream << "Vehicle " << vehicle->getId() << std::endl;
-                onStream << "-> Road: " << road->getName() << std::endl;
-                onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+                // onStream << "Vehicle " << vehicle->getId() << std::endl;
+                // onStream << "-> Road: " << road->getName() << std::endl;
+                // onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+                // onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
             }
+
+            print();
 
             road->cleanup();
         }
@@ -71,6 +73,32 @@ void Simulation::writeOn(std::ostream& onStream) {
         cycleCounter++;
         std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
     }
+}
+
+void Simulation::print() {
+    int width = roads[0]->getLength();
+    TrafficLight* t = roads[0]->getTrafficlights()[0];
+
+    for (int i = 0; i < width; i++) {
+        bool p = false;
+        if (t->getPosition() == i) {
+            if (t->isGreen()) std::cout << "g";
+            else std::cout << "r";
+            p = true;
+        }
+        for (auto v : roads[0]->getVehicles()) {
+
+            if (v != nullptr && std::abs(v->getPosition() - i) < 2) {
+                std::cout << "v";
+            p = true;
+            }
+        }
+
+        if (!p) std::cout << "-";
+
+    }
+
+    std::cout << std::endl;
 }
 
 

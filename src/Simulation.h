@@ -25,6 +25,8 @@ public:
 
     void writeOn(std::ostream& onStream);
 
+    void print();
+
     // Safety specific
     bool properlyInitialized() { return _init == this; }
 
