@@ -45,6 +45,7 @@ public:
     const std::vector<Vehicle *> &getVehicles() const;
     void addVehicle(Vehicle *v);
     Vehicle* getLeadingVehicle(Vehicle *v);
+    Vehicle* getFirstToTrafficLight(TrafficLight *trafficLight) const;
 
     const std::vector<TrafficLight *> &getTrafficlights() const;
     void addTrafficLight(TrafficLight *t);

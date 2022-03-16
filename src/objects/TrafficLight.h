@@ -30,7 +30,7 @@ public:
     void setPosition(int position);
     int getCycle() const;
     void setCycle(int cycles);
-    bool getState() const;
+    bool isGreen() const;
 
     void toggle();
 

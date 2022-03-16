@@ -46,11 +46,13 @@ void Simulation::writeOn(std::ostream &onStream) {
                     onStream << "-> Road: " << road->getName() << std::endl;
                     onStream << "-> Position: " << vehicle->getPosition() << std::endl;
                     onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
-                    if (trafficLight->getState()) {
-                        vehicle->tick(road->getLeadingVehicle(vehicle));
+                    if (!trafficLight->isGreen()) {
+                        
                     } else if (vehicles[vehicles.size() - 1]->getPosition() + BRAKE_DISTANCE <
                                trafficLight->getPosition())
-                        vehicles[vehicles.size() - 1]->updateDeceleration();
+                        vehicles[vehicles.size() - 1]->decelerate();
+
+                    vehicle->tick(road->getLeadingVehicle(vehicle));
                 }
             }
             road->cleanup();

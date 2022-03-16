@@ -35,6 +35,6 @@ void TrafficLight::toggle() {
     on = !on;
 }
 
-bool TrafficLight::getState() const {
+bool TrafficLight::isGreen() const {
     return on;
 }
