@@ -34,6 +34,7 @@ private:
     double decelerationDistance = DECELERATION_DISTANCE;
     double decelerationFactor   = DECELERATION_FACTOR;
 
+
     void updateSpeed();
     void updateAcceleration(Vehicle* leadingVehicle);
 
@@ -57,6 +58,7 @@ public:
     void stop();
 
     void decelerate();
+    void accelerate();
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

@@ -42,17 +42,17 @@ void Simulation::writeOn(std::ostream& onStream) {
                     cycleCounter = 0;
                 }
 
-                if (trafficLight->isGreen() == false) {
-                    Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
-                    if (firstVehicle == nullptr) continue;
+                Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
+                if (firstVehicle == nullptr) continue;
 
+                if (trafficLight->isGreen()) firstVehicle->accelerate();
+                else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
                     
                     if (distanceToLight < DECELERATION_DISTANCE ) { 
                         if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) firstVehicle->stop();
                         else firstVehicle->decelerate();
                     }
-                    
                 }
             }
 

@@ -73,5 +73,9 @@ void Vehicle::stop() {
 }
 
 void Vehicle::decelerate() {
-    speedMax = DECELE
+    speedMax = decelerationFactor * speedMax;
+}
+
+void Vehicle::accelerate() {
+    speedMax = SPEED_MAX;
 }
