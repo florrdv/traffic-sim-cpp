@@ -35,20 +35,21 @@ void Simulation::writeOn(std::ostream& onStream) {
         // onStream << "-------------------------------------------" << std::endl;
         // onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
-            std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
-            std::vector<Vehicle*> vehicles = road->getVehicles();
             std::vector<VehicleGenerator*> generators = road->getGenerators();
             for (VehicleGenerator* generator: generators) {
-                if (freqCounter > generator->getFrequency()) {
+                if (freqCounter * SIM_TIME > generator->getFrequency()) {
                     Vehicle * v= new Vehicle;
                     v->setPosition(0);
-                    vehicles.push_back(v); 
+                    road->addVehicle(v);
                     freqCounter = 0;
                 }
             }
+            std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
+            std::vector<Vehicle*> vehicles = road->getVehicles();
             for (TrafficLight* trafficLight : trafficLights) {
                 if (cycleCounter > trafficLight->getCycle()) {
                     trafficLight->toggle();
+                    std::cout << "############# Light is now " << std::boolalpha << trafficLight->isGreen() << " #############" << std::endl;
                     cycleCounter = 0;
                 }
 
