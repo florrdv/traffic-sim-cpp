@@ -40,7 +40,10 @@ void Simulation::writeOn(std::ostream& onStream) {
             std::vector<VehicleGenerator*> generators = road->getGenerators();
             for (VehicleGenerator* generator: generators) {
                 if (freqCounter > generator->getFrequency()) {
-                    // vehicles.push_back()
+                    Vehicle * v= new Vehicle;
+                    v->setPosition(0);
+                    vehicles.push_back(v); 
+                    freqCounter = 0;
                 }
             }
             for (TrafficLight* trafficLight : trafficLights) {
