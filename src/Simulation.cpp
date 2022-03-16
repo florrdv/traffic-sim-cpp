@@ -29,6 +29,7 @@ int Simulation::countVehicles() const {
 void Simulation::writeOn(std::ostream& onStream) {
     int timestamp = 0;
     int cycleCounter = 0;
+    int freqCounter = 0;
 
     while (countVehicles() > 0) {
         // onStream << "-------------------------------------------" << std::endl;
@@ -36,6 +37,12 @@ void Simulation::writeOn(std::ostream& onStream) {
         for (Road* road : roads) {
             std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
+            std::vector<VehicleGenerator*> generators = road->getGenerators();
+            for (VehicleGenerator* generator: generators) {
+                if (freqCounter > generator->getFrequency()) {
+                    // vehicles.push_back()
+                }
+            }
             for (TrafficLight* trafficLight : trafficLights) {
                 if (cycleCounter > trafficLight->getCycle()) {
                     trafficLight->toggle();
@@ -44,14 +51,15 @@ void Simulation::writeOn(std::ostream& onStream) {
 
                 Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
                 if (firstVehicle == nullptr) continue;
-
                 if (trafficLight->isGreen()) firstVehicle->accelerate();
                 else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
                     if (distanceToLight < DECELERATION_DISTANCE) {
-                        if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
-                        else firstVehicle->decelerate();
+                        firstVehicle->decelerate();
+                    }
+                    if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) {
+                        firstVehicle->stop();
                     }
                 }
             }
@@ -71,7 +79,8 @@ void Simulation::writeOn(std::ostream& onStream) {
         }
         timestamp++;
         cycleCounter++;
-        std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
+        freqCounter++;
+        std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000)));
     }
 }
 
@@ -102,9 +111,9 @@ void Simulation::print(double time) {
 
 void Simulation::clear() {
     // Clear console
-    #if defined(_WIN32)
-        system("cls");
-    #else
-        system("clear");
-    #endif  //finish
+#if defined(_WIN32)
+    system("cls");
+#else
+    system("clear");
+#endif  //finish
 }

@@ -1,8 +1,6 @@
 #ifndef __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_
 #define __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_
 
-static double SPEEDUP                  = 5;
-
 static double VEHICLE_LENGTH           = 4;
 static double SPEED_MAX                = 16.6;
 static double ACCELERATION_MAX         = 1.44;
