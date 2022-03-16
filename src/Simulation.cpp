@@ -59,7 +59,7 @@ void Simulation::writeOn(std::ostream& onStream) {
                 else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
                     std::cout << firstVehicle->getId() << std::endl;
-                    if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) {
+                    if (distanceToLight < BRAKE_DISTANCE ) {
                         firstVehicle->stop();
                     }
                     else if (distanceToLight < DECELERATION_DISTANCE && distanceToLight > BRAKE_DISTANCE) {

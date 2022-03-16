@@ -37,7 +37,6 @@ private:
 
     void updateSpeed();
     void updateAcceleration(Vehicle* leadingVehicle);
-    bool stopping = false;
 
 public:
     // Constructors / destructors

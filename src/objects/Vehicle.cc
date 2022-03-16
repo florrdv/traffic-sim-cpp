@@ -57,8 +57,6 @@ void Vehicle::updateSpeed() {
 }
 
 void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
-    if (stopping) return;
-
     double delta = 0;
     if (leadingVehicle != nullptr) {
         double followDistance = leadingVehicle->getPosition() - position - leadingVehicle->getLength();
@@ -73,12 +71,10 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
 void Vehicle::tick(Vehicle* leadingVehicle) {
     updateSpeed();
     updateAcceleration(leadingVehicle);
-    stopping = false;
 }
 
 void Vehicle::stop() {
     acceleration = -brakeMax * speed / speedMax;
-    stopping = true;
 }
 
 void Vehicle::decelerate() {
