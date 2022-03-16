@@ -1,17 +1,17 @@
 <BAAN>
     <naam>Middelheimlaan</naam>
-    <lengte>30</lengte>
+    <lengte>50</lengte>
 </BAAN>
 
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
-    <positie>400</positie>
-    <cyclus>2</cyclus>
+    <positie>40</positie>
+    <cyclus>50</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
-    <positie>20</positie>
+    <positie>10</positie>
 </VOERTUIG>
 
 <VOERTUIG>

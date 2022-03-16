@@ -32,9 +32,9 @@ void TrafficLight::setCycle(int c) {
 }
 
 void TrafficLight::toggle() {
-    on = !on;
+    green = !green;
 }
 
 bool TrafficLight::isGreen() const {
-    return on;
+    return green;
 }

@@ -19,7 +19,7 @@ private:
 
     int position{};
     int cycle{};
-    bool on=true;
+    bool green=false;
 
 public:
     // Constructors / destructors
