@@ -54,6 +54,8 @@ public:
 
     void tick(Vehicle* leadingVehicle);
 
+    void stop();
+
     void decelerate();
 
     // Safety specific
