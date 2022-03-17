@@ -118,10 +118,10 @@ void Simulation::printForVisualizer() {
     int freqCounter = 0;
 
     while (countVehicles() > 0) {
-        std::cout << R"({ "time": )" << timestamp*SIM_TIME << ",";
+        std::cout << R"({"time": )" << timestamp*SIM_TIME << ",";
         for (Road *road: roads) {
-            std::cout << R"("roads": [{"name": ")" << road->getName() << "\", ";
-            std::cout << R"("length":)" << road->getLength() << ", ";
+            std::cout << R"("roads":[{"name":")" << road->getName() << "\",";
+            std::cout << R"("length":)" << road->getLength() << ",";
 //            std::vector<VehicleGenerator *> generators = road->getGenerators();
 //            for (VehicleGenerator *generator: generators) {
 //                if (freqCounter * SIM_TIME > generator->getFrequency()) {
@@ -131,24 +131,24 @@ void Simulation::printForVisualizer() {
 //                    freqCounter = 0;
 //                }
 //            }
-            std::cout << R"("cars": [ )";
+            std::cout << R"("cars":[)";
             std::vector<Vehicle *> vehicles = road->getVehicles();
             for (Vehicle *vehicle: vehicles) {
                 vehicle->tick(road->getLeadingVehicle(vehicle));
-                std::cout << R"({"x": )" << vehicle->getPosition() << "}";
-                if (vehicle != vehicles.back()) std::cout << ", ";
+                std::cout << R"({"x":)" << vehicle->getPosition() << "}";
+                if (vehicle != vehicles.back()) std::cout << ",";
             }
-            std::cout << " ],";
+            std::cout << "],";
 
-            std::cout << R"("lights": [ )";
+            std::cout << R"("lights":[)";
             std::vector<TrafficLight *> trafficLights = road->getTrafficlights();
             for (TrafficLight *trafficLight: trafficLights) {
                 if (cycleCounter > trafficLight->getCycle()) {
                     trafficLight->toggle();
                     cycleCounter = 0;
                 }
-                std::cout << R"({"x": )" << trafficLight->getPosition() << R"(, "green": )" << trafficLight->isGreen() << R"(} ] })";
-                if (trafficLight != trafficLights.back()) std::cout << ", ";
+                std::cout << R"({"x":)" << trafficLight->getPosition() << R"(,"green":)" << trafficLight->isGreen() << R"(})";
+                if (trafficLight != trafficLights.back()) std::cout << ",";
                 Vehicle *firstVehicle = road->getFirstToTrafficLight(trafficLight);
                 if (firstVehicle == nullptr) continue;
                 if (trafficLight->isGreen()) firstVehicle->accelerate();
@@ -165,7 +165,7 @@ void Simulation::printForVisualizer() {
             }
             road->cleanup();
         }
-        std::cout << ", \n";
+        std::cout << "]}]}"<< std::endl;
         timestamp++;
         cycleCounter++;
         freqCounter++;
