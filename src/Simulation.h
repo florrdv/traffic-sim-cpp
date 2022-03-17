@@ -28,6 +28,8 @@ public:
 
     void writeOn(std::ostream& onStream);
 
+    void printForVisualizer();
+
     // Safety specific
     bool properlyInitialized() { return _init == this; }
 
