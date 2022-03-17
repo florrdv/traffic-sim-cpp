@@ -136,12 +136,12 @@ Vehicle* Road::getFirstToTrafficLight(TrafficLight* t) const {
     int trafficLightPosition = t->getPosition();
     Vehicle* firstVehicle = nullptr;
     for (Vehicle* vehicle : vehicles) {
+        double distanceToLight = ((double)trafficLightPosition) - vehicle->getPosition();
         if (firstVehicle == nullptr) {
-            firstVehicle = vehicle;
+            if (distanceToLight > 0) firstVehicle = vehicle;
             continue;
         }
-
-        double distanceToLight = ((double)trafficLightPosition) - vehicle->getPosition();
+        
         double previousDistanceToLight = ((double)trafficLightPosition) - firstVehicle->getPosition();
 
         if (distanceToLight > 0 && distanceToLight && distanceToLight < previousDistanceToLight) firstVehicle = vehicle;

@@ -135,17 +135,17 @@ void Simulation::print(double time) {
         std::cout << road->getName() << std::endl;
         int width = road->getLength();
 
-        char* repr = new char[width];
-        for (int i = 0; i < width; i++) repr[i] = '-';
+        std::string* repr = new std::string[width];
+        for (int i = 0; i < width; i++) repr[i] = "-";
 
         for (Vehicle* vehicle : road->getVehicles()) {
-            repr[(int)vehicle->getPosition()] = 'F';
+            repr[(int)vehicle->getPosition()] = "🚘";
         }
 
         for (TrafficLight* trafficLight : road->getTrafficlights()) {
-            repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? 'G' : 'R';
+            repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? "🟢" : "🔴";
             Vehicle* v = road->getFirstToTrafficLight(trafficLight);
-            if (v != nullptr) repr[(int) v->getPosition()] = 'L';
+            if (v != nullptr) repr[(int) v->getPosition()] = "🚔";
         }
 
 
