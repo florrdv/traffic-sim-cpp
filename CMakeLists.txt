@@ -1,0 +1,32 @@
+cmake_minimum_required(VERSION 3.6)
+project(TrafficSim)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS " -std=c++98 ")
+set(CMAKE_EXE_LINKER_FLAGS -pthread)
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
+# Set src dir
+set(CMAKE_SOURCE_DIR src)
+
+# Set include dir
+include_directories(gtest/include)
+
+# Set Library dir
+link_directories(gtest/lib)
+
+# Set source files for RELEASE target
+set(FILES src/util/XMLParser.cc src/util/XMLParser.h src/lib/DesignByContract.h src/lib/pugixml/pugiconfig.hpp src/lib/pugixml/pugixml.cpp src/lib/pugixml/pugixml.hpp src/objects/Vehicle.h src/objects/Vehicle.cc src/objects/Road.h src/objects/Road.cc src/objects/TrafficLight.h src/objects/TrafficLight.cc src/Simulation.cpp src/Simulation.h)
+set(RELEASE_SOURCE_FILES src/TrafficSim.cc ${FILES} src/objects/VehicleGenerator.cc src/objects/VehicleGenerator.h)
+
+# Set source files for DEBUG target
+set(DEBUG_SOURCE_FILES src/TrafficSimTests.cc ${FILES})
+
+# Create RELEASE target
+add_executable(TrafficSim ${RELEASE_SOURCE_FILES})
+
+# Create DEBUG target
+add_executable(TrafficSimTests ${DEBUG_SOURCE_FILES})
+
+# Link library
+target_link_libraries(TrafficSimTests gtest)
