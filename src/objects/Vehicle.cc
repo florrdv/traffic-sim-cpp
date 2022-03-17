@@ -75,7 +75,6 @@ void Vehicle::updateSpeed() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     double newSpeed = speed + acceleration * simTime;
     if (newSpeed < 0) {
-        std::cout << "Editing speed" << std::endl;
         position -= std::pow(speed, 2) / (2 * acceleration);
         speed = 0.0;
     } else {

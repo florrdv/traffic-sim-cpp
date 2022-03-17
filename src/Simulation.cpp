@@ -98,12 +98,10 @@ void Simulation::writeOn(std::ostream& onStream) {
                 else {
                     double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
-                    if (distanceToLight < DECELERATION_DISTANCE) {
-                        firstVehicle->decelerate();
-                    }
-                    if (distanceToLight < BRAKE_DISTANCE && distanceToLight > BRAKE_DISTANCE / 2) {
-                        firstVehicle->stop();
-                    }
+                    std::cout << distanceToLight;
+
+                    if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
+                    else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
                 }
             }
 
@@ -140,13 +138,16 @@ void Simulation::print(double time) {
         char* repr = new char[width];
         for (int i = 0; i < width; i++) repr[i] = '-';
 
-        for (TrafficLight* trafficLight : road->getTrafficlights()) {
-            repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? 'G' : 'R';
+        for (Vehicle* vehicle : road->getVehicles()) {
+            repr[(int)vehicle->getPosition()] = 'F';
         }
 
-        for (Vehicle* vehicle : road->getVehicles()) {
-            repr[(int)vehicle->getPosition()] = 'V';
+        for (TrafficLight* trafficLight : road->getTrafficlights()) {
+            repr[(int)trafficLight->getPosition()] = trafficLight->isGreen() ? 'G' : 'R';
+            Vehicle* v = road->getFirstToTrafficLight(trafficLight);
+            if (v != nullptr) repr[(int) v->getPosition()] = 'L';
         }
+
 
         for (int i = 0; i < width; i++) std::cout << repr[i];
         std::cout << std::endl << std::endl;

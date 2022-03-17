@@ -6,7 +6,7 @@
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
     <positie>90</positie>
-    <cyclus>1000</cyclus>
+    <cyclus>100</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIG>
