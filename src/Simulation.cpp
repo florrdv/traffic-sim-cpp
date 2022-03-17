@@ -1,16 +1,46 @@
+// TODO: add fancy header thing
+
 #include "Simulation.h"
+#include "lib/DesignByContract.h"
 
 #include <iostream>
 #include <chrono>
 #include <thread>
+#include <algorithm>
+#include <vector>
 
-#include "./data/Constants.cc"
 
-void Simulation::addRoad(Road* r) {
-    roads.push_back(r);
+/**
+\n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
+*/
+Simulation::Simulation() {
+    _init = this;
+    ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+*/
+Simulation::~Simulation() {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+    for (Road* road : roads) delete road;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+\n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
+*/
+void Simulation::addRoad(Road* r) {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+    roads.push_back(r);
+    ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling roadName");
+*/
 Road* Simulation::findRoad(const std::string& roadName) {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling roadName");
     for (Road* r : roads) {
         if (r->getName() == roadName) {
             return r;
@@ -19,35 +49,45 @@ Road* Simulation::findRoad(const std::string& roadName) {
     return nullptr;
 }
 
-int Simulation::countVehicles() const {
-    int amnt = 0;
-    for (Road* road : roads) amnt += road->getVehicles().size();
-
-    return amnt;
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling countVehicles");
+\n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+*/
+int Simulation::countVehicles() {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling countVehicles");
+    int amount = 0;
+    for (Road* road : roads) amount += road->getVehicles().size();
+    ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+    return amount;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Simulation::writeOn(std::ostream& onStream) {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+
     int timestamp = 0;
     int cycleCounter = 0;
     int freqCounter = 0;
 
     while (countVehicles() > 0) {
-        // onStream << "-------------------------------------------" << std::endl;
-        // onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
+         onStream << "-------------------------------------------" << std::endl;
+         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<VehicleGenerator*> generators = road->getGenerators();
-//            for (VehicleGenerator* generator: generators) {
-//                if (freqCounter * SIM_TIME > generator->getFrequency()) {
-//                    Vehicle * v= new Vehicle;
-//                    v->setPosition(0);
-//                    road->addVehicle(v);
-//                    freqCounter = 0;
-//                }
-//            }
+            for (VehicleGenerator* generator: generators) {
+                if (freqCounter * SIM_TIME > generator->getFrequency()) {
+                    Vehicle * v= new Vehicle;
+                    v->setPosition(0);
+                    road->addVehicle(v);
+                    freqCounter = 0;
+                }
+            }
             std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
             for (TrafficLight* trafficLight : trafficLights) {
-                if (cycleCounter > trafficLight->getCycle()) {
+                if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {
                     trafficLight->toggle();
                     cycleCounter = 0;
                 }
@@ -69,15 +109,12 @@ void Simulation::writeOn(std::ostream& onStream) {
 
             for (Vehicle* vehicle : vehicles) {
                 vehicle->tick(road->getLeadingVehicle(vehicle));
-
-                // onStream << "Vehicle " << vehicle->getId() << std::endl;
-                // onStream << "-> Road: " << road->getName() << std::endl;
-                // onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                // onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+                 onStream << "Vehicle " << vehicle->getId() << std::endl;
+                 onStream << "-> Road: " << road->getName() << std::endl;
+                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+                 onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
             }
-
             print(timestamp * SIM_TIME);
-
             road->cleanup();
         }
         timestamp++;
@@ -87,7 +124,12 @@ void Simulation::writeOn(std::ostream& onStream) {
     }
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling print");
+*/
 void Simulation::print(double time) {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling print");
+
     clear();
 
     std::cout << "Time: T+ " << std::to_string(time) << std::endl;
@@ -112,7 +154,12 @@ void Simulation::print(double time) {
 
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling printForVisualizer");
+*/
 void Simulation::printForVisualizer() {
+    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling printForVisualizer");
+
     int timestamp = 0;
     int cycleCounter = 0;
     int freqCounter = 0;
@@ -143,7 +190,7 @@ void Simulation::printForVisualizer() {
             std::cout << R"("lights":[)";
             std::vector<TrafficLight *> trafficLights = road->getTrafficlights();
             for (TrafficLight *trafficLight: trafficLights) {
-                if (cycleCounter > trafficLight->getCycle()) {
+                if (cycleCounter*SIM_TIME > trafficLight->getCycle()) {
                     trafficLight->toggle();
                     cycleCounter = 0;
                 }
@@ -181,3 +228,5 @@ void Simulation::clear() {
     system("clear");
 #endif  //finish
 }
+
+

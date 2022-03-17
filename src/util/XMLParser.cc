@@ -8,7 +8,6 @@
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
 
-#include <map>
 #include "XMLParser.h"
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
@@ -17,12 +16,21 @@
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
 
-void XMLParser::validateNode(const pugi::xml_node &node, const std::string name) const {
+#include <map>
+
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
+void XMLParser::validateNode(const pugi::xml_node &node, const std::string& name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
 }
 
-int XMLParser::parsePositiveInteger(const std::string &s, const std::string name) const {
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n ENSURE(value>=0, "Parsed integer cannot be negative");
+*/
+int XMLParser::parsePositiveInteger(const std::string &s, const std::string& name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     int value;
     try {
@@ -31,10 +39,13 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string name
     } catch (std::exception &e) {
         throw std::runtime_error("XML: " + name + " must be an integer");
     }
-
+    ENSURE(value>=0, "Parsed integer cannot be negative");
     return value;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void XMLParser::parse(Simulation &sim) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file

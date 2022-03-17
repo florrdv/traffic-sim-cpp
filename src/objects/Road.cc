@@ -11,64 +11,96 @@
 #include "Road.h"
 #include "../lib/DesignByContract.h"
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 const std::string& Road::getName() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
     return name;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::setName(const std::string& n) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     Road::name = n;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 int Road::getLength() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     return length;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::setLength(int l) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     Road::length = l;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 const std::vector<Vehicle*>& Road::getVehicles() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     return vehicles;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::addVehicle(Vehicle* v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     v->setId(vehicles.size());
     vehicles.push_back(v);
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::addTrafficLight(TrafficLight* t) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     trafficLights.push_back(t);
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 const std::vector<TrafficLight*>& Road::getTrafficlights() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     return trafficLights;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 const std::vector<VehicleGenerator*>& Road::getGenerators() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     return generators;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::addGenerator(VehicleGenerator* g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     generators.push_back(g);
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 Vehicle* Road::getLeadingVehicle(Vehicle* v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     Vehicle* leadingVehicle = nullptr;
@@ -82,6 +114,9 @@ Vehicle* Road::getLeadingVehicle(Vehicle* v) {
     return leadingVehicle;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 void Road::cleanup() {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     std::vector<Vehicle*>::iterator vehicle = vehicles.begin();
@@ -89,17 +124,17 @@ void Road::cleanup() {
     while (vehicle != vehicles.end()) {
         if ((*vehicle)->getPosition() > length) {
             vehicles.erase(vehicle);
-        }
-        else ++vehicle;
+        } else ++vehicle;
     }
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+*/
 Vehicle* Road::getFirstToTrafficLight(TrafficLight* t) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
     int trafficLightPosition = t->getPosition();
     Vehicle* firstVehicle = nullptr;
-
     for (Vehicle* vehicle : vehicles) {
         if (firstVehicle == nullptr) {
             firstVehicle = vehicle;
@@ -111,6 +146,5 @@ Vehicle* Road::getFirstToTrafficLight(TrafficLight* t) const {
 
         if (distanceToLight > 0 && distanceToLight && distanceToLight < previousDistanceToLight) firstVehicle = vehicle;
     }
-
     return firstVehicle;
 }

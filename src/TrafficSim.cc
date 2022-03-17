@@ -13,16 +13,18 @@
 #include "Simulation.h"
 
 int main() {
-//    std::cout << "Hello, simulation!" << std::endl;
+    std::cout << "Hello, simulation!" << std::endl;
 
     Simulation sim = Simulation();
 
     XMLParser parser;
     parser.parse(sim);
 
-//    std::cout << "Parsing succesful!" << std::endl;
+    std::cout << "Parsing succesful!" << std::endl;
 
-//    sim.writeOn(std::cout);
+    sim.writeOn(std::cout);
+
+    // uncomment following line for vizualiser
     sim.printForVisualizer();
     return 0;
 }
