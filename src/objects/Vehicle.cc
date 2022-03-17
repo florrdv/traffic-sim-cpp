@@ -11,6 +11,7 @@
 #include "Vehicle.h"
 
 #include <cmath>
+#include <iostream>
 
 #include "../lib/DesignByContract.h"
 
@@ -44,7 +45,11 @@ void Vehicle::setId(int id_) {
 
 void Vehicle::updateSpeed() {
     double newSpeed = speed + acceleration * simTime;
-    if (newSpeed < 0) position -= std::pow(speed, 2) / (2 * acceleration);
+    if (newSpeed < 0) {
+        std::cout << "Editing speed" << std::endl;
+        position -= std::pow(speed, 2) / (2 * acceleration);
+        speed = 0.0;
+    }
     else {
         speed = newSpeed;
         position += speed * simTime + acceleration * std::pow(simTime, 2) / 2;
@@ -57,7 +62,7 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
         double followDistance = leadingVehicle->getPosition() - position - leadingVehicle->getLength();
         double speedDifference = speed - leadingVehicle->getSpeed();
 
-            delta = (followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) / followDistance;
+        delta = (followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) / followDistance;
     }
 
     acceleration = accelerationMax * (1 - std::pow(speed / speedMax, 4)) - delta * delta;
@@ -69,7 +74,7 @@ void Vehicle::tick(Vehicle* leadingVehicle) {
 }
 
 void Vehicle::stop() {
-    acceleration = - brakeMax * speed / speedMax;
+    acceleration = -brakeMax * speed / speedMax;
 }
 
 void Vehicle::decelerate() {
@@ -78,4 +83,8 @@ void Vehicle::decelerate() {
 
 void Vehicle::accelerate() {
     speedMax = SPEED_MAX;
+}
+
+double Vehicle::getAcceleration() const {
+    return acceleration;
 }

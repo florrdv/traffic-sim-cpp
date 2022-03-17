@@ -52,6 +52,7 @@ public:
     double getLength() const;
 
     double getSpeed() const;
+    double getAcceleration() const;
 
     void tick(Vehicle* leadingVehicle);
 
