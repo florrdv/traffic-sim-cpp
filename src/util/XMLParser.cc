@@ -50,7 +50,7 @@ void XMLParser::parse(Simulation &sim) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
     pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file("input/example.xml");
+    pugi::xml_parse_result result = doc.load_file("../input/example.xml");
     // Make sure the file was loaded correctly
     if (!result) throw std::runtime_error("XML: invalid file");
 

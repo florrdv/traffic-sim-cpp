@@ -6,7 +6,7 @@
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
     <positie>90</positie>
-    <cyclus>100</cyclus>
+    <cyclus>15</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIG>
@@ -16,10 +16,15 @@
 
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
+    <positie>20</positie>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
     <positie>0</positie>
 </VOERTUIG>
 
 <VOERTUIGGENERATOR>
     <baan>Middelheimlaan</baan>
-    <frequentie>5</frequentie>
+    <frequentie>3</frequentie>
 </VOERTUIGGENERATOR>

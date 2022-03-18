@@ -12,19 +12,23 @@
 #include "util/XMLParser.h"
 #include "Simulation.h"
 
+// put this on false if you want to use the CLI visualizer, put on true for pygame visualizer
+bool VISUALIZE = true;
+// In order to use the pygame visualizer, make sure you execute the following command from cmake-build-debug:
+// $ ./TrafficSim | python3 ../src/pse-traffic-simulation-visualizer/visualize.py
+
 int main() {
-    std::cout << "Hello, simulation!" << std::endl;
+    if (!VISUALIZE) std::cout << "Hello, simulation!" << std::endl;
 
     Simulation sim = Simulation();
 
     XMLParser parser;
     parser.parse(sim);
 
-    std::cout << "Parsing succesful!" << std::endl;
+    if (!VISUALIZE) std::cout << "Parsing succesful!" << std::endl;
 
-    sim.writeOn(std::cout);
+    if (!VISUALIZE) sim.writeOn(std::cout);
 
-    // uncomment following line for vizualiser
-    sim.printForVisualizer();
+    if (VISUALIZE) sim.printForVisualizer();
     return 0;
 }
