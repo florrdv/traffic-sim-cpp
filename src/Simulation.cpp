@@ -19,28 +19,28 @@ Simulation::Simulation() {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
 */
 Simulation::~Simulation() {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
     for (Road* road : roads) delete road;
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
 \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
 */
 void Simulation::addRoad(Road* r) {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling addRoad");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
     roads.push_back(r);
     ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling roadName");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
 */
 Road* Simulation::findRoad(const std::string& roadName) {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling roadName");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
     for (Road* r : roads) {
         if (r->getName() == roadName) {
             return r;
@@ -50,11 +50,11 @@ Road* Simulation::findRoad(const std::string& roadName) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling countVehicles");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
 \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
 */
 int Simulation::countVehicles() {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling countVehicles");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
     int amount = 0;
     for (Road* road : roads) amount += road->getVehicles().size();
     ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
@@ -62,10 +62,10 @@ int Simulation::countVehicles() {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
 */
 void Simulation::writeOn(std::ostream& onStream) {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
 
     int timestamp = 0;
     int cycleCounter = 0;
@@ -121,10 +121,10 @@ void Simulation::writeOn(std::ostream& onStream) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling print");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling print");
 */
 void Simulation::print(double time) {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling print");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling print");
 
     clear();
 
@@ -154,10 +154,10 @@ void Simulation::print(double time) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling printForVisualizer");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling printForVisualizer");
 */
 void Simulation::printForVisualizer() {
-    REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling printForVisualizer");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling printForVisualizer");
 
     int timestamp = 0;
     int cycleCounter = 0;
