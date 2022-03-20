@@ -7,8 +7,13 @@ set(CMAKE_EXE_LINKER_FLAGS -pthread)
 # Set include dir
 include_directories(gtest/include)
 
-# Set Library dir
-link_directories(gtest/lib)
+if(APPLE)
+    # Set Apple Silicon library dir
+    link_directories(gtest/lib_apple_silicon)
+else()
+    # Set general library dir (unix)
+    link_directories(gtest/lib)
+endif()
 
 set(RELEASE_SOURCE_FILES
         src/data/Constants.cc
