@@ -8,7 +8,6 @@
 
 //TODO: - add until parameter, to stop program from running "infinitely" long when a generator is in place
 //      - Add .txt files with expected output
-//      - Fix debug build not working on Ubuntu 20.04 (again)
 
 // THE VALID TESTS
 TEST(SimulationTests, ValidSimulationTest1) {
