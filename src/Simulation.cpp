@@ -228,3 +228,6 @@ void Simulation::clear() {
 }
 
 
+std::vector<Road*> Simulation::getRoads() const {
+    return roads;
+}

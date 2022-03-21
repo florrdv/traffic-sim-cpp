@@ -29,6 +29,8 @@ public:
     // Regular methods
     void addRoad(Road* r);
     Road* findRoad(const std::string& roadName);
+    std::vector<Road*> getRoads() const;
+    
     int countVehicles();
 
     void writeOn(std::ostream& onStream);

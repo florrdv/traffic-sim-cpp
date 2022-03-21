@@ -195,6 +195,10 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         }
     }
 
+    for (Road* road : sim->getRoads()) {
+
+    }
+
     // Vehicle generators
     for (std::pair<std::string, std::vector<VehicleGenerator*>> p : generators) {
         Road* road = sim.findRoad(p.first);
