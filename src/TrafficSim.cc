@@ -23,7 +23,7 @@ int main() {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim);
+    parser.parse(sim, "../input/example.xml");
 
     if (!VISUALIZE) std::cout << "Parsing succesful!" << std::endl;
 

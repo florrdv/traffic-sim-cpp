@@ -28,7 +28,7 @@ public:
     XMLParser() { _init = this; };
 
     // Regular methods
-    void parse(Simulation& sim);
+    void parse(Simulation& sim, const std::string file);
 
     // Safety specific
     const bool properlyInitialized() const { return _init == this; }

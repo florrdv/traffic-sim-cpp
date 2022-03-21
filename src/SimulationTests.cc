@@ -3,9 +3,30 @@
 
 #include "data/Constants.cc"
 #include "lib/TestingHelpers.h"
+#include "util/XMLParser.h"
+#include "Simulation.h"
+
 
 TEST(SimulationTests, Temp) {
     EXPECT_EQ(5, 5);
+}
+
+TEST(SimulationTests, FullSimulationTest1) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/FullSimulationTest1.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/FullSimulationTest1.txt";
+
+    std::string xmlPath = TEST_INPUT_FOLDER + "/FullSimulationTest1.xml";
+    
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    parser.parse(sim, xmlPath);
+
+    std::ofstream file(outPath);
+    sim.writeOn(file);
+    file.close();
+
+    EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, FileTestExample1) {

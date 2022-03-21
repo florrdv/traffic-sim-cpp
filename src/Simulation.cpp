@@ -72,8 +72,8 @@ void Simulation::writeOn(std::ostream& onStream) {
     int freqCounter = 0;
 
     while (countVehicles() > 0) {
-        //  onStream << "-------------------------------------------" << std::endl;
-        //  onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
+         onStream << "-------------------------------------------" << std::endl;
+         onStream << "Time: T+ " << timestamp * SIM_TIME << "s" << std::endl;
         for (Road* road : roads) {
             std::vector<VehicleGenerator*> generators = road->getGenerators();
             for (VehicleGenerator* generator: generators) {
@@ -105,12 +105,12 @@ void Simulation::writeOn(std::ostream& onStream) {
 
             for (Vehicle* vehicle : vehicles) {
                 vehicle->tick(road->getLeadingVehicle(vehicle));
-                //  onStream << "Vehicle " << vehicle->getId() << std::endl;
-                //  onStream << "-> Road: " << road->getName() << std::endl;
-                //  onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                //  onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+                 onStream << "Vehicle " << vehicle->getId() << std::endl;
+                 onStream << "-> Road: " << road->getName() << std::endl;
+                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+                 onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
             }
-            print(timestamp * SIM_TIME);
+            // print(timestamp * SIM_TIME);
             road->cleanup();
         }
         timestamp++;

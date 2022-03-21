@@ -1,0 +1,1350 @@
+-------------------------------------------
+Time: T+ 0s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0
+-> Speed: 0
+-------------------------------------------
+Time: T+ 0.0166s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00059521
+-> Speed: 0.023904
+-------------------------------------------
+Time: T+ 0.0332s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00158723
+-> Speed: 0.047808
+-------------------------------------------
+Time: T+ 0.0498s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00297605
+-> Speed: 0.071712
+-------------------------------------------
+Time: T+ 0.0664s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00476168
+-> Speed: 0.095616
+-------------------------------------------
+Time: T+ 0.083s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00694411
+-> Speed: 0.11952
+-------------------------------------------
+Time: T+ 0.0996s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.00952335
+-> Speed: 0.143424
+-------------------------------------------
+Time: T+ 0.1162s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0124994
+-> Speed: 0.167328
+-------------------------------------------
+Time: T+ 0.1328s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0158723
+-> Speed: 0.191232
+-------------------------------------------
+Time: T+ 0.1494s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0196419
+-> Speed: 0.215136
+-------------------------------------------
+Time: T+ 0.166s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0238084
+-> Speed: 0.23904
+-------------------------------------------
+Time: T+ 0.1826s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0283717
+-> Speed: 0.262944
+-------------------------------------------
+Time: T+ 0.1992s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0333317
+-> Speed: 0.286848
+-------------------------------------------
+Time: T+ 0.2158s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0386886
+-> Speed: 0.310752
+-------------------------------------------
+Time: T+ 0.2324s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0444423
+-> Speed: 0.334656
+-------------------------------------------
+Time: T+ 0.249s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0505928
+-> Speed: 0.35856
+-------------------------------------------
+Time: T+ 0.2656s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0571401
+-> Speed: 0.382464
+-------------------------------------------
+Time: T+ 0.2822s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0640842
+-> Speed: 0.406368
+-------------------------------------------
+Time: T+ 0.2988s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0714251
+-> Speed: 0.430272
+-------------------------------------------
+Time: T+ 0.3154s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0791629
+-> Speed: 0.454176
+-------------------------------------------
+Time: T+ 0.332s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0872974
+-> Speed: 0.47808
+-------------------------------------------
+Time: T+ 0.3486s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.0958287
+-> Speed: 0.501984
+-------------------------------------------
+Time: T+ 0.3652s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.104757
+-> Speed: 0.525888
+-------------------------------------------
+Time: T+ 0.3818s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.114082
+-> Speed: 0.549792
+-------------------------------------------
+Time: T+ 0.3984s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.123804
+-> Speed: 0.573696
+-------------------------------------------
+Time: T+ 0.415s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.133922
+-> Speed: 0.5976
+-------------------------------------------
+Time: T+ 0.4316s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.144438
+-> Speed: 0.621504
+-------------------------------------------
+Time: T+ 0.4482s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.15535
+-> Speed: 0.645408
+-------------------------------------------
+Time: T+ 0.4648s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.166659
+-> Speed: 0.669312
+-------------------------------------------
+Time: T+ 0.4814s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.178364
+-> Speed: 0.693216
+-------------------------------------------
+Time: T+ 0.498s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.190467
+-> Speed: 0.71712
+-------------------------------------------
+Time: T+ 0.5146s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.202966
+-> Speed: 0.741023
+-------------------------------------------
+Time: T+ 0.5312s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.215863
+-> Speed: 0.764927
+-------------------------------------------
+Time: T+ 0.5478s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.229156
+-> Speed: 0.788831
+-------------------------------------------
+Time: T+ 0.5644s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.242845
+-> Speed: 0.812735
+-------------------------------------------
+Time: T+ 0.581s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.256932
+-> Speed: 0.836639
+-------------------------------------------
+Time: T+ 0.5976s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.271415
+-> Speed: 0.860543
+-------------------------------------------
+Time: T+ 0.6142s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.286296
+-> Speed: 0.884447
+-------------------------------------------
+Time: T+ 0.6308s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.301573
+-> Speed: 0.90835
+-------------------------------------------
+Time: T+ 0.6474s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.317247
+-> Speed: 0.932254
+-------------------------------------------
+Time: T+ 0.664s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.333317
+-> Speed: 0.956158
+-------------------------------------------
+Time: T+ 0.6806s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.349785
+-> Speed: 0.980062
+-------------------------------------------
+Time: T+ 0.6972s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.366649
+-> Speed: 1.00397
+-------------------------------------------
+Time: T+ 0.7138s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.38391
+-> Speed: 1.02787
+-------------------------------------------
+Time: T+ 0.7304s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.401568
+-> Speed: 1.05177
+-------------------------------------------
+Time: T+ 0.747s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.419622
+-> Speed: 1.07568
+-------------------------------------------
+Time: T+ 0.7636s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.438074
+-> Speed: 1.09958
+-------------------------------------------
+Time: T+ 0.7802s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.456922
+-> Speed: 1.12348
+-------------------------------------------
+Time: T+ 0.7968s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.476167
+-> Speed: 1.14739
+-------------------------------------------
+Time: T+ 0.8134s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.495809
+-> Speed: 1.17129
+-------------------------------------------
+Time: T+ 0.83s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.515847
+-> Speed: 1.19519
+-------------------------------------------
+Time: T+ 0.8466s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.536283
+-> Speed: 1.2191
+-------------------------------------------
+Time: T+ 0.8632s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.557115
+-> Speed: 1.243
+-------------------------------------------
+Time: T+ 0.8798s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.578344
+-> Speed: 1.2669
+-------------------------------------------
+Time: T+ 0.8964s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.59997
+-> Speed: 1.29081
+-------------------------------------------
+Time: T+ 0.913s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.621992
+-> Speed: 1.31471
+-------------------------------------------
+Time: T+ 0.9296s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.644412
+-> Speed: 1.33861
+-------------------------------------------
+Time: T+ 0.9462s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.667228
+-> Speed: 1.36252
+-------------------------------------------
+Time: T+ 0.9628s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.690441
+-> Speed: 1.38642
+-------------------------------------------
+Time: T+ 0.9794s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.714051
+-> Speed: 1.41032
+-------------------------------------------
+Time: T+ 0.996s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.738057
+-> Speed: 1.43422
+-------------------------------------------
+Time: T+ 1.0126s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.76246
+-> Speed: 1.45813
+-------------------------------------------
+Time: T+ 1.0292s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.787261
+-> Speed: 1.48203
+-------------------------------------------
+Time: T+ 1.0458s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.812457
+-> Speed: 1.50593
+-------------------------------------------
+Time: T+ 1.0624s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.838051
+-> Speed: 1.52983
+-------------------------------------------
+Time: T+ 1.079s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.864041
+-> Speed: 1.55374
+-------------------------------------------
+Time: T+ 1.0956s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.890429
+-> Speed: 1.57764
+-------------------------------------------
+Time: T+ 1.1122s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.917213
+-> Speed: 1.60154
+-------------------------------------------
+Time: T+ 1.1288s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.944393
+-> Speed: 1.62544
+-------------------------------------------
+Time: T+ 1.1454s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.971971
+-> Speed: 1.64935
+-------------------------------------------
+Time: T+ 1.162s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 0.999945
+-> Speed: 1.67325
+-------------------------------------------
+Time: T+ 1.1786s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.02832
+-> Speed: 1.69715
+-------------------------------------------
+Time: T+ 1.1952s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.05708
+-> Speed: 1.72105
+-------------------------------------------
+Time: T+ 1.2118s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.08625
+-> Speed: 1.74495
+-------------------------------------------
+Time: T+ 1.2284s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.11581
+-> Speed: 1.76885
+-------------------------------------------
+Time: T+ 1.245s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.14577
+-> Speed: 1.79275
+-------------------------------------------
+Time: T+ 1.2616s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.17612
+-> Speed: 1.81665
+-------------------------------------------
+Time: T+ 1.2782s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.20687
+-> Speed: 1.84055
+-------------------------------------------
+Time: T+ 1.2948s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.23802
+-> Speed: 1.86445
+-------------------------------------------
+Time: T+ 1.3114s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.26957
+-> Speed: 1.88835
+-------------------------------------------
+Time: T+ 1.328s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.30151
+-> Speed: 1.91225
+-------------------------------------------
+Time: T+ 1.3446s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.33385
+-> Speed: 1.93615
+-------------------------------------------
+Time: T+ 1.3612s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.36658
+-> Speed: 1.96005
+-------------------------------------------
+Time: T+ 1.3778s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.39972
+-> Speed: 1.98395
+-------------------------------------------
+Time: T+ 1.3944s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.43324
+-> Speed: 2.00785
+-------------------------------------------
+Time: T+ 1.411s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.46717
+-> Speed: 2.03175
+-------------------------------------------
+Time: T+ 1.4276s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.50149
+-> Speed: 2.05565
+-------------------------------------------
+Time: T+ 1.4442s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.53621
+-> Speed: 2.07955
+-------------------------------------------
+Time: T+ 1.4608s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.57133
+-> Speed: 2.10345
+-------------------------------------------
+Time: T+ 1.4774s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.60684
+-> Speed: 2.12734
+-------------------------------------------
+Time: T+ 1.494s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.64275
+-> Speed: 2.15124
+-------------------------------------------
+Time: T+ 1.5106s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.67905
+-> Speed: 2.17514
+-------------------------------------------
+Time: T+ 1.5272s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.71576
+-> Speed: 2.19904
+-------------------------------------------
+Time: T+ 1.5438s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.75285
+-> Speed: 2.22293
+-------------------------------------------
+Time: T+ 1.5604s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.79035
+-> Speed: 2.24683
+-------------------------------------------
+Time: T+ 1.577s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.82824
+-> Speed: 2.27073
+-------------------------------------------
+Time: T+ 1.5936s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.86653
+-> Speed: 2.29462
+-------------------------------------------
+Time: T+ 1.6102s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.90522
+-> Speed: 2.31852
+-------------------------------------------
+Time: T+ 1.6268s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.9443
+-> Speed: 2.34241
+-------------------------------------------
+Time: T+ 1.6434s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 1.98378
+-> Speed: 2.36631
+-------------------------------------------
+Time: T+ 1.66s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.02365
+-> Speed: 2.3902
+-------------------------------------------
+Time: T+ 1.6766s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.06393
+-> Speed: 2.41409
+-------------------------------------------
+Time: T+ 1.6932s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.1046
+-> Speed: 2.43799
+-------------------------------------------
+Time: T+ 1.7098s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.14566
+-> Speed: 2.46188
+-------------------------------------------
+Time: T+ 1.7264s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.18712
+-> Speed: 2.48577
+-------------------------------------------
+Time: T+ 1.743s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.22898
+-> Speed: 2.50966
+-------------------------------------------
+Time: T+ 1.7596s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.27124
+-> Speed: 2.53356
+-------------------------------------------
+Time: T+ 1.7762s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.31389
+-> Speed: 2.55745
+-------------------------------------------
+Time: T+ 1.7928s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.35694
+-> Speed: 2.58134
+-------------------------------------------
+Time: T+ 1.8094s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.40038
+-> Speed: 2.60523
+-------------------------------------------
+Time: T+ 1.826s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.44422
+-> Speed: 2.62912
+-------------------------------------------
+Time: T+ 1.8426s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.48846
+-> Speed: 2.65301
+-------------------------------------------
+Time: T+ 1.8592s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.5331
+-> Speed: 2.67689
+-------------------------------------------
+Time: T+ 1.8758s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.57813
+-> Speed: 2.70078
+-------------------------------------------
+Time: T+ 1.8924s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.62356
+-> Speed: 2.72467
+-------------------------------------------
+Time: T+ 1.909s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.66938
+-> Speed: 2.74856
+-------------------------------------------
+Time: T+ 1.9256s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.7156
+-> Speed: 2.77244
+-------------------------------------------
+Time: T+ 1.9422s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.76222
+-> Speed: 2.79633
+-------------------------------------------
+Time: T+ 1.9588s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.80923
+-> Speed: 2.82021
+-------------------------------------------
+Time: T+ 1.9754s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.85664
+-> Speed: 2.8441
+-------------------------------------------
+Time: T+ 1.992s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.90445
+-> Speed: 2.86798
+-------------------------------------------
+Time: T+ 2.0086s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 2.95265
+-> Speed: 2.89186
+-------------------------------------------
+Time: T+ 2.0252s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.00125
+-> Speed: 2.91574
+-------------------------------------------
+Time: T+ 2.0418s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.05025
+-> Speed: 2.93963
+-------------------------------------------
+Time: T+ 2.0584s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.09964
+-> Speed: 2.96351
+-------------------------------------------
+Time: T+ 2.075s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.14943
+-> Speed: 2.98739
+-------------------------------------------
+Time: T+ 2.0916s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.19961
+-> Speed: 3.01126
+-------------------------------------------
+Time: T+ 2.1082s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.2502
+-> Speed: 3.03514
+-------------------------------------------
+Time: T+ 2.1248s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.30117
+-> Speed: 3.05902
+-------------------------------------------
+Time: T+ 2.1414s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.35255
+-> Speed: 3.0829
+-------------------------------------------
+Time: T+ 2.158s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.40432
+-> Speed: 3.10677
+-------------------------------------------
+Time: T+ 2.1746s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.45649
+-> Speed: 3.13065
+-------------------------------------------
+Time: T+ 2.1912s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.50905
+-> Speed: 3.15452
+-------------------------------------------
+Time: T+ 2.2078s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.56201
+-> Speed: 3.17839
+-------------------------------------------
+Time: T+ 2.2244s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.61536
+-> Speed: 3.20226
+-------------------------------------------
+Time: T+ 2.241s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.66912
+-> Speed: 3.22614
+-------------------------------------------
+Time: T+ 2.2576s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.72326
+-> Speed: 3.25001
+-------------------------------------------
+Time: T+ 2.2742s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.77781
+-> Speed: 3.27387
+-------------------------------------------
+Time: T+ 2.2908s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.83275
+-> Speed: 3.29774
+-------------------------------------------
+Time: T+ 2.3074s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.88809
+-> Speed: 3.32161
+-------------------------------------------
+Time: T+ 2.324s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.94382
+-> Speed: 3.34547
+-------------------------------------------
+Time: T+ 2.3406s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 3.99995
+-> Speed: 3.36934
+-------------------------------------------
+Time: T+ 2.3572s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.05647
+-> Speed: 3.3932
+-------------------------------------------
+Time: T+ 2.3738s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.11339
+-> Speed: 3.41707
+-------------------------------------------
+Time: T+ 2.3904s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.17071
+-> Speed: 3.44093
+-------------------------------------------
+Time: T+ 2.407s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.22843
+-> Speed: 3.46479
+-------------------------------------------
+Time: T+ 2.4236s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.28653
+-> Speed: 3.48864
+-------------------------------------------
+Time: T+ 2.4402s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.34504
+-> Speed: 3.5125
+-------------------------------------------
+Time: T+ 2.4568s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.40394
+-> Speed: 3.53636
+-------------------------------------------
+Time: T+ 2.4734s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.46324
+-> Speed: 3.56021
+-------------------------------------------
+Time: T+ 2.49s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.52293
+-> Speed: 3.58407
+-------------------------------------------
+Time: T+ 2.5066s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.58302
+-> Speed: 3.60792
+-------------------------------------------
+Time: T+ 2.5232s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.64351
+-> Speed: 3.63177
+-------------------------------------------
+Time: T+ 2.5398s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.70439
+-> Speed: 3.65562
+-------------------------------------------
+Time: T+ 2.5564s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.76567
+-> Speed: 3.67947
+-------------------------------------------
+Time: T+ 2.573s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.82734
+-> Speed: 3.70331
+-------------------------------------------
+Time: T+ 2.5896s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.88941
+-> Speed: 3.72716
+-------------------------------------------
+Time: T+ 2.6062s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 4.95187
+-> Speed: 3.751
+-------------------------------------------
+Time: T+ 2.6228s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.01473
+-> Speed: 3.77484
+-------------------------------------------
+Time: T+ 2.6394s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.07799
+-> Speed: 3.79868
+-------------------------------------------
+Time: T+ 2.656s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.14164
+-> Speed: 3.82252
+-------------------------------------------
+Time: T+ 2.6726s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.20569
+-> Speed: 3.84636
+-------------------------------------------
+Time: T+ 2.6892s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.27013
+-> Speed: 3.87019
+-------------------------------------------
+Time: T+ 2.7058s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.33497
+-> Speed: 3.89403
+-------------------------------------------
+Time: T+ 2.7224s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.4002
+-> Speed: 3.91786
+-------------------------------------------
+Time: T+ 2.739s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.46583
+-> Speed: 3.94169
+-------------------------------------------
+Time: T+ 2.7556s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.53186
+-> Speed: 3.96552
+-------------------------------------------
+Time: T+ 2.7722s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.59828
+-> Speed: 3.98934
+-------------------------------------------
+Time: T+ 2.7888s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.6651
+-> Speed: 4.01317
+-------------------------------------------
+Time: T+ 2.8054s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.73231
+-> Speed: 4.03699
+-------------------------------------------
+Time: T+ 2.822s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.79991
+-> Speed: 4.06081
+-------------------------------------------
+Time: T+ 2.8386s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.86792
+-> Speed: 4.08463
+-------------------------------------------
+Time: T+ 2.8552s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 5.93631
+-> Speed: 4.10844
+-------------------------------------------
+Time: T+ 2.8718s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.00511
+-> Speed: 4.13226
+-------------------------------------------
+Time: T+ 2.8884s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.0743
+-> Speed: 4.15607
+-------------------------------------------
+Time: T+ 2.905s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.14388
+-> Speed: 4.17988
+-------------------------------------------
+Time: T+ 2.9216s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.21386
+-> Speed: 4.20369
+-------------------------------------------
+Time: T+ 2.9382s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.28423
+-> Speed: 4.22749
+-------------------------------------------
+Time: T+ 2.9548s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.355
+-> Speed: 4.2513
+-------------------------------------------
+Time: T+ 2.9714s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.42617
+-> Speed: 4.2751
+-------------------------------------------
+Time: T+ 2.988s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.49773
+-> Speed: 4.2989
+-------------------------------------------
+Time: T+ 3.0046s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.56968
+-> Speed: 4.32269
+-------------------------------------------
+Time: T+ 3.0212s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.64203
+-> Speed: 4.34649
+-------------------------------------------
+Time: T+ 3.0378s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.71477
+-> Speed: 4.37028
+-------------------------------------------
+Time: T+ 3.0544s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.78791
+-> Speed: 4.39407
+-------------------------------------------
+Time: T+ 3.071s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.86145
+-> Speed: 4.41785
+-------------------------------------------
+Time: T+ 3.0876s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 6.93537
+-> Speed: 4.44164
+-------------------------------------------
+Time: T+ 3.1042s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.0097
+-> Speed: 4.46542
+-------------------------------------------
+Time: T+ 3.1208s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.08442
+-> Speed: 4.4892
+-------------------------------------------
+Time: T+ 3.1374s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.15953
+-> Speed: 4.51298
+-------------------------------------------
+Time: T+ 3.154s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.23504
+-> Speed: 4.53675
+-------------------------------------------
+Time: T+ 3.1706s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.31094
+-> Speed: 4.56052
+-------------------------------------------
+Time: T+ 3.1872s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.38723
+-> Speed: 4.58429
+-------------------------------------------
+Time: T+ 3.2038s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.46392
+-> Speed: 4.60805
+-------------------------------------------
+Time: T+ 3.2204s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.54101
+-> Speed: 4.63181
+-------------------------------------------
+Time: T+ 3.237s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.61849
+-> Speed: 4.65557
+-------------------------------------------
+Time: T+ 3.2536s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.69636
+-> Speed: 4.67933
+-------------------------------------------
+Time: T+ 3.2702s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.77463
+-> Speed: 4.70308
+-------------------------------------------
+Time: T+ 3.2868s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.85329
+-> Speed: 4.72683
+-------------------------------------------
+Time: T+ 3.3034s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 7.93235
+-> Speed: 4.75058
+-------------------------------------------
+Time: T+ 3.32s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.0118
+-> Speed: 4.77432
+-------------------------------------------
+Time: T+ 3.3366s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.09165
+-> Speed: 4.79806
+-------------------------------------------
+Time: T+ 3.3532s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.17189
+-> Speed: 4.8218
+-------------------------------------------
+Time: T+ 3.3698s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.25252
+-> Speed: 4.84553
+-------------------------------------------
+Time: T+ 3.3864s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.33355
+-> Speed: 4.86927
+-------------------------------------------
+Time: T+ 3.403s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.41497
+-> Speed: 4.89299
+-------------------------------------------
+Time: T+ 3.4196s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.49678
+-> Speed: 4.91672
+-------------------------------------------
+Time: T+ 3.4362s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.57899
+-> Speed: 4.94044
+-------------------------------------------
+Time: T+ 3.4528s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.66159
+-> Speed: 4.96415
+-------------------------------------------
+Time: T+ 3.4694s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.74459
+-> Speed: 4.98786
+-------------------------------------------
+Time: T+ 3.486s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.82798
+-> Speed: 5.01157
+-------------------------------------------
+Time: T+ 3.5026s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.91176
+-> Speed: 5.03528
+-------------------------------------------
+Time: T+ 3.5192s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 8.99593
+-> Speed: 5.05898
+-------------------------------------------
+Time: T+ 3.5358s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.0805
+-> Speed: 5.08268
+-------------------------------------------
+Time: T+ 3.5524s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.16546
+-> Speed: 5.10637
+-------------------------------------------
+Time: T+ 3.569s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.25082
+-> Speed: 5.13006
+-------------------------------------------
+Time: T+ 3.5856s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.33657
+-> Speed: 5.15375
+-------------------------------------------
+Time: T+ 3.6022s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.42271
+-> Speed: 5.17743
+-------------------------------------------
+Time: T+ 3.6188s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.50925
+-> Speed: 5.20111
+-------------------------------------------
+Time: T+ 3.6354s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.59617
+-> Speed: 5.22478
+-------------------------------------------
+Time: T+ 3.652s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.68349
+-> Speed: 5.24845
+-------------------------------------------
+Time: T+ 3.6686s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.77121
+-> Speed: 5.27212
+-------------------------------------------
+Time: T+ 3.6852s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.85931
+-> Speed: 5.29578
+-------------------------------------------
+Time: T+ 3.7018s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 9.94781
+-> Speed: 5.31943
+-------------------------------------------
+Time: T+ 3.7184s
+Vehicle 0
+-> Road: Middelheimlaan
+-> Position: 10.0367
+-> Speed: 5.34309

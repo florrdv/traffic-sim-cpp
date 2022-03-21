@@ -46,11 +46,11 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string& nam
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
 */
-void XMLParser::parse(Simulation &sim) {
+void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
     pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file("../input/example.xml");
+    pugi::xml_parse_result result = doc.load_file(file.c_str());
     // Make sure the file was loaded correctly
     if (!result) throw std::runtime_error("XML: invalid file");
 
