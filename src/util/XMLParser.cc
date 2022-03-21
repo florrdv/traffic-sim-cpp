@@ -180,7 +180,9 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
         // Register the traffic light
-        for (TrafficLight* t : p.second) road->addTrafficLight(t);
+        for (TrafficLight* t : p.second) {
+            if (t->getPosition() <= road->getLength()) road->addTrafficLight(t);
+        }
     }
 
     // Vehicle generators
