@@ -39,6 +39,8 @@ set(DEBUG_SOURCE_FILES
         src/data/Constants.cc
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
+        src/lib/TestingHelpers.h
+        src/lib/TestingHelpers.cc
         src/lib/pugixml/pugixml.hpp
         src/lib/DesignByContract.h
         src/objects/Road.cc

@@ -3,6 +3,6 @@
 
 #include <string>
 
-bool FileCompare(const std::string leftFileName, const std::string rightFileName);
+bool fileCompare(const std::string leftFileName, const std::string rightFileName);
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_LIB_TESTINGHELPERS_H_

@@ -2,7 +2,7 @@
 
 #include "TestingHelpers.h"
 
-bool FileCompare(const std::string leftFileName, const std::string rightFileName) {
+bool fileCompare(const std::string leftFileName, const std::string rightFileName) {
 	std::ifstream leftFile, rightFile;
 	char leftRead, rightRead;
 	bool result;
