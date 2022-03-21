@@ -19,13 +19,13 @@
 #include <map>
 
 // Een verkeerssituatie is consistent als:
-// • Elk voertuig staat op een bestaande baan.                              OK
-// • Elk verkeerslicht staat op een bestaande baan.                         OK
-// • Elke voertuiggenerator staat op een bestaande baan.                    OK
-// • De positie van elk voertuig is kleiner dan de lengte van de baan.      OK
-// • De positie van elk verkeerslicht is kleiner dan de lengte van de baan. OK
-// • Er is maximaal ´e´en voertuiggenerator op elke baan.                   PENDING
-// • Een verkeerslicht mag zich niet in de vertraagafstand van een ander    PENDING
+// • Elk voertuig staat op een bestaande baan.                              OK UNTESTED
+// • Elk verkeerslicht staat op een bestaande baan.                         OK UNTESTED
+// • Elke voertuiggenerator staat op een bestaande baan.                    OK UNTESTED
+// • De positie van elk voertuig is kleiner dan de lengte van de baan.      OK UNTESTED
+// • De positie van elk verkeerslicht is kleiner dan de lengte van de baan. OK UNTESTED
+// • Er is maximaal ´e´en voertuiggenerator op elke baan.                   OK UNTESTED
+// • Een verkeerslicht mag zich niet in de vertraagafstand van een ander    
 // verkeerslicht bevinden (zie Appendix B).
 
  /**
@@ -199,6 +199,8 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     for (std::pair<std::string, std::vector<VehicleGenerator*>> p : generators) {
         Road* road = sim.findRoad(p.first);
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+
+        if (p.second.size() > 1) throw std::runtime_error("XML: multiple vehicle generators on road " + p.first);
 
         for (VehicleGenerator* g : p.second) road->addGenerator(g);
     }
