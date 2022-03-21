@@ -35,7 +35,6 @@ TEST(SimulationTests, FileTestExample3) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/FileTestExample3.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/test1.txt";
 
-
     std::ofstream temp(outPath);
 	temp << generateYes();
 	temp.close();
