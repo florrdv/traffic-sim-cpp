@@ -18,3 +18,11 @@ void VehicleGenerator::setFrequency(int frequency_) {
     ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly greater than 0");
     frequency = frequency_;
 }
+
+double VehicleGenerator::getPosition() const {
+    return position;
+}
+
+void VehicleGenerator::setPosition(double p) {
+    position = p;
+}

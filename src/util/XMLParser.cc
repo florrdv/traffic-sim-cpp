@@ -190,7 +190,9 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         Road* road = sim.findRoad(p.first);
         if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
 
-        for (VehicleGenerator* g : p.second) road->addGenerator(g);
+        for (VehicleGenerator* g : p.second) {
+            if (g->getPosition() <= road->getLength()) road->addGenerator(g);
+        }
     }
 }
 
