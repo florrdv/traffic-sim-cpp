@@ -17,9 +17,6 @@ public:
     int getFrequency() const;
     void setFrequency(int frequency_);
 
-    void setPosition(double p);
-    double getPosition() const;
-
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };
