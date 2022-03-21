@@ -1,0 +1,11 @@
+<BAAN>
+    <naam>Groenenborgelaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+<!--Road "Middelheimlaan" was not defined-->
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>
+

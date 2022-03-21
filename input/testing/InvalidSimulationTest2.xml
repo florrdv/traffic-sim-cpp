@@ -1,0 +1,9 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>10</lengte>
+</BAAN>
+<!--Vehicle position cannot be negative-->
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>-20</positie>
+</VOERTUIG>

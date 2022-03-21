@@ -1,0 +1,25 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+
+<VERKEERSLICHT>
+<baan>Middelheimlaan</baan>
+<positie>90</positie>
+<cyclus>15</cyclus>
+</VERKEERSLICHT>
+
+<VOERTUIG>
+<baan>Middelheimlaan</baan>
+<positie>40</positie>
+</VOERTUIG>
+
+<VOERTUIG>
+<baan>Middelheimlaan</baan>
+<positie>20</positie>
+</VOERTUIG>
+
+<VOERTUIGGENERATOR>
+<baan>Middelheimlaan</baan>
+<frequentie>3</frequentie>
+</VOERTUIGGENERATOR>

@@ -1,0 +1,10 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+<!--Traffic light cycle must be strictly positive-->
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>0</cyclus>
+</VERKEERSLICHT>

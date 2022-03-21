@@ -1,0 +1,21 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>-20</lengte>
+</BAAN>
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>0</positie>
+</VOERTUIG>
+
+<!--Cannot have two traffic lights on the same position-->
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>
+
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>2</cyclus>
+</VERKEERSLICHT>

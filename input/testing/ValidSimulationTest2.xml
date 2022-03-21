@@ -1,0 +1,15 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>50</lengte>
+</BAAN>
+
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>45</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>0</positie>
+</VOERTUIG>

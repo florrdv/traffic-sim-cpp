@@ -1,0 +1,9 @@
+<!--Road length must be strictly positive-->
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>0</lengte>
+</BAAN>
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>0</positie>
+</VOERTUIG>

@@ -9,6 +9,12 @@
     <cyclus>15</cyclus>
 </VERKEERSLICHT>
 
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>45</positie>
+    <cyclus>12</cyclus>
+</VERKEERSLICHT>
+
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
     <positie>40</positie>
@@ -17,11 +23,6 @@
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
     <positie>20</positie>
-</VOERTUIG>
-
-<VOERTUIG>
-    <baan>Middelheimlaan</baan>
-    <positie>0</positie>
 </VOERTUIG>
 
 <VOERTUIGGENERATOR>
