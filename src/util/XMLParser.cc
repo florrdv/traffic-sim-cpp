@@ -9,6 +9,8 @@
  */
 
 #include "XMLParser.h"
+
+#include "../data/Constants.cc"
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"
@@ -18,19 +20,19 @@
 
 #include <map>
 
-// Een verkeerssituatie is consistent als:
-// • Elk voertuig staat op een bestaande baan.                              OK UNTESTED
-// • Elk verkeerslicht staat op een bestaande baan.                         OK UNTESTED
-// • Elke voertuiggenerator staat op een bestaande baan.                    OK UNTESTED
-// • De positie van elk voertuig is kleiner dan de lengte van de baan.      OK UNTESTED
-// • De positie van elk verkeerslicht is kleiner dan de lengte van de baan. OK UNTESTED
-// • Er is maximaal ´e´en voertuiggenerator op elke baan.                   OK UNTESTED
-// • Een verkeerslicht mag zich niet in de vertraagafstand van een ander    
-// verkeerslicht bevinden (zie Appendix B).
+ // Een verkeerssituatie is consistent als:
+ // • Elk voertuig staat op een bestaande baan.                              OK UNTESTED
+ // • Elk verkeerslicht staat op een bestaande baan.                         OK UNTESTED
+ // • Elke voertuiggenerator staat op een bestaande baan.                    OK UNTESTED
+ // • De positie van elk voertuig is kleiner dan de lengte van de baan.      OK UNTESTED
+ // • De positie van elk verkeerslicht is kleiner dan de lengte van de baan. OK UNTESTED
+ // • Er is maximaal ´e´en voertuiggenerator op elke baan.                   OK UNTESTED
+ // • Een verkeerslicht mag zich niet in de vertraagafstand van een ander    OK UNTESTED
+ // verkeerslicht bevinden (zie Appendix B).
 
- /**
- \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
- */
+  /**
+  \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+  */
 void XMLParser::validateNode(const pugi::xml_node& node, const std::string& name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
@@ -195,8 +197,17 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         }
     }
 
-    for (Road* road : sim->getRoads()) {
+    for (Road* road : sim.getRoads()) {
+        std::vector<TrafficLight*> placedTrafficLights = road->getTrafficlights();
+        for (int trafficLightIndexOne = 0; trafficLightIndexOne < placedTrafficLights.size(); trafficLightIndexOne++) {
+            TrafficLight* trafficLightOne = placedTrafficLights[trafficLightIndexOne];
+            for (int trafficLightIndexTwo = 0; trafficLightIndexTwo < placedTrafficLights.size(); trafficLightIndexTwo++) {
+                if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
+                TrafficLight* trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
+                if (trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE)) throw std::runtime_error("XML: traffic light in decelleration zone of other traffic light");
+            }
+        }
     }
 
     // Vehicle generators
