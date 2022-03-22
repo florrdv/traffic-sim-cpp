@@ -6,10 +6,7 @@
 #include "../util/XMLParser.h"
 
 TEST(XMLParserTests, ParsingRoadBoundaries) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest1.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest1.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest1.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadBoundaries.xml";
 
     Simulation sim = Simulation();
 
@@ -19,10 +16,7 @@ TEST(XMLParserTests, ParsingRoadBoundaries) {
 
 
 TEST(XMLParserTests, ParsingRoadLengthNegative) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest3.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest3.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest3.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadLengthNegative.xml";
 
     Simulation sim = Simulation();
 
@@ -31,10 +25,7 @@ TEST(XMLParserTests, ParsingRoadLengthNegative) {
 }
 
 TEST(XMLParserTests, ParsingRoadLengthZero) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest4.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest4.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest4.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadLengthZero.xml";
 
     Simulation sim = Simulation();
 
@@ -43,10 +34,7 @@ TEST(XMLParserTests, ParsingRoadLengthZero) {
 }
 
 TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest10.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest10.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest10.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -54,11 +42,26 @@ TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
-TEST(XMLParserTests, ParsingVehicleGeneratorRoadUnknown) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest11.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest11.txt";
+TEST(XMLParserTests, ParsingVehicleNegativePosition) {
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParParsingVehicleNegativePositionserTest2.xml";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest11.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
+}
+
+TEST(XMLParserTests, ParsingVehicleOverlap) {
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleOverlap.xml";
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
+}
+
+TEST(XMLParserTests, ParsingVehicleGeneratorRoadUnknown) {
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleGeneratorRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -67,10 +70,7 @@ TEST(XMLParserTests, ParsingVehicleGeneratorRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingVehicleGeneratorMultiple) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest12.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest12.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest12.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleGeneratorMultiple.xml";
 
     Simulation sim = Simulation();
 
@@ -78,35 +78,8 @@ TEST(XMLParserTests, ParsingVehicleGeneratorMultiple) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "multiple vehicle generators");
 }
 
-TEST(XMLParserTests, ParsingVehiclesNegativePosition) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest2.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest2.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest2.xml";
-
-    Simulation sim = Simulation();
-
-    XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
-}
-
-TEST(XMLParserTests, ParsingVehiclesOverlap) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest5.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest5.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest5.xml";
-
-    Simulation sim = Simulation();
-
-    XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
-}
-
 TEST(XMLParserTests, ParsingTrafficLightsOverlap) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest6.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest6.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest6.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightsOverlap.xml";
 
     Simulation sim = Simulation();
 
@@ -115,10 +88,7 @@ TEST(XMLParserTests, ParsingTrafficLightsOverlap) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightRoadUnknown) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest7.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest7.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest7.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -127,10 +97,7 @@ TEST(XMLParserTests, ParsingTrafficLightRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest8.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest8.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest8.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightCycleNegative.xml";
 
     Simulation sim = Simulation();
 
@@ -139,10 +106,7 @@ TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleZero) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest9.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest9.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest9.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightCycleZero.xml";
     Simulation sim = Simulation();
 
     XMLParser parser;
@@ -151,10 +115,7 @@ TEST(XMLParserTests, ParsingTrafficLightCycleZero) {
 
 
 TEST(XMLParserTests, ParsingTrafficLightDecelerationOverlap) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest13.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest13.txt";
-
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest13.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightDecelerationOverlap.xml";
 
     Simulation sim = Simulation();
 
