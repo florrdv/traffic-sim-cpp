@@ -148,3 +148,11 @@ double Vehicle::getDecelerationFactor() const {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     return decelerationFactor;
 }
+
+/**
+\n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+*/
+double Vehicle::getSpeedMax() const {
+    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    return speedMax;
+}

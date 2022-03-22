@@ -79,6 +79,13 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     double getSpeed() const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
+    double getSpeedMax() const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     double getAcceleration() const;
 
     double getDecelerationFactor() const;

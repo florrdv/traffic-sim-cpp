@@ -4,7 +4,7 @@
 TEST(VehicleTests, PositionMutationHappyDay) {
     Vehicle v = Vehicle();
     v.setPosition(1.0);
-    EXPECT_EQ(v.getPosition(), 1.0);
+    EXPECT_EQ(1.0, v.getPosition());
 }
 
 TEST(VehicleTests, PositionMutationNegative) {
@@ -30,5 +30,5 @@ TEST(VehicleTests, DecelerateHappyDay) {
     // Tick twice
     v.decelerate();
 
-    EXPECT_EQ(v.getSpeed(), v.getDecelerationFactor() * SPEED_MAX);
+    EXPECT_EQ(v.getDecelerationFactor() * SPEED_MAX, v.getSpeedMax());
 }
