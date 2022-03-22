@@ -87,7 +87,9 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     double getAcceleration() const;
-
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     double getDecelerationFactor() const;
 
     /**
