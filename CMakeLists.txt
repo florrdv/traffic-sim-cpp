@@ -51,9 +51,10 @@ set(DEBUG_SOURCE_FILES
         src/objects/TrafficLightTests.cc
         src/objects/Vehicle.cc
         src/objects/Vehicle.h
+        src/objects/VehicleTests.cc
         src/objects/VehicleGenerator.cc
         src/objects/VehicleGenerator.h
-        src/objects/VehicleTests.cc
+        src/objects/VehicleGeneratorTests.cc
         src/util/XMLParser.cc
         src/util/XMLParser.h
         src/util/XMLParserTests.cc

@@ -475,6 +475,30 @@ src/objects/VehicleGenerator.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/objects/VehicleGenerator.cc.s
 .PHONY : src/objects/VehicleGenerator.cc.s
 
+src/objects/VehicleGeneratorTests.o: src/objects/VehicleGeneratorTests.cc.o
+.PHONY : src/objects/VehicleGeneratorTests.o
+
+# target to build an object file
+src/objects/VehicleGeneratorTests.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/VehicleGeneratorTests.cc.o
+.PHONY : src/objects/VehicleGeneratorTests.cc.o
+
+src/objects/VehicleGeneratorTests.i: src/objects/VehicleGeneratorTests.cc.i
+.PHONY : src/objects/VehicleGeneratorTests.i
+
+# target to preprocess a source file
+src/objects/VehicleGeneratorTests.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/VehicleGeneratorTests.cc.i
+.PHONY : src/objects/VehicleGeneratorTests.cc.i
+
+src/objects/VehicleGeneratorTests.s: src/objects/VehicleGeneratorTests.cc.s
+.PHONY : src/objects/VehicleGeneratorTests.s
+
+# target to generate assembly for a file
+src/objects/VehicleGeneratorTests.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/VehicleGeneratorTests.cc.s
+.PHONY : src/objects/VehicleGeneratorTests.cc.s
+
 src/objects/VehicleTests.o: src/objects/VehicleTests.cc.o
 .PHONY : src/objects/VehicleTests.o
 
@@ -599,6 +623,9 @@ help:
 	@echo "... src/objects/VehicleGenerator.o"
 	@echo "... src/objects/VehicleGenerator.i"
 	@echo "... src/objects/VehicleGenerator.s"
+	@echo "... src/objects/VehicleGeneratorTests.o"
+	@echo "... src/objects/VehicleGeneratorTests.i"
+	@echo "... src/objects/VehicleGeneratorTests.s"
 	@echo "... src/objects/VehicleTests.o"
 	@echo "... src/objects/VehicleTests.i"
 	@echo "... src/objects/VehicleTests.s"
