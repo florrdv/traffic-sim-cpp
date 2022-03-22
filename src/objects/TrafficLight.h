@@ -26,35 +26,35 @@ public:
     TrafficLight() { _init = this; }
 
     // Regular methods
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    */
     int getPosition() const;
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(p>=0, "Traffic light position must be positive");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    \n ENSURE(p>=0, "Traffic light position must be positive");
+    */
     void setPosition(int position);
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    */
     int getCycle() const;
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(c>=0, "Traffic light cycle must be strictly positive");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    \n ENSURE(c>=0, "Traffic light cycle must be strictly positive");
+    */
     void setCycle(int cycles);
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    */
     bool isGreen() const;
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
+    */
     void toggle();
 
     // Safety specific
