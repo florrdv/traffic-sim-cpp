@@ -76,37 +76,64 @@ void Simulation::tickVehicleGenerators(Road* road) {
     // If there's a generator running on the road and the cycle time 
     // has been exceeded, spawn a new vehicle
     VehicleGenerator* generator = road->getGenerator();
-    if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
+
+    bool shouldSpawn = freqCounter * SIM_TIME > generator->getFrequency();
+    if (generator != nullptr && shouldSpawn) {
         road->spawnVehicle();
         freqCounter = 0;
     }
+
+    freqCounter++;
 }
 
 void Simulation::tickTrafficLights(Road* road) {
+    // Get all traffic lights on the road
     std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
 
+    // Loop over all traffic lights
     for (TrafficLight* trafficLight : trafficLights) {
-        if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {
+        // Check if we have to toggle the light
+        bool shouldToggle = cycleCounter * SIM_TIME > trafficLight->getCycle(); 
+        if (shouldToggle) {
             trafficLight->toggle();
             cycleCounter = 0;
         }
 
+        // Get the first vehicle relative to the traffic light
+        // To make vehicles decelerate or stop, we just need to perform the action
+        // on the first vehicle driving towards the traffic light.
         Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
+        // No vehicles are driving towards the traffic light, continue to the next traffic light
         if (firstVehicle == nullptr) continue;
+
+        // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->isGreen()) firstVehicle->accelerate();
         else {
+            // The light is red, let's check how far away the first vehicle
+            // is from the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
+            // Stop the vehicle if it's in the braking zone
             if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
+            // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
         }
     }
+
+    cycleCounter++;
 }
 
 void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
+    // Get all vehicles on the road
     std::vector<Vehicle*> vehicles = road->getVehicles();
+
+    // Loop over all vehicles
     for (Vehicle* vehicle : vehicles) {
+        // Tick the relevant vehicle
         vehicle->tick(road->getLeadingVehicle(vehicle));
+
+        // Print all information on the vehicle in 
+        // the requested format
         onStream << "Vehicle " << vehicle->getId() << std::endl;
         onStream << "-> Road: " << road->getName() << std::endl;
         onStream << "-> Position: " << vehicle->getPosition() << std::endl;
@@ -135,15 +162,20 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
 
         // Loop over all roads
         for (Road* road : roads) {
+            // Tick all entities on the road
+            // we have these methods on the Simulation class as they control 
+            // the general flow of the simulation, not the road itself.
             tickVehicleGenerators(road);
             tickTrafficLights(road);
             tickVehicles(road, onStream);
 
             road->cleanup();
         }
+
+        // Increment relative 
         timestamp++;
-        cycleCounter++;
-        freqCounter++;
+
+        // Sleep until the next simulation tick
         std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
     }
 }
