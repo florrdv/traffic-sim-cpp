@@ -3,6 +3,8 @@
     <lengte>100</lengte>
 </BAAN>
 
+<!-- Overlapping deceleration zones-->
+
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
     <positie>90</positie>
