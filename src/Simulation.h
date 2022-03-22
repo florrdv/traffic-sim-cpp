@@ -48,12 +48,19 @@ private:
     */
     void tickVehicles(Road* road, std::ostream& stream);
 public:
+    /**
+    \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     Simulation();;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling destructor");
+    */
     ~Simulation();
 
     // Regular methods
     /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
     */
     void addRoad(Road* r);
 
