@@ -23,3 +23,12 @@ TEST(VehicleTests, TickHappyDay) {
     EXPECT_TRUE(std::abs(v.getAcceleration() - 1.4399999999938082) < 0.00001);
     EXPECT_TRUE(std::abs(v.getPosition() - 0.00059520959999999996) < 0.00001);
 }
+
+TEST(VehicleTests, DecelerateHappyDay) {
+    Vehicle v = Vehicle();
+
+    // Tick twice
+    v.decelerate();
+
+    EXPECT_EQ(v.getSpeed(), v.getDecelerationFactor() * SPEED_MAX);
+}

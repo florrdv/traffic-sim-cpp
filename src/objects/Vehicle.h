@@ -54,6 +54,8 @@ public:
     double getSpeed() const;
     double getAcceleration() const;
 
+    double getDecelerationFactor() const;
+
     void tick(Vehicle* leadingVehicle);
 
     void stop();
