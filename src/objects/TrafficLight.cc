@@ -12,53 +12,38 @@
 #include "../lib/DesignByContract.h"
 
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+
 int TrafficLight::getPosition() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return position;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(p>=0, "Traffic light position must be positive");
-*/
+
 void TrafficLight::setPosition(int p) {
     REQUIRE(this->properlyInitialized(), "TrafficLight was not properly initialized");
     ENSURE(p>=0, "Traffic light position must be positive");
     TrafficLight::position = p;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
 int TrafficLight::getCycle() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return cycle;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(c>=0, "Traffic light cycle must be strictly positive");
-*/
+
 void TrafficLight::setCycle(int c) {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     ENSURE(c>0, "Traffic light cycle must be strictly positive");
     TrafficLight::cycle = c;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+
 void TrafficLight::toggle() {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     green = !green;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-*/
+
 bool TrafficLight::isGreen() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return green;
