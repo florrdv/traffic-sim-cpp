@@ -34,7 +34,7 @@ int Road::getLength() const {
 
 void Road::setLength(int l) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
+    REQUIRE(l>0, "Length must be strictly positive");
     Road::length = l;
 }
 
