@@ -87,6 +87,8 @@ void Simulation::tickVehicleGenerators(Road* road) {
 }
 
 void Simulation::tickTrafficLights(Road* road) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    
     // Get all traffic lights on the road
     std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
 
@@ -124,6 +126,8 @@ void Simulation::tickTrafficLights(Road* road) {
 }
 
 void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+
     // Get all vehicles on the road
     std::vector<Vehicle*> vehicles = road->getVehicles();
 
