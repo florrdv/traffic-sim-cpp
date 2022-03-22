@@ -33,7 +33,7 @@ public:
 
     int countVehicles();
 
-    void writeOn(std::ostream& onStream, const double stopAt);
+    void writeOn(std::ostream& onStream, const double stopAt = 0.0);
 
     void printForVisualizer();
 
