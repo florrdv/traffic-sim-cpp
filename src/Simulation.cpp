@@ -101,12 +101,10 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
             // has been exceeded, spawn a new vehicle
             VehicleGenerator* generator = road->getGenerator();
             if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
-                Vehicle* v = new Vehicle;
-                v->setPosition(0);
-                road->addVehicle(v);
+                road->spawnVehicle();
                 freqCounter = 0;
             }
-            
+
             std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
             for (TrafficLight* trafficLight : trafficLights) {

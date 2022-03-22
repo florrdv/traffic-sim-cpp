@@ -28,11 +28,6 @@ private:
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
-
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
-    */
-    void spawnVehicle();
 public:
     // Constructors / destructors
     Road() { _init = this; }
@@ -47,6 +42,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     const std::string &getName() const;
+    
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
@@ -71,10 +67,12 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     void addVehicle(Vehicle *v);
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     Vehicle* getLeadingVehicle(Vehicle *v);
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
@@ -84,6 +82,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     const std::vector<TrafficLight *> &getTrafficLights() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
@@ -93,14 +92,21 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     VehicleGenerator* getGenerator() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     void setGenerator(VehicleGenerator *g);
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
     */
     void cleanup();
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    */
+    void spawnVehicle();
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
