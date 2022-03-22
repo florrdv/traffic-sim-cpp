@@ -35,7 +35,7 @@
   */
 void XMLParser::validateNode(const pugi::xml_node& node, const std::string& name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
-    if (node.empty()) throw std::runtime_error("XML: no " + name + " child found");
+    ASSERT(node.empty(), ("XML: no " + name + " child found").c_str());
 }
 
 /**
@@ -47,10 +47,10 @@ int XMLParser::parsePositiveInteger(const std::string& s, const std::string& nam
     int value;
     try {
         value = stoi(s);
-        if (value < 0) throw std::runtime_error("XML: " + name + " must be positive");
+        ASSERT(value >= 0, ("XML: " + name + " must be positive").c_str());
     }
     catch (std::exception& e) {
-        throw std::runtime_error("XML: " + name + " must be an integer");
+        ASSERT(false, ("XML: " + name + " must be an integer").c_str());
     }
     ENSURE(value >= 0, "Parsed integer cannot be negative");
     return value;
@@ -65,7 +65,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     pugi::xml_document doc;
     pugi::xml_parse_result result = doc.load_file(file.c_str());
     // Make sure the file was loaded correctly
-    if (!result) throw std::runtime_error("XML: invalid file");
+    ASSERT(result, "XML: invalid file");
 
     // Parameters for validation
     std::map<std::string, std::vector<TrafficLight*>> trafficLights = {};
@@ -90,7 +90,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             // Extract values
             std::string roadName = nameNode.text().as_string();
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
-            if (roadLength == 0) throw std::runtime_error("XML: road length must be strictly positive");
+            ASSERT(roadLength != 0, "XML: road length must be strictly positive");
 
             // Create road object
             Road* road = new Road();
@@ -115,7 +115,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             std::string road = roadNode.text().as_string();
             int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
-            if (cycle == 0) throw std::runtime_error("XML: cycle must be strictly positive");
+            ASSERT(cycle != 0, "XML: cycle must be strictly positive");
 
             // Create traffic light object
             TrafficLight* trafficLight = new TrafficLight();
@@ -159,7 +159,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             // Extract values
             std::string road = roadNode.text().as_string();
             int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency");
-            if (freq == 0) throw std::runtime_error("XML: frequency must be strictly positive");
+            ASSERT(freq != 0, "XML: frequency must be strictly positive");
 
             // Create vehicle generator object
             VehicleGenerator* generator = new VehicleGenerator();
@@ -169,7 +169,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             generators[road].push_back(generator);
         }
         else {
-            throw std::runtime_error("XML: unknown tag '" + name + "'");
+            ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
     }
 
@@ -181,10 +181,11 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     // Vehicles
     for (std::pair<std::string, std::vector<Vehicle*>> p : vehicles) {
         Road* road = sim.findRoad(p.first);
-        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+        ASSERT(road != nullptr, ("XML: unknown road " + p.first).c_str());
 
         // Register the vehicle
         for (Vehicle* v : p.second) {
+            
             if (v->getPosition() <= road->getLength()) road->addVehicle(v);
             else throw std::runtime_error("XML: vehicle outside of road boundaries");
         }
