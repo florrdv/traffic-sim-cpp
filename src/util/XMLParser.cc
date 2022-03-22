@@ -183,6 +183,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         // Register the vehicle
         for (Vehicle* v : p.second) {
             if (v->getPosition() <= road->getLength()) road->addVehicle(v);
+            else throw std::runtime_error("XML: vehicle outside of road boundaries");
         }
     }
 
@@ -207,6 +208,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         // Register the traffic light
         for (TrafficLight* t : p.second) {
             if (t->getPosition() <= road->getLength()) road->addTrafficLight(t);
+            else throw std::runtime_error("XML: traffic light outside of road boundaries");
         }
     }
 
