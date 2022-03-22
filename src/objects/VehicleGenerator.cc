@@ -11,10 +11,10 @@ int VehicleGenerator::getFrequency() const {
 
 /**
 \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-\n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly greater than 0");
+\n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
 */
 void VehicleGenerator::setFrequency(int frequency_) {
     REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly greater than 0");
+    ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
     frequency = frequency_;
 }
