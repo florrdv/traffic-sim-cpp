@@ -1,6 +1,7 @@
 #ifndef TRAFFICSIM_VEHICLEGENERATOR_H
 #define TRAFFICSIM_VEHICLEGENERATOR_H
 
+#include <iostream>
 
 class VehicleGenerator {
 private:
@@ -18,7 +19,8 @@ public:
     void setFrequency(int frequency_);
 
     // Safety specific
-    bool properlyInitialized() const { return _init == this; }
+    bool properlyInitialized() const {return _init == this;}
+
 };
 
 

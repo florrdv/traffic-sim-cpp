@@ -233,7 +233,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         ASSERT(road != nullptr, ("XML: unknown road " + p.first).c_str());
         ASSERT(p.second.size() <= 1, ("XML: multiple vehicle generators on road " + p.first).c_str());
 
-        for (VehicleGenerator* g : p.second) road->addGenerator(g);
+        for (VehicleGenerator* g : p.second) road->setGenerator(g);
     }
 }
 

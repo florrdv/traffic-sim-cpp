@@ -93,7 +93,7 @@ VehicleGenerator* Road::getGenerator() const {
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
 */
-void Road::addGenerator(VehicleGenerator* g) {
+void Road::setGenerator(VehicleGenerator* g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     generator = g;
 }

@@ -17,7 +17,7 @@ int main() {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, "../input/testing/ValidSimulationTest3.xml");
+    parser.parse(sim, "../input/testing/ValidSimulationTest1.xml");
     
     sim.writeOn(std::cout, 50);
 
