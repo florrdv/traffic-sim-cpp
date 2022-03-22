@@ -28,18 +28,35 @@ private:
     void print(double time);
     int countVehicles();
 public:
-/**
-\n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
-*/
     Simulation();;
     ~Simulation();
 
     // Regular methods
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     void addRoad(Road* r);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+
     Road* findRoad(const std::string& roadName);
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     std::vector<Road*> getRoads() const;
 
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     void writeOn(std::ostream& onStream, const double stopAt = 0.0);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicleGenerators();
+    void tickVehicles();
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }

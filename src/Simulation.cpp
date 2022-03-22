@@ -70,6 +70,18 @@ int Simulation::countVehicles() {
     return amount;
 }
 
+void Simulation::tickVehicleGenerators() {
+
+}
+
+void Simulation::tickTrafficLights() {
+    
+}
+
+void Simulation::tickVehicles() {
+    
+}
+
 /**
 \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
 */
@@ -105,8 +117,11 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
                 freqCounter = 0;
             }
 
+            // Get all entities currently on the road
             std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
+
+            // 
             for (TrafficLight* trafficLight : trafficLights) {
                 if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {
                     trafficLight->toggle();
