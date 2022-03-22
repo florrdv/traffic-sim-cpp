@@ -29,6 +29,9 @@ private:
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    */
     void spawnVehicle();
 public:
     // Constructors / destructors
