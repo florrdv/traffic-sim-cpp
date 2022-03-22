@@ -186,6 +186,19 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         }
     }
 
+    for (Road* road : sim.getRoads()) {
+        std::vector<Vehicle*> vehicles = road->getVehicles();
+        for (int vehicleIndexOne = 0; vehicleIndexOne < vehicles.size(); vehicleIndexOne++) {
+            Vehicle* vehicleOne = vehicles[vehicleIndexOne];
+            for (int vehicleIndexTwo = 0; vehicleIndexTwo < vehicles.size(); vehicleIndexTwo++) {
+                if (vehicleIndexOne == vehicleIndexTwo) continue;
+
+                Vehicle* vehicleTwo = vehicles[vehicleIndexTwo];
+                if (vehicleTwo->getPosition() == vehicleOne->getPosition()) throw std::runtime_error("XML: vehicles cannot be on the same position");
+            }
+        }
+    }
+
     // Traffic lights
     for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
         Road* road = sim.findRoad(p.first);
@@ -206,6 +219,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
 
                 TrafficLight* trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
                 if (trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) && trafficLightTwo->getPosition() < trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic light in decelleration zone of other traffic light");
+                if (trafficLightTwo->getPosition() == trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic lights cannot be on the same position");
             }
         }
     }
