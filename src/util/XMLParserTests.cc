@@ -43,7 +43,7 @@ TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingVehicleNegativePosition) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParParsingVehicleNegativePositionserTest2.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleNegativePosition.xml";
 
     Simulation sim = Simulation();
 
