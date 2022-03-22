@@ -87,14 +87,12 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << currentTime << "s" << std::endl;
         for (Road* road : roads) {
-            std::vector<VehicleGenerator*> generators = road->getGenerators();
-            for (VehicleGenerator* generator : generators) {
-                if (freqCounter * SIM_TIME > generator->getFrequency()) {
-                    Vehicle* v = new Vehicle;
-                    v->setPosition(0);
-                    road->addVehicle(v);
-                    freqCounter = 0;
-                }
+            VehicleGenerator* generator = road->getGenerator();
+            if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
+                Vehicle* v = new Vehicle;
+                v->setPosition(0);
+                road->addVehicle(v);
+                freqCounter = 0;
             }
             std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
             std::vector<Vehicle*> vehicles = road->getVehicles();

@@ -85,17 +85,17 @@ const std::vector<TrafficLight*>& Road::getTrafficlights() const {
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
 */
-const std::vector<VehicleGenerator*>& Road::getGenerators() const {
+VehicleGenerator* Road::getGenerator() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    return generators;
+    return generator;
 }
 
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
 */
-void Road::addGenerator(VehicleGenerator* g) {
+void Road::setGenerator(VehicleGenerator* g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    generators.push_back(g);
+    generator = g;
 }
 
 /**

@@ -12,7 +12,7 @@ TEST(SimulationTests, ValidSimulationTest1) {
     std::string inPath = TEST_INPUT_FOLDER + "/ValidSimulationTest1.txt";
 
     std::string xmlPath = TEST_INPUT_FOLDER + "/ValidSimulationTest1.xml";
-    
+
     Simulation sim = Simulation();
 
     XMLParser parser;

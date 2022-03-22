@@ -13,15 +13,6 @@ TEST(RoadTests, roadLengthNegative) {
     road.setLength(-20);
 }
 
-TEST(RoadTests, multipleGenerators) {
-    Road road = Road();
-
-    VehicleGenerator g1;
-    VehicleGenerator g2;
-    road.addGenerator(&g1);
-    road.addGenerator(&g2);
-}
-
 TEST(RoadTests, getSetName) {
     Road road = Road();
 
@@ -39,17 +30,17 @@ TEST(RoadTests, getSetLength) {
 TEST(RoadTests, getSetVehicle) {
     Road road = Road();
 
-    Vehicle v;
-    road.addVehicle(&v);
-    ASSERT_EQ(&v, road.getVehicles()[0]);
+    Vehicle* v = new Vehicle();
+    road.addVehicle(v);
+    ASSERT_EQ(v, road.getVehicles()[0]);
 }
 
 TEST(RoadTests, getSetGenerator) {
     Road road = Road();
 
-    VehicleGenerator g;
-    road.addGenerator(&g);
-    ASSERT_EQ(&g, road.getGenerators()[0]);
+    VehicleGenerator* g = new VehicleGenerator();
+    road.setGenerator(g);
+    ASSERT_EQ(g, road.getGenerator());
 }
 
 
