@@ -1,0 +1,9 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+<!--Road "Groenenborgerlaan" was not defined-->
+<VOERTUIGGENERATOR>
+    <baan>Groenenborgerlaan</baan>
+    <frequentie>3</frequentie>
+</VOERTUIGGENERATOR>

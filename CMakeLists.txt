@@ -33,7 +33,7 @@ set(RELEASE_SOURCE_FILES
         src/util/XMLParser.h
         src/Simulation.cpp
         src/Simulation.h
-        src/TrafficSim.cc)
+        src/TrafficSim.cc input/testing/InvalidSimulationTest10.xml)
 
 set(DEBUG_SOURCE_FILES
         src/data/Constants.cc

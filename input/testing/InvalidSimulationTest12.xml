@@ -1,0 +1,14 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>4</frequentie>
+</VOERTUIGGENERATOR>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>3</frequentie>
+</VOERTUIGGENERATOR>
