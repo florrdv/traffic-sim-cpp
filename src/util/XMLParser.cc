@@ -42,11 +42,12 @@ void XMLParser::validateNode(const pugi::xml_node& node, const std::string& name
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
 \n ENSURE(value>=0, "Parsed integer cannot be negative");
 */
-int XMLParser::parsePositiveInteger(const std::string& s, const std::string& name) const {
+int XMLParser::parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive = false) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     int value;
     try {
         value = stoi(s);
+        ASSERT((strictlyPositive && value > 0) || !strictlyPositive,  ("XML: " + name + " must be strictly positive").c_str());
         ASSERT(value >= 0, ("XML: " + name + " must be positive").c_str());
     }
     catch (std::exception& e) {
@@ -89,8 +90,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
 
             // Extract values
             std::string roadName = nameNode.text().as_string();
-            int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
-            ASSERT(roadLength != 0, "XML: road length must be strictly positive");
+            int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
 
             // Create road object
             Road* road = new Road();
@@ -114,8 +114,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             // Extract values
             std::string road = roadNode.text().as_string();
             int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
-            int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
-            ASSERT(cycle != 0, "XML: cycle must be strictly positive");
+            int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
 
             // Create traffic light object
             TrafficLight* trafficLight = new TrafficLight();
@@ -158,8 +157,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
 
             // Extract values
             std::string road = roadNode.text().as_string();
-            int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency");
-            ASSERT(freq != 0, "XML: frequency must be strictly positive");
+            int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
 
             // Create vehicle generator object
             VehicleGenerator* generator = new VehicleGenerator();
