@@ -5,7 +5,7 @@
 #include "../lib/TestingHelpers.h"
 #include "../util/XMLParser.h"
 
-TEST(SimulationTests, InvalidXMLParserTest1) {
+TEST(XMLParserTests, InvalidXMLParserTest1) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest1.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest1.txt";
 
@@ -17,7 +17,7 @@ TEST(SimulationTests, InvalidXMLParserTest1) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest2) {
+TEST(XMLParserTests, InvalidXMLParserTest2) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest2.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest2.txt";
 
@@ -29,7 +29,7 @@ TEST(SimulationTests, InvalidXMLParserTest2) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest3) {
+TEST(XMLParserTests, InvalidXMLParserTest3) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest3.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest3.txt";
 
@@ -41,7 +41,7 @@ TEST(SimulationTests, InvalidXMLParserTest3) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest4) {
+TEST(XMLParserTests, InvalidXMLParserTest4) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest4.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest4.txt";
 
@@ -53,7 +53,7 @@ TEST(SimulationTests, InvalidXMLParserTest4) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest5) {
+TEST(XMLParserTests, InvalidXMLParserTest5) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest5.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest5.txt";
 
@@ -65,7 +65,7 @@ TEST(SimulationTests, InvalidXMLParserTest5) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest6) {
+TEST(XMLParserTests, InvalidXMLParserTest6) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest6.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest6.txt";
 
@@ -77,7 +77,7 @@ TEST(SimulationTests, InvalidXMLParserTest6) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest7) {
+TEST(XMLParserTests, InvalidXMLParserTest7) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest7.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest7.txt";
 
@@ -89,7 +89,7 @@ TEST(SimulationTests, InvalidXMLParserTest7) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest8) {
+TEST(XMLParserTests, InvalidXMLParserTest8) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest8.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest8.txt";
 
@@ -101,7 +101,7 @@ TEST(SimulationTests, InvalidXMLParserTest8) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest9) {
+TEST(XMLParserTests, InvalidXMLParserTest9) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest9.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest9.txt";
 
@@ -112,7 +112,7 @@ TEST(SimulationTests, InvalidXMLParserTest9) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest10) {
+TEST(XMLParserTests, InvalidXMLParserTest10) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest10.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest10.txt";
 
@@ -124,7 +124,7 @@ TEST(SimulationTests, InvalidXMLParserTest10) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest11) {
+TEST(XMLParserTests, InvalidXMLParserTest11) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest11.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest11.txt";
 
@@ -136,7 +136,7 @@ TEST(SimulationTests, InvalidXMLParserTest11) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest12) {
+TEST(XMLParserTests, InvalidXMLParserTest12) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest12.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest12.txt";
 
@@ -148,7 +148,7 @@ TEST(SimulationTests, InvalidXMLParserTest12) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "multiple vehicle generators");
 }
 
-TEST(SimulationTests, InvalidXMLParserTest13) {
+TEST(XMLParserTests, InvalidXMLParserTest13) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest13.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest13.txt";
 
