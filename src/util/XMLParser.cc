@@ -35,7 +35,7 @@
   */
 void XMLParser::validateNode(const pugi::xml_node& node, const std::string& name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
-    ASSERT(node.empty(), ("XML: no " + name + " child found").c_str());
+    ASSERT(!node.empty(), ("XML: no " + name + " child found").c_str());
 }
 
 /**
@@ -185,9 +185,8 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
 
         // Register the vehicle
         for (Vehicle* v : p.second) {
-            
-            if (v->getPosition() <= road->getLength()) road->addVehicle(v);
-            else throw std::runtime_error("XML: vehicle outside of road boundaries");
+            ASSERT(v->getPosition() <= road->getLength(), "XML: vehicle outside of road boundaries");
+            road->addVehicle(v);
         }
     }
 
@@ -199,7 +198,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
                 if (vehicleIndexOne == vehicleIndexTwo) continue;
 
                 Vehicle* vehicleTwo = vehicles[vehicleIndexTwo];
-                if (vehicleTwo->getPosition() == vehicleOne->getPosition()) throw std::runtime_error("XML: vehicles cannot be on the same position");
+                ASSERT(vehicleTwo->getPosition() != vehicleOne->getPosition(), "XML: vehicles cannot be on the same position");
             }
         }
     }
@@ -207,12 +206,12 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     // Traffic lights
     for (std::pair<std::string, std::vector<TrafficLight*>> p : trafficLights) {
         Road* road = sim.findRoad(p.first);
-        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
+        ASSERT(road != nullptr, ("XML: unknown road " + p.first).c_str());
 
         // Register the traffic light
         for (TrafficLight* t : p.second) {
-            if (t->getPosition() <= road->getLength()) road->addTrafficLight(t);
-            else throw std::runtime_error("XML: traffic light outside of road boundaries");
+            ASSERT(t->getPosition() <= road->getLength(), "XML: traffic light outside of road boundaries");
+            road->addTrafficLight(t);
         }
     }
 
@@ -224,8 +223,8 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight* trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
-                if (trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) && trafficLightTwo->getPosition() < trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic light in deceleration zone of other traffic light");
-                if (trafficLightTwo->getPosition() == trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic lights cannot be on the same position");
+                ASSERT(!(trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) && trafficLightTwo->getPosition() < trafficLightOne->getPosition()), "XML: traffic light in deceleration zone of other traffic light");
+                ASSERT(trafficLightTwo->getPosition() != trafficLightOne->getPosition(), "XML: traffic lights cannot be on the same position");
             }
         }
     }
@@ -233,9 +232,8 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     // Vehicle generators
     for (std::pair<std::string, std::vector<VehicleGenerator*>> p : generators) {
         Road* road = sim.findRoad(p.first);
-        if (road == nullptr) throw std::runtime_error("XML: unknown road " + p.first);
-
-        if (p.second.size() > 1) throw std::runtime_error("XML: multiple vehicle generators on road " + p.first);
+        ASSERT(road != nullptr, ("XML: unknown road " + p.first).c_str());
+        ASSERT(p.second.size() <= 1, ("XML: multiple vehicle generators on road " + p.first).c_str());
 
         for (VehicleGenerator* g : p.second) road->addGenerator(g);
     }
