@@ -13,7 +13,7 @@
 
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 */
 int TrafficLight::getPosition() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
@@ -21,7 +21,7 @@ int TrafficLight::getPosition() const {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 \n ENSURE(p>=0, "Traffic light position cannot be a negative integer");
 */
 void TrafficLight::setPosition(int p) {
@@ -32,7 +32,7 @@ void TrafficLight::setPosition(int p) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 */
 int TrafficLight::getCycle() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
@@ -40,7 +40,7 @@ int TrafficLight::getCycle() const {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 \n ENSURE(c>=0, "Traffic light cycle cannot be a negative integer");
 */
 void TrafficLight::setCycle(int c) {
@@ -50,7 +50,7 @@ void TrafficLight::setCycle(int c) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 */
 void TrafficLight::toggle() {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
@@ -58,7 +58,7 @@ void TrafficLight::toggle() {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
 */
 bool TrafficLight::isGreen() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
