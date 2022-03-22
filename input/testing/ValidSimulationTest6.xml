@@ -11,7 +11,7 @@
 
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
-    <positie>45</positie>
+    <positie>25</positie>
     <cyclus>12</cyclus>
 </VERKEERSLICHT>
 
@@ -30,7 +30,3 @@
     <frequentie>3</frequentie>
 </VOERTUIGGENERATOR>
 
-<VOERTUIGGENERATOR>
-    <baan>Middelheimlaan</baan>
-    <frequentie>3</frequentie>
-</VOERTUIGGENERATOR>
