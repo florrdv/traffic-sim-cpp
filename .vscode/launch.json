@@ -2,10 +2,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) Launch",
+            "name": "(gdb) TrafficSim",
             "type": "lldb",
             "request": "launch",
             // Resolved by CMake Tools:
+            "preLaunchTask": "CMake Build",
             "program": "${command:cmake.buildDirectory}/TrafficSim",
             "args": [],
             "stopAtEntry": false,
@@ -28,10 +29,11 @@
             ]
         },
         {
-            "name": "(gdb) Test",
+            "name": "(gdb) TrafficSimTests",
             "type": "lldb",
             "request": "launch",
             // Resolved by CMake Tools:
+            "preLaunchTask": "CMake Build",
             "program": "${command:cmake.buildDirectory}/TrafficSimTests",
             "args": [],
             "stopAtEntry": false,
