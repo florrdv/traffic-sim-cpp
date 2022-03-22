@@ -30,10 +30,10 @@ public:
     void addRoad(Road* r);
     Road* findRoad(const std::string& roadName);
     std::vector<Road*> getRoads() const;
-    
+
     int countVehicles();
 
-    void writeOn(std::ostream& onStream);
+    void writeOn(std::ostream& onStream, const double stopAt);
 
     void printForVisualizer();
 
