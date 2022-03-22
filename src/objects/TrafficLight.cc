@@ -22,12 +22,11 @@ int TrafficLight::getPosition() const {
 
 /**
 \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(p>=0, "Traffic light position cannot be a negative integer");
+\n ENSURE(p>=0, "Traffic light position must be positive");
 */
 void TrafficLight::setPosition(int p) {
-    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
-    //TODO: Make sure the position is within the road length
-    ENSURE(p>=0, "Traffic light position cannot be a negative integer");
+    REQUIRE(this->properlyInitialized(), "TrafficLight was not properly initialized");
+    ENSURE(p>=0, "Traffic light position must be positive");
     TrafficLight::position = p;
 }
 
@@ -41,11 +40,11 @@ int TrafficLight::getCycle() const {
 
 /**
 \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
-\n ENSURE(c>=0, "Traffic light cycle cannot be a negative integer");
+\n ENSURE(c>=0, "Traffic light cycle must be strictly positive");
 */
 void TrafficLight::setCycle(int c) {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
-    ENSURE(c>=0, "Traffic light cycle cannot be a negative integer");
+    ENSURE(c>0, "Traffic light cycle must be strictly positive");
     TrafficLight::cycle = c;
 }
 
