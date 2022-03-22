@@ -25,17 +25,24 @@ private:
     double speed = 0;
     double acceleration = 0;
 
-    double length               = VEHICLE_LENGTH;
-    double speedMax             = SPEED_MAX;
-    double accelerationMax      = ACCELERATION_MAX;
-    double brakeMax             = BRAKE_MAX;
-    double followMin            = FOLLOW_MIN;
-    double simTime              = SIM_TIME;
+    double length = VEHICLE_LENGTH;
+    double speedMax = SPEED_MAX;
+    double accelerationMax = ACCELERATION_MAX;
+    double brakeMax = BRAKE_MAX;
+    double followMin = FOLLOW_MIN;
+    double simTime = SIM_TIME;
     double decelerationDistance = DECELERATION_DISTANCE;
-    double decelerationFactor   = DECELERATION_FACTOR;
+    double decelerationFactor = DECELERATION_FACTOR;
 
-
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(speed >= 0, "Vehicle speed must be positive");
+    */
     void updateSpeed();
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
+    */
     void updateAcceleration(Vehicle* leadingVehicle);
 
 public:
@@ -43,24 +50,55 @@ public:
     Vehicle() { _init = this; }
 
     // General methods
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     double getPosition() const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(p>=0, "Vehicle position cannot be a negative integer");
+    */
     void setPosition(int position);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     int getId() const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(id_>=0, "Vehicle ID cannot be a negative integer");
+    */
     void setId(int id);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     double getLength() const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     double getSpeed() const;
     double getAcceleration() const;
 
     double getDecelerationFactor() const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     void tick(Vehicle* leadingVehicle);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     void stop();
-
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     void decelerate();
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     void accelerate();
 
     // Safety specific
