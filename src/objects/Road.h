@@ -16,6 +16,7 @@
 #include "Vehicle.h"
 #include "VehicleGenerator.h"
 #include "TrafficLight.h"
+#include "../lib/DesignByContract.h"
 
 class Road {
 private:
@@ -31,6 +32,7 @@ public:
     // Constructors / destructors
     Road() { _init = this; }
     ~Road() {
+        REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling destructor");
         for (Vehicle* vehicle : vehicles) delete vehicle;
         for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
     }

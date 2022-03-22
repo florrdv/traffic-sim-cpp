@@ -1,4 +1,13 @@
-// TODO: add fancy header thing
+/*
+ * Project: PSE Traffic Simulator
+ * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
+ * Description: 
+ * Version: 1.0
+ * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+ * -----
+ * File Created: Tuesday, 1st March 2022 1:54:22 pm
+ */
+
 
 #include "Simulation.h"
 #include "lib/DesignByContract.h"
@@ -22,7 +31,7 @@ Simulation::Simulation() {
 \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
 */
 Simulation::~Simulation() {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling destructor");
     for (Road* road : roads) delete road;
 }
 
@@ -40,7 +49,7 @@ void Simulation::addRoad(Road* r) {
 \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
 */
 Road* Simulation::findRoad(const std::string& roadName) {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling findRoad");
     for (Road* r : roads) {
         if (r->getName() == roadName) {
             return r;
@@ -121,15 +130,6 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
         freqCounter++;
         std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
     }
-}
-
-void Simulation::clear() {
-    // Clear console
-#if defined(_WIN32)
-    system("cls");
-#else
-    system("clear");
-#endif  //finish
 }
 
 
