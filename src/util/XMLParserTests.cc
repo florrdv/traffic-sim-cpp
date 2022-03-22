@@ -38,7 +38,7 @@ TEST(SimulationTests, InvalidXMLParserTest3) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest4) {
@@ -62,7 +62,7 @@ TEST(SimulationTests, InvalidXMLParserTest5) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest6) {
@@ -74,7 +74,7 @@ TEST(SimulationTests, InvalidXMLParserTest6) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "same position");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest7) {
@@ -86,7 +86,7 @@ TEST(SimulationTests, InvalidXMLParserTest7) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest8) {
@@ -98,7 +98,7 @@ TEST(SimulationTests, InvalidXMLParserTest8) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest9) {
@@ -109,7 +109,7 @@ TEST(SimulationTests, InvalidXMLParserTest9) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest10) {
@@ -121,7 +121,7 @@ TEST(SimulationTests, InvalidXMLParserTest10) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown roads");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest11) {
@@ -133,7 +133,7 @@ TEST(SimulationTests, InvalidXMLParserTest11) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown roads");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest12) {
@@ -145,7 +145,7 @@ TEST(SimulationTests, InvalidXMLParserTest12) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "multiple vehicle generators");
 }
 
 TEST(SimulationTests, InvalidXMLParserTest13) {
@@ -157,6 +157,6 @@ TEST(SimulationTests, InvalidXMLParserTest13) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "deceleration distance");
 }
 

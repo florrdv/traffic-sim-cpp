@@ -7,7 +7,6 @@
 #include "Simulation.h"
 
 
-// THE VALID TESTS
 TEST(SimulationTests, ValidSimulationTest1) {
     std::string outPath = TEST_OUTPUT_FOLDER + "/ValidSimulationTest1.txt";
     std::string inPath = TEST_INPUT_FOLDER + "/ValidSimulationTest1.txt";

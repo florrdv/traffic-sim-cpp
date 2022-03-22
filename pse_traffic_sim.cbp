@@ -102,9 +102,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/input/testing/InvalidSimulationTest10.xml">
-			<Option target="TrafficSim"/>
-		</Unit>
 		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/Simulation.cpp">
 			<Option target="TrafficSimTests"/>
 			<Option target="TrafficSim"/>
