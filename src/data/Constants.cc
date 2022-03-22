@@ -3,7 +3,7 @@
 
 #include <string>
 
-static double SPEEDUP                  = 5;
+static double SPEEDUP                  = 100;
 
 static double VEHICLE_LENGTH           = 4;
 static double SPEED_MAX                = 16.6;

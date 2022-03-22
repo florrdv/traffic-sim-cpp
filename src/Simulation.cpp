@@ -119,7 +119,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
         timestamp++;
         cycleCounter++;
         freqCounter++;
-        std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000)));
+        // std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
     }
 }
 
