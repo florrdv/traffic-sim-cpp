@@ -60,8 +60,8 @@ void Simulation::tickVehicleGenerators(Road* road) {
     // has been exceeded, spawn a new vehicle
     VehicleGenerator* generator = road->getGenerator();
 
-    bool shouldSpawn = freqCounter * SIM_TIME > generator->getFrequency();
-    if (generator != nullptr && shouldSpawn) {
+    bool shouldSpawn = generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency();
+    if (shouldSpawn) {
         road->spawnVehicle();
         freqCounter = 0;
     }
