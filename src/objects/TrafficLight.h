@@ -28,10 +28,11 @@ public:
     // Regular methods
     int getPosition() const;
     void setPosition(int position);
+
     int getCycle() const;
     void setCycle(int cycles);
-    bool isGreen() const;
 
+    bool isGreen() const;
     void toggle();
 
     // Safety specific

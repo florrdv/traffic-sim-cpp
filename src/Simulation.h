@@ -18,6 +18,7 @@ private:
 
     void print(double time);
     void clear();
+    int countVehicles();
 public:
 /**
 \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
@@ -31,11 +32,7 @@ public:
     Road* findRoad(const std::string& roadName);
     std::vector<Road*> getRoads() const;
 
-    int countVehicles();
-
     void writeOn(std::ostream& onStream, const double stopAt = 0.0);
-
-    void printForVisualizer();
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }
