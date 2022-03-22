@@ -3,14 +3,13 @@
 
 TEST(RoadTests, roadLengthZero) {
     Road road = Road();
-
-    road.setLength(0);
+    EXPECT_DEATH(road.setLength(0), "strictly positive");
 }
 
 TEST(RoadTests, roadLengthNegative) {
     Road road = Road();
 
-    road.setLength(-20);
+    EXPECT_DEATH(road.setLength(-20), "strictly positive");
 }
 
 TEST(RoadTests, getSetName) {
