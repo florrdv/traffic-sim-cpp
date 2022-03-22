@@ -12,13 +12,20 @@
  */
 
 #include <string>
+#include <gtest/gtest_prod.h>
+
 #include "../data/Constants.cc"
 
+class VehicleTests;
+
 class Vehicle {
+    FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
+    FRIEND_TEST(VehicleTests, UpdateSpeedHappyDay);
+    
 private:
+
     Vehicle* _init;
 
-private:
     double position = 0;
     int id;
 
@@ -34,6 +41,7 @@ private:
     double decelerationDistance = DECELERATION_DISTANCE;
     double decelerationFactor = DECELERATION_FACTOR;
 
+    friend class VehicleTests;
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(speed >= 0, "Vehicle speed must be positive");
