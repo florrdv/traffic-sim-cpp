@@ -223,7 +223,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight* trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
-                if (trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) && trafficLightTwo->getPosition() < trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic light in decelleration zone of other traffic light");
+                if (trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) && trafficLightTwo->getPosition() < trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic light in deceleration zone of other traffic light");
                 if (trafficLightTwo->getPosition() == trafficLightOne->getPosition()) throw std::runtime_error("XML: traffic lights cannot be on the same position");
             }
         }

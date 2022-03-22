@@ -2,7 +2,7 @@
     <naam>Middelheimlaan</naam>
     <lengte>100</lengte>
 </BAAN>
-
+<!-- Cannot have two vehicle generators-->
 <VOERTUIGGENERATOR>
     <baan>Middelheimlaan</baan>
     <frequentie>4</frequentie>

@@ -1,6 +1,6 @@
 <BAAN>
     <naam>Middelheimlaan</naam>
-    <lengte>-20</lengte>
+    <lengte>200</lengte>
 </BAAN>
 <!--Cannot have two vehicles on the same position-->
 <VOERTUIG>
