@@ -22,7 +22,7 @@ class XMLParser {
     XMLParser* _init;
     
     void validateNode(const pugi::xml_node& node, const std::string& nam) const;
-    int parsePositiveInteger(const std::string& s, const std::string& name) const;
+    int parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive) const;
 public:
     // Constructors / destructors
     XMLParser() { _init = this; };
