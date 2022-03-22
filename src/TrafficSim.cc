@@ -27,7 +27,7 @@ int main() {
 
 //    if (!VISUALIZE) std::cout << "Parsing succesful!" << std::endl;
 
-    if (!VISUALIZE) sim.writeOn(std::cout);
+    if (!VISUALIZE) sim.writeOn(std::cout, 50);
 
     if (VISUALIZE) sim.printForVisualizer();
     return 0;

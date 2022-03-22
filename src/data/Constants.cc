@@ -15,7 +15,7 @@ static double SIM_TIME                 = 0.0166;
 static double DECELERATION_DISTANCE    = 50;
 static double DECELERATION_FACTOR      = 0.4 ;
 
-static std::string TEST_INPUT_FOLDER = "input/testing";
-static std::string TEST_OUTPUT_FOLDER = "output/testing";
+static std::string TEST_INPUT_FOLDER = "../input/testing";
+static std::string TEST_OUTPUT_FOLDER = "../output/testing";
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_

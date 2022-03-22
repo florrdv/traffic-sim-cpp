@@ -7,7 +7,7 @@
 #include "Simulation.h"
 
 //TODO: - add until parameter, to stop program from running "infinitely" long when a generator is in place
-//      - Add .txt files with expected output
+//      - add .txt files with expected output
 
 // THE VALID TESTS
 TEST(SimulationTests, ValidSimulationTest1) {
@@ -58,7 +58,7 @@ TEST(SimulationTests, ValidSimulationTest3) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -76,7 +76,7 @@ TEST(SimulationTests, ValidSimulationTest4) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -94,7 +94,7 @@ TEST(SimulationTests, ValidSimulationTest5) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -112,7 +112,7 @@ TEST(SimulationTests, ValidSimulationTest6) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -130,7 +130,7 @@ TEST(SimulationTests, ValidSimulationTest7) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -148,7 +148,7 @@ TEST(SimulationTests, ValidSimulationTest8) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
