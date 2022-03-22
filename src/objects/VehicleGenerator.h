@@ -15,7 +15,14 @@ public:
     VehicleGenerator() {_init = this;}
 
     // General methods
+/**
+\n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+*/
     int getFrequency() const;
+/**
+\n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+\n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
+*/
     void setFrequency(int frequency_);
 
     // Safety specific
