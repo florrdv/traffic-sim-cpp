@@ -1,7 +1,7 @@
 /*
  * Project: PSE Traffic Simulator
  * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
- * Description: 
+ * Description:
  * Version: 1.0
  * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
  * -----
@@ -19,9 +19,9 @@
 #include <vector>
 
 
-/**
-\n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
-*/
+ /**
+ \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
+ */
 Simulation::Simulation() {
     _init = this;
     ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
@@ -70,16 +70,48 @@ int Simulation::countVehicles() {
     return amount;
 }
 
-void Simulation::tickVehicleGenerators() {
+void Simulation::tickVehicleGenerators(Road* road) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
 
+    // If there's a generator running on the road and the cycle time 
+    // has been exceeded, spawn a new vehicle
+    VehicleGenerator* generator = road->getGenerator();
+    if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
+        road->spawnVehicle();
+        freqCounter = 0;
+    }
 }
 
-void Simulation::tickTrafficLights() {
-    
+void Simulation::tickTrafficLights(Road* road) {
+    std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
+
+    for (TrafficLight* trafficLight : trafficLights) {
+        if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {
+            trafficLight->toggle();
+            cycleCounter = 0;
+        }
+
+        Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
+        if (firstVehicle == nullptr) continue;
+        if (trafficLight->isGreen()) firstVehicle->accelerate();
+        else {
+            double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
+
+            if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
+            else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
+        }
+    }
 }
 
-void Simulation::tickVehicles() {
-    
+void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
+    std::vector<Vehicle*> vehicles = road->getVehicles();
+    for (Vehicle* vehicle : vehicles) {
+        vehicle->tick(road->getLeadingVehicle(vehicle));
+        onStream << "Vehicle " << vehicle->getId() << std::endl;
+        onStream << "-> Road: " << road->getName() << std::endl;
+        onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+        onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+    }
 }
 
 /**
@@ -87,12 +119,6 @@ void Simulation::tickVehicles() {
 */
 void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
-
-    // Let's start off by initializing the 
-    // variable we require for the execution
-    int timestamp = 0;
-    int cycleCounter = 0;
-    int freqCounter = 0;
 
     // Loop while there are still vehicles
     // in the simulation
@@ -109,44 +135,10 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
 
         // Loop over all roads
         for (Road* road : roads) {
-            // If there's a generator running on the road and the cycle time 
-            // has been exceeded, spawn a new vehicle
-            VehicleGenerator* generator = road->getGenerator();
-            if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
-                road->spawnVehicle();
-                freqCounter = 0;
-            }
+            tickVehicleGenerators(road);
+            tickTrafficLights(road);
+            tickVehicles(road, onStream);
 
-            // Get all entities currently on the road
-            std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
-            std::vector<Vehicle*> vehicles = road->getVehicles();
-
-            // 
-            for (TrafficLight* trafficLight : trafficLights) {
-                if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {
-                    trafficLight->toggle();
-                    cycleCounter = 0;
-                }
-
-                Vehicle* firstVehicle = road->getFirstToTrafficLight(trafficLight);
-                if (firstVehicle == nullptr) continue;
-                if (trafficLight->isGreen()) firstVehicle->accelerate();
-                else {
-                    double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
-
-                    if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
-                    else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
-                }
-            }
-
-            for (Vehicle* vehicle : vehicles) {
-                vehicle->tick(road->getLeadingVehicle(vehicle));
-                onStream << "Vehicle " << vehicle->getId() << std::endl;
-                onStream << "-> Road: " << road->getName() << std::endl;
-                onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-                onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
-            }
-            // print(timestamp * SIM_TIME);
             road->cleanup();
         }
         timestamp++;

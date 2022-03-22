@@ -24,9 +24,29 @@ private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
 
     std::vector<Road*> roads;
+    int timestamp = 0;
+    int cycleCounter = 0;
+    int freqCounter = 0;
 
-    void print(double time);
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     int countVehicles();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicleGenerators(Road* road);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickTrafficLights(Road* road);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicles(Road* road, std::ostream& stream);
 public:
     Simulation();;
     ~Simulation();
@@ -51,12 +71,6 @@ public:
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     void writeOn(std::ostream& onStream, const double stopAt = 0.0);
-
-    /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
-    */
-    void tickVehicleGenerators();
-    void tickVehicles();
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }
