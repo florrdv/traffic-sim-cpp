@@ -97,6 +97,8 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
 
         // Loop over all roads
         for (Road* road : roads) {
+            // If there's a generator running on the road and the cycle time 
+            // has been exceeded, spawn a new vehicle
             VehicleGenerator* generator = road->getGenerator();
             if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
                 Vehicle* v = new Vehicle;
@@ -104,6 +106,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
                 road->addVehicle(v);
                 freqCounter = 0;
             }
+            
             std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
             for (TrafficLight* trafficLight : trafficLights) {

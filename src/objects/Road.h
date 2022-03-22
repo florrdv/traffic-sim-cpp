@@ -28,6 +28,8 @@ private:
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
+
+    void spawnVehicle();
 public:
     // Constructors / destructors
     Road() { _init = this; }

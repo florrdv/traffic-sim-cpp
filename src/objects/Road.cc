@@ -123,3 +123,9 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
     }
     return firstVehicle;
 }
+
+void Road::spawnVehicle() {
+    Vehicle* v = new Vehicle();
+    v->setPosition(0);
+    addVehicle(v);
+}
