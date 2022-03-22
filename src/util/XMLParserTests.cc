@@ -5,237 +5,158 @@
 #include "../lib/TestingHelpers.h"
 #include "../util/XMLParser.h"
 
-TEST(SimulationTests, InvalidSimulationTest1) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest1.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest1.txt";
+TEST(SimulationTests, InvalidXMLParserTest1) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest1.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest1.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest1.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest1.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest2) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest2.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest2.txt";
+TEST(SimulationTests, InvalidXMLParserTest2) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest2.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest2.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest2.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest2.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
 }
 
-TEST(SimulationTests, InvalidSimulationTest3) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest3.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest3.txt";
+TEST(SimulationTests, InvalidXMLParserTest3) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest3.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest3.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest3.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest3.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
 }
 
-TEST(SimulationTests, InvalidSimulationTest4) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest4.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest4.txt";
+TEST(SimulationTests, InvalidXMLParserTest4) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest4.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest4.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest4.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest4.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
 }
 
-TEST(SimulationTests, InvalidSimulationTest5) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest5.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest5.txt";
+TEST(SimulationTests, InvalidXMLParserTest5) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest5.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest5.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest5.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest5.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "");
 }
 
-TEST(SimulationTests, InvalidSimulationTest6) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest6.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest6.txt";
+TEST(SimulationTests, InvalidXMLParserTest6) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest6.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest6.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest6.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest6.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest7) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest7.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest7.txt";
+TEST(SimulationTests, InvalidXMLParserTest7) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest7.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest7.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest7.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest7.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest8) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest8.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest8.txt";
+TEST(SimulationTests, InvalidXMLParserTest8) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest8.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest8.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest8.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest8.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest9) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest9.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest9.txt";
+TEST(SimulationTests, InvalidXMLParserTest9) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest9.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest9.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest9.xml";
-
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest9.xml";
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest10) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest10.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest10.txt";
+TEST(SimulationTests, InvalidXMLParserTest10) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest10.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest10.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest10.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest10.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest11) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest11.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest11.txt";
+TEST(SimulationTests, InvalidXMLParserTest11) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest11.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest11.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest11.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest11.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest12) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest12.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest12.txt";
+TEST(SimulationTests, InvalidXMLParserTest12) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest12.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest12.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest12.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest12.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
-TEST(SimulationTests, InvalidSimulationTest13) {
-    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidSimulationTest13.txt";
-    std::string inPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest13.txt";
+TEST(SimulationTests, InvalidXMLParserTest13) {
+    std::string outPath = TEST_OUTPUT_FOLDER + "/InvalidXMLParserTest13.txt";
+    std::string inPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest13.txt";
 
-    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidSimulationTest13.xml";
+    std::string xmlPath = TEST_INPUT_FOLDER + "/InvalidXMLParserTest13.xml";
 
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
 }
 
