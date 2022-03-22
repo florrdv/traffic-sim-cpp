@@ -94,7 +94,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
                 road->addVehicle(v);
                 freqCounter = 0;
             }
-            std::vector<TrafficLight*> trafficLights = road->getTrafficlights();
+            std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
             std::vector<Vehicle*> vehicles = road->getVehicles();
             for (TrafficLight* trafficLight : trafficLights) {
                 if (cycleCounter * SIM_TIME > trafficLight->getCycle()) {

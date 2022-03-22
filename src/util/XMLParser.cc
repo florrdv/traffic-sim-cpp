@@ -214,7 +214,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
     }
 
     for (Road* road : sim.getRoads()) {
-        std::vector<TrafficLight*> placedTrafficLights = road->getTrafficlights();
+        std::vector<TrafficLight*> placedTrafficLights = road->getTrafficLights();
         for (int trafficLightIndexOne = 0; trafficLightIndexOne < placedTrafficLights.size(); trafficLightIndexOne++) {
             TrafficLight* trafficLightOne = placedTrafficLights[trafficLightIndexOne];
             for (int trafficLightIndexTwo = 0; trafficLightIndexTwo < placedTrafficLights.size(); trafficLightIndexTwo++) {
