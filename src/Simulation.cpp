@@ -76,16 +76,26 @@ int Simulation::countVehicles() {
 void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
 
+    // Let's start off by initializing the 
+    // variable we require for the execution
     int timestamp = 0;
     int cycleCounter = 0;
     int freqCounter = 0;
 
+    // Loop while there are still vehicles
+    // in the simulation
     while (countVehicles() > 0) {
+        // Compute the current time and check if we should still
+        // be running the simulation. We have a stopAt parameter for tests
+        // using the Vehicle Generator feature.
         double currentTime = timestamp * SIM_TIME;
         if (stopAt != 0 && currentTime > stopAt) return;
 
+        // Print the log entry header
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << currentTime << "s" << std::endl;
+
+        // Loop over all roads
         for (Road* road : roads) {
             VehicleGenerator* generator = road->getGenerator();
             if (generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency()) {
