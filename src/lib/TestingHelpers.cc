@@ -1,7 +1,8 @@
 #include <fstream>
-
 #include "TestingHelpers.h"
 
+// Snippet written by Serge Demeyer
+// Source: https://github.com/sergedemeyer/TicTacToe_Git/blob/master/DesignByContract.h
 bool fileCompare(const std::string leftFileName, const std::string rightFileName) {
 	std::ifstream leftFile, rightFile;
 	char leftRead, rightRead;

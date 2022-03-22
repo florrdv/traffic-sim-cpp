@@ -28,7 +28,6 @@ double Vehicle::getPosition() const {
 */
 void Vehicle::setPosition(int p) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    // TODO: Ensure position is within the road length
     ENSURE(p>=0, "Vehicle position cannot be a negative integer");
     Vehicle::position = p;
 }
