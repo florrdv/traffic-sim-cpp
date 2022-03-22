@@ -90,6 +90,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             // Extract values
             std::string roadName = nameNode.text().as_string();
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length");
+            if (roadLength == 0) throw std::runtime_error("XML: road length must be strictly positive");
 
             // Create road object
             Road* road = new Road();
@@ -114,6 +115,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             std::string road = roadNode.text().as_string();
             int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle");
+            if (cycle == 0) throw std::runtime_error("XML: cycle must be strictly positive");
 
             // Create traffic light object
             TrafficLight* trafficLight = new TrafficLight();
@@ -157,6 +159,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
             // Extract values
             std::string road = roadNode.text().as_string();
             int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency");
+            if (freq == 0) throw std::runtime_error("XML: frequency must be strictly positive");
 
             // Create vehicle generator object
             VehicleGenerator* generator = new VehicleGenerator();
@@ -183,6 +186,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         // Register the vehicle
         for (Vehicle* v : p.second) {
             if (v->getPosition() <= road->getLength()) road->addVehicle(v);
+            else throw std::runtime_error("XML: vehicle outside of road boundaries");
         }
     }
 
@@ -207,6 +211,7 @@ void XMLParser::parse(Simulation& sim, const std::string file) {
         // Register the traffic light
         for (TrafficLight* t : p.second) {
             if (t->getPosition() <= road->getLength()) road->addTrafficLight(t);
+            else throw std::runtime_error("XML: traffic light outside of road boundaries");
         }
     }
 
