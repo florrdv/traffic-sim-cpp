@@ -63,7 +63,7 @@ int Simulation::countVehicles() {
 
 void Simulation::tickVehicleGenerators(Road* road) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
-    REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation")
+    REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation");
     // If there's a generator running on the road and the cycle time 
     // has been exceeded, spawn a new vehicle
     VehicleGenerator* generator = road->getGenerator();
