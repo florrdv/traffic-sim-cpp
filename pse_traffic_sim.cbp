@@ -119,7 +119,7 @@
 		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/TrafficSimTests.cc">
 			<Option target="TrafficSimTests"/>
 		</Unit>
-		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/data/Constants.cc">
+		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/data/Constants.h">
 			<Option target="TrafficSimTests"/>
 			<Option target="TrafficSim"/>
 		</Unit>

@@ -9,8 +9,7 @@ private:
 
     int frequency{};
     int frequencyCount = 0;
-    double position{};
-
+    
 public:
     // Constructors / destructors
     VehicleGenerator() {_init = this;}

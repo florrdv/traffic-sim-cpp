@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
-#include "data/Constants.cc"
+#include "data/Constants.h"
 #include "lib/TestingHelpers.h"
 #include "util/XMLParser.h"
 #include "Simulation.h"
@@ -159,8 +159,6 @@ TEST(SimulationTests, RoadMutationHappyDay) {
     sim.addRoad(road);
 
     EXPECT_EQ(road, sim.findRoad("example"));
-
-    delete road;
 }
 
 TEST(SimulationTests, CountVehiclesHappyDay) {
@@ -173,7 +171,4 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
     road->addVehicle(vehicle);
 
     EXPECT_EQ(1, sim.countVehicles());
-
-    delete road;
-    delete vehicle;
 }
