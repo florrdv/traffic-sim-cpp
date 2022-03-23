@@ -154,7 +154,7 @@ TEST(SimulationTests, ValidSimulationTest8) {
 
 TEST(SimulationTests, RoadMutationHappyDay) {
     Simulation sim = Simulation();
-    Road* road = new Road();
+    Road* road = new Road("example", 100.0);
     road->setName("example");
 
     sim.addRoad(road);
@@ -164,11 +164,11 @@ TEST(SimulationTests, RoadMutationHappyDay) {
 
 TEST(SimulationTests, CountVehiclesHappyDay) {
     Simulation sim = Simulation();
-    Road* road = new Road();
+    Road* road = new Road("example", 100.0);
     road->setName("example");
     sim.addRoad(road);
 
-    Vehicle* vehicle = new Vehicle;
+    Vehicle* vehicle = new Vehicle(0.0);
     road->addVehicle(vehicle);
 
     EXPECT_EQ(1, sim.countVehicles());
@@ -176,13 +176,12 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
 
 TEST(SimulationTests, TickTrafficLightsHappyDay) {
     Simulation sim = Simulation();
-    Road* road = new Road();
+    Road* road = new Road("example", 100.0);
     sim.addRoad(road);
-    TrafficLight* light = new TrafficLight();
-    
     int cycle = 10;
+    TrafficLight* light = new TrafficLight(20.0, cycle);
+    
 
-    light->setCycle(cycle);
     road->addTrafficLight(light);
 
     bool beforeTicks = light->isGreen();
@@ -195,8 +194,8 @@ TEST(SimulationTests, TickTrafficLightsHappyDay) {
 
 TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
     Simulation sim = Simulation();
-    Road* road = new Road();
-    TrafficLight* light = new TrafficLight();
+    Road* road = new Road("example", 100.0);
+    TrafficLight* light = new TrafficLight(20.0, 20);
     
     EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
 
@@ -204,14 +203,13 @@ TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
 }
 
 TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
-    Simulation sim = Simulation();
-    Road* road = new Road();
-    sim.addRoad(road);
-    VehicleGenerator* generator = new VehicleGenerator();
-    road->setGenerator(generator);
-
     int frequency = 10;
-    generator->setFrequency(frequency);
+
+    Simulation sim = Simulation();
+    Road* road = new Road("example", 100.0);
+    sim.addRoad(road);
+    VehicleGenerator* generator = new VehicleGenerator(frequency);
+    road->setGenerator(generator);
 
     int expectedAfterTick = sim.countVehicles()+1;
 
@@ -223,8 +221,8 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
 
 TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
     Simulation sim = Simulation();
-    Road* road = new Road();
-    VehicleGenerator* generator = new VehicleGenerator();
+    Road* road = new Road("example", 20.0);
+    VehicleGenerator* generator = new VehicleGenerator(10);
     road->setGenerator(generator);
 
     EXPECT_DEATH(sim.tickVehicleGenerators(road), "not part of the simulation");
@@ -234,9 +232,8 @@ TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
 
 TEST(SimulationTests, TickVehiclesUnknownRoad) {
     Simulation sim = Simulation();
-    Road* road = new Road();
-    Vehicle* vehicle = new Vehicle();
-    vehicle->setPosition(20);
+    Road* road = new Road("example", 10.0);
+    Vehicle* vehicle = new Vehicle(20.0);
     road->addVehicle(vehicle);
 
 
