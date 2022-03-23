@@ -193,6 +193,24 @@ TEST(SimulationTests, TickTrafficLightsHappyDay) {
     EXPECT_NE(beforeTicks, light->isGreen());
 }
 
+TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
+    Simulation sim = Simulation();
+    Road* road = new Road();
+    TrafficLight* light = new TrafficLight();
+    
+    int cycle = 10;
+
+    light->setCycle(cycle);
+    road->addTrafficLight(light);
+
+    bool beforeTicks = light->isGreen();
+
+    light->setCycleCount(ceil(cycle/gSimTime));
+    sim.tickTrafficLights(road);
+
+    EXPECT_DEATH(beforeTicks, light->isGreen());
+}
+
 TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road();

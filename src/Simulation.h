@@ -24,6 +24,7 @@ class Simulation {
     FRIEND_TEST(SimulationTests, CountVehiclesHappyDay);
     FRIEND_TEST(SimulationTests, TickTrafficLightsHappyDay);
     FRIEND_TEST(SimulationTests, TickVehicleGeneratorsHappyDay);
+    FRIEND_TEST(SimulationTests, TickTrafficLightsUnknownRoad);
 
 private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
