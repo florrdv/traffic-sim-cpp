@@ -22,6 +22,8 @@ set(RELEASE_SOURCE_FILES
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
         src/lib/DesignByContract.h
+        src/objects/Entity.cc
+        src/objects/Entity.h
         src/objects/Road.cc
         src/objects/Road.h
         src/objects/TrafficLight.cc
@@ -44,6 +46,9 @@ set(DEBUG_SOURCE_FILES
         src/lib/TestingHelpers.cc
         src/lib/pugixml/pugixml.hpp
         src/lib/DesignByContract.h
+        src/objects/Entity.cc
+        src/objects/Entity.h
+        src/objects/EntityTests.cc
         src/objects/Road.cc
         src/objects/Road.h
         src/objects/RoadTests.cc

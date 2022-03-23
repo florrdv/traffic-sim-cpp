@@ -1,7 +1,11 @@
 #ifndef __PROJECTS_PSE_TRAFFIC_SIM_SRC_OBJECTS_ENTITY_H_
 #define __PROJECTS_PSE_TRAFFIC_SIM_SRC_OBJECTS_ENTITY_H_
 
+#include <gtest/gtest_prod.h>
+
 class Entity {
+    FRIEND_TEST(EntityTests, PositionMutationHappyDay);
+    FRIEND_TEST(EntityTests, PositionMutationNegative);
 private:
     Entity* _init;
 
@@ -9,6 +13,7 @@ private:
 
 protected:
     // Constructors / destructors
+    Entity(double p): position(p) { _init = this; };
 
     // Regular methods
     /**
