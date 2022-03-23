@@ -2,18 +2,18 @@
 #include "Vehicle.h"
 
 TEST(VehicleTests, PositionMutationHappyDay) {
-    Vehicle v = Vehicle();
+    Vehicle v = Vehicle(0.0);
     v.setPosition(1.0);
     EXPECT_EQ(1.0, v.getPosition());
 }
 
 TEST(VehicleTests, PositionMutationNegative) {
-    Vehicle v = Vehicle();
+    Vehicle v = Vehicle(0.0);
     EXPECT_DEATH(v.setPosition(-1), "negative");
 }
 
 TEST(VehicleTests, TickHappyDay) {
-    Vehicle v = Vehicle();
+    Vehicle v = Vehicle(0.0);
 
     // Tick twice
     v.tick(nullptr);
@@ -25,7 +25,7 @@ TEST(VehicleTests, TickHappyDay) {
 }
 
 TEST(VehicleTests, UpdateAccelerationHappyDay) {
-    Vehicle v;
+    Vehicle v = Vehicle(0.0);
 
     v.updateAcceleration(nullptr);
 
@@ -33,7 +33,7 @@ TEST(VehicleTests, UpdateAccelerationHappyDay) {
 }
 
 TEST(VehicleTests, UpdateSpeedHappyDay) {
-    Vehicle v;
+    Vehicle v = Vehicle(0.0);
 
     // Update acceleration first
     v.updateAcceleration(nullptr);
@@ -44,7 +44,7 @@ TEST(VehicleTests, UpdateSpeedHappyDay) {
 }
 
 TEST(VehicleTests, DecelerateHappyDay) {
-    Vehicle v;
+    Vehicle v = Vehicle(0.0);
 
     // Tick twice
     v.decelerate();

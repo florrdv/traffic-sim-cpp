@@ -56,11 +56,11 @@ void Vehicle::updateSpeed() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     double newSpeed = speed + acceleration * simTime;
     if (newSpeed < 0) {
-        position -= std::pow(speed, 2) / (2 * acceleration);
+        setPosition(getPosition() - std::pow(speed, 2) / (2 * acceleration));
         speed = 0.0;
     } else {
         speed = newSpeed;
-        position += speed * simTime + acceleration * std::pow(simTime, 2) / 2;
+        setPosition(getPosition() + speed * simTime + acceleration * std::pow(simTime, 2) / 2);
     }
     ENSURE(speed >= 0, "Vehicle speed must be positive");
 }
@@ -73,7 +73,7 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     double delta = 0;
     if (leadingVehicle != nullptr) {
-        double followDistance = leadingVehicle->getPosition() - position - leadingVehicle->getLength();
+        double followDistance = leadingVehicle->getPosition() - getPosition() - leadingVehicle->getLength();
         double speedDifference = speed - leadingVehicle->getSpeed();
 
         delta = (followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) / followDistance;
