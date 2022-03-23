@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
 #include <fstream>
 
-#include "../data/Constants.cc"
+#include "../data/Constants.h"
 #include "../lib/TestingHelpers.h"
 #include "../util/XMLParser.h"
 

@@ -21,7 +21,6 @@ private:
     int cycle{};
     bool green=false;
 
-    int freqCounter = 0;
     int cycleCount = 0;
 
 public:

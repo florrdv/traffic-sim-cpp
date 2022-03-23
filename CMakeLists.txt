@@ -17,7 +17,7 @@ else()
 endif()
 
 set(RELEASE_SOURCE_FILES
-        src/data/Constants.cc
+        src/data/Constants.h
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
@@ -37,7 +37,7 @@ set(RELEASE_SOURCE_FILES
         src/TrafficSim.cc)
 
 set(DEBUG_SOURCE_FILES
-        src/data/Constants.cc
+        src/data/Constants.h
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
         src/lib/TestingHelpers.h

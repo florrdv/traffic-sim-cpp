@@ -10,7 +10,7 @@
 
 #include "XMLParser.h"
 
-#include "../data/Constants.cc"
+#include "../data/Constants.h"
 #include "../objects/Road.h"
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"

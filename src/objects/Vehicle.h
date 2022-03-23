@@ -14,7 +14,7 @@
 #include <string>
 #include <gtest/gtest_prod.h>
 
-#include "../data/Constants.cc"
+#include "../data/Constants.h"
 
 class VehicleTests;
 
@@ -32,14 +32,14 @@ private:
     double speed = 0;
     double acceleration = 0;
 
-    double length = gVehicleLength;
-    double speedMax = gSpeedMax;
-    double accelerationMax = gAccelerationMax;
-    double brakeMax = gBrakeMax;
-    double followMin = gFollowMin;
-    double simTime = gSimTime;
-    double decelerationDistance = gDecelerationDistance;
-    double decelerationFactor = gDecelerationFactor;
+    double length{};
+    double speedMax{};
+    double accelerationMax{};
+    double brakeMax{};
+    double followMin{};
+    double simTime{};
+    double decelerationDistance{};
+    double decelerationFactor{};
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
@@ -54,7 +54,7 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle() { _init = this; }
+    Vehicle(): length(gVehicleLength), speedMax(gSpeedMax), accelerationMax(gAccelerationMax), brakeMax(gBrakeMax), followMin(gFollowMin), simTime(gSimTime), decelerationDistance(gDecelerationDistance), decelerationFactor(gDecelerationFactor) { _init = this; }
 
     // General methods
     /**
