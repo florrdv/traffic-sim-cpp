@@ -50,9 +50,12 @@ bool TrafficLight::isGreen() const {
 }
 
 void TrafficLight::setCycleCount(int count) {
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
+    ENSURE(count>=0, "Traffic light cycle must be positive");
     cycleCount = count;
 };
 
 int TrafficLight::getCycleCount() const {
+    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return cycleCount;
 };
