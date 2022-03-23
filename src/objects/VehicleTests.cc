@@ -49,5 +49,5 @@ TEST(VehicleTests, DecelerateHappyDay) {
     // Tick twice
     v.decelerate();
 
-    EXPECT_EQ(v.getDecelerationFactor() * SPEED_MAX, v.getSpeedMax());
+    EXPECT_EQ(v.getDecelerationFactor() * gSpeedMax, v.getSpeedMax());
 }

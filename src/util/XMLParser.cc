@@ -221,7 +221,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight *trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
-                ASSERT(!(trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - DECELERATION_DISTANCE) &&
+                ASSERT(!(trafficLightTwo->getPosition() > (trafficLightOne->getPosition() - gDecelerationDistance) &&
                          trafficLightTwo->getPosition() < trafficLightOne->getPosition()),
                        "XML: traffic light in deceleration zone of other traffic light");
                 ASSERT(trafficLightTwo->getPosition() != trafficLightOne->getPosition(),

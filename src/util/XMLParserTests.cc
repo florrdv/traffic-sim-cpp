@@ -6,7 +6,7 @@
 #include "../util/XMLParser.h"
 
 TEST(XMLParserTests, ParsingRoadBoundaries) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadBoundaries.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingRoadBoundaries.xml";
 
     Simulation sim = Simulation();
 
@@ -16,7 +16,7 @@ TEST(XMLParserTests, ParsingRoadBoundaries) {
 
 
 TEST(XMLParserTests, ParsingRoadLengthNegative) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadLengthNegative.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingRoadLengthNegative.xml";
 
     Simulation sim = Simulation();
 
@@ -25,7 +25,7 @@ TEST(XMLParserTests, ParsingRoadLengthNegative) {
 }
 
 TEST(XMLParserTests, ParsingRoadLengthZero) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingRoadLengthZero.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingRoadLengthZero.xml";
 
     Simulation sim = Simulation();
 
@@ -34,7 +34,7 @@ TEST(XMLParserTests, ParsingRoadLengthZero) {
 }
 
 TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleRoadUnknown.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingVehicleRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -43,7 +43,7 @@ TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingVehicleNegativePosition) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleNegativePosition.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingVehicleNegativePosition.xml";
 
     Simulation sim = Simulation();
 
@@ -52,7 +52,7 @@ TEST(XMLParserTests, ParsingVehicleNegativePosition) {
 }
 
 TEST(XMLParserTests, ParsingVehicleOverlap) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleOverlap.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingVehicleOverlap.xml";
 
     Simulation sim = Simulation();
 
@@ -61,7 +61,7 @@ TEST(XMLParserTests, ParsingVehicleOverlap) {
 }
 
 TEST(XMLParserTests, ParsingVehicleGeneratorRoadUnknown) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleGeneratorRoadUnknown.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingVehicleGeneratorRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -70,7 +70,7 @@ TEST(XMLParserTests, ParsingVehicleGeneratorRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingVehicleGeneratorMultiple) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingVehicleGeneratorMultiple.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingVehicleGeneratorMultiple.xml";
 
     Simulation sim = Simulation();
 
@@ -79,7 +79,7 @@ TEST(XMLParserTests, ParsingVehicleGeneratorMultiple) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightsOverlap) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightsOverlap.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightsOverlap.xml";
 
     Simulation sim = Simulation();
 
@@ -88,7 +88,7 @@ TEST(XMLParserTests, ParsingTrafficLightsOverlap) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightRoadUnknown) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightRoadUnknown.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightRoadUnknown.xml";
 
     Simulation sim = Simulation();
 
@@ -97,7 +97,7 @@ TEST(XMLParserTests, ParsingTrafficLightRoadUnknown) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightCycleNegative.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightCycleNegative.xml";
 
     Simulation sim = Simulation();
 
@@ -106,7 +106,7 @@ TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleZero) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightCycleZero.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightCycleZero.xml";
     Simulation sim = Simulation();
 
     XMLParser parser;
@@ -115,7 +115,7 @@ TEST(XMLParserTests, ParsingTrafficLightCycleZero) {
 
 
 TEST(XMLParserTests, ParsingTrafficLightDecelerationOverlap) {
-    std::string xmlPath = TEST_INPUT_FOLDER + "/ParsingTrafficLightDecelerationOverlap.xml";
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightDecelerationOverlap.xml";
 
     Simulation sim = Simulation();
 

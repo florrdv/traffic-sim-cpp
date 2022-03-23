@@ -3,19 +3,17 @@
 
 #include <string>
 
-static double SPEEDUP                  = 100;
+static double gVehicleLength           = 4;
+static double gSpeedMax                = 16.6;
+static double gAccelerationMax         = 1.44;
+static double gBrakeMax                = 4.61;
+static double gBrakeDistance           = 15;
+static double gFollowMin               = 4;
+static double gSimTime                 = 0.0166;
+static double gDecelerationDistance    = 50;
+static double gDecelerationFactor      = 0.4 ;
 
-static double VEHICLE_LENGTH           = 4;
-static double SPEED_MAX                = 16.6;
-static double ACCELERATION_MAX         = 1.44;
-static double BRAKE_MAX                = 4.61;
-static double BRAKE_DISTANCE           = 15;
-static double FOLLOW_MIN               = 4;
-static double SIM_TIME                 = 0.0166;
-static double DECELERATION_DISTANCE    = 50;
-static double DECELERATION_FACTOR      = 0.4 ;
-
-static std::string TEST_INPUT_FOLDER = "../input/testing";
-static std::string TEST_OUTPUT_FOLDER = "../output/testing";
+static std::string gTestInputFolder = "../input/testing";
+static std::string gTestOutputFolder = "../output/testing";
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_

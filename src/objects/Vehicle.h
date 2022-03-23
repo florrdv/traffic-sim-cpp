@@ -32,14 +32,14 @@ private:
     double speed = 0;
     double acceleration = 0;
 
-    double length = VEHICLE_LENGTH;
-    double speedMax = SPEED_MAX;
-    double accelerationMax = ACCELERATION_MAX;
-    double brakeMax = BRAKE_MAX;
-    double followMin = FOLLOW_MIN;
-    double simTime = SIM_TIME;
-    double decelerationDistance = DECELERATION_DISTANCE;
-    double decelerationFactor = DECELERATION_FACTOR;
+    double length = gVehicleLength;
+    double speedMax = gSpeedMax;
+    double accelerationMax = gAccelerationMax;
+    double brakeMax = gBrakeMax;
+    double followMin = gFollowMin;
+    double simTime = gSimTime;
+    double decelerationDistance = gDecelerationDistance;
+    double decelerationFactor = gDecelerationFactor;
 
     friend class VehicleTests;
     /**

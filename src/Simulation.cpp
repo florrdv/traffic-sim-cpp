@@ -63,7 +63,7 @@ void Simulation::tickVehicleGenerators(Road* road) {
 
     // Get the frequency count for the generator
     int freqCount = generator->getFrequencyCount();
-    bool shouldSpawn = freqCount * SIM_TIME > generator->getFrequency();
+    bool shouldSpawn = freqCount * gSimTime > generator->getFrequency();
 
     // Spawn a vehicle if necessary
     if (shouldSpawn) {
@@ -82,7 +82,7 @@ void Simulation::tickTrafficLights(Road* road) {
     for (TrafficLight* trafficLight : trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
         // Check if we have to toggle the light
-        bool shouldToggle = cycleCount * SIM_TIME > trafficLight->getCycle(); 
+        bool shouldToggle = cycleCount * gSimTime > trafficLight->getCycle();
         if (shouldToggle) {
             trafficLight->toggle();
             trafficLight->setCycleCount(0);
@@ -103,9 +103,9 @@ void Simulation::tickTrafficLights(Road* road) {
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
             // Stop the vehicle if it's in the braking zone
-            if (distanceToLight < BRAKE_DISTANCE) firstVehicle->stop();
+            if (distanceToLight < gBrakeDistance) firstVehicle->stop();
             // Force the vehicle to decelerate if it's in the deceleration zone
-            else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
+            else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();
         }
     }
 }
@@ -142,7 +142,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         // Compute the current time and check if we should still
         // be running the simulation. We have a stopAt parameter for tests
         // using the Vehicle Generator feature.
-        double currentTime = timestamp * SIM_TIME;
+        double currentTime = timestamp * gSimTime;
         if (stopAt != 0 && currentTime > stopAt) return;
 
         // Print the log entry header
@@ -165,7 +165,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         timestamp++;
 
         // Sleep until the next simulation tick
-        // std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / speedup)));
+         std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / speedup)));
     }
 }
 
