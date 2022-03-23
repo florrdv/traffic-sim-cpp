@@ -63,7 +63,7 @@ int Simulation::countVehicles() {
 
 void Simulation::tickVehicleGenerators(Road* road) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
-
+    REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation")
     // If there's a generator running on the road and the cycle time 
     // has been exceeded, spawn a new vehicle
     VehicleGenerator* generator = road->getGenerator();
@@ -82,7 +82,7 @@ void Simulation::tickVehicleGenerators(Road* road) {
 
 void Simulation::tickTrafficLights(Road* road) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
-    
+    REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation");
     // Get all traffic lights on the road
     std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
 
@@ -120,7 +120,7 @@ void Simulation::tickTrafficLights(Road* road) {
 
 void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
-
+    REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation");
     // Get all vehicles on the road
     std::vector<Vehicle*> vehicles = road->getVehicles();
 
