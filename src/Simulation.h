@@ -24,19 +24,34 @@ private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
 
     std::vector<Road*> roads;
+    int timestamp = 0;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
-    \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     int countVehicles();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicleGenerators(Road* road);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickTrafficLights(Road* road);
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicles(Road* road, std::ostream& stream);
 public:
     /**
     \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    Simulation();
+    Simulation();;
     /**
-    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling destructor");
     */
     ~Simulation();
 
@@ -46,22 +61,24 @@ public:
     \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
     */
     void addRoad(Road* r);
+
     /**
-    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     Road* findRoad(const std::string& roadName);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
     */
-    std::vector<Road*> getRoads();
+    std::vector<Road*> getRoads() const;
+
     /**
-    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    void writeOn(std::ostream& onStream, const double stopAt = 0.0);
+    void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
 
     // Safety specific
-    bool properlyInitialized() { return _init == this; }
+    bool properlyInitialized() const { return _init == this; }
 
 };
 
