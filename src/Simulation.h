@@ -65,10 +65,10 @@ public:
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-
     Road* findRoad(const std::string& roadName);
+
     /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
     */
     std::vector<Road*> getRoads() const;
 
@@ -78,7 +78,7 @@ public:
     void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
 
     // Safety specific
-    bool properlyInitialized() { return _init == this; }
+    bool properlyInitialized() const { return _init == this; }
 
 };
 

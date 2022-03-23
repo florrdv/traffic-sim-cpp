@@ -172,5 +172,6 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
 
 
 std::vector<Road*> Simulation::getRoads() const {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
     return roads;
 }
