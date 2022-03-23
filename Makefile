@@ -292,6 +292,57 @@ src/lib/pugixml/pugixml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/lib/pugixml/pugixml.cpp.s
 .PHONY : src/lib/pugixml/pugixml.cpp.s
 
+src/objects/Entity.o: src/objects/Entity.cc.o
+.PHONY : src/objects/Entity.o
+
+# target to build an object file
+src/objects/Entity.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/Entity.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/objects/Entity.cc.o
+.PHONY : src/objects/Entity.cc.o
+
+src/objects/Entity.i: src/objects/Entity.cc.i
+.PHONY : src/objects/Entity.i
+
+# target to preprocess a source file
+src/objects/Entity.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/Entity.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/objects/Entity.cc.i
+.PHONY : src/objects/Entity.cc.i
+
+src/objects/Entity.s: src/objects/Entity.cc.s
+.PHONY : src/objects/Entity.s
+
+# target to generate assembly for a file
+src/objects/Entity.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/Entity.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/objects/Entity.cc.s
+.PHONY : src/objects/Entity.cc.s
+
+src/objects/EntityTests.o: src/objects/EntityTests.cc.o
+.PHONY : src/objects/EntityTests.o
+
+# target to build an object file
+src/objects/EntityTests.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/EntityTests.cc.o
+.PHONY : src/objects/EntityTests.cc.o
+
+src/objects/EntityTests.i: src/objects/EntityTests.cc.i
+.PHONY : src/objects/EntityTests.i
+
+# target to preprocess a source file
+src/objects/EntityTests.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/EntityTests.cc.i
+.PHONY : src/objects/EntityTests.cc.i
+
+src/objects/EntityTests.s: src/objects/EntityTests.cc.s
+.PHONY : src/objects/EntityTests.s
+
+# target to generate assembly for a file
+src/objects/EntityTests.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/objects/EntityTests.cc.s
+.PHONY : src/objects/EntityTests.cc.s
+
 src/objects/Road.o: src/objects/Road.cc.o
 .PHONY : src/objects/Road.o
 
@@ -575,6 +626,12 @@ help:
 	@echo "... src/lib/pugixml/pugixml.o"
 	@echo "... src/lib/pugixml/pugixml.i"
 	@echo "... src/lib/pugixml/pugixml.s"
+	@echo "... src/objects/Entity.o"
+	@echo "... src/objects/Entity.i"
+	@echo "... src/objects/Entity.s"
+	@echo "... src/objects/EntityTests.o"
+	@echo "... src/objects/EntityTests.i"
+	@echo "... src/objects/EntityTests.s"
 	@echo "... src/objects/Road.o"
 	@echo "... src/objects/Road.i"
 	@echo "... src/objects/Road.s"

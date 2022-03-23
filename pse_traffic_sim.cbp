@@ -145,6 +145,17 @@
 			<Option target="TrafficSimTests"/>
 			<Option target="TrafficSim"/>
 		</Unit>
+		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/objects/Entity.cc">
+			<Option target="TrafficSimTests"/>
+			<Option target="TrafficSim"/>
+		</Unit>
+		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/objects/Entity.h">
+			<Option target="TrafficSimTests"/>
+			<Option target="TrafficSim"/>
+		</Unit>
+		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/objects/EntityTests.cc">
+			<Option target="TrafficSimTests"/>
+		</Unit>
 		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/objects/Road.cc">
 			<Option target="TrafficSimTests"/>
 			<Option target="TrafficSim"/>
