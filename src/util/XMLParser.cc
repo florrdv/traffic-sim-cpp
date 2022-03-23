@@ -31,7 +31,7 @@
 // verkeerslicht bevinden (zie Appendix B).
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
@@ -39,7 +39,7 @@ void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 \n ENSURE(value>=0, "Parsed integer cannot be negative");
 */
 int XMLParser::parsePositiveInteger(const std::string &s, const std::string &name,
@@ -60,7 +60,7 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
 void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");

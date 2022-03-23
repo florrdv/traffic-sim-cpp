@@ -39,72 +39,72 @@ public:
 
     // Regular methods
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     const std::string &getName() const;
     
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void setName(const std::string &name);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     int getLength() const;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void setLength(int length);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     const std::vector<Vehicle *> &getVehicles() const;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void addVehicle(Vehicle *v);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     Vehicle* getLeadingVehicle(Vehicle *v);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     Vehicle* getFirstToTrafficLight(TrafficLight *trafficLight) const;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     const std::vector<TrafficLight *> &getTrafficLights() const;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void addTrafficLight(TrafficLight *t);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     VehicleGenerator* getGenerator() const;
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void setGenerator(VehicleGenerator *g);
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void cleanup();
 
     /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling writeOn");
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     void spawnVehicle();
 

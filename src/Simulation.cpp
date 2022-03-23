@@ -75,7 +75,7 @@ void Simulation::tickVehicleGenerators(Road* road) {
 }
 
 void Simulation::tickTrafficLights(Road* road) {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
     
     // Get all traffic lights on the road
     std::vector<TrafficLight*> trafficLights = road->getTrafficLights();
@@ -116,7 +116,7 @@ void Simulation::tickTrafficLights(Road* road) {
 }
 
 void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
     // Get all vehicles on the road
     std::vector<Vehicle*> vehicles = road->getVehicles();
@@ -136,10 +136,10 @@ void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 */
 void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
     // Loop while there are still vehicles
     // in the simulation
