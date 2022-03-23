@@ -123,3 +123,13 @@ TEST(XMLParserTests, ParsingTrafficLightDecelerationOverlap) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "deceleration zone");
 }
 
+TEST(XMLParserTests, ParsingHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/ParsingHappyDay.xml";
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_EXIT({parser.parse(sim, xmlPath); fprintf(stderr, "Parsed successfully"); exit(0);},
+                ::testing::ExitedWithCode(0), "Parsed successfully");
+}
+
