@@ -41,12 +41,12 @@ TEST(TrafficLightTests, toggle) {
 TEST(TrafficLightTests, CycleCountMutationNegative) {
     TrafficLight light;
 
-    EXPECT_DEATH(g.setCycleCount(-20), "positive");
+    EXPECT_DEATH(light.setCycleCount(-20), "positive");
 }
 
 TEST(TrafficLightTests, CycleCountMutationHappyDay) {
     TrafficLight light;
 
-    g.setCycleCount(0);
-    ASSERT_EQ(0, g.getCycleCount());
+    light.setCycleCount(0);
+    ASSERT_EQ(0, light.getCycleCount());
 }
