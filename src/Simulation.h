@@ -25,7 +25,6 @@ private:
 
     std::vector<Road*> roads;
 
-    void print(double time);
 /**
 \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
 \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
