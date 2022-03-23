@@ -37,3 +37,16 @@ TEST(TrafficLightTests, toggle) {
     light->toggle();
     EXPECT_NE(beforeToggle, light->isGreen());
 }
+
+TEST(TrafficLightTests, CycleCountMutationNegative) {
+    TrafficLight* g = new TrafficLight;
+
+    EXPECT_DEATH(g->setCycleCount(-20), "positive");
+}
+
+TEST(TrafficLightTests, CycleCountMutationHappyDay) {
+    TrafficLight* g = new TrafficLight;
+
+    g->setCycleCount(0);
+    ASSERT_EQ(0, g->getCycleCount());
+}
