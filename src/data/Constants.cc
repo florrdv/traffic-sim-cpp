@@ -11,7 +11,7 @@ static double gBrakeDistance           = 15;
 static double gFollowMin               = 4;
 static double gSimTime                 = 0.0166;
 static double gDecelerationDistance    = 50;
-static double gDecelerationFactor      = 0.4 ;
+static double gDecelerationFactor      = 0.4;
 
 static std::string gTestInputFolder = "../input/testing";
 static std::string gTestOutputFolder = "../output/testing";
