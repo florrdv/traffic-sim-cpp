@@ -52,6 +52,14 @@ private:
     void tickVehicles(Road* road, std::ostream& stream);
 public:
     /**
+    \n REQUIRE(gSpeedMax > 0, "gSpeedMax must be strictly positive");
+    \n REQUIRE(gAccelerationMax > 0, "gAccelerationMax must be strictly positive");
+    \n REQUIRE(gBrakeMax > 0, "gBrakeMax must be strictly positive");
+    \n REQUIRE(gBrakeDistance >= 0, "gBrakeDistance must be positive");
+    \n REQUIRE(gFollowMin >= 0, "gFollowMin must be positive");
+    \n REQUIRE(gSimTime > 0, "gSimTime must be strictly positive");
+    \n REQUIRE(gDecelerationDistance >= 0, "gDecelerationDistance must be positive");
+    \n REQUIRE(gDecelerationFactor > 0, "gDecelerationFactor must be strictly positive");
     \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     Simulation();
