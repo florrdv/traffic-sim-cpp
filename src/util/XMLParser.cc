@@ -182,9 +182,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
     for (Road *road: sim.getRoads()) {
         std::vector<Vehicle *> vehicles = road->getVehicles();
-        for (int vehicleIndexOne = 0; vehicleIndexOne < vehicles.size(); vehicleIndexOne++) {
+        for (int vehicleIndexOne = 0; vehicleIndexOne < (int) vehicles.size(); vehicleIndexOne++) {
             Vehicle *vehicleOne = vehicles[vehicleIndexOne];
-            for (int vehicleIndexTwo = 0; vehicleIndexTwo < vehicles.size(); vehicleIndexTwo++) {
+            for (int vehicleIndexTwo = 0; vehicleIndexTwo < (int) vehicles.size(); vehicleIndexTwo++) {
                 if (vehicleIndexOne == vehicleIndexTwo) continue;
 
                 Vehicle *vehicleTwo = vehicles[vehicleIndexTwo];
@@ -208,10 +208,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
     for (Road *road: sim.getRoads()) {
         std::vector<TrafficLight *> placedTrafficLights = road->getTrafficLights();
-        for (int trafficLightIndexOne = 0; trafficLightIndexOne < placedTrafficLights.size(); trafficLightIndexOne++) {
+        for (int trafficLightIndexOne = 0; trafficLightIndexOne < (int) placedTrafficLights.size(); trafficLightIndexOne++) {
             TrafficLight *trafficLightOne = placedTrafficLights[trafficLightIndexOne];
-            for (int trafficLightIndexTwo = 0;
-                 trafficLightIndexTwo < placedTrafficLights.size(); trafficLightIndexTwo++) {
+            for (int trafficLightIndexTwo = 0; trafficLightIndexTwo < (int) placedTrafficLights.size(); trafficLightIndexTwo++) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight *trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
