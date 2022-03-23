@@ -148,7 +148,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
 
         // Print the log entry header
         onStream << "-------------------------------------------" << std::endl;
-        std::cout << "Time: T+ " << currentTime << "s" << std::endl;
+        onStream << "Time: T+ " << currentTime << "s" << std::endl;
 
         // Loop over all roads
         for (Road* road : roads) {
