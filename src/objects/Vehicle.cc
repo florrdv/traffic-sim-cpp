@@ -17,24 +17,6 @@
 /**
 \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 */
-double Vehicle::getPosition() const {
-    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    return position;
-}
-
-/**
-\n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-\n ENSURE(p>=0, "Vehicle position cannot be a negative integer");
-*/
-void Vehicle::setPosition(int p) {
-    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    ENSURE(p>=0, "Vehicle position cannot be a negative integer");
-    Vehicle::position = p;
-}
-
-/**
-\n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-*/
 double Vehicle::getLength() const {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     return length;

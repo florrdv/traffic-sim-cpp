@@ -25,14 +25,14 @@ void Road::setName(const std::string &n) {
 }
 
 
-int Road::getLength() const {
+double Road::getLength() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
     return length;
 }
 
 
-void Road::setLength(int l) {
+void Road::setLength(double l) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(l>0, "Length must be strictly positive");
     Road::length = l;

@@ -24,7 +24,7 @@ private:
     Road* _init;
 
     std::string name;
-    int length;
+    double length;
 
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
@@ -32,7 +32,7 @@ private:
 
 public:
     // Constructors / destructors
-    Road() { _init = this; }
+    Road(std::string n, double l): name(n), length(l) { _init = this; }
     ~Road() {
         REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling destructor");
         for (Vehicle* vehicle : vehicles) delete vehicle;
@@ -54,12 +54,12 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    int getLength() const;
+    double getLength() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    void setLength(int length);
+    void setLength(double length);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
