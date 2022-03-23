@@ -151,3 +151,6 @@ TEST(SimulationTests, ValidSimulationTest8) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
+TEST(SimulationTests, ValidSimulationTest9) {
+
+}
