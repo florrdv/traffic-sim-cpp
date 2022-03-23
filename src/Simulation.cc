@@ -20,6 +20,14 @@
 
 
 Simulation::Simulation() {
+    REQUIRE(gSpeedMax > 0, "gSpeedMax must be strictly positive");
+    REQUIRE(gAccelerationMax > 0, "gAccelerationMax must be strictly positive");
+    REQUIRE(gBrakeMax > 0, "gBrakeMax must be strictly positive");
+    REQUIRE(gBrakeDistance >= 0, "gBrakeDistance must be positive");
+    REQUIRE(gFollowMin >= 0, "gFollowMin must be positive");
+    REQUIRE(gSimTime > 0, "gSimTime must be strictly positive");
+    REQUIRE(gDecelerationDistance >= 0, "gDecelerationDistance must be positive");
+    REQUIRE(gDecelerationFactor > 0, "gDecelerationFactor must be strictly positive");
     _init = this;
     ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
 }
