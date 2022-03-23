@@ -8,6 +8,7 @@ private:
     VehicleGenerator* _init;
 
     int frequency{};
+    int frequencyCount = 0;
     double position{};
 
 public:
@@ -15,15 +16,27 @@ public:
     VehicleGenerator() {_init = this;}
 
     // General methods
-/**
-\n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    */
     int getFrequency() const;
-/**
-\n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-\n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
-*/
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    \n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
+    */
     void setFrequency(int frequency_);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    */
+    int getFrequencyCount() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    \n ENSURE(count >=0, "Vehicle generator frequence must be strictly positive");
+    */
+    void setFrequencyCount(int count);
 
     // Safety specific
     bool properlyInitialized() const {return _init == this;}

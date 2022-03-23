@@ -61,14 +61,17 @@ void Simulation::tickVehicleGenerators(Road* road) {
     VehicleGenerator* generator = road->getGenerator();
     if (generator == nullptr) return;
 
+    // Get the frequency count for the generator
     int freqCount = generator->getFrequencyCount();
-    bool shouldSpawn = freqCounter * SIM_TIME > generator->getFrequency();
+    bool shouldSpawn = freqCount * SIM_TIME > generator->getFrequency();
+
+    // Spawn a vehicle if necessary
     if (shouldSpawn) {
         road->spawnVehicle();
-        freqCounter = 0;
+        generator->setFrequencyCount(0);
     }
 
-    freqCounter++;
+    generator->setFrequencyCount(freqCount + 1);
 }
 
 void Simulation::tickTrafficLights(Road* road) {
