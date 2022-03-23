@@ -196,6 +196,7 @@ TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 100.0);
     TrafficLight* light = new TrafficLight(20.0, 20);
+    road->addTrafficLight(light);
     
     EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
 
