@@ -54,7 +54,7 @@ public:
     /**
     \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    Simulation();;
+    Simulation();
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling destructor");
     */

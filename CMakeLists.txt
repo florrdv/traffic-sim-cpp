@@ -32,7 +32,7 @@ set(RELEASE_SOURCE_FILES
         src/objects/VehicleGenerator.h
         src/util/XMLParser.cc
         src/util/XMLParser.h
-        src/Simulation.cpp
+        src/Simulation.cc
         src/Simulation.h
         src/TrafficSim.cc)
 
@@ -59,7 +59,7 @@ set(DEBUG_SOURCE_FILES
         src/util/XMLParser.cc
         src/util/XMLParser.h
         src/util/XMLParserTests.cc
-        src/Simulation.cpp
+        src/Simulation.cc
         src/Simulation.h
         src/SimulationTests.cc
         src/TrafficSimTests.cc)

@@ -102,7 +102,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/Simulation.cpp">
+		<Unit filename="/home/achraf/CLionProjects/pse-traffic-sim/src/Simulation.cc">
 			<Option target="TrafficSimTests"/>
 			<Option target="TrafficSim"/>
 		</Unit>

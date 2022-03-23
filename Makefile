@@ -142,32 +142,32 @@ TrafficSim/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/build
 .PHONY : TrafficSim/fast
 
-src/Simulation.o: src/Simulation.cpp.o
+src/Simulation.o: src/Simulation.cc.o
 .PHONY : src/Simulation.o
 
 # target to build an object file
-src/Simulation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cpp.o
-.PHONY : src/Simulation.cpp.o
+src/Simulation.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cc.o
+.PHONY : src/Simulation.cc.o
 
-src/Simulation.i: src/Simulation.cpp.i
+src/Simulation.i: src/Simulation.cc.i
 .PHONY : src/Simulation.i
 
 # target to preprocess a source file
-src/Simulation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cpp.i
-.PHONY : src/Simulation.cpp.i
+src/Simulation.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cc.i
+.PHONY : src/Simulation.cc.i
 
-src/Simulation.s: src/Simulation.cpp.s
+src/Simulation.s: src/Simulation.cc.s
 .PHONY : src/Simulation.s
 
 # target to generate assembly for a file
-src/Simulation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cpp.s
-.PHONY : src/Simulation.cpp.s
+src/Simulation.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/Simulation.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/Simulation.cc.s
+.PHONY : src/Simulation.cc.s
 
 src/SimulationTests.o: src/SimulationTests.cc.o
 .PHONY : src/SimulationTests.o
