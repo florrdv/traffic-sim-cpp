@@ -69,9 +69,7 @@ void Simulation::tickVehicleGenerators(Road* road) {
     if (shouldSpawn) {
         road->spawnVehicle();
         generator->setFrequencyCount(0);
-    }
-
-    generator->setFrequencyCount(freqCount + 1);
+    } else generator->setFrequencyCount(freqCount + 1);
 }
 
 void Simulation::tickTrafficLights(Road* road) {
@@ -88,7 +86,7 @@ void Simulation::tickTrafficLights(Road* road) {
         if (shouldToggle) {
             trafficLight->toggle();
             trafficLight->setCycleCount(0);
-        }
+        } else trafficLight->setCycleCount(cycleCount + 1);
 
         // Get the first vehicle relative to the traffic light
         // To make vehicles decelerate or stop, we just need to perform the action
@@ -109,9 +107,6 @@ void Simulation::tickTrafficLights(Road* road) {
             // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
         }
-
-        // Increase the cycle count
-        trafficLight->setCycleCount(cycleCount + 1);
     }
 }
 
@@ -138,7 +133,7 @@ void Simulation::tickVehicles(Road* road, std::ostream& onStream) {
 /**
 \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 */
-void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
+void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedup) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
     // Loop while there are still vehicles
@@ -148,11 +143,12 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
         // be running the simulation. We have a stopAt parameter for tests
         // using the Vehicle Generator feature.
         double currentTime = timestamp * SIM_TIME;
+        // std::cout << ("Current time: " + std::to_string(currentTime)) << std::endl;
         if (stopAt != 0 && currentTime > stopAt) return;
 
         // Print the log entry header
         onStream << "-------------------------------------------" << std::endl;
-        onStream << "Time: T+ " << currentTime << "s" << std::endl;
+        std::cout << "Time: T+ " << currentTime << "s" << std::endl;
 
         // Loop over all roads
         for (Road* road : roads) {
@@ -170,7 +166,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
         timestamp++;
 
         // Sleep until the next simulation tick
-        std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / SPEEDUP)));
+        // std::this_thread::sleep_for(std::chrono::milliseconds((int)(SIM_TIME * 1000 / speedup)));
     }
 }
 

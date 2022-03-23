@@ -23,7 +23,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    \n ENSURE(frequency_ >0, "Vehicle generator frequence must be strictly positive");
+    \n ENSURE(frequency_ >0, "Vehicle generator frequency must be strictly positive");
     */
     void setFrequency(int frequency_);
 
@@ -34,7 +34,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    \n ENSURE(count >=0, "Vehicle generator frequence must be positive");
+    \n ENSURE(count >=0, "Vehicle generator frequency count must be positive");
     */
     void setFrequencyCount(int count);
 

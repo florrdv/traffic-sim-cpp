@@ -75,7 +75,7 @@ public:
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    void writeOn(std::ostream& onStream, const double stopAt = 0.0);
+    void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
 
     // Safety specific
     bool properlyInitialized() { return _init == this; }
