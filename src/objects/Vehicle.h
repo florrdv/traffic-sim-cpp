@@ -15,10 +15,11 @@
 #include <gtest/gtest_prod.h>
 
 #include "../data/Constants.h"
+#include "Entity.h"
 
 class VehicleTests;
 
-class Vehicle {
+class Vehicle: public Entity {
     FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
     FRIEND_TEST(VehicleTests, UpdateSpeedHappyDay);
     
@@ -26,7 +27,6 @@ private:
 
     Vehicle* _init;
 
-    double position = 0;
     int id;
 
     double speed = 0;
@@ -54,18 +54,9 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle() { _init = this; }
+    Vehicle(double position): Entity(position) { _init = this; }
 
     // General methods
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    */
-    double getPosition() const;
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n ENSURE(p>=0, "Vehicle position cannot be a negative integer");
-    */
-    void setPosition(int position);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");

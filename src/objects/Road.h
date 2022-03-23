@@ -13,6 +13,7 @@
 
 #include <string>
 #include <vector>
+
 #include "Vehicle.h"
 #include "VehicleGenerator.h"
 #include "TrafficLight.h"
@@ -28,7 +29,7 @@ private:
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
-    
+
 public:
     // Constructors / destructors
     Road() { _init = this; }

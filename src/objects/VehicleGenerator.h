@@ -2,17 +2,18 @@
 #define TRAFFICSIM_VEHICLEGENERATOR_H
 
 #include <iostream>
+#include "Entity.h"
 
-class VehicleGenerator {
+class VehicleGenerator: public Entity {
 private:
     VehicleGenerator* _init;
 
     int frequency{};
     int frequencyCount = 0;
-    
+
 public:
     // Constructors / destructors
-    VehicleGenerator() {_init = this;}
+    VehicleGenerator(double position): Entity(position) {_init = this;}
 
     // General methods
     /**

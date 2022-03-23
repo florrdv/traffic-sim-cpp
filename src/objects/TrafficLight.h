@@ -12,12 +12,12 @@
  */
 
 #include <string>
+#include "Entity.h"
 
-class TrafficLight {
+class TrafficLight: public Entity {
 private:
     TrafficLight* _init;
 
-    int position{};
     int cycle{};
     bool green=false;
 
@@ -25,18 +25,9 @@ private:
 
 public:
     // Constructors / destructors
-    TrafficLight() { _init = this; }
+    TrafficLight(double position): Entity(position) { _init = this; }
 
     // Regular methods
-    /**
-    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
-    */
-    int getPosition() const;
-    /**
-    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
-    \n ENSURE(p>=0, "Traffic light position must be positive");
-    */
-    void setPosition(int position);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");

@@ -16,6 +16,7 @@ protected:
     Entity(double p): position(p) { _init = this; };
 
     // Regular methods
+public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Entity wasn't initialized properly");
     */
@@ -26,6 +27,7 @@ protected:
     */
     double getPosition() const;
 
+private:
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };
