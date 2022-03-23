@@ -25,30 +25,30 @@ private:
 
     std::vector<Road*> roads;
 
-/**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
-\n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
+    \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+    */
     int countVehicles();
 public:
-/**
-\n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
-*/
+    /**
+    \n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
     Simulation();
-/**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    */
     ~Simulation();
 
     // Regular methods
-/**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
-\n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
+    */
     void addRoad(Road* r);
-/**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
-*/
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
+    */
     Road* findRoad(const std::string& roadName);
 
     /**
