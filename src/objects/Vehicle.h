@@ -41,7 +41,6 @@ private:
     double decelerationDistance = gDecelerationDistance;
     double decelerationFactor = gDecelerationFactor;
 
-    friend class VehicleTests;
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(speed >= 0, "Vehicle speed must be positive");

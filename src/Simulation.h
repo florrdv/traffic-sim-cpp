@@ -18,8 +18,11 @@
 
 #include <string>
 #include <vector>
+#include <gtest/gtest_prod.h>
 
 class Simulation {
+    FRIEND_TEST(SimulationTests, CountVehiclesHappyDay);
+
 private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
 

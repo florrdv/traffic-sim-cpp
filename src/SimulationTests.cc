@@ -151,6 +151,29 @@ TEST(SimulationTests, ValidSimulationTest8) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest9) {
+TEST(SimulationTests, RoadMutationHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road;
+    road->setName("example");
 
+    sim.addRoad(road);
+
+    EXPECT_EQ(road, sim.findRoad("example"));
+
+    delete road;
+}
+
+TEST(SimulationTests, CountVehiclesHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road;
+    road->setName("example");
+    sim.addRoad(road);
+
+    Vehicle* vehicle = new Vehicle;
+    road->addVehicle(vehicle);
+
+    EXPECT_EQ(1, sim.countVehicles());
+
+    delete road;
+    delete vehicle;
 }
