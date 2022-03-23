@@ -241,33 +241,6 @@ src/TrafficSimTests.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/TrafficSimTests.cc.s
 .PHONY : src/TrafficSimTests.cc.s
 
-src/data/Constants.o: src/data/Constants.h.o
-.PHONY : src/data/Constants.o
-
-# target to build an object file
-src/data/Constants.h.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/data/Constants.h.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/data/Constants.h.o
-.PHONY : src/data/Constants.h.o
-
-src/data/Constants.i: src/data/Constants.h.i
-.PHONY : src/data/Constants.i
-
-# target to preprocess a source file
-src/data/Constants.h.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/data/Constants.h.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/data/Constants.h.i
-.PHONY : src/data/Constants.h.i
-
-src/data/Constants.s: src/data/Constants.h.s
-.PHONY : src/data/Constants.s
-
-# target to generate assembly for a file
-src/data/Constants.h.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSimTests.dir/build.make CMakeFiles/TrafficSimTests.dir/src/data/Constants.h.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TrafficSim.dir/build.make CMakeFiles/TrafficSim.dir/src/data/Constants.h.s
-.PHONY : src/data/Constants.h.s
-
 src/lib/TestingHelpers.o: src/lib/TestingHelpers.cc.o
 .PHONY : src/lib/TestingHelpers.o
 
@@ -596,9 +569,6 @@ help:
 	@echo "... src/TrafficSimTests.o"
 	@echo "... src/TrafficSimTests.i"
 	@echo "... src/TrafficSimTests.s"
-	@echo "... src/data/Constants.o"
-	@echo "... src/data/Constants.i"
-	@echo "... src/data/Constants.s"
 	@echo "... src/lib/TestingHelpers.o"
 	@echo "... src/lib/TestingHelpers.i"
 	@echo "... src/lib/TestingHelpers.s"

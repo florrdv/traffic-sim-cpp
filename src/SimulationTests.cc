@@ -196,8 +196,15 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road();
     VehicleGenerator* generator = new VehicleGenerator();
+    road->setGenerator(generator);
 
+    int frequency = 10;
+    generator->setFrequency(frequency);
 
+    int expectedAfterTick = sim.countVehicles()+1;
+
+    generator->setFrequencyCount(ceil(frequency/gSimTime));
     sim.tickVehicleGenerators(road);
 
+    EXPECT_EQ(expectedAfterTick, sim.countVehicles());
 }
