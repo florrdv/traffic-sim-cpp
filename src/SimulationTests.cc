@@ -151,3 +151,14 @@ TEST(SimulationTests, ValidSimulationTest8) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
+TEST(SimulationTests, RoadMutationHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road;
+    road->setName("example");
+
+    sim.addRoad(road);
+
+    EXPECT_EQ(road, sim.findRoad("example"));
+}
+
+
