@@ -198,17 +198,7 @@ TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
     Road* road = new Road();
     TrafficLight* light = new TrafficLight();
     
-    int cycle = 10;
-
-    light->setCycle(cycle);
-    road->addTrafficLight(light);
-
-    bool beforeTicks = light->isGreen();
-
-    light->setCycleCount(ceil(cycle/gSimTime));
-    sim.tickTrafficLights(road);
-
-    EXPECT_DEATH(beforeTicks, light->isGreen());
+    EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
 }
 
 TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
@@ -227,4 +217,28 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     sim.tickVehicleGenerators(road);
 
     EXPECT_EQ(expectedAfterTick, sim.countVehicles());
+}
+
+TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
+    Simulation sim = Simulation();
+    Road* road = new Road();
+    VehicleGenerator* generator = new VehicleGenerator();
+    road->setGenerator(generator);
+
+    EXPECT_DEATH(sim.tickVehicleGenerators(road), "not part of the simulation");
+
+    delete road;
+}
+
+TEST(SimulationTests, TickVehiclesUnknownRoad) {
+    Simulation sim = Simulation();
+    Road* road = new Road();
+    Vehicle* vehicle = new Vehicle();
+    vehicle->setPosition(20);
+    road->addVehicle(vehicle);
+
+
+    EXPECT_DEATH(sim.tickVehicles(road, std::cout), "not part of the simulation");
+
+    delete road;
 }
