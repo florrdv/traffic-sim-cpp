@@ -199,6 +199,8 @@ TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
     TrafficLight* light = new TrafficLight();
     
     EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
+
+    delete road;
 }
 
 TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
