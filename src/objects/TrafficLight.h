@@ -25,7 +25,7 @@ private:
 
 public:
     // Constructors / destructors
-    TrafficLight(double position): Entity(position) { _init = this; }
+    TrafficLight(double position, int c): Entity(position), cycle(c) { _init = this; }
 
     // Regular methods
 
