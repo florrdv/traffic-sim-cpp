@@ -177,6 +177,7 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
 TEST(SimulationTests, TickTrafficLightsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road();
+    sim.addRoad(road);
     TrafficLight* light = new TrafficLight();
     
     int cycle = 10;
@@ -195,6 +196,7 @@ TEST(SimulationTests, TickTrafficLightsHappyDay) {
 TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road();
+    sim.addRoad(road);
     VehicleGenerator* generator = new VehicleGenerator();
     road->setGenerator(generator);
 
