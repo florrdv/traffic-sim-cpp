@@ -1,5 +1,6 @@
 #include <gtest/gtest.h>
 #include <fstream>
+#include <cmath>
 
 #include "data/Constants.cc"
 #include "lib/TestingHelpers.h"
@@ -153,7 +154,7 @@ TEST(SimulationTests, ValidSimulationTest8) {
 
 TEST(SimulationTests, RoadMutationHappyDay) {
     Simulation sim = Simulation();
-    Road* road = new Road;
+    Road* road = new Road();
     road->setName("example");
 
     sim.addRoad(road);
@@ -163,7 +164,7 @@ TEST(SimulationTests, RoadMutationHappyDay) {
 
 TEST(SimulationTests, CountVehiclesHappyDay) {
     Simulation sim = Simulation();
-    Road* road = new Road;
+    Road* road = new Road();
     road->setName("example");
     sim.addRoad(road);
 
@@ -171,4 +172,29 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
     road->addVehicle(vehicle);
 
     EXPECT_EQ(1, sim.countVehicles());
+}
+
+TEST(SimulationTests, TickTrafficLightsHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road();
+    TrafficLight* light = new TrafficLight();
+    light->setCycle(1);
+    road->addTrafficLight(light);
+
+    bool beforeTicks = light->isGreen();
+
+    light->setCycleCount(ceil(1/gSimTime));
+    sim.tickTrafficLights(road);
+
+    EXPECT_NE(beforeTicks, light->isGreen());
+}
+
+TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road();
+    VehicleGenerator* generator = new VehicleGenerator();
+
+
+    sim.tickVehicleGenerators(road);
+
 }
