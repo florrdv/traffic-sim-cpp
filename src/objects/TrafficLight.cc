@@ -11,20 +11,6 @@
 #include "TrafficLight.h"
 #include "../lib/DesignByContract.h"
 
-
-
-int TrafficLight::getPosition() const {
-    REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
-    return position;
-}
-
-
-void TrafficLight::setPosition(int p) {
-    REQUIRE(this->properlyInitialized(), "TrafficLight was not properly initialized");
-    ENSURE(p>=0, "Traffic light position must be positive");
-    TrafficLight::position = p;
-}
-
 int TrafficLight::getCycle() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     return cycle;
