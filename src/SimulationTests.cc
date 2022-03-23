@@ -19,7 +19,7 @@ TEST(SimulationTests, ValidSimulationTest1) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 0, 500);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
@@ -37,7 +37,7 @@ TEST(SimulationTests, ValidSimulationTest2) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file);
+    sim.writeOn(file, 0, 500);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
