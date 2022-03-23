@@ -21,6 +21,6 @@ int VehicleGenerator::getFrequencyCount() const {
 
 void VehicleGenerator::setFrequencyCount(int count) {
     REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    ENSURE(count >= 0, "Vehicle generator frequence must be strictly positive");
+    ENSURE(count >= 0, "Vehicle generator frequence must be positive");
     frequencyCount = count;
 }
