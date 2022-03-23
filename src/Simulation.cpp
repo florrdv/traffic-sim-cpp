@@ -143,7 +143,6 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         // be running the simulation. We have a stopAt parameter for tests
         // using the Vehicle Generator feature.
         double currentTime = timestamp * SIM_TIME;
-        // std::cout << ("Current time: " + std::to_string(currentTime)) << std::endl;
         if (stopAt != 0 && currentTime > stopAt) return;
 
         // Print the log entry header
