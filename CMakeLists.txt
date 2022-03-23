@@ -18,6 +18,7 @@ endif()
 
 set(RELEASE_SOURCE_FILES
         src/data/Constants.h
+        src/data/Constants.cc
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
@@ -40,6 +41,7 @@ set(RELEASE_SOURCE_FILES
 
 set(DEBUG_SOURCE_FILES
         src/data/Constants.h
+        src/data/Constants.cc
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
         src/lib/TestingHelpers.h
