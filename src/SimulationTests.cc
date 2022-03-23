@@ -221,19 +221,6 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     EXPECT_EQ(expectedAfterTick, sim.countVehicles());
 }
 
-TEST(SimulationTests, WriteOnHappyDay) {
-    Simulation sim = Simulation();
-    Road* road = new Road();
-    sim.addRoad(road);
-    Vehicle* vehicle1 = new Vehicle();
-    Vehicle* vehicle2 = new Vehicle();
-    road->addVehicle(vehicle1);
-    road->addVehicle(vehicle2);
-
-    sim.writeOn(std::cout);
-
-    ENSURE(sim.countVehicles()==0, "Simulation ended too early.");
-}
 TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
     Simulation sim = Simulation();
     Road* road = new Road();

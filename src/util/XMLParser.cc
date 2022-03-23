@@ -95,9 +95,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
 
             // Create road object
-            Road *road = new Road();
-            road->setName(roadName);
-            road->setLength(roadLength);
+            Road *road = new Road(roadName, roadLength);
 
             // Register road
             sim.addRoad(road);
@@ -118,9 +116,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
 
             // Create traffic light object
-            TrafficLight *trafficLight = new TrafficLight();
-            trafficLight->setPosition(pos);
-            trafficLight->setCycle(cycle);
+            TrafficLight *trafficLight = new TrafficLight(pos, cycle);
 
             if (trafficLights.find(road) == trafficLights.end()) trafficLights.insert({road, {}});
             trafficLights[road].push_back(trafficLight);
@@ -139,8 +135,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
             // Create vehicle object
-            Vehicle *vehicle = new Vehicle();
-            vehicle->setPosition(pos);
+            Vehicle *vehicle = new Vehicle(pos);
 
             if (vehicles.find(road) == vehicles.end()) vehicles.insert({road, {}});
             vehicles[road].push_back(vehicle);
@@ -159,8 +154,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
 
             // Create vehicle generator object
-            VehicleGenerator *generator = new VehicleGenerator();
-            generator->setFrequency(freq);
+            VehicleGenerator *generator = new VehicleGenerator(freq);
 
             if (generators.find(road) == generators.end()) generators.insert({road, {}});
             generators[road].push_back(generator);

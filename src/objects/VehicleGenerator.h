@@ -13,7 +13,7 @@ private:
 
 public:
     // Constructors / destructors
-    VehicleGenerator(double position): Entity(position) {_init = this;}
+    VehicleGenerator(int freq): Entity(0.0), frequency(freq) {_init = this;}
 
     // General methods
     /**
