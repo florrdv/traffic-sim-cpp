@@ -59,8 +59,10 @@ void Simulation::tickVehicleGenerators(Road* road) {
     // If there's a generator running on the road and the cycle time 
     // has been exceeded, spawn a new vehicle
     VehicleGenerator* generator = road->getGenerator();
+    if (generator == nullptr) return;
 
-    bool shouldSpawn = generator != nullptr && freqCounter * SIM_TIME > generator->getFrequency();
+    int freqCount = generator->getFrequencyCount();
+    bool shouldSpawn = freqCounter * SIM_TIME > generator->getFrequency();
     if (shouldSpawn) {
         road->spawnVehicle();
         freqCounter = 0;
@@ -77,11 +79,12 @@ void Simulation::tickTrafficLights(Road* road) {
 
     // Loop over all traffic lights
     for (TrafficLight* trafficLight : trafficLights) {
+        int cycleCount = trafficLight->getCycleCount();
         // Check if we have to toggle the light
-        bool shouldToggle = cycleCounter * SIM_TIME > trafficLight->getCycle(); 
+        bool shouldToggle = cycleCount * SIM_TIME > trafficLight->getCycle(); 
         if (shouldToggle) {
             trafficLight->toggle();
-            cycleCounter = 0;
+            trafficLight->setCycleCount(0);
         }
 
         // Get the first vehicle relative to the traffic light
@@ -103,9 +106,10 @@ void Simulation::tickTrafficLights(Road* road) {
             // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < DECELERATION_DISTANCE) firstVehicle->decelerate();
         }
-    }
 
-    cycleCounter++;
+        // Increase the cycle count
+        trafficLight->setCycleCount(cycleCount + 1);
+    }
 }
 
 void Simulation::tickVehicles(Road* road, std::ostream& onStream) {

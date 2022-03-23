@@ -25,8 +25,6 @@ private:
 
     std::vector<Road*> roads;
     int timestamp = 0;
-    int cycleCounter = 0;
-    int freqCounter = 0;
 
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");

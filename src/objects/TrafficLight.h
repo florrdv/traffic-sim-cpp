@@ -21,6 +21,9 @@ private:
     int cycle{};
     bool green=false;
 
+    int freqCounter = 0;
+    int cycleCount = 0;
+
 public:
     // Constructors / destructors
     TrafficLight() { _init = this; }
@@ -46,6 +49,9 @@ public:
     \n ENSURE(c>=0, "Traffic light cycle must be strictly positive");
     */
     void setCycle(int cycles);
+    
+    void setCycleCount(int cycleCount);
+    int getCycleCount() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized when calling writeOn");
