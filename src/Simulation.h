@@ -26,19 +26,39 @@ private:
     std::vector<Road*> roads;
 
     void print(double time);
+/**
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
+\n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+*/
     int countVehicles();
 public:
 /**
-\n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+\n ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
 */
-    Simulation();;
+    Simulation();
+/**
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+*/
     ~Simulation();
 
     // Regular methods
+/**
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+\n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
+*/
     void addRoad(Road* r);
+/**
+\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling roadName");
+*/
     Road* findRoad(const std::string& roadName);
-    std::vector<Road*> getRoads();
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    */
+    std::vector<Road*> getRoads();
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    */
     void writeOn(std::ostream& onStream, const double stopAt = 0.0);
 
     // Safety specific
