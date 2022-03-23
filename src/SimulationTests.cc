@@ -178,12 +178,15 @@ TEST(SimulationTests, TickTrafficLightsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road();
     TrafficLight* light = new TrafficLight();
-    light->setCycle(1);
+    
+    int cycle = 10;
+
+    light->setCycle(cycle);
     road->addTrafficLight(light);
 
     bool beforeTicks = light->isGreen();
 
-    light->setCycleCount(ceil(1/gSimTime));
+    light->setCycleCount(ceil(cycle/gSimTime));
     sim.tickTrafficLights(road);
 
     EXPECT_NE(beforeTicks, light->isGreen());
