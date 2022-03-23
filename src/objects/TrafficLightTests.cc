@@ -2,51 +2,51 @@
 #include "TrafficLight.h"
 
 TEST(TrafficLightTests, setPosition) {
-    TrafficLight* light = new TrafficLight();
+    TrafficLight light;
 
-    EXPECT_DEATH(light->setPosition(-20), "positive");
+    EXPECT_DEATH(light.setPosition(-20), "positive");
 }
 
 TEST(TrafficLightTests, getSetPosition) {
-    TrafficLight* light = new TrafficLight();
-    light->setPosition(20);
-    EXPECT_EQ(20, light->getPosition());
+    TrafficLight light;
+    light.setPosition(20);
+    EXPECT_EQ(20, light.getPosition());
 }
 
 TEST(TrafficLightTests, setCycle1) {
-    TrafficLight* light = new TrafficLight();
+    TrafficLight light;
 
-    EXPECT_DEATH(light->setCycle(0), "strictly positive");
+    EXPECT_DEATH(light.setCycle(0), "strictly positive");
 }
 
 TEST(TrafficLightTests, setCycle2) {
-    TrafficLight* light = new TrafficLight();
+    TrafficLight light;
 
-    EXPECT_DEATH(light->setCycle(-20), "strictly positive");
+    EXPECT_DEATH(light.setCycle(-20), "strictly positive");
 }
 
 TEST(TrafficLightTests, getSetCycle) {
-    TrafficLight* light = new TrafficLight();
-    light->setCycle(20);
-    EXPECT_EQ(20, light->getCycle());
+    TrafficLight light;
+    light.setCycle(20);
+    EXPECT_EQ(20, light.getCycle());
 }
 
 TEST(TrafficLightTests, toggle) {
-    TrafficLight* light = new TrafficLight;
-    bool beforeToggle = light->isGreen();
-    light->toggle();
-    EXPECT_NE(beforeToggle, light->isGreen());
+    TrafficLight light;
+    bool beforeToggle = light.isGreen();
+    light.toggle();
+    EXPECT_NE(beforeToggle, light.isGreen());
 }
 
 TEST(TrafficLightTests, CycleCountMutationNegative) {
-    TrafficLight* g = new TrafficLight;
+    TrafficLight light;
 
-    EXPECT_DEATH(g->setCycleCount(-20), "positive");
+    EXPECT_DEATH(light.setCycleCount(-20), "positive");
 }
 
 TEST(TrafficLightTests, CycleCountMutationHappyDay) {
-    TrafficLight* g = new TrafficLight;
+    TrafficLight light;
 
-    g->setCycleCount(0);
-    ASSERT_EQ(0, g->getCycleCount());
+    light.setCycleCount(0);
+    ASSERT_EQ(0, light.getCycleCount());
 }
