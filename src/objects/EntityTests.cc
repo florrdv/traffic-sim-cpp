@@ -11,5 +11,5 @@ TEST(EntityTests, PositionMutationHappyDay) {
 TEST(EntityTests, PositionMutationNegative) {
     Entity entity = Entity(10.0);
 
-    EXPECT_DEATH(entity.setPosition(-50.0), "negative integer");
+    EXPECT_DEATH(entity.setPosition(-50.0), "positive integer");
 }

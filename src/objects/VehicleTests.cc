@@ -9,7 +9,7 @@ TEST(VehicleTests, PositionMutationHappyDay) {
 
 TEST(VehicleTests, PositionMutationNegative) {
     Vehicle v = Vehicle(0.0);
-    EXPECT_DEATH(v.setPosition(-1), "negative");
+    EXPECT_DEATH(v.setPosition(-1), "positive");
 }
 
 TEST(VehicleTests, TickHappyDay) {
