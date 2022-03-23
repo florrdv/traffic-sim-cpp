@@ -25,6 +25,7 @@ class Simulation {
     FRIEND_TEST(SimulationTests, TickTrafficLightsHappyDay);
     FRIEND_TEST(SimulationTests, TickVehicleGeneratorsHappyDay);
     FRIEND_TEST(SimulationTests, TickTrafficLightsUnknownRoad);
+    FRIEND_TEST(SimulationTests, WriteOnHappyDay);
     FRIEND_TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad);
     FRIEND_TEST(SimulationTests, TickVehiclesUnknownRoad);
 
