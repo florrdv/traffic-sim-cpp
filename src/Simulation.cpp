@@ -106,7 +106,6 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt) {
                 onStream << "-> Position: " << vehicle->getPosition() << std::endl;
                 onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
             }
-            // print(timestamp * SIM_TIME);
             road->cleanup();
         }
         timestamp++;
