@@ -35,6 +35,7 @@ public:
         REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling destructor");
         for (Vehicle* vehicle : vehicles) delete vehicle;
         for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
+        delete generator;
     }
 
     // Regular methods
