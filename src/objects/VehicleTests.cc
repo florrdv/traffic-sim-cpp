@@ -3,17 +3,23 @@
 
 TEST(VehicleTests, PositionMutationHappyDay) {
     Vehicle v = Vehicle(0.0);
+    EXPECT_EQ(0.0, v.getPosition());
     v.setPosition(1.0);
     EXPECT_EQ(1.0, v.getPosition());
 }
 
 TEST(VehicleTests, PositionMutationNegative) {
     Vehicle v = Vehicle(0.0);
+    EXPECT_EQ(0.0, v.getPosition());
     EXPECT_DEATH(v.setPosition(-1), "positive");
 }
 
 TEST(VehicleTests, TickHappyDay) {
     Vehicle v = Vehicle(0.0);
+
+    EXPECT_EQ(0.0, v.getSpeed());
+    EXPECT_EQ(0.0, v.getAcceleration());
+    EXPECT_EQ(0.0, v.getPosition());
 
     // Tick twice
     v.tick(nullptr);
@@ -26,7 +32,7 @@ TEST(VehicleTests, TickHappyDay) {
 
 TEST(VehicleTests, UpdateAccelerationHappyDay) {
     Vehicle v = Vehicle(0.0);
-
+    EXPECT_EQ(0.0, v.getAcceleration());
     v.updateAcceleration(nullptr);
 
     EXPECT_TRUE(std::abs(v.getAcceleration() - 1.4399999999999999) < 0.00001);
@@ -34,7 +40,7 @@ TEST(VehicleTests, UpdateAccelerationHappyDay) {
 
 TEST(VehicleTests, UpdateSpeedHappyDay) {
     Vehicle v = Vehicle(0.0);
-
+    EXPECT_EQ(0.0, v.getSpeed());
     // Update acceleration first
     v.updateAcceleration(nullptr);
     // Then update the speed
@@ -45,8 +51,7 @@ TEST(VehicleTests, UpdateSpeedHappyDay) {
 
 TEST(VehicleTests, DecelerateHappyDay) {
     Vehicle v = Vehicle(0.0);
-    
+    EXPECT_EQ(gSpeedMax, v.getSpeedMax());
     v.decelerate();
-
     EXPECT_EQ(v.getDecelerationFactor() * gSpeedMax, v.getSpeedMax());
 }
