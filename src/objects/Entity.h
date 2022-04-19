@@ -6,6 +6,7 @@
 class Entity {
     FRIEND_TEST(EntityTests, PositionMutationHappyDay);
     FRIEND_TEST(EntityTests, PositionMutationNegative);
+    FRIEND_TEST(EntityTests, GetSetPosition);
 private:
     Entity* _init;
 

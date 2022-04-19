@@ -3,7 +3,7 @@
 
 TEST(EntityTests, PositionMutationHappyDay) {
     Entity entity = Entity(10.0);
-
+    ASSERT_EQ(10.0, entity.getPosition());
     entity.setPosition(5.0);
     ASSERT_EQ(5.0, entity.getPosition());
 }
