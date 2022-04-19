@@ -180,7 +180,7 @@ TEST(SimulationTests, TickTrafficLightsHappyDay) {
     sim.addRoad(road);
     int cycle = 10;
     TrafficLight* light = new TrafficLight(20.0, cycle);
-    
+
 
     road->addTrafficLight(light);
 
@@ -197,7 +197,7 @@ TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
     Road* road = new Road("example", 100.0);
     TrafficLight* light = new TrafficLight(20.0, 20);
     road->addTrafficLight(light);
-    
+
     EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
 
     delete road;
@@ -241,4 +241,13 @@ TEST(SimulationTests, TickVehiclesUnknownRoad) {
     EXPECT_DEATH(sim.tickVehicles(road, std::cout), "not part of the simulation");
 
     delete road;
+}
+
+TEST(SimulationTests, GetSetRoads) {
+    Simulation sim = Simulation();
+    REQUIRE(sim.getRoads().empty(), "simulation should not have roads yet");
+    Road* road = new Road("example", 10.0);
+    sim.addRoad(road);
+    REQUIRE(sim.getRoads().size()==1, "added road was not detected");
+    REQUIRE(sim.findRoad("example")==road, "could not find road with added name");
 }

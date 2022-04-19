@@ -44,7 +44,7 @@ int Vehicle::getId() const {
 */
 void Vehicle::setId(int id_) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    ENSURE(id_>=0, "Vehicle ID cannot be a negative integer");
+    ENSURE(id_ >= 0, "Vehicle ID cannot be a negative integer");
     Vehicle::id = id_;
 }
 
@@ -69,14 +69,16 @@ void Vehicle::updateSpeed() {
 \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 \n ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
  */
-void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
+void Vehicle::updateAcceleration(Vehicle *leadingVehicle) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     double delta = 0;
     if (leadingVehicle != nullptr) {
         double followDistance = leadingVehicle->getPosition() - getPosition() - leadingVehicle->getLength();
         double speedDifference = speed - leadingVehicle->getSpeed();
 
-        delta = (followMin + std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) / followDistance;
+        delta = (followMin +
+                 std::max(0.0, speed + speed * speedDifference / (2 * std::sqrt(accelerationMax * brakeMax)))) /
+                followDistance;
     }
     acceleration = accelerationMax * (1 - std::pow(speed / speedMax, 4)) - delta * delta;
     ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
@@ -85,7 +87,7 @@ void Vehicle::updateAcceleration(Vehicle* leadingVehicle) {
 /**
 \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 */
-void Vehicle::tick(Vehicle* leadingVehicle) {
+void Vehicle::tick(Vehicle *leadingVehicle) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     updateSpeed();
     updateAcceleration(leadingVehicle);

@@ -45,8 +45,7 @@ TEST(VehicleTests, UpdateSpeedHappyDay) {
 
 TEST(VehicleTests, DecelerateHappyDay) {
     Vehicle v = Vehicle(0.0);
-
-    // Tick twice
+    
     v.decelerate();
 
     EXPECT_EQ(v.getDecelerationFactor() * gSpeedMax, v.getSpeedMax());
