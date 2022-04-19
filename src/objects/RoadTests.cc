@@ -3,7 +3,7 @@
 
 TEST(RoadTests, LengthMutationHappyDay) {
     Road road = Road("example", 100.0);
-
+    ASSERT_EQ(100.0, road.getLength());
     road.setLength(5);
     ASSERT_EQ(5, road.getLength());
 }
@@ -15,29 +15,28 @@ TEST(RoadTests, LengthMutationZero) {
 
 TEST(RoadTests, LengthMutationNegative) {
     Road road = Road("example", 100.0);
-
     EXPECT_DEATH(road.setLength(-20), "strictly positive");
 }
 
 TEST(RoadTests, NameMutationHappyDay) {
     Road road = Road("example", 100.0);
-
+    ASSERT_EQ(100.0, road.getLength());
     road.setName("test");
     ASSERT_EQ("test", road.getName());
 }
 
 TEST(RoadTests, VehiclesMutationHappyDay) {
     Road road = Road("example", 100.0);
-
-    Vehicle* v = new Vehicle(0.0);
+    ASSERT(road.getVehicles().empty(), "there should be no vehicles on the road yet");
+    Vehicle *v = new Vehicle(0.0);
     road.addVehicle(v);
     ASSERT_EQ(v, road.getVehicles()[0]);
 }
 
 TEST(RoadTests, GeneratorMutationHappyDay) {
     Road road = Road("example", 100.0);
-
-    VehicleGenerator* g = new VehicleGenerator(0.0);
+    ASSERT(road.getGenerator() == nullptr, "there should be no generator on the road yet");
+    VehicleGenerator *g = new VehicleGenerator(0.0);
     road.setGenerator(g);
     ASSERT_EQ(g, road.getGenerator());
 }
