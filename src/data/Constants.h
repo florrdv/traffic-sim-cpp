@@ -22,7 +22,8 @@ enum VehicleType {
     Bus,
     FireTruck,
     Ambulance,
-    Police
+    Police,
+    num_types
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_
