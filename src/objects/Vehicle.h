@@ -22,6 +22,7 @@ class VehicleTests;
 enum VehicleType {
     Personal,
     Bus,
+    FireTruck,
     Ambulance,
     Police
 };

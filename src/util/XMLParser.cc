@@ -81,6 +81,12 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
 VehicleType parseVehicleType(const pugi::xml_node& node) {
     // Default case
     if (node.empty()) return VehicleType::Personal;
+
+    std::string name = node.text().as_string();
+    if (name == "auto") return VehicleType::Personal;
+    else if (name == "bus") return VehicleType::Bus;
+    else if (name == "brandweerwagen") return Vehicle
+
     return VehicleType::Police;
 }
 
