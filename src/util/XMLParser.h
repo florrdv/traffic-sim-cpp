@@ -23,6 +23,11 @@ class XMLParser {
     
     void validateNode(const pugi::xml_node& node, const std::string& nam) const;
     int parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive) const;
+
+    Road* parseRoad(const pugi::xml_node& node);
+    Vehicle* parseVehicle(const pugi::xml_node& node);
+    TrafficLight* parseTrafficLight(const pugi::xml_node& node);
+    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 public:
     // Constructors / destructors
     XMLParser() { _init = this; };

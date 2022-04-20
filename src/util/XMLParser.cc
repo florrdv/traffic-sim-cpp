@@ -59,6 +59,61 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
     return value;
 }
 
+Road* XMLParser::parseRoad(const pugi::xml_node& node) {
+    // Fetch nodes
+    pugi::xml_node nameNode = node.child("naam");
+    pugi::xml_node lengthNode = node.child("lengte");
+
+    // Check if the nodes exist
+    validateNode(nameNode, "name");
+    validateNode(lengthNode, "length");
+
+    // Extract values
+    std::string roadName = nameNode.text().as_string();
+    int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
+
+    // Create road object
+    Road *road = new Road(roadName, roadLength);
+
+    return road;
+}
+
+Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
+    // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+    pugi::xml_node posNode = node.child("positie");
+
+    // Check if the nodes exist
+    validateNode(roadNode, "baan");
+    validateNode(posNode, "positie");
+
+    // Extract values
+    std::string road = roadNode.text().as_string();
+    int pos = parsePositiveInteger(posNode.text().as_string(), "position");
+
+    // Create vehicle object
+    Vehicle *vehicle = new Vehicle(pos);
+    return vehicle;
+}
+
+VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
+     // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+    pugi::xml_node freqNode = node.child("frequentie");
+
+    // Check if the nodes exist
+    validateNode(roadNode, "baan");
+    validateNode(freqNode, "frequentie");
+
+    // Extract values
+    std::string road = roadNode.text().as_string();
+    int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
+
+    // Create vehicle generator object
+    VehicleGenerator *generator = new VehicleGenerator(freq);
+    return generator;
+}
+
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
@@ -82,20 +137,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         // type of node we're dealing with
         std::string name = node.name();
         if (name == "BAAN") {
-            // Fetch nodes
-            pugi::xml_node nameNode = node.child("naam");
-            pugi::xml_node lengthNode = node.child("lengte");
-
-            // Check if the nodes exist
-            validateNode(nameNode, "name");
-            validateNode(lengthNode, "length");
-
-            // Extract values
-            std::string roadName = nameNode.text().as_string();
-            int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
-
-            // Create road object
-            Road *road = new Road(roadName, roadLength);
+           
 
             // Register road
             sim.addRoad(road);
