@@ -35,6 +35,7 @@ private:
     Vehicle* _init;
 
     int id;
+    VehicleType type;
 
     double speed = 0;
     double acceleration = 0;
@@ -61,7 +62,7 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle(double position): Entity(position) { _init = this; }
+    Vehicle(double position, VehicleType t): Entity(position), type(t) { _init = this; }
 
     // General methods
 
