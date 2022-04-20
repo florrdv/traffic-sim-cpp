@@ -17,4 +17,12 @@ extern double gDecelerationFactor;
 static std::string gTestInputFolder = "../input/testing";
 static std::string gTestOutputFolder = "../output/testing";
 
+enum VehicleType {
+    Personal,
+    Bus,
+    FireTruck,
+    Ambulance,
+    Police
+};
+
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_
