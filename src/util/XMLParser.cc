@@ -122,7 +122,7 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
     // TODO: add
-    /VehicleType vehicleType = parseVehicleType(typeNode);
+    VehicleType vehicleType = parseVehicleType(typeNode);
 
     // Create vehicle object
     Vehicle *vehicle = new Vehicle(pos, vehicleType);
