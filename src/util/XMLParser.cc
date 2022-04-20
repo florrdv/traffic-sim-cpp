@@ -114,6 +114,36 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
     return generator;
 }
 
+TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
+    // Fetch nodes
+    pugi::xml_node positionNode = node.child("positie");
+    pugi::xml_node cycleNode = node.child("cyclus");
+
+    validateNode(positionNode, "position");
+    validateNode(cycleNode, "cycle");
+
+    // Extract values
+    std::string road = roadNode.text().as_string();
+    int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
+    int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
+
+    // Create traffic light object
+    TrafficLight *trafficLight = new TrafficLight(pos, cycle);
+    return trafficLight;
+}
+
+std::string XMLParser::parseTrafficLightRoadName(const pugi::xml_node& node) {
+    // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+
+    // Check if the nodes exist
+    validateNode(roadNode, "road");
+
+    // Parse road name
+    std::string road = roadNode.text().as_string();
+    return road;
+}
+
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
@@ -137,7 +167,8 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         // type of node we're dealing with
         std::string name = node.name();
         if (name == "BAAN") {
-           
+            // Parse road
+            Road* road = parseRoad(node);
 
             // Register road
             sim.addRoad(road);
