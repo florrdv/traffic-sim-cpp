@@ -9,7 +9,6 @@
  */
 
 #include "Road.h"
-#include "../data/Constants.h"
 #include "../lib/DesignByContract.h"
 
 
@@ -123,7 +122,6 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
 
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    ENSURE(Enum::IsDefined(VehicleType, type), "Vehicle type is not defined");
     Vehicle *v = new Vehicle(0, VehicleType::Personal);
     addVehicle(v);
 }

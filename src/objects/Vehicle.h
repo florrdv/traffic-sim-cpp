@@ -19,6 +19,14 @@
 
 class VehicleTests;
 
+enum VehicleType {
+    Personal,
+    Bus,
+    FireTruck,
+    Ambulance,
+    Police
+};
+
 class Vehicle: public Entity {
     FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
     FRIEND_TEST(VehicleTests, UpdateSpeedHappyDay);
