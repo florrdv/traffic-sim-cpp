@@ -88,7 +88,7 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
-VehicleType parseVehicleType(const pugi::xml_node& node) {
+VehicleType XMLParser::parseVehicleType(const pugi::xml_node& node) {
     // Default case
     if (node.empty()) return VehicleType::Personal;
 
@@ -122,7 +122,7 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
     // TODO: add
-    VehicleType vehicleType = parseVehicleType(typeNode);
+    /VehicleType vehicleType = parseVehicleType(typeNode);
 
     // Create vehicle object
     Vehicle *vehicle = new Vehicle(pos, vehicleType);
