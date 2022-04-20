@@ -9,13 +9,13 @@ class VehicleGenerator: public Entity {
 private:
     VehicleGenerator* _init;
 
-    VehicleType vehicleType;
+    VehicleType type;
     int frequency{};
     int frequencyCount = 0;
 
 public:
     // Constructors / destructors
-    VehicleGenerator(int freq, VehicleType t): Entity(0.0), vehicleType(t), frequency(freq) {_init = this;}
+    VehicleGenerator(int freq, VehicleType t): Entity(0.0), type(t), frequency(freq) {_init = this;}
 
     // General methods
     /**

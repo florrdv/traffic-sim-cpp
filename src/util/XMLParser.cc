@@ -121,10 +121,8 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     std::string road = roadNode.text().as_string();
     int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
-    // TODO: add
-    VehicleType vehicleType = parseVehicleType(typeNode);
-
     // Create vehicle object
+    VehicleType vehicleType = parseVehicleType(typeNode);
     Vehicle *vehicle = new Vehicle(pos, vehicleType);
 
     ENSURE(vehicle != nullptr, "Road has to be generated");
@@ -140,6 +138,7 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
 
     // Fetch nodes
     pugi::xml_node freqNode = node.child("frequentie");
+    pugi::xml_node typeNode = node.child("type"); // we will not validate this node as it can be empty
 
     // Check if the nodes exist
     validateNode(freqNode, "frequentie");
@@ -148,7 +147,8 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
     int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
 
     // Create vehicle generator object
-    VehicleGenerator *generator = new VehicleGenerator(freq);
+    VehicleType vehicleType = parseVehicleType(typeNode);
+    VehicleGenerator *generator = new VehicleGenerator(freq, vehicleType);
 
     ENSURE(generator != nullptr, "Road has to be generated");
     return generator;
