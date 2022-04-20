@@ -28,7 +28,7 @@ TEST(RoadTests, NameMutationHappyDay) {
 TEST(RoadTests, VehiclesMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getVehicles().empty(), "there should be no vehicles on the road yet");
-    Vehicle *v = new Vehicle(0.0);
+    Vehicle *v = new Vehicle(0.0, VehicleType::Personal);
     road.addVehicle(v);
     ASSERT_EQ(v, road.getVehicles()[0]);
 }

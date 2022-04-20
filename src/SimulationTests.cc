@@ -168,7 +168,7 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
     road->setName("example");
     sim.addRoad(road);
 
-    Vehicle* vehicle = new Vehicle(0.0);
+    Vehicle* vehicle = new Vehicle(0.0, VehicleType::Personal);
     road->addVehicle(vehicle);
 
     EXPECT_EQ(1, sim.countVehicles());
@@ -234,7 +234,7 @@ TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
 TEST(SimulationTests, TickVehiclesUnknownRoad) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 10.0);
-    Vehicle* vehicle = new Vehicle(20.0);
+    Vehicle* vehicle = new Vehicle(20.0, VehicleType::Personal);
     road->addVehicle(vehicle);
 
 

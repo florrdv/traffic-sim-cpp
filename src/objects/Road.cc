@@ -127,6 +127,6 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
 void Road::spawnVehicle() {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
 
-    Vehicle* v = new Vehicle(0);
+    Vehicle* v = new Vehicle(0, VehicleType::Personal);
     addVehicle(v);
 }
