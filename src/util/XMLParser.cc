@@ -188,6 +188,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             VehicleGenerator *generator = parseVehicleGenerator(node);
             std::string road = parseRoadReference(node);
 
+            // Verify and register vehicle generator
             if (generators.find(road) == generators.end()) generators.insert({road, {}});
             generators[road].push_back(generator);
         } else {
