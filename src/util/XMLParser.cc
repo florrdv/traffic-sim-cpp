@@ -87,8 +87,8 @@ VehicleType parseVehicleType(const pugi::xml_node& node) {
     else if (name == "bus") return VehicleType::Bus;
     else if (name == "brandweerwagen") return VehicleType::FireTruck;
     else if (name == "ziekenwagen") return VehicleType::Ambulance;
-
-    return VehicleType::Police;
+    else if (name == "politiecombi") return VehicleType::Police;
+    else ASSERT(false, ("XML: unknown vehicle type '" + name + "'").c_str());
 }
 
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
