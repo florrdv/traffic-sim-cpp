@@ -85,7 +85,8 @@ VehicleType parseVehicleType(const pugi::xml_node& node) {
     std::string name = node.text().as_string();
     if (name == "auto") return VehicleType::Personal;
     else if (name == "bus") return VehicleType::Bus;
-    else if (name == "brandweerwagen") return Vehicle
+    else if (name == "brandweerwagen") return VehicleType::FireTruck;
+    else if (name == "ziekenwagen") return VehicleType::Ambulance;
 
     return VehicleType::Police;
 }
