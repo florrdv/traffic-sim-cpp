@@ -79,6 +79,8 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
 }
 
 VehicleType parseVehicleType(const pugi::xml_node& node) {
+    // Default case
+    if (node.empty()) return VehicleType::Personal;
     return VehicleType::Police;
 }
 
