@@ -29,7 +29,7 @@ class XMLParser {
 
     TrafficLight* parseTrafficLight(const pugi::xml_node& node);
     std::string parseRoadReference(const pugi::xml_node& node);
-    std::string parseVehicleType(const std::string& name);
+    VehicleType parseVehicleType(const pugi::xml_node& node);
 
     VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 public:

@@ -78,14 +78,15 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
     return road;
 }
 
-VehicleType parseVehicleType(const std::string& name) {
-    
+VehicleType parseVehicleType(const pugi::xml_node& node) {
+    return VehicleType::Police;
 }
 
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
     pugi::xml_node posNode = node.child("positie");
+    pugi::xml_node typeNode = node.child("type"); // we will not validate this node as it can be empty
 
     // Check if the nodes exist
     validateNode(roadNode, "baan");
@@ -96,9 +97,10 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     int pos = parsePositiveInteger(posNode.text().as_string(), "position");
 
     // TODO: add
+    VehicleType vehicleType = parseVehicleType(typeNode);
 
     // Create vehicle object
-    Vehicle *vehicle = new Vehicle(pos);
+    Vehicle *vehicle = new Vehicle(pos, vehicleType);
     return vehicle;
 }
 
