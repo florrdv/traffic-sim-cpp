@@ -21,7 +21,14 @@
 class XMLParser {
     XMLParser* _init;
     
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     void validateNode(const pugi::xml_node& node, const std::string& nam) const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(value>=0, "Parsed integer cannot be negative");
+    */
     int parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive) const;
 
     /**
@@ -59,6 +66,9 @@ public:
     XMLParser() { _init = this; };
 
     // Regular methods
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     void parse(Simulation& sim, const std::string file);
 
     // Safety specific
