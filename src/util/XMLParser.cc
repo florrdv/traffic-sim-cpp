@@ -98,15 +98,12 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
 
 VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
      // Fetch nodes
-    pugi::xml_node roadNode = node.child("baan");
     pugi::xml_node freqNode = node.child("frequentie");
 
     // Check if the nodes exist
-    validateNode(roadNode, "baan");
     validateNode(freqNode, "frequentie");
 
     // Extract values
-    std::string road = roadNode.text().as_string();
     int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
 
     // Create vehicle generator object
@@ -123,7 +120,6 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
     validateNode(cycleNode, "cycle");
 
     // Extract values
-    std::string road = roadNode.text().as_string();
     int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
     int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
 
@@ -132,7 +128,7 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
     return trafficLight;
 }
 
-std::string XMLParser::parseTrafficLightRoadName(const pugi::xml_node& node) {
+std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
 
