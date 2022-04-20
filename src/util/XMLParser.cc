@@ -59,6 +59,10 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
     return value;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n ENSURE(road !== nullptr, "Road has to be generated");
+*/
 Road* XMLParser::parseRoad(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node nameNode = node.child("naam");
@@ -78,6 +82,9 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
     return road;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+*/
 VehicleType parseVehicleType(const pugi::xml_node& node) {
     // Default case
     if (node.empty()) return VehicleType::Personal;
@@ -91,6 +98,10 @@ VehicleType parseVehicleType(const pugi::xml_node& node) {
     else ASSERT(false, ("XML: unknown vehicle type '" + name + "'").c_str());
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n ENSURE(vehicle !== nullptr, "Road has to be generated");
+*/
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
@@ -113,6 +124,10 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     return vehicle;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n ENSURE(generator !== nullptr, "Road has to be generated");
+*/
 VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
      // Fetch nodes
     pugi::xml_node freqNode = node.child("frequentie");
@@ -128,6 +143,10 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
     return generator;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n ENSURE(trafficLight !== nullptr, "Road has to be generated");
+*/
 TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node positionNode = node.child("positie");
@@ -145,6 +164,9 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
     return trafficLight;
 }
 
+/**
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+*/
 std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
