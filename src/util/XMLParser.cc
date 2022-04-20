@@ -78,6 +78,10 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
     return road;
 }
 
+VehicleType parseVehicleType(const std::string& name) {
+    
+}
+
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
@@ -90,6 +94,8 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
     // Extract values
     std::string road = roadNode.text().as_string();
     int pos = parsePositiveInteger(posNode.text().as_string(), "position");
+
+    // TODO: add
 
     // Create vehicle object
     Vehicle *vehicle = new Vehicle(pos);
