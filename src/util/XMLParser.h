@@ -24,14 +24,25 @@ class XMLParser {
     void validateNode(const pugi::xml_node& node, const std::string& nam) const;
     int parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive) const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(road != nullptr, "Road has to be generated");
+    */
     Road* parseRoad(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(vehicle != nullptr, "Road has to be generated");
+    */
     Vehicle* parseVehicle(const pugi::xml_node& node);
-
     TrafficLight* parseTrafficLight(const pugi::xml_node& node);
+    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
+
     std::string parseRoadReference(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     VehicleType parseVehicleType(const pugi::xml_node& node);
 
-    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 public:
     // Constructors / destructors
     XMLParser() { _init = this; };
