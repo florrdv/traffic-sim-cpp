@@ -61,9 +61,11 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(road !== nullptr, "Road has to be generated");
+\n ENSURE(road != nullptr, "Road has to be generated");
 */
 Road* XMLParser::parseRoad(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
     // Fetch nodes
     pugi::xml_node nameNode = node.child("naam");
     pugi::xml_node lengthNode = node.child("lengte");
@@ -79,6 +81,7 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
     // Create road object
     Road *road = new Road(roadName, roadLength);
 
+    ENSURE(road != nullptr, "Road has to be generated");
     return road;
 }
 
@@ -100,9 +103,11 @@ VehicleType parseVehicleType(const pugi::xml_node& node) {
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(vehicle !== nullptr, "Road has to be generated");
+\n ENSURE(vehicle != nullptr, "Road has to be generated");
 */
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
     pugi::xml_node posNode = node.child("positie");
@@ -121,15 +126,19 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
 
     // Create vehicle object
     Vehicle *vehicle = new Vehicle(pos, vehicleType);
+
+    ENSURE(vehicle != nullptr, "Road has to be generated");
     return vehicle;
 }
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(generator !== nullptr, "Road has to be generated");
+\n ENSURE(generator != nullptr, "Road has to be generated");
 */
 VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
-     // Fetch nodes
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
     pugi::xml_node freqNode = node.child("frequentie");
 
     // Check if the nodes exist
@@ -140,14 +149,18 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
 
     // Create vehicle generator object
     VehicleGenerator *generator = new VehicleGenerator(freq);
+
+    ENSURE(generator != nullptr, "Road has to be generated");
     return generator;
 }
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(trafficLight !== nullptr, "Road has to be generated");
+\n ENSURE(trafficLight != nullptr, "Road has to be generated");
 */
 TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
     // Fetch nodes
     pugi::xml_node positionNode = node.child("positie");
     pugi::xml_node cycleNode = node.child("cyclus");
@@ -161,6 +174,8 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
 
     // Create traffic light object
     TrafficLight *trafficLight = new TrafficLight(pos, cycle);
+
+    ENSURE(trafficLight != nullptr, "Road has to be generated");
     return trafficLight;
 }
 
