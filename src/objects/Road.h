@@ -48,6 +48,7 @@ public:
     
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(!name.empty(), "Road name cannot be empty");
     */
     void setName(const std::string &name);
 
@@ -58,6 +59,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(l>0, "Length must be strictly positive");
     */
     void setLength(double length);
 
@@ -68,6 +70,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     */
     void addVehicle(Vehicle *v);
 
@@ -88,6 +91,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     */
     void addTrafficLight(TrafficLight *t);
 
@@ -98,7 +102,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
+    \n ENSURE(g != nullptr, "Cannot add empty generator to road");
+     */
     void setGenerator(VehicleGenerator *g);
 
     /**
