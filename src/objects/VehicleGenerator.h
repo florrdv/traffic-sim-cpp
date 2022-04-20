@@ -36,6 +36,11 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    */
+    VehicleType getType() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
     \n ENSURE(count >=0, "Vehicle generator frequency count must be positive");
     */
     void setFrequencyCount(int count);

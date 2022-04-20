@@ -24,3 +24,8 @@ void VehicleGenerator::setFrequencyCount(int count) {
     ENSURE(count >= 0, "Vehicle generator frequency count must be positive");
     frequencyCount = count;
 }
+
+
+VehicleType VehicleGenerator::getType() const {
+    return type;
+}

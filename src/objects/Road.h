@@ -109,7 +109,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    void spawnVehicle();
+    void spawnVehicle(const VehicleType& type);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

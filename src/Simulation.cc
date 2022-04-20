@@ -75,7 +75,7 @@ void Simulation::tickVehicleGenerators(Road* road) {
 
     // Spawn a vehicle if necessary
     if (shouldSpawn) {
-        road->spawnVehicle();
+        road->spawnVehicle(generator->getType());
         generator->setFrequencyCount(0);
     } else generator->setFrequencyCount(freqCount + 1);
 }

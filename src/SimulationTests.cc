@@ -209,7 +209,7 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 100.0);
     sim.addRoad(road);
-    VehicleGenerator* generator = new VehicleGenerator(frequency);
+    VehicleGenerator* generator = new VehicleGenerator(frequency, VehicleType::Personal);
     road->setGenerator(generator);
 
     int expectedAfterTick = sim.countVehicles()+1;
@@ -223,7 +223,7 @@ TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
 TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 20.0);
-    VehicleGenerator* generator = new VehicleGenerator(10);
+    VehicleGenerator* generator = new VehicleGenerator(10, VehicleType::Personal);
     road->setGenerator(generator);
 
     EXPECT_DEATH(sim.tickVehicleGenerators(road), "not part of the simulation");
