@@ -31,7 +31,7 @@
 // verkeerslicht bevinden (zie Appendix B).
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
@@ -39,7 +39,7 @@ void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(value>=0, "Parsed integer cannot be negative");
 */
 int XMLParser::parsePositiveInteger(const std::string &s, const std::string &name,
@@ -60,7 +60,7 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(road !== nullptr, "Road has to be generated");
 */
 Road* XMLParser::parseRoad(const pugi::xml_node& node) {
@@ -83,7 +83,7 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
 VehicleType parseVehicleType(const pugi::xml_node& node) {
     // Default case
@@ -99,7 +99,7 @@ VehicleType parseVehicleType(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(vehicle !== nullptr, "Road has to be generated");
 */
 Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
@@ -125,7 +125,7 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(generator !== nullptr, "Road has to be generated");
 */
 VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
@@ -144,7 +144,7 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(trafficLight !== nullptr, "Road has to be generated");
 */
 TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
@@ -165,7 +165,7 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
 std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
     // Fetch nodes
@@ -180,7 +180,7 @@ std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
 void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
