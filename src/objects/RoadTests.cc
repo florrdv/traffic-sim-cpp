@@ -1,3 +1,4 @@
+#include <cmath>
 #include <gtest/gtest.h>
 #include "Road.h"
 
@@ -41,6 +42,47 @@ TEST(RoadTests, GeneratorMutationHappyDay) {
     ASSERT_EQ(g, road.getGenerator());
 }
 
+TEST(RoadTests, TickTrafficLightsHappyDay) {
+    Simulation sim = Simulation();
+    Road* road = new Road("example", 100.0);
+    sim.addRoad(road);
+    int cycle = 10;
+    TrafficLight* light = new TrafficLight(20.0, cycle);
 
 
+    road->addTrafficLight(light);
+
+    bool beforeTicks = light->isGreen();
+
+    light->setCycleCount(ceil(cycle/gSimTime));
+    sim.tickTrafficLights(road);
+
+    EXPECT_NE(beforeTicks, light->isGreen());
+}
+
+TEST(RoadTests, TickTrafficLightsUnknownRoad) {
+    Simulation sim = Simulation();
+    Road* road = new Road("example", 100.0);
+    TrafficLight* light = new TrafficLight(20.0, 20);
+    road->addTrafficLight(light);
+
+    EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
+
+    delete road;
+}
+
+TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
+    int frequency = 10;
+
+    Road road = Road("example", 100.0);
+    VehicleGenerator* generator = new VehicleGenerator(frequency, VehicleType::Personal);
+    road.setGenerator(generator);
+
+    int expectedAfterTick = road.getVehicles().size();
+
+    generator->setFrequencyCount(ceil(frequency/gSimTime));
+    road.tickVehicleGenerators();
+
+    EXPECT_EQ(expectedAfterTick, road.getVehicles().size() - 1);
+}
 
