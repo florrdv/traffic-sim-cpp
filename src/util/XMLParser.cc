@@ -35,7 +35,7 @@
 */
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
-    ASSERT(!node.empty(), ("XML: no " + name + " child found").c_str());
+    ASSERT(!node.empty(), ("XML: no child found for " + name).c_str());
 }
 
 /**
@@ -268,13 +268,13 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     }
 
     for (Road *road: sim.getRoads()) {
-        std::vector<Vehicle *> vehicles = road->getVehicles();
-        for (int vehicleIndexOne = 0; vehicleIndexOne < (int) vehicles.size(); vehicleIndexOne++) {
-            Vehicle *vehicleOne = vehicles[vehicleIndexOne];
-            for (int vehicleIndexTwo = 0; vehicleIndexTwo < (int) vehicles.size(); vehicleIndexTwo++) {
+        std::vector<Vehicle *> roadVehicles = road->getVehicles();
+        for (int vehicleIndexOne = 0; vehicleIndexOne < (int) roadVehicles.size(); vehicleIndexOne++) {
+            Vehicle *vehicleOne = roadVehicles[vehicleIndexOne];
+            for (int vehicleIndexTwo = 0; vehicleIndexTwo < (int) roadVehicles.size(); vehicleIndexTwo++) {
                 if (vehicleIndexOne == vehicleIndexTwo) continue;
 
-                Vehicle *vehicleTwo = vehicles[vehicleIndexTwo];
+                Vehicle *vehicleTwo = roadVehicles[vehicleIndexTwo];
                 ASSERT(vehicleTwo->getPosition() != vehicleOne->getPosition(),
                        "XML: vehicles cannot be on the same position");
             }
