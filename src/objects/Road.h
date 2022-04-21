@@ -20,6 +20,9 @@
 #include "../lib/DesignByContract.h"
 
 class Road {
+    FRIEND_TEST(RoadTests, TickVehicleGeneratorsHappyDay);
+    FRIEND_TEST(RoadTests, TickTrafficLightsHappyDay);
+
 private:
     Road* _init;
 

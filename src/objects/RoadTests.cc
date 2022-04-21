@@ -43,32 +43,19 @@ TEST(RoadTests, GeneratorMutationHappyDay) {
 }
 
 TEST(RoadTests, TickTrafficLightsHappyDay) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 100.0);
-    sim.addRoad(road);
+    Road road = Road("example", 100.0);
     int cycle = 10;
     TrafficLight* light = new TrafficLight(20.0, cycle);
 
 
-    road->addTrafficLight(light);
+    road.addTrafficLight(light);
 
     bool beforeTicks = light->isGreen();
 
     light->setCycleCount(ceil(cycle/gSimTime));
-    sim.tickTrafficLights(road);
+    road.tickTrafficLights();
 
     EXPECT_NE(beforeTicks, light->isGreen());
-}
-
-TEST(RoadTests, TickTrafficLightsUnknownRoad) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 100.0);
-    TrafficLight* light = new TrafficLight(20.0, 20);
-    road->addTrafficLight(light);
-
-    EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
-
-    delete road;
 }
 
 TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
