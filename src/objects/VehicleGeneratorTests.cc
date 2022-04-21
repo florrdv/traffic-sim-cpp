@@ -32,3 +32,8 @@ TEST(GeneratorTests, FrequencyCountMutationHappyDay) {
     g->setFrequencyCount(0);
     ASSERT_EQ(0, g->getFrequencyCount());
 }
+
+TEST(GeneratorTests, VehicleTypeGetter) {
+    VehicleGenerator* g = new VehicleGenerator(0.0, VehicleType::FireTruck);
+    EXPECT_EQ(g->getType(), VehicleType::FireTruck);
+}
