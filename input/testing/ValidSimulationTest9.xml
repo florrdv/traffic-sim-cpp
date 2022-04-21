@@ -1,0 +1,57 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>100</lengte>
+</BAAN>
+
+<BAAN>
+    <naam>Groenenborgerlaan</naam>
+    <lengte>200</lengte>
+</BAAN>
+
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>
+
+<VERKEERSLICHT>
+    <baan>Groenenborgerlaan</baan>
+    <positie>0</positie>
+    <cyclus>12</cyclus>
+</VERKEERSLICHT>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>40</positie>
+    <type>bus</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>20</positie>
+    <type>auto</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>0</positie>
+    <type>bus</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Groenenborgerlaan</baan>
+    <positie>20</positie>
+    <type>brandweerwagen</type>
+</VOERTUIG>
+
+<VOERTUIGGENERATOR>
+    <baan>Groenenborgerlaan</baan>
+    <frequentie>3</frequentie>
+    <type>ziekenwagen</type>
+</VOERTUIGGENERATOR>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>3</frequentie>
+    <type>politiecombi</type>
+</VOERTUIGGENERATOR>
