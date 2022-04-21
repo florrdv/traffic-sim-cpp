@@ -30,6 +30,26 @@ private:
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
 
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickTrafficLights();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicleGenerators();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicles(std::ostream& stream);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    */
+    void cleanup();
+
 public:
     // Constructors / destructors
     Road(std::string n, double l): name(n), length(l) { _init = this; }
@@ -105,11 +125,6 @@ public:
     \n ENSURE(g != nullptr, "Cannot add empty generator to road");
      */
     void setGenerator(VehicleGenerator *g);
-
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
-    void cleanup();
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
