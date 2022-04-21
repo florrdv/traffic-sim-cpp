@@ -50,6 +50,11 @@ private:
     */
     void cleanup();
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    */
+    void spawnVehicle(const VehicleType& type);
+
 public:
     // Constructors / destructors
     Road(std::string n, double l): name(n), length(l) { _init = this; }
@@ -128,8 +133,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
-    void spawnVehicle(const VehicleType& type);
+     */
+    void tick(std::ostream& stream);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
