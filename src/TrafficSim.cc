@@ -17,7 +17,7 @@ int main() {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    parser.parse(sim, "../input/testing/ParsingUnknownVehicleType.xml");
+    parser.parse(sim, "../input/example.xml");
 
     sim.writeOn(std::cout, 50);
 
