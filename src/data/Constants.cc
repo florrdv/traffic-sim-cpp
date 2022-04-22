@@ -1,4 +1,11 @@
 #include "Constants.h"
+#include <map>
+
+struct VehicleConstants {
+
+};
+
+std::map<std::string, int> vehicleConstants;
 
 double gVehicleLength           = 4;
 double gSpeedMax                = 16.6;
