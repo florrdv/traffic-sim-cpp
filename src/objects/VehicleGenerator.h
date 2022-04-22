@@ -3,17 +3,19 @@
 
 #include <iostream>
 #include "Entity.h"
+#include "Vehicle.h"
 
 class VehicleGenerator: public Entity {
 private:
     VehicleGenerator* _init;
 
+    VehicleType type;
     int frequency{};
     int frequencyCount = 0;
 
 public:
     // Constructors / destructors
-    VehicleGenerator(int freq): Entity(0.0), frequency(freq) {_init = this;}
+    VehicleGenerator(int freq, VehicleType t): Entity(0.0), type(t), frequency(freq) {_init = this;}
 
     // General methods
     /**
@@ -31,6 +33,11 @@ public:
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
     */
     int getFrequencyCount() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    */
+    VehicleType getType() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");

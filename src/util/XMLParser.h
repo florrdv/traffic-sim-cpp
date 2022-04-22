@@ -21,13 +21,54 @@
 class XMLParser {
     XMLParser* _init;
     
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     void validateNode(const pugi::xml_node& node, const std::string& nam) const;
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(value>=0, "Parsed integer cannot be negative");
+    */
     int parsePositiveInteger(const std::string& s, const std::string& name, const bool strictlyPositive) const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(road != nullptr, "Road has to be generated");
+    */
+    Road* parseRoad(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(vehicle != nullptr, "Road has to be generated");
+    */
+    Vehicle* parseVehicle(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(trafficLight != nullptr, "Road has to be generated");
+    */
+    TrafficLight* parseTrafficLight(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(generator != nullptr, "Road has to be generated");
+    */
+    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
+    std::string parseRoadReference(const pugi::xml_node& node);
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
+    VehicleType parseVehicleType(const pugi::xml_node& node);
+
 public:
     // Constructors / destructors
     XMLParser() { _init = this; };
 
     // Regular methods
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     void parse(Simulation& sim, const std::string file);
 
     // Safety specific

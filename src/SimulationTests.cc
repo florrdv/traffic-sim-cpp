@@ -152,6 +152,24 @@ TEST(SimulationTests, ValidSimulationTest8) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
+TEST(SimulationTests, ValidSimulationTest9) {
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest9.txt";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest9.txt";
+
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest9.xml";
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    parser.parse(sim, xmlPath);
+
+    std::ofstream file(outPath);
+    sim.writeOn(file, 50, 500);
+    file.close();
+
+    EXPECT_TRUE(fileCompare(inPath, outPath));
+}
+
 TEST(SimulationTests, RoadMutationHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 100.0);
@@ -168,79 +186,10 @@ TEST(SimulationTests, CountVehiclesHappyDay) {
     road->setName("example");
     sim.addRoad(road);
 
-    Vehicle* vehicle = new Vehicle(0.0);
+    Vehicle* vehicle = new Vehicle(0.0, VehicleType::Personal);
     road->addVehicle(vehicle);
 
     EXPECT_EQ(1, sim.countVehicles());
-}
-
-TEST(SimulationTests, TickTrafficLightsHappyDay) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 100.0);
-    sim.addRoad(road);
-    int cycle = 10;
-    TrafficLight* light = new TrafficLight(20.0, cycle);
-
-
-    road->addTrafficLight(light);
-
-    bool beforeTicks = light->isGreen();
-
-    light->setCycleCount(ceil(cycle/gSimTime));
-    sim.tickTrafficLights(road);
-
-    EXPECT_NE(beforeTicks, light->isGreen());
-}
-
-TEST(SimulationTests, TickTrafficLightsUnknownRoad) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 100.0);
-    TrafficLight* light = new TrafficLight(20.0, 20);
-    road->addTrafficLight(light);
-
-    EXPECT_DEATH(sim.tickTrafficLights(road), "not part of the simulation");
-
-    delete road;
-}
-
-TEST(SimulationTests, TickVehicleGeneratorsHappyDay) {
-    int frequency = 10;
-
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 100.0);
-    sim.addRoad(road);
-    VehicleGenerator* generator = new VehicleGenerator(frequency);
-    road->setGenerator(generator);
-
-    int expectedAfterTick = sim.countVehicles()+1;
-
-    generator->setFrequencyCount(ceil(frequency/gSimTime));
-    sim.tickVehicleGenerators(road);
-
-    EXPECT_EQ(expectedAfterTick, sim.countVehicles());
-}
-
-TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 20.0);
-    VehicleGenerator* generator = new VehicleGenerator(10);
-    road->setGenerator(generator);
-
-    EXPECT_DEATH(sim.tickVehicleGenerators(road), "not part of the simulation");
-
-    delete road;
-}
-
-TEST(SimulationTests, TickVehiclesUnknownRoad) {
-    Simulation sim = Simulation();
-    Road* road = new Road("example", 10.0);
-    Vehicle* vehicle = new Vehicle(20.0);
-    road->addVehicle(vehicle);
-
-
-    EXPECT_DEATH(sim.tickVehicles(road, std::cout), "not part of the simulation");
-
-    delete road;
 }
 
 TEST(SimulationTests, GetSetRoads) {

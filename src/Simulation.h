@@ -22,12 +22,7 @@
 
 class Simulation {
     FRIEND_TEST(SimulationTests, CountVehiclesHappyDay);
-    FRIEND_TEST(SimulationTests, TickTrafficLightsHappyDay);
-    FRIEND_TEST(SimulationTests, TickVehicleGeneratorsHappyDay);
-    FRIEND_TEST(SimulationTests, TickTrafficLightsUnknownRoad);
     FRIEND_TEST(SimulationTests, WriteOnHappyDay);
-    FRIEND_TEST(SimulationTests, TickVehicleGeneratorsUnknownRoad);
-    FRIEND_TEST(SimulationTests, TickVehiclesUnknownRoad);
 
 private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
@@ -39,24 +34,6 @@ private:
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     int countVehicles();
-
-    /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
-    \n REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation")
-    */
-    void tickVehicleGenerators(Road* road);
-
-    /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
-    \n REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation")
-    */
-    void tickTrafficLights(Road* road);
-
-    /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
-    \n REQUIRE(find(roads.begin(), roads.end(), road) != roads.end(), "Road is not part of the simulation")
-    */
-    void tickVehicles(Road* road, std::ostream& stream);
 public:
     /**
     \n REQUIRE(gSpeedMax > 0, "gSpeedMax must be strictly positive");

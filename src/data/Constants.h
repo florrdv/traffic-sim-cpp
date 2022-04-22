@@ -17,4 +17,6 @@ extern double gDecelerationFactor;
 static std::string gTestInputFolder = "../input/testing";
 static std::string gTestOutputFolder = "../output/testing";
 
+
+
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_

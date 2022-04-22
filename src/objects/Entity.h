@@ -19,12 +19,12 @@ protected:
     // Regular methods
 public:
     /**
-    \n REQUIRE(this->properlyInitialized(), "Entity wasn't initialized properly");
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(p>=0, "Entity position cannot be a negative integer");
     */
     void setPosition(double p);
     /**
-    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n ENSURE(p>=0, "Entity position cannot be a negative integer");
+    \n REQUIRE(this->properlyInitialized(), "Entity wasn't initialized properly");
     */
     double getPosition() const;
 

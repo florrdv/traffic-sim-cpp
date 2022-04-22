@@ -11,6 +11,7 @@
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
 
+#include <map>
 #include <string>
 #include <gtest/gtest_prod.h>
 
@@ -18,6 +19,14 @@
 #include "Entity.h"
 
 class VehicleTests;
+
+enum VehicleType {
+    Personal,
+    Bus,
+    FireTruck,
+    Ambulance,
+    Police
+};
 
 class Vehicle: public Entity {
     FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
@@ -28,6 +37,7 @@ private:
     Vehicle* _init;
 
     int id;
+    VehicleType type;
 
     double speed = 0;
     double acceleration = 0;
@@ -54,7 +64,7 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle(double position): Entity(position) { _init = this; }
+    Vehicle(double position, VehicleType t): Entity(position), type(t) { _init = this; }
 
     // General methods
 

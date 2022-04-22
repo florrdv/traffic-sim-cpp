@@ -20,34 +20,33 @@ const std::string &Road::getName() const {
 
 void Road::setName(const std::string &n) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
+    ENSURE(!name.empty(), "Road name cannot be empty");
     Road::name = n;
 }
 
 
 double Road::getLength() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
     return length;
 }
 
 
 void Road::setLength(double l) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    REQUIRE(l>0, "Length must be strictly positive");
+    ENSURE(l > 0, "Length must be strictly positive");
     Road::length = l;
 }
 
 
 const std::vector<Vehicle *> &Road::getVehicles() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
     return vehicles;
 }
 
 
 void Road::addVehicle(Vehicle *v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     v->setId(vehicles.size());
     vehicles.push_back(v);
 }
@@ -55,14 +54,13 @@ void Road::addVehicle(Vehicle *v) {
 
 void Road::addTrafficLight(TrafficLight *t) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
+    ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     trafficLights.push_back(t);
 }
 
 
 const std::vector<TrafficLight *> &Road::getTrafficLights() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
     return trafficLights;
 }
 
@@ -75,6 +73,7 @@ VehicleGenerator *Road::getGenerator() const {
 
 void Road::setGenerator(VehicleGenerator *g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    ENSURE(g != nullptr, "Cannot add empty generator to road");
     generator = g;
 }
 
@@ -84,12 +83,10 @@ Vehicle *Road::getLeadingVehicle(Vehicle *v) {
     Vehicle *leadingVehicle = nullptr;
     for (Vehicle *candidate: vehicles) {
         if (candidate->getPosition() <= v->getPosition()) continue;
-
         if (leadingVehicle == nullptr ||
             leadingVehicle->getPosition() - v->getPosition() > candidate->getPosition() - v->getPosition())
             leadingVehicle = candidate;
     }
-
     return leadingVehicle;
 }
 
@@ -97,7 +94,6 @@ Vehicle *Road::getLeadingVehicle(Vehicle *v) {
 void Road::cleanup() {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     std::vector<Vehicle *>::iterator vehicle = vehicles.begin();
-
     while (vehicle != vehicles.end()) {
         if ((*vehicle)->getPosition() > length) {
             vehicles.erase(vehicle);
@@ -124,9 +120,91 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
     return firstVehicle;
 }
 
-void Road::spawnVehicle() {
+void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-
-    Vehicle* v = new Vehicle(0);
+    Vehicle *v = new Vehicle(0, VehicleType::Personal);
     addVehicle(v);
+}
+
+void Road::tickTrafficLights() {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    // Get all traffic lights on the road
+    std::vector<TrafficLight*> trafficLights = getTrafficLights();
+
+    // Loop over all traffic lights
+    for (TrafficLight* trafficLight : trafficLights) {
+        int cycleCount = trafficLight->getCycleCount();
+        // Check if we have to toggle the light
+        bool shouldToggle = cycleCount * gSimTime > trafficLight->getCycle();
+        if (shouldToggle) {
+            trafficLight->toggle();
+            trafficLight->setCycleCount(0);
+        } else trafficLight->setCycleCount(cycleCount + 1);
+
+        // Get the first vehicle relative to the traffic light
+        // To make vehicles decelerate or stop, we just need to perform the action
+        // on the first vehicle driving towards the traffic light.
+        Vehicle* firstVehicle = getFirstToTrafficLight(trafficLight);
+        // No vehicles are driving towards the traffic light, continue to the next traffic light
+        if (firstVehicle == nullptr) continue;
+
+        // If the traffic light is green, all vehicles should accelerate
+        if (trafficLight->isGreen()) firstVehicle->accelerate();
+        else {
+            // The light is red, let's check how far away the first vehicle
+            // is from the traffic light
+            double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
+
+            // Stop the vehicle if it's in the braking zone
+            if (distanceToLight < gBrakeDistance) firstVehicle->stop();
+            // Force the vehicle to decelerate if it's in the deceleration zone
+            else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();
+        }
+    }
+}
+
+void Road::tickVehicles(std::ostream& onStream) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    // Get all vehicles on the road
+    std::vector<Vehicle*> vehicles = getVehicles();
+
+    // Loop over all vehicles
+    for (Vehicle* vehicle : vehicles) {
+        // Tick the relevant vehicle
+        vehicle->tick(getLeadingVehicle(vehicle));
+
+        // Print all information on the vehicle in 
+        // the requested format
+        onStream << "Vehicle " << vehicle->getId() << std::endl;
+        onStream << "-> Road: " << getName() << std::endl;
+        onStream << "-> Position: " << vehicle->getPosition() << std::endl;
+        onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+    }
+}
+
+void Road::tickVehicleGenerators() {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    // If there's a generator running on the road and the cycle time 
+    // has been exceeded, spawn a new vehicle
+    VehicleGenerator* generator = getGenerator();
+    if (generator == nullptr) return;
+
+    // Get the frequency count for the generator
+    int freqCount = generator->getFrequencyCount();
+    bool shouldSpawn = freqCount * gSimTime > generator->getFrequency();
+
+    // Spawn a vehicle if necessary
+    if (shouldSpawn) {
+        spawnVehicle(generator->getType());
+        generator->setFrequencyCount(0);
+    } else generator->setFrequencyCount(freqCount + 1);
+}
+
+void Road::tick(std::ostream& stream) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    tickVehicleGenerators();
+    tickTrafficLights();
+    tickVehicles(stream);
+
+    cleanup();
 }

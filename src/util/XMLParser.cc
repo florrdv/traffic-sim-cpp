@@ -60,7 +60,142 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n ENSURE(road != nullptr, "Road has to be generated");
+*/
+Road* XMLParser::parseRoad(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+    pugi::xml_node nameNode = node.child("naam");
+    pugi::xml_node lengthNode = node.child("lengte");
+
+    // Check if the nodes exist
+    validateNode(nameNode, "name");
+    validateNode(lengthNode, "length");
+
+    // Extract values
+    std::string roadName = nameNode.text().as_string();
+    int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
+
+    // Create road object
+    Road *road = new Road(roadName, roadLength);
+
+    ENSURE(road != nullptr, "Road has to be generated");
+    return road;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+*/
+VehicleType XMLParser::parseVehicleType(const pugi::xml_node& node) {
+    // Default case
+    if (node.empty()) return VehicleType::Personal;
+
+    std::string name = node.text().as_string();
+    if (name == "auto") return VehicleType::Personal;
+    else if (name == "bus") return VehicleType::Bus;
+    else if (name == "brandweerwagen") return VehicleType::FireTruck;
+    else if (name == "ziekenwagen") return VehicleType::Ambulance;
+    else if (name == "politiecombi") return VehicleType::Police;
+    else ASSERT(false, ("XML: unknown vehicle type '" + name + "'").c_str());
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n ENSURE(vehicle != nullptr, "Road has to be generated");
+*/
+Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+    pugi::xml_node posNode = node.child("positie");
+    pugi::xml_node typeNode = node.child("type"); // we will not validate this node as it can be empty
+
+    // Check if the nodes exist
+    validateNode(roadNode, "baan");
+    validateNode(posNode, "positie");
+
+    // Extract values
+    std::string road = roadNode.text().as_string();
+    int pos = parsePositiveInteger(posNode.text().as_string(), "position");
+
+    // Create vehicle object
+    VehicleType vehicleType = parseVehicleType(typeNode);
+    Vehicle *vehicle = new Vehicle(pos, vehicleType);
+
+    ENSURE(vehicle != nullptr, "Road has to be generated");
+    return vehicle;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n ENSURE(generator != nullptr, "Road has to be generated");
+*/
+VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+    pugi::xml_node freqNode = node.child("frequentie");
+    pugi::xml_node typeNode = node.child("type"); // we will not validate this node as it can be empty
+
+    // Check if the nodes exist
+    validateNode(freqNode, "frequentie");
+
+    // Extract values
+    int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
+
+    // Create vehicle generator object
+    VehicleType vehicleType = parseVehicleType(typeNode);
+    VehicleGenerator *generator = new VehicleGenerator(freq, vehicleType);
+
+    ENSURE(generator != nullptr, "Road has to be generated");
+    return generator;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n ENSURE(trafficLight != nullptr, "Road has to be generated");
+*/
+TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+    pugi::xml_node positionNode = node.child("positie");
+    pugi::xml_node cycleNode = node.child("cyclus");
+
+    validateNode(positionNode, "position");
+    validateNode(cycleNode, "cycle");
+
+    // Extract values
+    int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
+    int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
+
+    // Create traffic light object
+    TrafficLight *trafficLight = new TrafficLight(pos, cycle);
+
+    ENSURE(trafficLight != nullptr, "Road has to be generated");
+    return trafficLight;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+*/
+std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
+    // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+
+    // Check if the nodes exist
+    validateNode(roadNode, "road");
+
+    // Parse road name
+    std::string road = roadNode.text().as_string();
+    return road;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
 void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
@@ -82,80 +217,32 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         // type of node we're dealing with
         std::string name = node.name();
         if (name == "BAAN") {
-            // Fetch nodes
-            pugi::xml_node nameNode = node.child("naam");
-            pugi::xml_node lengthNode = node.child("lengte");
-
-            // Check if the nodes exist
-            validateNode(nameNode, "name");
-            validateNode(lengthNode, "length");
-
-            // Extract values
-            std::string roadName = nameNode.text().as_string();
-            int roadLength = parsePositiveInteger(lengthNode.text().as_string(), "length", true);
-
-            // Create road object
-            Road *road = new Road(roadName, roadLength);
-
-            // Register road
+            // Parse and register road
+            Road* road = parseRoad(node);
             sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
-            // Fetch nodes
-            pugi::xml_node roadNode = node.child("baan");
-            pugi::xml_node positionNode = node.child("positie");
-            pugi::xml_node cycleNode = node.child("cyclus");
+            // Parse traffic light
+            TrafficLight *trafficLight = parseTrafficLight(node);
+            std::string road = parseRoadReference(node);
 
-            // Check if the nodes exist
-            validateNode(roadNode, "road");
-            validateNode(positionNode, "position");
-            validateNode(cycleNode, "cycle");
-
-            // Extract values
-            std::string road = roadNode.text().as_string();
-            int pos = parsePositiveInteger(positionNode.text().as_string(), "position");
-            int cycle = parsePositiveInteger(cycleNode.text().as_string(), "cycle", true);
-
-            // Create traffic light object
-            TrafficLight *trafficLight = new TrafficLight(pos, cycle);
-
+            // Verify and register traffic light
             if (trafficLights.find(road) == trafficLights.end()) trafficLights.insert({road, {}});
             trafficLights[road].push_back(trafficLight);
 
         } else if (name == "VOERTUIG") {
-            // Fetch nodes
-            pugi::xml_node roadNode = node.child("baan");
-            pugi::xml_node posNode = node.child("positie");
+            // Parse vehicle
+            Vehicle *vehicle = parseVehicle(node);
+            std::string road = parseRoadReference(node);
 
-            // Check if the nodes exist
-            validateNode(roadNode, "baan");
-            validateNode(posNode, "positie");
-
-            // Extract values
-            std::string road = roadNode.text().as_string();
-            int pos = parsePositiveInteger(posNode.text().as_string(), "position");
-
-            // Create vehicle object
-            Vehicle *vehicle = new Vehicle(pos);
-
+            // Verify and register vehicle
             if (vehicles.find(road) == vehicles.end()) vehicles.insert({road, {}});
             vehicles[road].push_back(vehicle);
-
         } else if (name == "VOERTUIGGENERATOR") {
-            // Fetch nodes
-            pugi::xml_node roadNode = node.child("baan");
-            pugi::xml_node freqNode = node.child("frequentie");
+            // Parse vehicle generator
+            VehicleGenerator *generator = parseVehicleGenerator(node);
+            std::string road = parseRoadReference(node);
 
-            // Check if the nodes exist
-            validateNode(roadNode, "baan");
-            validateNode(freqNode, "frequentie");
-
-            // Extract values
-            std::string road = roadNode.text().as_string();
-            int freq = parsePositiveInteger(freqNode.text().as_string(), "frequency", true);
-
-            // Create vehicle generator object
-            VehicleGenerator *generator = new VehicleGenerator(freq);
-
+            // Verify and register vehicle generator
             if (generators.find(road) == generators.end()) generators.insert({road, {}});
             generators[road].push_back(generator);
         } else if (name == "BUSHALTE") {
@@ -199,13 +286,13 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     }
 
     for (Road *road: sim.getRoads()) {
-        std::vector<Vehicle *> vehicles = road->getVehicles();
-        for (int vehicleIndexOne = 0; vehicleIndexOne < (int) vehicles.size(); vehicleIndexOne++) {
-            Vehicle *vehicleOne = vehicles[vehicleIndexOne];
-            for (int vehicleIndexTwo = 0; vehicleIndexTwo < (int) vehicles.size(); vehicleIndexTwo++) {
+        std::vector<Vehicle *> roadVehicles = road->getVehicles();
+        for (int vehicleIndexOne = 0; vehicleIndexOne < (int) roadVehicles.size(); vehicleIndexOne++) {
+            Vehicle *vehicleOne = roadVehicles[vehicleIndexOne];
+            for (int vehicleIndexTwo = 0; vehicleIndexTwo < (int) roadVehicles.size(); vehicleIndexTwo++) {
                 if (vehicleIndexOne == vehicleIndexTwo) continue;
 
-                Vehicle *vehicleTwo = vehicles[vehicleIndexTwo];
+                Vehicle *vehicleTwo = roadVehicles[vehicleIndexTwo];
                 ASSERT(vehicleTwo->getPosition() != vehicleOne->getPosition(),
                        "XML: vehicles cannot be on the same position");
             }
@@ -226,11 +313,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
     for (Road *road: sim.getRoads()) {
         std::vector<TrafficLight *> placedTrafficLights = road->getTrafficLights();
-        for (int trafficLightIndexOne = 0;
-             trafficLightIndexOne < (int) placedTrafficLights.size(); trafficLightIndexOne++) {
+        for (int trafficLightIndexOne = 0; trafficLightIndexOne < (int) placedTrafficLights.size(); trafficLightIndexOne++) {
             TrafficLight *trafficLightOne = placedTrafficLights[trafficLightIndexOne];
-            for (int trafficLightIndexTwo = 0;
-                 trafficLightIndexTwo < (int) placedTrafficLights.size(); trafficLightIndexTwo++) {
+            for (int trafficLightIndexTwo = 0; trafficLightIndexTwo < (int) placedTrafficLights.size(); trafficLightIndexTwo++) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight *trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];

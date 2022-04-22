@@ -20,6 +20,9 @@
 #include "../lib/DesignByContract.h"
 
 class Road {
+    FRIEND_TEST(RoadTests, TickVehicleGeneratorsHappyDay);
+    FRIEND_TEST(RoadTests, TickTrafficLightsHappyDay);
+
 private:
     Road* _init;
 
@@ -29,6 +32,31 @@ private:
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
     VehicleGenerator* generator=nullptr;
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickTrafficLights();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicleGenerators();
+
+    /**
+    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    */
+    void tickVehicles(std::ostream& stream);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    */
+    void cleanup();
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    */
+    void spawnVehicle(const VehicleType& type);
 
 public:
     // Constructors / destructors
@@ -48,6 +76,7 @@ public:
     
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(!name.empty(), "Road name cannot be empty");
     */
     void setName(const std::string &name);
 
@@ -58,6 +87,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(l>0, "Length must be strictly positive");
     */
     void setLength(double length);
 
@@ -68,6 +98,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     */
     void addVehicle(Vehicle *v);
 
@@ -88,6 +119,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     */
     void addTrafficLight(TrafficLight *t);
 
@@ -98,18 +130,14 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
+    \n ENSURE(g != nullptr, "Cannot add empty generator to road");
+     */
     void setGenerator(VehicleGenerator *g);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
-    void cleanup();
-
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    */
-    void spawnVehicle();
+     */
+    void tick(std::ostream& stream);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

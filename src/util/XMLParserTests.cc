@@ -116,7 +116,6 @@ TEST(XMLParserTests, ParsingTrafficLightCycleZero) {
 
 TEST(XMLParserTests, ParsingTrafficLightDecelerationOverlap) {
     std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightDecelerationOverlap.xml";
-
     Simulation sim = Simulation();
 
     XMLParser parser;
@@ -132,4 +131,21 @@ TEST(XMLParserTests, ParsingHappyDay) {
     EXPECT_EXIT({parser.parse(sim, xmlPath); fprintf(stderr, "Parsed successfully"); exit(0);},
                 ::testing::ExitedWithCode(0), "Parsed successfully");
 }
+
+TEST(XMLParserTests, NoRoadNameXML) {
+    std::string xmlPath = gTestInputFolder + "/NoRoadName.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "no child found");
+}
+
+TEST(XMLPArserTests, UnknownVehicleType) {
+    std::string xmlPath = gTestInputFolder + "/ParsingUnknownVehicleType.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown vehicle type");
+}
+
 
