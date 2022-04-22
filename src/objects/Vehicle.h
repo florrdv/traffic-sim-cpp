@@ -20,14 +20,6 @@
 
 class VehicleTests;
 
-enum VehicleType {
-    Personal,
-    Bus,
-    FireTruck,
-    Ambulance,
-    Police
-};
-
 class Vehicle: public Entity {
     FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
     FRIEND_TEST(VehicleTests, UpdateSpeedHappyDay);
@@ -64,7 +56,15 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle(double position, VehicleType t): Entity(position), type(t) { _init = this; }
+    Vehicle(double position, VehicleType t): Entity(position), type(t) { 
+        _init = this;
+        VehicleConstant constants = gVehicleConstants.at(t);
+        length = constants.gVehicleLength;
+        speedMax = constants.gSpeedMax;
+        gAccelerationMax = constants.gAccelerationMax;
+        gBrakeMax = constants.gBrakeMax;
+        gFollowMin = constants.gFollowMin;
+    }
 
     // General methods
 
