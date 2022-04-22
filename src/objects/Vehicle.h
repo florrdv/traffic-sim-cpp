@@ -56,7 +56,15 @@ private:
 
 public:
     // Constructors / destructors
-    Vehicle(double position, VehicleType t): Entity(position), type(t) { _init = this; }
+    Vehicle(double position, VehicleType t): Entity(position), type(t) { 
+        _init = this;
+        VehicleConstant constants = gVehicleConstants.at(t);
+        length = constants.gVehicleLength;
+        speedMax = constants.gSpeedMax;
+        gAccelerationMax = constants.gAccelerationMax;
+        gBrakeMax = constants.gBrakeMax;
+        gFollowMin = constants.gFollowMin;
+    }
 
     // General methods
 
