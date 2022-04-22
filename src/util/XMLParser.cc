@@ -31,7 +31,7 @@
 // verkeerslicht bevinden (zie Appendix B).
 
 /**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
@@ -39,7 +39,7 @@ void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name
 }
 
 /**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 \n ENSURE(value>=0, "Parsed integer cannot be negative");
 */
 int XMLParser::parsePositiveInteger(const std::string &s, const std::string &name,
@@ -245,6 +245,24 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             // Verify and register vehicle generator
             if (generators.find(road) == generators.end()) generators.insert({road, {}});
             generators[road].push_back(generator);
+        } else if (name == "BUSHALTE") {
+            // Fetch nodes
+            pugi::xml_node roadNode = node.child("baan");
+            pugi::xml_node posNode = node.child("positie");
+            pugi::xml_node waitTimeNode = node.child("wachttijd");
+
+            // Check if the nodes exist
+            validateNode(roadNode, "baan");
+            validateNode(posNode, "positie");
+            validateNode(waitTimeNode, "wachttijd");
+
+            // Extract values
+//            std::string road = roadNode.text().as_string();
+//            int pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
+//            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
+
+            // Create bushalte object
+            //TODO: ^^^
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
