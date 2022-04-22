@@ -35,7 +35,7 @@
 */
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
-    ASSERT(!node.empty(), ("XML: no " + name + " child found").c_str());
+    ASSERT(!node.empty(), ("XML: no child found for " + name).c_str());
 }
 
 /**
@@ -257,9 +257,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             validateNode(waitTimeNode, "wachttijd");
 
             // Extract values
-            std::string road = roadNode.text().as_string();
-            int pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
-            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
+//            std::string road = roadNode.text().as_string();
+//            int pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
+//            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
 
             // Create bushalte object
             //TODO: ^^^

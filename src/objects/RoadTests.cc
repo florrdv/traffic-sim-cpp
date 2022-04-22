@@ -65,7 +65,7 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
     VehicleGenerator* generator = new VehicleGenerator(frequency, VehicleType::Personal);
     road.setGenerator(generator);
 
-    int expectedAfterTick = road.getVehicles().size();
+    unsigned int expectedAfterTick = road.getVehicles().size();
 
     generator->setFrequencyCount(ceil(frequency/gSimTime));
     road.tickVehicleGenerators();
