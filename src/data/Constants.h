@@ -22,12 +22,7 @@ struct VehicleConstant {
 
 extern std::map<VehicleType, VehicleConstant> gVehicleConstants;
 
-extern double gVehicleLength;
-extern double gSpeedMax;
-extern double gAccelerationMax;
-extern double gBrakeMax;
 extern double gBrakeDistance;
-extern double gFollowMin;
 extern double gSimTime;
 extern double gDecelerationDistance;
 extern double gDecelerationFactor;

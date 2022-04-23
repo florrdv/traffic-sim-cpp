@@ -53,6 +53,7 @@ std::map<VehicleType, VehicleConstant> gVehicleConstants = {
     }
 };
 
+double gBrakeDistance           = 15;
 double gSimTime                 = 0.0166;
 double gDecelerationDistance    = 50;
 double gDecelerationFactor      = 0.4;

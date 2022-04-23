@@ -15,6 +15,6 @@ double Entity::getPosition() const {
 */
 void Entity::setPosition(double p) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    ENSURE(p>=0, "Entity position must be a positive integer");
+    ENSURE(p>=0, "Entity position must be a positive double");
     position = p;
 }

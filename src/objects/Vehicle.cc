@@ -106,7 +106,7 @@ void Vehicle::stop() {
 */
 void Vehicle::decelerate() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    speedMax = decelerationFactor * gSpeedMax;
+    speedMax = decelerationFactor * speedMaxLimit;
 }
 
 /**
@@ -114,7 +114,7 @@ void Vehicle::decelerate() {
 */
 void Vehicle::accelerate() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    speedMax = gSpeedMax;
+    speedMax = speedMaxLimit;
 }
 
 /**

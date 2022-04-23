@@ -51,7 +51,7 @@ TEST(VehicleTests, UpdateSpeedHappyDay) {
 
 TEST(VehicleTests, DecelerateHappyDay) {
     Vehicle v = Vehicle(0.0, VehicleType::Personal);
-    EXPECT_EQ(gSpeedMax, v.getSpeedMax());
+    EXPECT_EQ(16.6, v.getSpeedMax());
     v.decelerate();
-    EXPECT_EQ(v.getDecelerationFactor() * gSpeedMax, v.getSpeedMax());
+    EXPECT_EQ(v.getDecelerationFactor() * 16.6, v.getSpeedMax());
 }
