@@ -34,14 +34,14 @@ private:
     double speed = 0;
     double acceleration = 0;
 
-    double length = gVehicleLength;
-    double speedMax = gSpeedMax;
-    double accelerationMax = gAccelerationMax;
-    double brakeMax = gBrakeMax;
-    double followMin = gFollowMin;
-    double simTime = gSimTime;
-    double decelerationDistance = gDecelerationDistance;
-    double decelerationFactor = gDecelerationFactor;
+    double length;
+    double speedMax;
+    double accelerationMax;
+    double brakeMax;
+    double followMin;
+    double simTime;
+    double decelerationDistance;
+    double decelerationFactor;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
