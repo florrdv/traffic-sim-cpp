@@ -17,6 +17,7 @@
 #include "../objects/VehicleGenerator.h"
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
+#include "../objects/BusStop.h"
 
 #include <map>
 
@@ -257,12 +258,12 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             validateNode(waitTimeNode, "wachttijd");
 
             // Extract values
-//            std::string road = roadNode.text().as_string();
-//            int pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
-//            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
+            std::string road = roadNode.text().as_string();
+            double pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
+            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
 
             // Create bushalte object
-            //TODO: ^^^
+            BusStop(pos, waitTime);
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
