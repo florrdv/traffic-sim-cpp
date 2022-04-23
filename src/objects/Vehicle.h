@@ -35,6 +35,7 @@ private:
     double acceleration = 0;
 
     double length;
+    double speedMaxLimit;
     double speedMax;
     double accelerationMax;
     double brakeMax;
@@ -61,9 +62,10 @@ public:
         VehicleConstant constants = gVehicleConstants.at(t);
         length = constants.gVehicleLength;
         speedMax = constants.gSpeedMax;
-        gAccelerationMax = constants.gAccelerationMax;
-        gBrakeMax = constants.gBrakeMax;
-        gFollowMin = constants.gFollowMin;
+        speedMaxLimit = constants.gSpeedMax;
+        accelerationMax = constants.gAccelerationMax;
+        brakeMax = constants.gBrakeMax;
+        followMin = constants.gFollowMin;
     }
 
     // General methods
