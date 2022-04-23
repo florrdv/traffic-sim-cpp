@@ -66,6 +66,9 @@ public:
         accelerationMax = constants.gAccelerationMax;
         brakeMax = constants.gBrakeMax;
         followMin = constants.gFollowMin;
+        simTime = gSimTime;
+        decelerationDistance = gDecelerationDistance;
+        decelerationFactor = gDecelerationFactor;
     }
 
     // General methods
