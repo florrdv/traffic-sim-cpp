@@ -17,6 +17,7 @@
 #include <iostream>
 #include <string>
 #include "../lib/pugixml/pugixml.hpp"
+#include "../objects/BusStop.h"
 
 class XMLParser {
     XMLParser* _init;
@@ -53,6 +54,12 @@ class XMLParser {
     VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 
     /**
+     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+     \n ENSURE(busStop != nullptr, "Road has to be generated";
+     */
+    BusStop *parseBusStop(const pugi::xml_node &node);
+
+    /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
     std::string parseRoadReference(const pugi::xml_node& node);
@@ -73,6 +80,7 @@ public:
 
     // Safety specific
     const bool properlyInitialized() const { return _init == this; }
+
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_

@@ -64,7 +64,7 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(road != nullptr, "Road has to be generated");
 */
-Road* XMLParser::parseRoad(const pugi::xml_node& node) {
+Road *XMLParser::parseRoad(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -89,7 +89,7 @@ Road* XMLParser::parseRoad(const pugi::xml_node& node) {
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
-VehicleType XMLParser::parseVehicleType(const pugi::xml_node& node) {
+VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) {
     // Default case
     if (node.empty()) return VehicleType::Personal;
 
@@ -106,7 +106,7 @@ VehicleType XMLParser::parseVehicleType(const pugi::xml_node& node) {
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(vehicle != nullptr, "Road has to be generated");
 */
-Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
+Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -134,7 +134,7 @@ Vehicle* XMLParser::parseVehicle(const pugi::xml_node& node) {
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(generator != nullptr, "Road has to be generated");
 */
-VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
+VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -159,7 +159,7 @@ VehicleGenerator* XMLParser::parseVehicleGenerator(const pugi::xml_node& node) {
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 \n ENSURE(trafficLight != nullptr, "Road has to be generated");
 */
-TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
+TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -180,10 +180,40 @@ TrafficLight* XMLParser::parseTrafficLight(const pugi::xml_node& node) {
     return trafficLight;
 }
 
+
+/**
+ \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+ \n ENSURE(busStop != nullptr, "Road has to be generated";
+ */
+BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+    pugi::xml_node roadNode = node.child("baan");
+    pugi::xml_node posNode = node.child("positie");
+    pugi::xml_node waitTimeNode = node.child("wachttijd");
+
+    // Check if the nodes exist
+    validateNode(roadNode, "baan");
+    validateNode(posNode, "positie");
+    validateNode(waitTimeNode, "wachttijd");
+
+    // Extract values
+    std::string road = roadNode.text().as_string();
+    double pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
+    int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
+
+    // Create bushalte object
+    BusStop *busStop = new BusStop(pos, waitTime);
+
+    ENSURE(busStop != nullptr, "Road has to be generated");
+    return busStop;
+}
+
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 */
-std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
+std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
 
@@ -194,6 +224,7 @@ std::string XMLParser::parseRoadReference(const pugi::xml_node& node) {
     std::string road = roadNode.text().as_string();
     return road;
 }
+
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
@@ -210,6 +241,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     std::map<std::string, std::vector<TrafficLight *>> trafficLights = {};
     std::map<std::string, std::vector<Vehicle *>> vehicles = {};
     std::map<std::string, std::vector<VehicleGenerator *>> generators = {};
+    std::map<std::string, std::vector<BusStop *>> busStops = {};
 
     // Loop over all nodes in the document
     // we just loaded
@@ -219,7 +251,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         std::string name = node.name();
         if (name == "BAAN") {
             // Parse and register road
-            Road* road = parseRoad(node);
+            Road *road = parseRoad(node);
             sim.addRoad(road);
         } else if (name == "VERKEERSLICHT") {
             // Parse traffic light
@@ -247,23 +279,14 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             if (generators.find(road) == generators.end()) generators.insert({road, {}});
             generators[road].push_back(generator);
         } else if (name == "BUSHALTE") {
-            // Fetch nodes
-            pugi::xml_node roadNode = node.child("baan");
-            pugi::xml_node posNode = node.child("positie");
-            pugi::xml_node waitTimeNode = node.child("wachttijd");
+            // Parse bus stop
+            BusStop *busStop = parseBusStop(node);
+            std::string road = parseRoadReference(node);
 
-            // Check if the nodes exist
-            validateNode(roadNode, "baan");
-            validateNode(posNode, "positie");
-            validateNode(waitTimeNode, "wachttijd");
+            // Verify and register bus stop
+            if (busStops.find(road) == busStops.end()) busStops.insert({road, {}});
+            busStops[road].push_back(busStop);
 
-            // Extract values
-            std::string road = roadNode.text().as_string();
-            double pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
-            int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
-
-            // Create bushalte object
-            BusStop(pos, waitTime);
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
@@ -314,9 +337,11 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
     for (Road *road: sim.getRoads()) {
         std::vector<TrafficLight *> placedTrafficLights = road->getTrafficLights();
-        for (int trafficLightIndexOne = 0; trafficLightIndexOne < (int) placedTrafficLights.size(); trafficLightIndexOne++) {
+        for (int trafficLightIndexOne = 0;
+             trafficLightIndexOne < (int) placedTrafficLights.size(); trafficLightIndexOne++) {
             TrafficLight *trafficLightOne = placedTrafficLights[trafficLightIndexOne];
-            for (int trafficLightIndexTwo = 0; trafficLightIndexTwo < (int) placedTrafficLights.size(); trafficLightIndexTwo++) {
+            for (int trafficLightIndexTwo = 0;
+                 trafficLightIndexTwo < (int) placedTrafficLights.size(); trafficLightIndexTwo++) {
                 if (trafficLightIndexOne == trafficLightIndexTwo) continue;
 
                 TrafficLight *trafficLightTwo = placedTrafficLights[trafficLightIndexTwo];
