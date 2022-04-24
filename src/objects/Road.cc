@@ -12,6 +12,7 @@
 #include "../lib/DesignByContract.h"
 
 
+
 const std::string &Road::getName() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     return name;
@@ -120,6 +121,27 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
     return firstVehicle;
 }
 
+
+Vehicle *Road::getFirstBusToBusStop(BusStop *b) const {
+    REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    int busStopPosition = b->getPosition();
+    Vehicle *firstBus = nullptr;
+    for (Vehicle *bus: vehicles) {
+        if (bus->getType() != Bus) continue;
+        double distanceToStop = ((double) busStopPosition) - bus->getPosition();
+        if (firstBus == nullptr) {
+            if (distanceToStop > 0) firstBus = bus;
+            continue;
+        }
+
+        double previousDistanceToBusStop = ((double) busStopPosition) - firstBus->getPosition();
+
+        if (distanceToStop > 0 && distanceToStop < previousDistanceToBusStop) firstBus = bus;
+    }
+    return firstBus;
+}
+
+
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     Vehicle *v = new Vehicle(0, VehicleType::Personal);
@@ -157,6 +179,14 @@ void Road::tickTrafficLights() {
             // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();
         }
+    }
+}
+
+
+void Road::tickBusStops() {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    for (BusStop* busStop: busStops) {
+
     }
 }
 
@@ -203,6 +233,3 @@ void Road::tick(std::ostream& stream) {
     cleanup();
 }
 
-void Road::tickBusStops() {
-
-}

@@ -17,6 +17,7 @@
 #include "Vehicle.h"
 #include "VehicleGenerator.h"
 #include "TrafficLight.h"
+#include "BusStop.h"
 #include "../lib/DesignByContract.h"
 
 class Road {
@@ -31,6 +32,7 @@ private:
 
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
+    std::vector<BusStop*> busStops;
     VehicleGenerator* generator=nullptr;
 
     /**
@@ -116,6 +118,11 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     Vehicle* getFirstToTrafficLight(TrafficLight *trafficLight) const;
+
+    /**
+    \n
+    */
+    Vehicle* getFirstBusToBusStop(BusStop *busStop) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
