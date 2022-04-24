@@ -128,9 +128,6 @@ void Road::spawnVehicle(const VehicleType &type) {
 
 void Road::tickTrafficLights() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    // Get all traffic lights on the road
-    std::vector<TrafficLight*> trafficLights = getTrafficLights();
-
     // Loop over all traffic lights
     for (TrafficLight* trafficLight : trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
@@ -165,9 +162,6 @@ void Road::tickTrafficLights() {
 
 void Road::tickVehicles(std::ostream& onStream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    // Get all vehicles on the road
-    std::vector<Vehicle*> vehicles = getVehicles();
-
     // Loop over all vehicles
     for (Vehicle* vehicle : vehicles) {
         // Tick the relevant vehicle
@@ -186,7 +180,6 @@ void Road::tickVehicleGenerators() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     // If there's a generator running on the road and the cycle time 
     // has been exceeded, spawn a new vehicle
-    VehicleGenerator* generator = getGenerator();
     if (generator == nullptr) return;
 
     // Get the frequency count for the generator
