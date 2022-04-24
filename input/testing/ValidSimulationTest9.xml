@@ -55,3 +55,9 @@
     <frequentie>3</frequentie>
     <type>politiecombi</type>
 </VOERTUIGGENERATOR>
+
+<BUSHALTE>
+    <baan>Middelheimlaan</baan>
+    <positie>250</positie>
+    <wachttijd>20</wachttijd>
+</BUSHALTE>

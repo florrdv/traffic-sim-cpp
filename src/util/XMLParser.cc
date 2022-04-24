@@ -166,6 +166,7 @@ TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
     pugi::xml_node positionNode = node.child("positie");
     pugi::xml_node cycleNode = node.child("cyclus");
 
+    // Check if the nodes exist
     validateNode(positionNode, "position");
     validateNode(cycleNode, "cycle");
 
