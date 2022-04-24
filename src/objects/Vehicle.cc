@@ -50,6 +50,13 @@ void Vehicle::setId(int id_) {
 
 /**
 \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+*/
+VehicleType Vehicle::getType() const {
+    return type;
+}
+
+/**
+\n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
 \n ENSURE(speed >= 0, "Vehicle speed must be positive");
 */
 void Vehicle::updateSpeed() {

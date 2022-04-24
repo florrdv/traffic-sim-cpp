@@ -49,6 +49,7 @@ TEST(VehicleTests, UpdateSpeedHappyDay) {
     EXPECT_TRUE(std::abs(v.getSpeed() - 0.023904) < 0.00001);
 }
 
+
 TEST(VehicleTests, DecelerateHappyDay) {
     Vehicle v = Vehicle(0.0, VehicleType::Personal);
     EXPECT_EQ(16.6, v.getSpeedMax());

@@ -108,6 +108,11 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
+    VehicleType getType() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    */
     void tick(Vehicle* leadingVehicle);
 
     /**
