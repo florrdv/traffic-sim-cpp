@@ -170,8 +170,7 @@ void Road::tickTrafficLights() {
         // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->isGreen()) firstVehicle->accelerate();
         else {
-            // The light is red, let's check how far away the first vehicle
-            // is from the traffic light
+            // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
             // Stop the vehicle if it's in the braking zone
@@ -186,7 +185,19 @@ void Road::tickTrafficLights() {
 void Road::tickBusStops() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     for (BusStop* busStop: busStops) {
+        int waitTime = busStop->getWaitTime();
+        // Get the first bus relative to the bus stop
+        Vehicle* firstBus = getFirstBusToBusStop(busStop);
+        // No busses are driving towards the bus stop, continue to the next bus stop
+        if (firstBus == nullptr) continue;
 
+        // Check the distance from the first bus to the bust top
+        double distanceToStop = busStop->getPosition() - firstBus->getPosition();
+
+        // Stop the bus if it's in the braking zone
+        if (distanceToStop < gBrakeDistance) firstBus->stop();
+        // Force the bus to decelerate if it's in the deceleration zone
+        else if (distanceToStop < gDecelerationDistance) firstBus->decelerate();
     }
 }
 
