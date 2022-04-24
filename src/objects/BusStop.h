@@ -4,7 +4,7 @@
 #include <string>
 #include "Entity.h"
 
-class BusStop : Entity {
+class BusStop : public Entity {
 private:
     BusStop* _init;
 
