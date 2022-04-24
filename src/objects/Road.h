@@ -34,12 +34,12 @@ private:
     VehicleGenerator* generator=nullptr;
 
     /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    \n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
     */
     void tickTrafficLights();
 
     /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    \n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
     */
     void tickVehicleGenerators();
 
@@ -49,7 +49,7 @@ private:
     void tickBusStops();
 
     /**
-    \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
+    \n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
     */
     void tickVehicles(std::ostream& stream);
 
