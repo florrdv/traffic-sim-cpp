@@ -21,6 +21,8 @@
 
 #include <map>
 
+// TODO: remove this comment?
+
 // Een verkeerssituatie is consistent als:
 // • Elk voertuig staat op een bestaande baan.                              OK UNTESTED
 // • Elk verkeerslicht staat op een bestaande baan.                         OK UNTESTED
