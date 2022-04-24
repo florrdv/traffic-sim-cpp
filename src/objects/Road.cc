@@ -204,7 +204,12 @@ void Road::tick(std::ostream& stream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     tickVehicleGenerators();
     tickTrafficLights();
+    tickBusStops();
     tickVehicles(stream);
 
     cleanup();
+}
+
+void Road::tickBusStops() {
+
 }

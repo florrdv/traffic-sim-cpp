@@ -44,6 +44,11 @@ private:
     void tickVehicleGenerators();
 
     /**
+    /n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
+    */
+    void tickBusStops();
+
+    /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     void tickVehicles(std::ostream& stream);
@@ -141,6 +146,7 @@ public:
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
+
 };
 
 
