@@ -21,18 +21,6 @@
 
 #include <map>
 
-// TODO: remove this comment?
-
-// Een verkeerssituatie is consistent als:
-// • Elk voertuig staat op een bestaande baan.                              OK UNTESTED
-// • Elk verkeerslicht staat op een bestaande baan.                         OK UNTESTED
-// • Elke voertuiggenerator staat op een bestaande baan.                    OK UNTESTED
-// • De positie van elk voertuig is kleiner dan de lengte van de baan.      OK UNTESTED
-// • De positie van elk verkeerslicht is kleiner dan de lengte van de baan. OK UNTESTED
-// • Er is maximaal ´e´en voertuiggenerator op elke baan.                   OK UNTESTED
-// • Een verkeerslicht mag zich niet in de vertraagafstand van een ander    OK UNTESTED
-// verkeerslicht bevinden (zie Appendix B).
-
 /**
 \n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
 */
