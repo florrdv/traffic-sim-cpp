@@ -37,7 +37,9 @@ set(RELEASE_SOURCE_FILES
         src/util/XMLParser.h
         src/Simulation.cc
         src/Simulation.h
-        src/TrafficSim.cc)
+        src/TrafficSim.cc
+        src/objects/BusStop.cc
+        src/objects/BusStop.h)
 
 set(DEBUG_SOURCE_FILES
         src/data/Constants.h
@@ -69,7 +71,9 @@ set(DEBUG_SOURCE_FILES
         src/Simulation.cc
         src/Simulation.h
         src/SimulationTests.cc
-        src/TrafficSimTests.cc src/objects/BusStop.cc src/objects/BusStop.h)
+        src/TrafficSimTests.cc
+        src/objects/BusStop.cc
+        src/objects/BusStop.h)
 
 # Create RELEASE target
 add_executable(TrafficSim ${RELEASE_SOURCE_FILES})

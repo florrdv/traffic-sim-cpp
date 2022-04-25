@@ -12,7 +12,6 @@
 #include "../lib/DesignByContract.h"
 
 
-
 const std::string &Road::getName() const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     return name;
@@ -151,7 +150,7 @@ void Road::spawnVehicle(const VehicleType &type) {
 void Road::tickTrafficLights() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     // Loop over all traffic lights
-    for (TrafficLight* trafficLight : trafficLights) {
+    for (TrafficLight *trafficLight: trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
         // Check if we have to toggle the light
         bool shouldToggle = cycleCount * gSimTime > trafficLight->getCycle();
@@ -163,7 +162,7 @@ void Road::tickTrafficLights() {
         // Get the first vehicle relative to the traffic light
         // To make vehicles decelerate or stop, we just need to perform the action
         // on the first vehicle driving towards the traffic light.
-        Vehicle* firstVehicle = getFirstToTrafficLight(trafficLight);
+        Vehicle *firstVehicle = getFirstToTrafficLight(trafficLight);
         // No vehicles are driving towards the traffic light, continue to the next traffic light
         if (firstVehicle == nullptr) continue;
 
@@ -175,7 +174,7 @@ void Road::tickTrafficLights() {
 
             // Stop the vehicle if it's in the braking zone
             if (distanceToLight < gBrakeDistance) firstVehicle->stop();
-            // Force the vehicle to decelerate if it's in the deceleration zone
+                // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();
         }
     }
@@ -184,27 +183,38 @@ void Road::tickTrafficLights() {
 
 void Road::tickBusStops() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    for (BusStop* busStop: busStops) {
-        int waitTime = busStop->getWaitTime();
+    for (BusStop *busStop: busStops) {
+        int waitTime = busStop->getTimeCount();
         // Get the first bus relative to the bus stop
-        Vehicle* firstBus = getFirstBusToBusStop(busStop);
+        Vehicle *firstBus = getFirstBusToBusStop(busStop);
+        // Check if there's a bus that can move again
+        if (busStop->getBus() != nullptr) {
+            if (waitTime * gSimTime > busStop->getTimeCount()) {
+                busStop->removeBus();
+                busStop->setTimeCount(0);
+            } else busStop->setTimeCount(waitTime + 1);
+        }
+
         // No busses are driving towards the bus stop, continue to the next bus stop
         if (firstBus == nullptr) continue;
 
-        // Check the distance from the first bus to the bust top
+        // Check the distance from the first bus to the bus stop
         double distanceToStop = busStop->getPosition() - firstBus->getPosition();
 
         // Stop the bus if it's in the braking zone
-        if (distanceToStop < gBrakeDistance) firstBus->stop();
-        // Force the bus to decelerate if it's in the deceleration zone
+        if (distanceToStop < gBrakeDistance) {
+            firstBus->stop();
+            busStop->setBus(firstBus);
+        }
+            // Force the bus to decelerate if it's in the deceleration zone
         else if (distanceToStop < gDecelerationDistance) firstBus->decelerate();
     }
 }
 
-void Road::tickVehicles(std::ostream& onStream) {
+void Road::tickVehicles(std::ostream &onStream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     // Loop over all vehicles
-    for (Vehicle* vehicle : vehicles) {
+    for (Vehicle *vehicle: vehicles) {
         // Tick the relevant vehicle
         vehicle->tick(getLeadingVehicle(vehicle));
 
@@ -234,7 +244,7 @@ void Road::tickVehicleGenerators() {
     } else generator->setFrequencyCount(freqCount + 1);
 }
 
-void Road::tick(std::ostream& stream) {
+void Road::tick(std::ostream &stream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     tickVehicleGenerators();
     tickTrafficLights();

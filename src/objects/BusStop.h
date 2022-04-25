@@ -3,10 +3,15 @@
 
 #include <string>
 #include "Entity.h"
+#include "Vehicle.h"
 
 class BusStop : public Entity {
 private:
     BusStop* _init;
+
+    Vehicle* bus = nullptr;
+
+    int timeCount = 0;
 
     std::string name;
 
@@ -19,9 +24,15 @@ public:
 
     void setName(const std::string &name);
 
-    int getWaitTime() const;
+    int getTimeCount() const;
 
-    void setWaitTime(int waitTime);
+    void setTimeCount(int timeCount);
+
+    Vehicle *getBus() const;
+
+    void setBus(Vehicle *bus);
+
+    void removeBus();
 };
 
 

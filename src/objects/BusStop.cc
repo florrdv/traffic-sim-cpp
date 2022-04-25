@@ -4,14 +4,26 @@ const std::string &BusStop::getName() const {
     return name;
 }
 
-void BusStop::setName(const std::string &name) {
-    BusStop::name = name;
+void BusStop::setName(const std::string &n) {
+    BusStop::name = n;
 }
 
-int BusStop::getWaitTime() const {
-    return waitTime;
+Vehicle *BusStop::getBus() const {
+    return bus;
 }
 
-void BusStop::setWaitTime(int waitTime) {
-    BusStop::waitTime = waitTime;
+void BusStop::setBus(Vehicle *b) {
+    BusStop::bus = b;
+}
+
+void BusStop::removeBus() {
+    bus = nullptr;
+}
+
+int BusStop::getTimeCount() const {
+    return timeCount;
+}
+
+void BusStop::setTimeCount(int t) {
+    BusStop::timeCount = t;
 }
