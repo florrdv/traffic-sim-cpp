@@ -252,7 +252,6 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             // Verify and register traffic light
             if (trafficLights.find(road) == trafficLights.end()) trafficLights.insert({road, {}});
             trafficLights[road].push_back(trafficLight);
-
         } else if (name == "VOERTUIG") {
             // Parse vehicle
             Vehicle *vehicle = parseVehicle(node);
@@ -277,6 +276,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             // Verify and register bus stop
             if (busStops.find(road) == busStops.end()) busStops.insert({road, {}});
             busStops[road].push_back(busStop);
+        } else if (name == "KRUISHALTE") {
 
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
