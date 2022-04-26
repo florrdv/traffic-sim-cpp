@@ -254,3 +254,7 @@ void Road::tick(std::ostream &stream) {
     cleanup();
 }
 
+const std::vector<BusStop *>& Road::getBusStops() const {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    return busStops;
+}

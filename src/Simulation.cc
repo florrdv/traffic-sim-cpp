@@ -11,6 +11,7 @@
 
 #include "Simulation.h"
 #include "lib/DesignByContract.h"
+#include "lib/json.hpp"
 
 #include <iostream>
 #include <chrono>
@@ -97,7 +98,7 @@ std::vector<Road*> Simulation::getRoads() const {
 nlohmann::json Simulation::dumpState() {
     nlohmann::json j;
 
-    std::vector<nlohmann::json> vehicles;
+    std::vector<nlohmann::json> vehiclesSerialized;
     for (Road* road : roads) {
         for (Vehicle* vehicle : road->getVehicles()) {
             nlohmann::json v;
@@ -105,11 +106,11 @@ nlohmann::json Simulation::dumpState() {
             v["type"] = vehicle->getType();
             v["position"] = vehicle->getPosition();
 
-            vehicles.push_back(v);
+            vehiclesSerialized.push_back(v);
         }
     }
 
-    std::vector<nlohmann::json> trafficLights;
+    std::vector<nlohmann::json> trafficLightsSerialized;
     for (Road* road : roads) {
         for (TrafficLight* trafficLight : road->getTrafficLights()) {
             nlohmann::json t;
@@ -117,12 +118,30 @@ nlohmann::json Simulation::dumpState() {
             t["position"] = trafficLight->getPosition();
             t["isGreen"] = trafficLight->isGreen();
 
-            trafficLights.push_back(t);
+            trafficLightsSerialized.push_back(t);
         }
     }
 
-    j["vehicles"] = vehicles;
-    j["trafficLights"] = trafficLights;
+    j["vehicles"] = vehiclesSerialized;
+    j["trafficLights"] = trafficLightsSerialized;
 
     return j;
+}
+
+void Simulation::writeToFile(std::ifstream& fileStream) const {
+    nlohmann::json j;
+    
+    std::vector<nlohmann::json> roadsSerialized;
+    for (Road* road : roads) {
+        nlohmann::json r;
+        r["name"] = road->getName();
+        r["length"] = road->getLength();
+
+        roadsSerialized.push_back(r);
+    }
+
+    std::vector<nlohmann::json> busStops;
+    for (Road* road : roads) {
+       for (BusStop* busStop : road->getBusStop)
+    }
 }

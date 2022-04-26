@@ -66,6 +66,8 @@ public:
     */
     void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
 
+    void writeToFile(std::ifstream& fileStream) const;
+    
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 

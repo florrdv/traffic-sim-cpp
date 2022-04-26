@@ -105,6 +105,11 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    */
+    const std::vector<BusStop *> &getBusStops() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     */
     void addVehicle(Vehicle *v);
