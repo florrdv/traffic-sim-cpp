@@ -43,6 +43,8 @@ set(RELEASE_SOURCE_FILES
         src/TrafficSim.cc
         src/objects/BusStop.cc
         src/objects/BusStop.h
+        src/objects/CrossRoad.cc
+        src/objects/CrossRoad.h
 )
 
 set(DEBUG_SOURCE_FILES
@@ -79,7 +81,10 @@ set(DEBUG_SOURCE_FILES
         src/SimulationTests.cc
         src/TrafficSimTests.cc
         src/objects/BusStop.cc
-        src/objects/BusStop.h)
+        src/objects/BusStop.h
+        src/objects/CrossRoad.cc
+        src/objects/CrossRoad.h
+)
 
 # Create RELEASE target
 add_executable(TrafficSim ${RELEASE_SOURCE_FILES})

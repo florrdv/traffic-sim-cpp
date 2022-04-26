@@ -18,6 +18,7 @@
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
 #include "../objects/BusStop.h"
+#include "../objects/CrossRoad.h"
 
 #include <map>
 
@@ -74,6 +75,13 @@ Road *XMLParser::parseRoad(const pugi::xml_node &node) {
 
     ENSURE(road != nullptr, "Road has to be generated");
     return road;
+}
+
+CrossRoad *XMLParser::parseCrossRoad(const pugi::xml_node &node) {
+    REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+
+    // Fetch nodes
+//    pugi::xml_node
 }
 
 /**
@@ -278,6 +286,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             if (busStops.find(road) == busStops.end()) busStops.insert({road, {}});
             busStops[road].push_back(busStop);
         } else if (name == "KRUISPUNT") {
+            CrossRoad *crossRoad = parseCrossRoad(node);
 
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
@@ -355,4 +364,5 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         for (VehicleGenerator *g: p.second) road->setGenerator(g);
     }
 }
+
 
