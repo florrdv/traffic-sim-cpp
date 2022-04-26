@@ -33,6 +33,11 @@ Simulation::~Simulation() {
     for (Road* road : roads) delete road;
 }
 
+std::vector<Road*> Simulation::getRoads() const {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
+    return roads;
+}
+
 void Simulation::addRoad(Road* r) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
     roads.push_back(r);
@@ -90,12 +95,6 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         // Sleep until the next simulation tick
          std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
     }
-}
-
-
-std::vector<Road*> Simulation::getRoads() const {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
-    return roads;
 }
 
 nlohmann::json Simulation::dumpState() {
