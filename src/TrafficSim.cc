@@ -9,17 +9,24 @@
  */
 
 #include <iostream>
+#include <fstream>
 #include "util/XMLParser.h"
 #include "Simulation.h"
 
 int main() {
 
-    Simulation sim = Simulation();
-
     XMLParser parser;
-    parser.parse(sim, "../input/testing/ValidSimulationTest9.xml");
+    Simulation sim1 = Simulation();
+    Simulation sim2 = Simulation();
 
-    sim.writeOn(std::cout, 50);
+    parser.parse(sim1, "../input/testing/ValidSimulationTest7.xml");
+    parser.parse(sim2, "../input/testing/ValidSimulationTest7.xml");
+
+    // sim1.writeOn(std::cout, 50);
+
+    std::ofstream f("out.json");
+    sim2.writeToFile(f, 50);
+    f.close();
 
     return 0;
 }

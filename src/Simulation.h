@@ -15,7 +15,9 @@
 #define TRAFFICSIM_SIMULATION_H
 
 #include "objects/Road.h"
+#include "lib/json.hpp"
 
+#include <iostream>
 #include <string>
 #include <vector>
 #include <gtest/gtest_prod.h>
@@ -34,6 +36,8 @@ private:
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     int countVehicles();
+
+    nlohmann::json dumpState();
 public:
     Simulation();
     /**
@@ -63,6 +67,8 @@ public:
     */
     void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
 
+    void writeToFile(std::ofstream& fileStream, const double stopAt = 0.0);
+    
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 

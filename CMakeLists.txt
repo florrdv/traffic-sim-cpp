@@ -2,7 +2,8 @@ cmake_minimum_required(VERSION 3.6)
 project(pse_traffic_sim)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-Wall -Werror")
+# set(CMAKE_CXX_FLAGS "-Wall -Werror")
+set(CMAKE_CXX_FLAGS "-Wall")
 set(CMAKE_EXE_LINKER_FLAGS -pthread)
 
 # Set include dir
@@ -22,6 +23,8 @@ set(RELEASE_SOURCE_FILES
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
+        src/lib/json.hpp
+        src/lib/NullBuffer.h
         src/lib/DesignByContract.h
         src/objects/Entity.cc
         src/objects/Entity.h
@@ -39,16 +42,19 @@ set(RELEASE_SOURCE_FILES
         src/Simulation.h
         src/TrafficSim.cc
         src/objects/BusStop.cc
-        src/objects/BusStop.h)
+        src/objects/BusStop.h
+)
 
 set(DEBUG_SOURCE_FILES
         src/data/Constants.h
         src/data/Constants.cc
         src/lib/pugixml/pugiconfig.hpp
         src/lib/pugixml/pugixml.cpp
+        src/lib/pugixml/pugixml.hpp
+        src/lib/json.hpp
+        src/lib/NullBuffer.h
         src/lib/TestingHelpers.h
         src/lib/TestingHelpers.cc
-        src/lib/pugixml/pugixml.hpp
         src/lib/DesignByContract.h
         src/objects/Entity.cc
         src/objects/Entity.h

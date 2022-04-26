@@ -10,10 +10,14 @@
 
 
 #include "Simulation.h"
+#include "data/Constants.h"
 #include "lib/DesignByContract.h"
+#include "lib/json.hpp"
+#include "lib/NullBuffer.h"
 
-#include <iostream>
 #include <chrono>
+#include <fstream>
+#include <iostream>
 #include <thread>
 #include <algorithm>
 #include <vector>
@@ -92,4 +96,97 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
 std::vector<Road*> Simulation::getRoads() const {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
     return roads;
+}
+
+nlohmann::json Simulation::dumpState() {
+    nlohmann::json j;
+
+    std::vector<nlohmann::json> vehiclesSerialized;
+    for (Road* road : roads) {
+        for (Vehicle* vehicle : road->getVehicles()) {
+            nlohmann::json v;
+            v["road"] = road->getName();
+            v["type"] = vehicle->getType();
+            v["position"] = vehicle->getPosition();
+
+            vehiclesSerialized.push_back(v);
+        }
+    }
+
+    std::vector<nlohmann::json> trafficLightsSerialized;
+    for (Road* road : roads) {
+        for (TrafficLight* trafficLight : road->getTrafficLights()) {
+            nlohmann::json t;
+            t["road"] = road->getName();
+            t["position"] = trafficLight->getPosition();
+            t["isGreen"] = trafficLight->isGreen();
+
+            trafficLightsSerialized.push_back(t);
+        }
+    }
+
+    j["vehicles"] = vehiclesSerialized;
+    j["trafficLights"] = trafficLightsSerialized;
+
+    return j;
+}
+
+void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
+    nlohmann::json j;
+    
+    std::vector<nlohmann::json> roadsSerialized;
+    for (Road* road : roads) {
+        nlohmann::json r;
+        r["name"] = road->getName();
+        r["length"] = road->getLength();
+
+        roadsSerialized.push_back(r);
+    }
+
+    std::vector<nlohmann::json> busStopsSerialized;
+    for (Road* road : roads) {
+       for (BusStop* busStop : road->getBusStops()) {
+           nlohmann::json b;
+           b["road"] = road->getName();
+           b["position"] = busStop->getPosition();
+
+            busStopsSerialized.push_back(b);
+       }
+    }
+
+    j["roads"] = roadsSerialized;
+    j["busStops"] = busStopsSerialized;
+    j["simTime"] = gSimTime;
+
+    NullBuffer null_buffer;
+    std::ostream null_stream(&null_buffer);
+
+    std::vector<nlohmann::json> logs;
+
+    // Loop while there are still vehicles
+    // in the simulation
+    while (countVehicles() > 0) {
+        // Compute the current time and check if we should still
+        // be running the simulation. We have a stopAt parameter for tests
+        // using the Vehicle Generator feature.
+        double currentTime = timestamp * gSimTime;
+        if (stopAt != 0 && currentTime > stopAt) break;
+
+        logs.push_back(dumpState());
+
+        // Loop over all roads
+        for (Road* road : roads) {
+            // Tick all entities on the road
+            // we have these methods on the Simulation class as they control 
+            // the general flow of the simulation, not the road itself.
+            road->tick(null_stream);
+        }
+
+
+        // Increment relative 
+        timestamp++;
+    }
+
+    j["logs"] = logs;
+    fileStream << std::setw(4) << j << std::endl;
 }
