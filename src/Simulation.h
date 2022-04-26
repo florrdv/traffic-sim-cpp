@@ -15,6 +15,7 @@
 #define TRAFFICSIM_SIMULATION_H
 
 #include "objects/Road.h"
+#include "lib/json.hpp"
 
 #include <string>
 #include <vector>
@@ -35,7 +36,7 @@ private:
     */
     int countVehicles();
 
-    void dumpState();
+    nlohmann::json dumpState();
 public:
     Simulation();
     /**
