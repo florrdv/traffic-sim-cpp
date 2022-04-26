@@ -184,7 +184,7 @@ void Road::tickTrafficLights() {
 void Road::tickBusStops() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     for (BusStop *busStop: busStops) {
-        int waitTime = busStop->getTimeCount();
+        int waitTime = busStop->getWaitTime();
         // Get the first bus relative to the bus stop
         Vehicle *firstBus = getFirstBusToBusStop(busStop);
         // Check if there's a bus that can move again

@@ -28,6 +28,8 @@ public:
 
     void setTimeCount(int timeCount);
 
+    int getWaitTime() const;
+
     Vehicle *getBus() const;
 
     void setBus(Vehicle *bus);
