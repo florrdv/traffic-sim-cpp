@@ -64,7 +64,7 @@ class XMLParser {
      \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
      \n ENSURE(crossRoad != nullptr, "Road has to be generated";
      */
-    CrossRoad *parseCrossRoad(const pugi::xml_node &node);
+    CrossRoad *parseCrossRoad(const pugi::xml_node &node) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");

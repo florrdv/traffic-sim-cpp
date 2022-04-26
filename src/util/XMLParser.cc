@@ -77,11 +77,24 @@ Road *XMLParser::parseRoad(const pugi::xml_node &node) {
     return road;
 }
 
-CrossRoad *XMLParser::parseCrossRoad(const pugi::xml_node &node) {
+CrossRoad *XMLParser::parseCrossRoad(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
+    pugi::xml_node firstRoadNode = node.first_child();
+    pugi::xml_node secondRoadNode = firstRoadNode.next_sibling();
+
     // Fetch nodes
-//    pugi::xml_node
+    int firstPos = firstRoadNode.attribute("positie").as_int();
+    int secondPos = secondRoadNode.attribute("positie").as_int();
+
+    std::string firstRoadName = firstRoadNode.text().as_string();
+    std::string secondRoadName = secondRoadNode.text().as_string();
+
+    // Create cross road object
+    CrossRoad *crossRoad = new CrossRoad({firstRoadName, firstPos}, {secondRoadName, secondPos});
+
+    ENSURE(crossRoad != nullptr, "Road has to be generated");
+    return crossRoad;
 }
 
 /**
