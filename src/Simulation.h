@@ -34,6 +34,8 @@ private:
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
     int countVehicles();
+
+    void dumpState();
 public:
     Simulation();
     /**

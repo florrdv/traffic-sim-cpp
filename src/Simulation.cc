@@ -93,3 +93,7 @@ std::vector<Road*> Simulation::getRoads() const {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
     return roads;
 }
+
+void Simulation::dumpState() {
+    
+}
