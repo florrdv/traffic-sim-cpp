@@ -23,6 +23,7 @@ set(RELEASE_SOURCE_FILES
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
         src/lib/json.hpp
+        src/lib/NullBuffer.h
         src/lib/DesignByContract.h
         src/objects/Entity.cc
         src/objects/Entity.h
@@ -50,6 +51,7 @@ set(DEBUG_SOURCE_FILES
         src/lib/pugixml/pugixml.cpp
         src/lib/pugixml/pugixml.hpp
         src/lib/json.hpp
+        src/lib/NullBuffer.h
         src/lib/TestingHelpers.h
         src/lib/TestingHelpers.cc
         src/lib/DesignByContract.h
