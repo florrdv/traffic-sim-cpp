@@ -10,6 +10,7 @@
 
 
 #include "Simulation.h"
+#include "data/Constants.h"
 #include "lib/DesignByContract.h"
 #include "lib/json.hpp"
 
@@ -140,8 +141,18 @@ void Simulation::writeToFile(std::ifstream& fileStream) const {
         roadsSerialized.push_back(r);
     }
 
-    std::vector<nlohmann::json> busStops;
+    std::vector<nlohmann::json> busStopsSerialized;
     for (Road* road : roads) {
-       for (BusStop* busStop : road->getBusStop)
+       for (BusStop* busStop : road->getBusStops()) {
+           nlohmann::json b;
+           b["road"] = road->getName();
+           b["position"] = busStop->getPosition();
+
+            busStopsSerialized.push_back(b);
+       }
     }
+
+    j["roads"] = roadsSerialized;
+    j["busStops"] = busStopsSerialized;
+    j["simTime"] = gSimTime;
 }
