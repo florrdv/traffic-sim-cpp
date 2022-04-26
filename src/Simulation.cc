@@ -129,7 +129,7 @@ nlohmann::json Simulation::dumpState() {
     return j;
 }
 
-void Simulation::writeToFile(std::ifstream& fileStream) const {
+void Simulation::writeToFile(std::ifstream& fileStream, const double stopAt = 0.0) {
     nlohmann::json j;
     
     std::vector<nlohmann::json> roadsSerialized;
@@ -155,4 +155,28 @@ void Simulation::writeToFile(std::ifstream& fileStream) const {
     j["roads"] = roadsSerialized;
     j["busStops"] = busStopsSerialized;
     j["simTime"] = gSimTime;
+
+   // Loop while there are still vehicles
+    // in the simulation
+    while (countVehicles() > 0) {
+        // Compute the current time and check if we should still
+        // be running the simulation. We have a stopAt parameter for tests
+        // using the Vehicle Generator feature.
+        double currentTime = timestamp * gSimTime;
+        if (stopAt != 0 && currentTime > stopAt) return;
+
+        // Loop over all roads
+        for (Road* road : roads) {
+            // Tick all entities on the road
+            // we have these methods on the Simulation class as they control 
+            // the general flow of the simulation, not the road itself.
+            road->tick(onStream);
+        }
+
+        // Increment relative 
+        timestamp++;
+
+        // Sleep until the next simulation tick
+         std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
+    }
 }
