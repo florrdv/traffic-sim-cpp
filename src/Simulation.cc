@@ -11,6 +11,7 @@
 
 #include "Simulation.h"
 #include "lib/DesignByContract.h"
+#include "lib/json.hpp"
 
 #include <iostream>
 #include <chrono>
@@ -95,5 +96,19 @@ std::vector<Road*> Simulation::getRoads() const {
 }
 
 void Simulation::dumpState() {
-    
+    nlohmann::json j;
+
+    std::vector<nlohmann::json> vehicles;
+    for (Road* road : roads) {
+        for (Vehicle* vehicle : road->getVehicles()) {
+            nlohmann::json v;
+            v["type"] = vehicle->getType();
+            v["position"] = vehicle->getPosition();
+            v["road"] = road->getName();
+
+            vehicles.push_back(v);
+        }
+    }
+
+    j["vehicles"] = 
 }
