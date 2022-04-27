@@ -70,6 +70,12 @@ class XMLParser {
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
     std::string parseRoadReference(const pugi::xml_node& node);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
+    std::pair<std::string, std::string> parseRoadReferences(const pugi::xml_node &node);
+
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */

@@ -237,6 +237,20 @@ std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
     return road;
 }
 
+std::pair<std::string, std::string> XMLParser::parseRoadReferences(const pugi::xml_node &node) {
+    // Fetch nodes
+    pugi::xml_node firstRoadNode = node.first_child();
+    pugi::xml_node secondRoadNode = firstRoadNode.next_sibling();
+
+    // Check if the nodes exist
+    validateNode(firstRoadNode, "road");
+    validateNode(secondRoadNode, "road");
+
+    // Parse road names
+    std::pair<std::string, std::string> roads = {firstRoadNode.text().as_string(), secondRoadNode.text().as_string()};
+    return roads;
+}
+
 
 /**
 \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
@@ -254,6 +268,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     std::map<std::string, std::vector<Vehicle *>> vehicles = {};
     std::map<std::string, std::vector<VehicleGenerator *>> generators = {};
     std::map<std::string, std::vector<BusStop *>> busStops = {};
+    std::map<std::string, std::vector<CrossRoad *>> crossRoads = {};
 
     // Loop over all nodes in the document
     // we just loaded
@@ -299,7 +314,15 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             if (busStops.find(road) == busStops.end()) busStops.insert({road, {}});
             busStops[road].push_back(busStop);
         } else if (name == "KRUISPUNT") {
+            // Parse cross road
             CrossRoad *crossRoad = parseCrossRoad(node);
+            std::string road1;
+            std::string road2;
+            std::pair<std::string, std::string>(road1, road2) = parseRoadReferences(node);
+
+            // Verify and register cross road
+            if ()
+
 
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
