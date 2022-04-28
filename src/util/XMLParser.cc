@@ -321,9 +321,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             std::pair<std::string, std::string> roadStrings = parseRoadReferences(node);
 
             // Verify and register cross road
-            if (crossRoads.find(road1) == crossRoads.end()) crossRoads.insert(road1, {});
+            if (crossRoads.find(road1) == crossRoads.end()) crossRoads.insert({road1, {}});
             crossRoads[road1].push_back(crossRoad);
-            if (crossRoads.find(road2) == crossRoads.end()) crossRoads.insert(road2, {});
+            if (crossRoads.find(road2) == crossRoads.end()) crossRoads.insert({road2, {}});
             crossRoads[road2].push_back(crossRoad);
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
