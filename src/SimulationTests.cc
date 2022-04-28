@@ -170,6 +170,24 @@ TEST(SimulationTests, ValidSimulationTest9) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
+TEST(SimulationTests, ValidSimulationTest10) {
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest10.txt";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest10.txt";
+
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest10.xml";
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    parser.parse(sim, xmlPath);
+
+    std::ofstream file(outPath);
+    sim.writeOn(file, 50, 500);
+    file.close();
+
+    EXPECT_TRUE(fileCompare(inPath, outPath));
+}
+
 TEST(SimulationTests, RoadMutationHappyDay) {
     Simulation sim = Simulation();
     Road* road = new Road("example", 100.0);
