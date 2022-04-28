@@ -82,8 +82,8 @@ set(DEBUG_SOURCE_FILES
         src/TrafficSimTests.cc
         src/objects/BusStop.cc
         src/objects/BusStop.h
-        src/objects/CrossRoad.cc
-        src/objects/CrossRoad.h
+        src/objects/Crossroad.cc
+        src/objects/Crossroad.h
 )
 
 # Create RELEASE target

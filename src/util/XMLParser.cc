@@ -18,7 +18,7 @@
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
 #include "../objects/BusStop.h"
-#include "../objects/CrossRoad.h"
+#include "../objects/Crossroad.h"
 
 #include <map>
 
@@ -409,8 +409,8 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         CrossroadDetails details1 = details[0];
         CrossroadDetails details2 = details[1];
         Crossroad* crossroadParsed = new Crossroad(details1, details2);
-        details1.road.addCrossroad(crossroadParsed);
-        details2.road.addCrossroad(crossroadParsed);
+        details1.road->addCrossroad(crossroadParsed);
+        details2.road->addCrossroad(crossroadParsed);
     }
 }
 

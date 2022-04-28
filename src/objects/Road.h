@@ -18,7 +18,7 @@
 #include "VehicleGenerator.h"
 #include "TrafficLight.h"
 #include "BusStop.h"
-#include "CrossRoad.h"
+#include "Crossroad.h"
 #include "../lib/DesignByContract.h"
 
 class Road {
