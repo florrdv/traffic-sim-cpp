@@ -264,7 +264,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     std::map<std::string, std::vector<Vehicle *>> vehicles = {};
     std::map<std::string, std::vector<VehicleGenerator *>> generators = {};
     std::map<std::string, std::vector<BusStop *>> busStops = {};
-    std::vector<std::pair<std::pair<std::string, int>, std::pair<std::string, int>>> crossRoads = {};
+    std::vector<std::pair<std::pair<std::string, int>, std::pair<std::string, int>>> crossroads = {};
 
     // Loop over all nodes in the document
     // we just loaded
@@ -314,7 +314,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossRoad = parseCrossRoad(node);
 
             // Verify and register cross road
-            crossRoads.push_back(crossRoad);
+            crossroads.push_back(crossRoad);
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
@@ -392,13 +392,13 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     }
 
     // Cross roads
-    for (std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossRoad : crossRoads) {
-        std::vector<CrossRoadDetails> details;
-        for (std::pair<std::string, int> pair : { crossRoad.first, crossRoad.second }) {
+    for (std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossroad : crossroads) {
+        std::vector<CrossroadDetails> details;
+        for (std::pair<std::string, int> pair : { crossroad.first, crossroad.second }) {
             Road *road = sim.findRoad(pair.first);
             ASSERT(road != nullptr, ("XML: unknown road " + pair.first).c_str());
 
-            details.push_back(CrossRoadDetails {
+            details.push_back(CrossroadDetails {
                 .road=road,
                 .position=pair.second
             });
@@ -406,11 +406,11 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
         ASSERT(details.size() == 2, "XML: invalid cross road");
 
-        CrossRoadDetails details1 = details[0];
-        CrossRoadDetails details2 = details[1];
-        CrossRoad* crossRoadParsed = new CrossRoad(details1, details2);
-        details1.road.setCrossRoad(crossRoadParsed);
-        details2.road.setCrossRoad(crossRoadParsed);
+        CrossroadDetails details1 = details[0];
+        CrossroadDetails details2 = details[1];
+        Crossroad* crossroadParsed = new Crossroad(details1, details2);
+        details1.road.addCrossroad(crossroadParsed);
+        details2.road.addCrossroad(crossroadParsed);
     }
 }
 

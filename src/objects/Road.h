@@ -159,12 +159,12 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
      */
-    const std::vector<CrossRoad *> &getCrossRoads() const;
+    const std::vector<Crossroad *> &getCrossroads() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
      */
-    void setCrossRoads(const std::vector<CrossRoad *> &crossRoads);
+    void setCrossroads(const std::vector<Crossroad *> &crossroads);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");

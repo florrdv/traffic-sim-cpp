@@ -6,16 +6,16 @@
 #include <string>
 
 class Road;
-struct CrossRoadDetails {
+struct CrossroadDetails {
     Road* road;
     int position;
 };
 
-class CrossRoad {
-    std::pair<CrossRoadDetails, CrossRoadDetails> details;
+class Crossroad {
+    std::pair<CrossroadDetails, CrossroadDetails> details;
 
 public:
-    CrossRoad(CrossRoadDetails details1, CrossRoadDetails details2) : details({details1, details2}) {};
+    Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) {};
 };
 
 

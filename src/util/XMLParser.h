@@ -18,7 +18,7 @@
 #include <string>
 #include "../lib/pugixml/pugixml.hpp"
 #include "../objects/BusStop.h"
-#include "../objects/CrossRoad.h"
+#include "../objects/Crossroad.h"
 
 class XMLParser {
     XMLParser* _init;

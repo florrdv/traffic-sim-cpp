@@ -259,10 +259,10 @@ const std::vector<BusStop *>& Road::getBusStops() const {
     return busStops;
 }
 
-const std::vector<CrossRoad *> &Road::getCrossRoads() const {
+const std::vector<Crossroad *> &Road::getCrossroads() const {
     return crossRoads;
 }
 
-void Road::setCrossRoads(const std::vector<CrossRoad *> &c) {
+void Road::setCrossRoads(const std::vector<Crossroad *> &c) {
     Road::crossRoads = c;
 }

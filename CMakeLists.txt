@@ -43,8 +43,8 @@ set(RELEASE_SOURCE_FILES
         src/TrafficSim.cc
         src/objects/BusStop.cc
         src/objects/BusStop.h
-        src/objects/CrossRoad.cc
-        src/objects/CrossRoad.h
+        src/objects/Crossroad.cc
+        src/objects/Crossroad.h
 )
 
 set(DEBUG_SOURCE_FILES
