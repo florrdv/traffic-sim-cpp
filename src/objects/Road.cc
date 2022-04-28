@@ -254,7 +254,7 @@ void Road::tick(std::ostream &stream) {
     cleanup();
 }
 
-const std::vector<BusStop *>& Road::getBusStops() const {
+const std::vector<BusStop *> &Road::getBusStops() const {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     return busStops;
 }
@@ -265,4 +265,8 @@ const std::vector<CrossRoad *> &Road::getCrossRoads() const {
 
 void Road::setCrossRoads(const std::vector<CrossRoad *> &c) {
     Road::crossRoads = c;
+}
+
+void Road::addCrossRoad(CrossRoad *c) {
+    Road::crossRoads.push_back(c);
 }

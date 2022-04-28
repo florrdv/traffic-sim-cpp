@@ -23,22 +23,23 @@
 
 class Road {
     FRIEND_TEST(RoadTests, TickVehicleGeneratorsHappyDay);
+
     FRIEND_TEST(RoadTests, TickTrafficLightsHappyDay);
 
 private:
-    Road* _init;
+    Road *_init;
 
     std::string name;
     double length;
 
-    std::vector<Vehicle*> vehicles;
-    std::vector<TrafficLight*> trafficLights;
-    std::vector<BusStop*> busStops;
-    std::vector<CrossRoad*> crossRoads;
+    std::vector<Vehicle *> vehicles;
+    std::vector<TrafficLight *> trafficLights;
+    std::vector<BusStop *> busStops;
+    std::vector<CrossRoad *> crossRoads;
 public:
 
 private:
-    VehicleGenerator* generator=nullptr;
+    VehicleGenerator *generator = nullptr;
 
     /**
     \n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
@@ -58,7 +59,7 @@ private:
     /**
     \n ENSURE(properlyInitialized(), "Road wasn't initialized properly");
     */
-    void tickVehicles(std::ostream& stream);
+    void tickVehicles(std::ostream &stream);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
@@ -68,15 +69,16 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    void spawnVehicle(const VehicleType& type);
+    void spawnVehicle(const VehicleType &type);
 
 public:
     // Constructors / destructors
-    Road(std::string n, double l): name(n), length(l) { _init = this; }
+    Road(std::string n, double l) : name(n), length(l) { _init = this; }
+
     ~Road() {
         REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly when calling destructor");
-        for (Vehicle* vehicle : vehicles) delete vehicle;
-        for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
+        for (Vehicle *vehicle: vehicles) delete vehicle;
+        for (TrafficLight *trafficLight: trafficLights) delete trafficLight;
         delete generator;
     }
 
@@ -122,17 +124,17 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    Vehicle* getLeadingVehicle(Vehicle *v);
+    Vehicle *getLeadingVehicle(Vehicle *v);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    Vehicle* getFirstToTrafficLight(TrafficLight *trafficLight) const;
+    Vehicle *getFirstToTrafficLight(TrafficLight *trafficLight) const;
 
     /**
     \n
     */
-    Vehicle* getFirstBusToBusStop(BusStop *busStop) const;
+    Vehicle *getFirstBusToBusStop(BusStop *busStop) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
@@ -148,7 +150,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
-    VehicleGenerator* getGenerator() const;
+    VehicleGenerator *getGenerator() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
@@ -169,13 +171,16 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
      */
-    void tick(std::ostream& stream);
+    void addCrossRoad(CrossRoad *c);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+     */
+    void tick(std::ostream &stream);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
-
 };
-
 
 
 #endif //TRAFFICSIM_ROAD_H
