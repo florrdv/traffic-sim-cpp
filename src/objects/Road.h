@@ -35,6 +35,9 @@ private:
     std::vector<TrafficLight*> trafficLights;
     std::vector<BusStop*> busStops;
     std::vector<CrossRoad*> crossRoads;
+public:
+
+private:
     VehicleGenerator* generator=nullptr;
 
     /**
@@ -152,6 +155,16 @@ public:
     \n ENSURE(g != nullptr, "Cannot add empty generator to road");
      */
     void setGenerator(VehicleGenerator *g);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+     */
+    const std::vector<CrossRoad *> &getCrossRoads() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+     */
+    void setCrossRoads(const std::vector<CrossRoad *> &crossRoads);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");

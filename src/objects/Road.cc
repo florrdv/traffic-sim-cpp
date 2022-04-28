@@ -218,7 +218,7 @@ void Road::tickVehicles(std::ostream &onStream) {
         // Tick the relevant vehicle
         vehicle->tick(getLeadingVehicle(vehicle));
 
-        // Print all information on the vehicle in 
+        // Print all information on the vehicle in
         // the requested format
         onStream << "Vehicle " << vehicle->getId() << std::endl;
         onStream << "-> Road: " << getName() << std::endl;
@@ -229,7 +229,7 @@ void Road::tickVehicles(std::ostream &onStream) {
 
 void Road::tickVehicleGenerators() {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    // If there's a generator running on the road and the cycle time 
+    // If there's a generator running on the road and the cycle time
     // has been exceeded, spawn a new vehicle
     if (generator == nullptr) return;
 
@@ -257,4 +257,12 @@ void Road::tick(std::ostream &stream) {
 const std::vector<BusStop *>& Road::getBusStops() const {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     return busStops;
+}
+
+const std::vector<CrossRoad *> &Road::getCrossRoads() const {
+    return crossRoads;
+}
+
+void Road::setCrossRoads(const std::vector<CrossRoad *> &c) {
+    Road::crossRoads = c;
 }
