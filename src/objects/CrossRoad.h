@@ -5,10 +5,17 @@
 #include <utility>
 #include <string>
 
-class CrossRoad : std::pair<std::pair<std::string, int>, std::pair<std::string, int>> {
+class Road;
+struct CrossRoadDetails {
+    Road* road;
+    int position;
+};
+
+class CrossRoad {
+    std::pair<CrossRoadDetails, CrossRoadDetails> details;
 
 public:
-    CrossRoad(std::pair<std::string, int> firstIntersection, std::pair<std::string, int> secondIntersection);
+    CrossRoad(CrossRoadDetails details1, CrossRoadDetails details2) : details({details1, details2}) {};
 };
 
 
