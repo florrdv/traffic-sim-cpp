@@ -93,8 +93,6 @@ public:
 
     // Safety specific
     const bool properlyInitialized() const { return _init == this; }
-
-    CrossRoad *parseCrossRoad(pugi::xml_node node);
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_UTIL_XMLPARSER_H_
