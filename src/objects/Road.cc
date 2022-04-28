@@ -260,13 +260,16 @@ const std::vector<BusStop *> &Road::getBusStops() const {
 }
 
 const std::vector<CrossRoad *> &Road::getCrossRoads() const {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     return crossRoads;
 }
 
 void Road::setCrossRoads(const std::vector<CrossRoad *> &c) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     Road::crossRoads = c;
 }
 
 void Road::addCrossRoad(CrossRoad *c) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     Road::crossRoads.push_back(c);
 }
