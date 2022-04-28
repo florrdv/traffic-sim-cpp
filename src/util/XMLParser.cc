@@ -318,12 +318,13 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             CrossRoad *crossRoad = parseCrossRoad(node);
             std::string road1;
             std::string road2;
-            std::pair<std::string, std::string>(road1, road2) = parseRoadReferences(node);
+            std::pair<std::string, std::string> roadStrings = parseRoadReferences(node);
 
             // Verify and register cross road
-            if ()
-
-
+            if (crossRoads.find(road1) == crossRoads.end()) crossRoads.insert(road1, {});
+            crossRoads[road1].push_back(crossRoad);
+            if (crossRoads.find(road2) == crossRoads.end()) crossRoads.insert(road2, {});
+            crossRoads[road2].push_back(crossRoad);
         } else {
             ASSERT(false, ("XML: unknown tag '" + name + "'").c_str());
         }
