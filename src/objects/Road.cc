@@ -254,15 +254,22 @@ void Road::tick(std::ostream &stream) {
     cleanup();
 }
 
-const std::vector<BusStop *>& Road::getBusStops() const {
+const std::vector<BusStop *> &Road::getBusStops() const {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     return busStops;
 }
 
 const std::vector<Crossroad *> &Road::getCrossroads() const {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     return crossRoads;
 }
 
-void Road::setCrossRoads(const std::vector<Crossroad *> &c) {
+void Road::setCrossroads(const std::vector<Crossroad *> &c) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     Road::crossRoads = c;
+}
+
+void Road::addCrossroad(Crossroad *c) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    Road::crossRoads.push_back(c);
 }
