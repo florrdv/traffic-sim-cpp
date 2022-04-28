@@ -69,7 +69,7 @@ public:
     // Constructors / destructors
     Road(std::string n, double l): name(n), length(l) { _init = this; }
     ~Road() {
-        REQUIRE(this->properlyInitialized(), "Road wasn't initialized when calling destructor");
+        REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly when calling destructor");
         for (Vehicle* vehicle : vehicles) delete vehicle;
         for (TrafficLight* trafficLight : trafficLights) delete trafficLight;
         delete generator;
@@ -80,7 +80,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     */
     const std::string &getName() const;
-    
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(!name.empty(), "Road name cannot be empty");
