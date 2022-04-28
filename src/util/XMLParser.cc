@@ -408,8 +408,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
         CrossRoadDetails details1 = details[0];
         CrossRoadDetails details2 = details[1];
-        CrossRoad* crossRoadParser = new CrossRoad(details1, details2);
-        details1.road.set
+        CrossRoad* crossRoadParsed = new CrossRoad(details1, details2);
+        details1.road.setCrossRoad(crossRoadParsed);
+        details2.road.setCrossRoad(crossRoadParsed);
     }
 }
 
