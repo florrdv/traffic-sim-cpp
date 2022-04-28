@@ -22,7 +22,7 @@
 
 class XMLParser {
     XMLParser* _init;
-    
+
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
