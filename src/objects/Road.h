@@ -18,6 +18,7 @@
 #include "VehicleGenerator.h"
 #include "TrafficLight.h"
 #include "BusStop.h"
+#include "CrossRoad.h"
 #include "../lib/DesignByContract.h"
 
 class Road {
@@ -33,6 +34,7 @@ private:
     std::vector<Vehicle*> vehicles;
     std::vector<TrafficLight*> trafficLights;
     std::vector<BusStop*> busStops;
+    std::vector<CrossRoad*> crossRoads;
     VehicleGenerator* generator=nullptr;
 
     /**
