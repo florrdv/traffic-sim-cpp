@@ -13,16 +13,10 @@ private:
 
     int timeCount = 0;
 
-    std::string name;
-
     int waitTime;
 
 public:
     BusStop(double position, int w) : Entity(position), waitTime(w) { _init = this; };
-
-    const std::string &getName() const;
-
-    void setName(const std::string &name);
 
     int getTimeCount() const;
 
