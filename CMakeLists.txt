@@ -82,6 +82,7 @@ set(DEBUG_SOURCE_FILES
         src/TrafficSimTests.cc
         src/objects/BusStop.cc
         src/objects/BusStop.h
+        src/objects/BusStopTests.cc
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
 )
