@@ -4,6 +4,7 @@
 #include "../data/Constants.h"
 #include "../lib/TestingHelpers.h"
 #include "../objects/BusStop.h"
+#include "../lib/DesignByContract.h"
 
 
 TEST(BusStopTests, PositionMutationHappyDay) {
@@ -52,5 +53,11 @@ TEST(BusStopTests, TimeCountMutationNegative) {
 }
 
 TEST(BusStopTests, BusMutationHappyDay) {
+    BusStop busStop = BusStop(0.0, 10);
+    Vehicle * bus = new Vehicle(0.0, Bus);
 
+    EXPECT_EQ(busStop.getBus(), nullptr);
+
+    busStop.setBus(bus);
+    ASSERT_EQ(busStop.getBus(), bus);
 }

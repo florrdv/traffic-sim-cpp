@@ -1,14 +1,6 @@
 #include "BusStop.h"
 #include "../lib/DesignByContract.h"
 
-const std::string &BusStop::getName() const {
-    return name;
-}
-
-void BusStop::setName(const std::string &n) {
-    BusStop::name = n;
-}
-
 Vehicle *BusStop::getBus() const {
     return bus;
 }
