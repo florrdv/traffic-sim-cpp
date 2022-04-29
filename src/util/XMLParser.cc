@@ -83,9 +83,12 @@ std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::p
     pugi::xml_node firstRoadNode = node.first_child();
     pugi::xml_node secondRoadNode = firstRoadNode.next_sibling();
 
+    validateNode(firstRoadNode, "crossroad road");
+    validateNode(secondRoadNode, "crossroad road");
+
     // Fetch nodes
-    int firstPos = firstRoadNode.attribute("positie").as_int();
-    int secondPos = secondRoadNode.attribute("positie").as_int();
+    int firstPos = parsePositiveInteger(firstRoadNode.attribute("positie").as_string(), "position", true);
+    int secondPos = parsePositiveInteger(secondRoadNode.attribute("positie").as_string(), "position", true);
 
     std::string firstRoadName = firstRoadNode.text().as_string();
     std::string secondRoadName = secondRoadNode.text().as_string();
