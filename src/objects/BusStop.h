@@ -30,6 +30,8 @@ public:
 
     int getWaitTime() const;
 
+    void setWaitTime(int waitTime);
+
     Vehicle *getBus() const;
 
     void setBus(Vehicle *bus);

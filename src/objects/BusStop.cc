@@ -31,3 +31,7 @@ void BusStop::setTimeCount(int t) {
 int BusStop::getWaitTime() const {
     return waitTime;
 }
+
+void BusStop::setWaitTime(int w) {
+    BusStop::waitTime = w;
+}
