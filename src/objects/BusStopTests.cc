@@ -54,7 +54,7 @@ TEST(BusStopTests, TimeCountMutationNegative) {
 
 TEST(BusStopTests, BusMutationHappyDay) {
     BusStop busStop = BusStop(0.0, 10);
-    Vehicle * bus = new Vehicle(0.0, Bus);
+    Vehicle *bus = new Vehicle(0.0, Bus);
 
     EXPECT_EQ(busStop.getBus(), nullptr);
 

@@ -45,6 +45,7 @@ set(RELEASE_SOURCE_FILES
         src/objects/BusStop.h
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
+        src/objects/CrossRoadTests.cc
 )
 
 set(DEBUG_SOURCE_FILES
