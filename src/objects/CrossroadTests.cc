@@ -4,11 +4,13 @@
 #include "../data/Constants.h"
 #include "../lib/TestingHelpers.h"
 #include "../objects/Crossroad.h"
+#include "../objects/Road.h"
 #include "../lib/DesignByContract.h"
 
 TEST(CrossroadTests, PositionMutationHappyDay) {
-    Crossroad crossroad = Crossroad(0.0, 10);
-    EXPECT_EQ(0, busStop.getPosition());
-    busStop.setPosition(20);
-    EXPECT_EQ(20, busStop.getPosition());
+    Road *road1 = new Road("foo", 100);
+    Road *road2 = new Road("bar", 80);
+    Crossroad crossroad = Crossroad(CrossroadDetails(road1, 10), CrossroadDetails(road2, 5));
+
+    //TODO: Figure out what to test
 }
