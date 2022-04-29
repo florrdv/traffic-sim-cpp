@@ -1,4 +1,5 @@
 #include "BusStop.h"
+#include "../lib/DesignByContract.h"
 
 const std::string &BusStop::getName() const {
     return name;
@@ -25,6 +26,7 @@ int BusStop::getTimeCount() const {
 }
 
 void BusStop::setTimeCount(int t) {
+    ENSURE(t >= 0, "Bus stop wait time must be positive");
     BusStop::timeCount = t;
 }
 
@@ -33,5 +35,6 @@ int BusStop::getWaitTime() const {
 }
 
 void BusStop::setWaitTime(int w) {
+    ENSURE(w > 0, "Bus stop wait time must be strictly positive");
     BusStop::waitTime = w;
 }
