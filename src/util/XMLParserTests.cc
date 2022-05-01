@@ -253,6 +253,15 @@ TEST(XMLParserTests, ParsingCrossroadUndefinedRoad) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
+//TODO: implement in parser s.t. we can't put a crossroad between the same road
+TEST(XMLParserTests, ParsingCrossRoadSameRoads) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossRoadSameRoads.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "same road");
+}
+
 TEST(XMLParserTests, ParsingCrossroadPositionOutOfBound) {
     std::string xmlPath = gTestInputFolder + "/ParsingCrossroadPositionOutOfBound.xml";
     Simulation sim = Simulation();
