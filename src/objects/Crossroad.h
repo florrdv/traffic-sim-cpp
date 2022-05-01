@@ -9,8 +9,6 @@ class Road;
 struct CrossroadDetails {
     Road* road;
     int position;
-
-    CrossroadDetails(Road *r, int p) : road(r), position(p) {}
 };
 
 class Crossroad {
