@@ -396,11 +396,11 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
     }
 
     // Bus stops
-    for (std::pair<std::string, std::vector<BusStop *>> b : busStops) {
-        Road *road = sim.findRoad(b.first);
-        ASSERT(road != nullptr, ("XML: unknown road " + b.first).c_str());
+    for (std::pair<std::string, std::vector<BusStop *>> currentBusStops : busStops) {
+        Road *road = sim.findRoad(currentBusStops.first);
+        ASSERT(road != nullptr, ("XML: unknown road " + currentBusStops.first).c_str());
 
-        for (BusStop *g: b.second) road->(g);
+        for (BusStop *busStop : currentBusStops.second) road->addBusStop(busStop);
     }
 
     // Cross roads
