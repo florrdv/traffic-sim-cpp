@@ -211,7 +211,7 @@ BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
 
     // Extract values
     std::string road = roadNode.text().as_string();
-    double pos = parsePositiveInteger(posNode.text().as_string(), "position", true);
+    double pos = parsePositiveInteger(posNode.text().as_string(), "position", false);
     int waitTime = parsePositiveInteger(waitTimeNode.text().as_string(), "wait time", true);
 
     // Create bushalte object
