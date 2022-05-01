@@ -93,6 +93,8 @@ std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::p
     std::string firstRoadName = firstRoadNode.text().as_string();
     std::string secondRoadName = secondRoadNode.text().as_string();
 
+    ASSERT(firstRoadName != secondRoadName, "invalid road combination");
+
     return {{ firstRoadName, firstPos }, { secondRoadName, secondPos }};
 }
 
