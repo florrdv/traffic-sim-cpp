@@ -73,6 +73,7 @@ VehicleGenerator *Road::getGenerator() const {
 
 void Road::setGenerator(VehicleGenerator *g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(g->getPosition() < length, "Road not long enough for generator");
     ENSURE(g != nullptr, "Cannot add empty generator to road");
     generator = g;
 }
@@ -266,7 +267,7 @@ const std::vector<Crossroad *> &Road::getCrossroads() const {
 
 void Road::addCrossroad(Crossroad *c) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for cross road");
+    REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
 
     Road::crossRoads.push_back(c);
 }

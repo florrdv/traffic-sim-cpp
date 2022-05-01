@@ -163,7 +163,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for cross road");
+    \n REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
      */
     void addCrossroad(Crossroad *c);
 
