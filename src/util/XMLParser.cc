@@ -325,8 +325,9 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
 
     // Let's continue parsing the data
-    // We have to put every vehicle and traffic light
-    // on a road, while making sure that the road exists.
+    // We have to put every vehicle, vehicle generator,
+    // cross road, bus stop and traffic light on a road,
+    // while making sure that the road exists.
 
     // Vehicles
     for (std::pair<std::string, std::vector<Vehicle *>> p: vehicles) {
