@@ -45,7 +45,6 @@ set(RELEASE_SOURCE_FILES
         src/objects/BusStop.h
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
-        src/objects/CrossroadTests.cc
 )
 
 set(DEBUG_SOURCE_FILES
@@ -86,6 +85,7 @@ set(DEBUG_SOURCE_FILES
         src/objects/BusStopTests.cc
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
+        src/objects/CrossroadTests.cc
 )
 
 # Create RELEASE target
