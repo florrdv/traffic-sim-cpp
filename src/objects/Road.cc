@@ -271,10 +271,8 @@ void Road::setCrossroads(const std::vector<Crossroad *> &c) {
 
 void Road::addCrossroad(Crossroad *c) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for cross road");
 
-
-
-    REQUIRE(c->getPosition() < length, "Road not long enough for bus stop");
     Road::crossRoads.push_back(c);
 }
 

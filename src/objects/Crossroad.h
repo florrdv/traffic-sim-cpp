@@ -19,6 +19,12 @@ class Crossroad {
 public:
     Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) { _init = this; };
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
+    \n ENSURE(false, "Requested road not found");
+    */
+    int getPositionForRoad(Road* road);
+
 private:
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
