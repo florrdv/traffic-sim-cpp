@@ -141,6 +141,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
     \n ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     */
     void addTrafficLight(TrafficLight *t);
