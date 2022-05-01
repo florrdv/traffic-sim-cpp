@@ -163,11 +163,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-     */
-    void setCrossroads(const std::vector<Crossroad *> &crossroads);
-
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for cross road");
      */
     void addCrossroad(Crossroad *c);
 
