@@ -174,6 +174,11 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
      */
+    void addBusStop(BusStop *c);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+     */
     void tick(std::ostream &stream);
 
     // Safety specific

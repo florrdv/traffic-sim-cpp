@@ -273,3 +273,8 @@ void Road::addCrossroad(Crossroad *c) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     Road::crossRoads.push_back(c);
 }
+
+void Road::addBusStop(BusStop *b) {
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    busStops.push_back(b);
+}
