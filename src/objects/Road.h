@@ -116,7 +116,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n REQUIRE(v->getPosition() < length, "Road not long enough for vehicle");
-    
+
     \n ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     */
     void addVehicle(Vehicle *v);
@@ -167,7 +167,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
+    \n REQUIRE(c->getPositionForRoad(this) > length, "Road not long enough for crossroad");
      */
     void addCrossroad(Crossroad *c);
 

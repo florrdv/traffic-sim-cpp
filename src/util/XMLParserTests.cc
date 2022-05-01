@@ -47,7 +47,7 @@ TEST(XMLParserTests, ParsingVehiclePositionOutOfBound) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "Road not long enough");
 }
 
 TEST(XMLParserTests, ParsingVehicleNegativePosition) {
@@ -110,7 +110,7 @@ TEST(XMLParserTests, ParsingTrafficLightPositionOutOfBound) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "Road not long enough");
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
@@ -226,7 +226,7 @@ TEST(XMLParserTests, ParsingBusStopPositionOutOfBound) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "Road not long enough");
 }
 
 TEST(XMLParserTests, ParsingCrossroadOneRoad) {
@@ -266,5 +266,5 @@ TEST(XMLParserTests, ParsingCrossroadPositionOutOfBound) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "Road not long enough");
 }

@@ -100,7 +100,7 @@ void Road::cleanup() {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     std::vector<Vehicle *>::iterator vehicle = vehicles.begin();
     while (vehicle != vehicles.end()) {
-        if ((*vehicle)->getPosition() > length) {
+        if ((*vehicle)->getPosition() < length) {
             vehicles.erase(vehicle);
         } else ++vehicle;
     }

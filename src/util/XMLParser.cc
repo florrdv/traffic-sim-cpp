@@ -338,7 +338,6 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
         // Register the vehicle
         for (Vehicle *v: p.second) {
-            ASSERT(v->getPosition() <= road->getLength(), "XML: vehicle outside of road boundaries");
             road->addVehicle(v);
         }
     }
@@ -364,7 +363,6 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
         // Register the traffic light
         for (TrafficLight *t: p.second) {
-            ASSERT(t->getPosition() <= road->getLength(), "XML: traffic light outside of road boundaries");
             road->addTrafficLight(t);
         }
     }
