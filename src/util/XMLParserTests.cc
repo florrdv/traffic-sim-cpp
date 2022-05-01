@@ -42,6 +42,14 @@ TEST(XMLParserTests, ParsingVehicleRoadUnknown) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
+TEST(XMLParserTests, ParsingVehiclePositionOutOfBound) {
+    std::string xmlPath = gTestInputFolder + "/ParsingVehiclePositionOutOfBound.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+}
+
 TEST(XMLParserTests, ParsingVehicleNegativePosition) {
     std::string xmlPath = gTestInputFolder + "/ParsingVehicleNegativePosition.xml";
 
@@ -94,6 +102,15 @@ TEST(XMLParserTests, ParsingTrafficLightRoadUnknown) {
 
     XMLParser parser;
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
+}
+
+TEST(XMLParserTests, ParsingTrafficLightPositionOutOfBound) {
+    std::string xmlPath = gTestInputFolder + "/ParsingTrafficLightPositionOutOfBound.xml";
+
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
 }
 
 TEST(XMLParserTests, ParsingTrafficLightCycleNegative) {
@@ -196,9 +213,21 @@ TEST(XMLParserTests, ParsingBusStopWaitTimeZero) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
-//TODO: - make sure the bus stop position is within the length of the road
-//      - make sure the bus stop is on an existing road
+TEST(XMLParserTests, ParsingBusStopUndefinedRoad) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopUndefinedRoad.xml";
+    Simulation sim = Simulation();
 
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
+}
+
+TEST(XMLParserTests, ParsingBusStopPositionOutOfBound) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopPositionOutOfBound.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
+}
 
 TEST(XMLParserTests, ParsingCrossroadOneRoad) {
     std::string xmlPath = gTestInputFolder + "/ParsingCrossroadOneRoad.xml";
@@ -222,4 +251,12 @@ TEST(XMLParserTests, ParsingCrossroadUndefinedRoad) {
 
     XMLParser parser;
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
+}
+
+TEST(XMLParserTests, ParsingCrossroadPositionOutOfBound) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossroadPositionOutOfBound.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "position out of bound");
 }
