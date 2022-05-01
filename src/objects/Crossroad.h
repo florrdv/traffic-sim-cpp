@@ -14,8 +14,14 @@ struct CrossroadDetails {
 class Crossroad {
     std::pair<CrossroadDetails, CrossroadDetails> details;
 
+    Crossroad* _init;
+
 public:
-    Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) {};
+    Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) { _init = this; };
+
+private:
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
 };
 
 

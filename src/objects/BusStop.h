@@ -31,6 +31,10 @@ public:
     void setBus(Vehicle *bus);
 
     void removeBus();
+
+private:
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
 };
 
 
