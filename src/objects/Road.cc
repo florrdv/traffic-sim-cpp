@@ -276,5 +276,6 @@ void Road::addCrossroad(Crossroad *c) {
 
 void Road::addBusStop(BusStop *b) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
 }
