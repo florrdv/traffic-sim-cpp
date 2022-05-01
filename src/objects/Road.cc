@@ -77,7 +77,6 @@ VehicleGenerator *Road::getGenerator() const {
 
 void Road::setGenerator(VehicleGenerator *g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    REQUIRE(g->getPosition() < length, "Road not long enough for generator");
     ENSURE(g != nullptr, "Cannot add empty generator to road");
     generator = g;
 }

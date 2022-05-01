@@ -155,7 +155,6 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n REQUIRE(g->getPosition() < length, "Road not long enough for generator");
     \n ENSURE(g != nullptr, "Cannot add empty generator to road");
      */
     void setGenerator(VehicleGenerator *g);
