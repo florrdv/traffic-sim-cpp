@@ -62,7 +62,7 @@ TEST(RoadTests, BusStopMutationHappyDay) {
 TEST(RoadTests, BusStopMutationInvalidPosition) {
     Road road = Road("example", 100.0);
     ASSERT(road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
-    BusStop *busStop = new BusStop(10, VehicleType::Personal);
+    BusStop *busStop = new BusStop(200, VehicleType::Personal);
     EXPECT_DEATH(road.addBusStop(busStop), "Road not long enough for");
 }
 

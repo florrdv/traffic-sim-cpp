@@ -5,16 +5,6 @@
 #include "../lib/TestingHelpers.h"
 #include "../util/XMLParser.h"
 
-TEST(XMLParserTests, ParsingRoadBoundaries) {
-    std::string xmlPath = gTestInputFolder + "/ParsingRoadBoundaries.xml";
-
-    Simulation sim = Simulation();
-
-    XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "road boundaries");
-}
-
-
 TEST(XMLParserTests, ParsingRoadLengthNegative) {
     std::string xmlPath = gTestInputFolder + "/ParsingRoadLengthNegative.xml";
 
