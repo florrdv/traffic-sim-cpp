@@ -12,13 +12,13 @@
 
 #include "../data/Constants.h"
 #include "../objects/Road.h"
+#include "../objects/Crossroad.h"
 #include "../objects/TrafficLight.h"
 #include "../objects/Vehicle.h"
 #include "../objects/VehicleGenerator.h"
 #include "../Simulation.h"
 #include "../lib/DesignByContract.h"
 #include "../objects/BusStop.h"
-#include "../objects/Crossroad.h"
 
 #include <map>
 
@@ -402,10 +402,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             Road *road = sim.findRoad(pair.first);
             ASSERT(road != nullptr, ("XML: unknown road " + pair.first).c_str());
 
-            details.push_back(CrossroadDetails {
-                .road=road,
-                .position=pair.second
-            });
+            details.push_back(CrossroadDetails {road, pair.second});
         }
 
         ASSERT(details.size() == 2, "XML: invalid cross road");
