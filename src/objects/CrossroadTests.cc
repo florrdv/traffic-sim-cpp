@@ -12,5 +12,5 @@ TEST(CrossroadTests, PositionMutationHappyDay) {
     Road *road2 = new Road("bar", 80);
     Crossroad crossroad = Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 });
 
-    //TODO: Figure out what to test
+    // TODO: Figure out what to test
 }

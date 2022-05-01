@@ -173,6 +173,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
      */
     void addBusStop(BusStop *c);
 
