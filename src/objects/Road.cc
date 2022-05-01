@@ -46,6 +46,8 @@ const std::vector<Vehicle *> &Road::getVehicles() const {
 
 void Road::addVehicle(Vehicle *v) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(v->getPosition() < length, "Road not long enough for vehicle");
+
     ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     v->setId(vehicles.size());
     vehicles.push_back(v);
@@ -55,6 +57,7 @@ void Road::addVehicle(Vehicle *v) {
 void Road::addTrafficLight(TrafficLight *t) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
+    
     ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     trafficLights.push_back(t);
 }
