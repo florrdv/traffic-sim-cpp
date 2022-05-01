@@ -196,4 +196,30 @@ TEST(XMLParserTests, ParsingBusStopWaitTimeZero) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
 }
 
+//TODO: - make sure the bus stop position is within the length of the road
+//      - make sure the bus stop is on an existing road
 
+
+TEST(XMLParserTests, ParsingCrossroadOneRoad) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossroadOneRoad.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "no child found");
+}
+
+TEST(XMLParserTests, ParsingCrossroadNegativePosition) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossroadNegativePosition.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
+}
+
+TEST(XMLParserTests, ParsingCrossroadUndefinedRoad) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossroadUndefinedRoad.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
+}
