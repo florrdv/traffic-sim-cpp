@@ -14,7 +14,10 @@ private:
 
 protected:
     // Constructors / destructors
-    Entity(double p): position(p) { _init = this; };
+    /**
+    \n ENSURE(p>=0, "Entity position cannot be a negative integer")
+    */
+    Entity(double p);
 
     // Regular methods
 public:
