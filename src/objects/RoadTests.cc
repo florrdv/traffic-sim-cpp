@@ -29,17 +29,17 @@ TEST(RoadTests, NameMutationHappyDay) {
 TEST(RoadTests, VehiclesMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getVehicles().empty(), "there should be no vehicles on the road yet");
-    Vehicle *v = new Vehicle(0.0, VehicleType::Personal);
-    road.addVehicle(v);
-    ASSERT_EQ(v, road.getVehicles()[0]);
+    Vehicle *vehicle = new Vehicle(0.0, VehicleType::Personal);
+    road.addVehicle(vehicle);
+    ASSERT_EQ(vehicle, road.getVehicles()[0]);
 }
 
 TEST(RoadTests, GeneratorMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getGenerator() == nullptr, "there should be no generator on the road yet");
-    VehicleGenerator *g = new VehicleGenerator(0.0, VehicleType::Personal);
-    road.setGenerator(g);
-    ASSERT_EQ(g, road.getGenerator());
+    VehicleGenerator *generator = new VehicleGenerator(0.0, VehicleType::Personal);
+    road.setGenerator(generator);
+    ASSERT_EQ(generator, road.getGenerator());
 }
 
 TEST(RoadTests, TickTrafficLightsHappyDay) {
