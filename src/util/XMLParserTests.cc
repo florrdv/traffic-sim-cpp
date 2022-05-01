@@ -148,4 +148,52 @@ TEST(XMLPArserTests, UnknownVehicleType) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown vehicle type");
 }
 
+TEST(XMLParserTests, ParsingBusStopNoRoad) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopNoRoad.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "no child found");
+}
+
+TEST(XMLParserTests, ParsingBusStopNoPosition) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopNoPosition.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "no child found");
+}
+
+TEST(XMLParserTests, ParsingBusStopNoWaitTime) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopNoWaitTime.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "no child found");
+}
+
+TEST(XMLParserTests, ParsingBusStopNegativePosition) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopNegativePosition.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be positive");
+}
+
+TEST(XMLParserTests, ParsingBusStopWaitTimeNegative) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopWaitTimeNegative.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
+}
+
+TEST(XMLParserTests, ParsingBusStopWaitTimeZero) {
+    std::string xmlPath = gTestInputFolder + "/ParsingBusStopWaitTimeZero.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "must be strictly positive");
+}
+
 
