@@ -18,18 +18,39 @@ private:
 public:
     BusStop(double position, int w) : Entity(position), waitTime(w) { _init = this; };
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     int getTimeCount() const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     void setTimeCount(int timeCount);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     int getWaitTime() const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     void setWaitTime(int waitTime);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     Vehicle *getBus() const;
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     void setBus(Vehicle *bus);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    */
     void removeBus();
 
 private:
