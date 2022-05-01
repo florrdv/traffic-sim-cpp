@@ -34,6 +34,13 @@ TEST(RoadTests, VehiclesMutationHappyDay) {
     ASSERT_EQ(vehicle, road.getVehicles()[0]);
 }
 
+TEST(RoadTests, VehiclesMutationInvalidPosition) {
+    Road road = Road("example", 100.0);
+    ASSERT(road.getVehicles().empty(), "there should be no vehicles on the road yet");
+    Vehicle *vehicle = new Vehicle(200, VehicleType::Personal);
+    EXPECT_DEATH(road.addVehicle(vehicle), "Road not long enough for");
+}
+
 TEST(RoadTests, GeneratorMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getGenerator() == nullptr, "there should be no generator on the road yet");
