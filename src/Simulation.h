@@ -34,7 +34,7 @@ private:
 
     /**
     \n REQUIRE(properlyInitialized(), "constructor must end in properlyInitialized state");
-    \n  ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
+    \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
     */
     int countVehicles();
     /**
