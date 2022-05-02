@@ -12,6 +12,9 @@ private:
 
     double position{};
 
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
+
 protected:
     // Constructors / destructors
     /**
@@ -31,9 +34,7 @@ public:
     */
     double getPosition() const;
 
-private:
-    // Safety specific
-    bool properlyInitialized() const { return _init == this; }
+
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_OBJECTS_ENTITY_H_
