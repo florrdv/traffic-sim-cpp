@@ -5,7 +5,7 @@
  * Version: 1.0
  * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
  * -----
- * File Created: Thursday, 5rd March 2022 3:43:06 pm
+ * File Created: Thursday, 5th March 2022 3:43:06 pm
  */
 
 #ifndef TRAFFICSIM_VEHICLEGENERATOR_H

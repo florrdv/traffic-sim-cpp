@@ -1,3 +1,13 @@
+/*
+ * Project: PSE Traffic Simulator
+ * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
+ * Description: contains road class definition
+ * Version: 1.0
+ * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+ * -----
+ * File Created: Thursday, 3rd March 2022 5:12:46 pm
+ */
+
 #include <cmath>
 #include <gtest/gtest.h>
 #include "Road.h"

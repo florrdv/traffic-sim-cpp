@@ -1,6 +1,3 @@
-#ifndef TRAFFICSIM_ROAD_H
-#define TRAFFICSIM_ROAD_H
-
 /*
  * Project: PSE Traffic Simulator
  * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
@@ -10,6 +7,9 @@
  * -----
  * File Created: Thursday, 3rd March 2022 5:12:46 pm
  */
+
+#ifndef TRAFFICSIM_ROAD_H
+#define TRAFFICSIM_ROAD_H
 
 #include <string>
 #include <utility>
