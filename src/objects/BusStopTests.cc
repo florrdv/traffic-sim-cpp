@@ -1,3 +1,13 @@
+/*
+ * Project: PSE Traffic Simulator
+ * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
+ * Description: contains road logic
+ * Version: 1.0
+ * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+ * -----
+ * File Created: Thursday, 20th April 2022 9:12:10 pm
+ */
+
 #include <gtest/gtest.h>
 #include <fstream>
 
