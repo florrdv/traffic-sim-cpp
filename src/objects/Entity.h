@@ -16,13 +16,11 @@ private:
     bool properlyInitialized() const { return _init == this; }
 
 protected:
-    // Constructors / destructors
     /**
     \n ENSURE(p>=0, "Entity position cannot be a negative integer")
     */
     Entity(double p);
 
-    // Regular methods
 public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
