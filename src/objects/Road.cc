@@ -285,7 +285,7 @@ void Road::addBusStop(BusStop *b) {
 }
 
 Road::Road(std::string n, double l): name(n), length(l) {
-    REQUIRE(l >= 0, "Road length must be positive");
+    REQUIRE(l > 0, "Road length must be strictly positive");
 
     _init = this;
     ENSURE(_init == this, "_init reference must be set");

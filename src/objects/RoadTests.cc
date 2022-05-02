@@ -2,6 +2,19 @@
 #include <gtest/gtest.h>
 #include "Road.h"
 
+TEST(RoadTests, RoadGenerationHappyDay) {
+    EXPECT_EXIT({Road("example", 100.0); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+TEST(RoadTests, RoadGenerationZeroLength) {
+    EXPECT_DEATH(Road("example", 0), "Road length must be strictly positive");
+}
+
+TEST(RoadTests, RoadGenerationNegativeLength) {
+    EXPECT_DEATH(Road("example", -10), "Road length must be strictly positive");
+}
+
 TEST(RoadTests, LengthMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT_EQ(100.0, road.getLength());
