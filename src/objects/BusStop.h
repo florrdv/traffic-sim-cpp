@@ -35,6 +35,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    \n ENSURE(w > 0, "Bus stop wait time must be strictly positive");
     */
     void setWaitTime(int waitTime);
 
