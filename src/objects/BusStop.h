@@ -16,7 +16,12 @@ private:
     int waitTime;
 
 public:
-    BusStop(double position, int w) : Entity(position), waitTime(w) { _init = this; };
+    /**
+    \n REQUIRE(position >= 0, "Position has to be positive");
+    \n REQUIRE(w >= 0, "Wait time has to be positive");
+    \n ENSURE(_init == this, "_init reference must be set");
+     */
+    BusStop(double position, int w);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
