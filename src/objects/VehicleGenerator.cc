@@ -8,10 +8,11 @@ int VehicleGenerator::getFrequency() const {
 }
 
 
-void VehicleGenerator::setFrequency(int frequency_) {
+void VehicleGenerator::setFrequency(int f) {
     REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    ENSURE(frequency_ >0, "Vehicle generator frequency must be strictly positive");
-    frequency = frequency_;
+    ENSURE(f > 0, "Vehicle generator frequency must be strictly positive");
+    frequency = f;
+    ENSURE(frequency == f, "Frequency was not set properly");
 }
 
 int VehicleGenerator::getFrequencyCount() const {
@@ -19,10 +20,11 @@ int VehicleGenerator::getFrequencyCount() const {
     return frequencyCount;
 }
 
-void VehicleGenerator::setFrequencyCount(int count) {
+void VehicleGenerator::setFrequencyCount(int c) {
     REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    ENSURE(count >= 0, "Vehicle generator frequency count must be positive");
-    frequencyCount = count;
+    ENSURE(c >= 0, "Vehicle generator frequency count must be positive");
+    frequencyCount = c;
+    ENSURE(frequencyCount == c, "Frequency count was not set properly");
 }
 
 

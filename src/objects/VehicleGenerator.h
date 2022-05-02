@@ -24,9 +24,10 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    \n ENSURE(frequency_ >0, "Vehicle generator frequency must be strictly positive");
+    \n ENSURE(f >0, "Vehicle generator frequency must be strictly positive");
+    \n ENSURE(frequency == f, "Frequency was not set properly");
     */
-    void setFrequency(int frequency_);
+    void setFrequency(int f);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
@@ -40,9 +41,10 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    \n ENSURE(count >=0, "Vehicle generator frequency count must be positive");
+    \n ENSURE(c >=0, "Vehicle generator frequency c must be positive");
+    \n ENSURE(frequencyCount == c, "Frequency count was not set properly");
     */
-    void setFrequencyCount(int count);
+    void setFrequencyCount(int c);
 
     // Safety specific
     bool properlyInitialized() const {return _init == this;}
