@@ -1,6 +1,3 @@
-#ifndef TRAFFICSIM_TRAFFICLIGHT_H
-#define TRAFFICSIM_TRAFFICLIGHT_H
-
 /*
  * Project: PSE Traffic Simulator
  * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
@@ -10,6 +7,9 @@
  * -----
  * File Created: Thursday, 3rd March 2022 3:43:06 pm
  */
+
+#ifndef TRAFFICSIM_TRAFFICLIGHT_H
+#define TRAFFICSIM_TRAFFICLIGHT_H
 
 #include <string>
 #include "Entity.h"
