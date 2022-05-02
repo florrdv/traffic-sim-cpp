@@ -1,6 +1,23 @@
 #include <gtest/gtest.h>
 #include "TrafficLight.h"
 
+TEST(TrafficLightTests, TrafficLightGenerationHappyDay) {
+    EXPECT_EXIT({TrafficLight(0.0, 10); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+TEST(TrafficLightTests, TrafficLightGenerationNegativePosition) {
+    EXPECT_DEATH(TrafficLight(-10, 10), "Entity position cannot be a negative integer");
+}
+
+TEST(TrafficLightTests, TrafficLightGenerationZeroCycleCount) {
+    EXPECT_DEATH(TrafficLight(0, 0), "Cycle count must be strictly positive");
+}
+
+TEST(TrafficLightTests, TrafficLightGenerationNegativeCycleCount) {
+    EXPECT_DEATH(TrafficLight(0, -1), "Cycle count must be strictly positive");
+}
+
 TEST(TrafficLightTests, PositionMutationHappyDay) {
     TrafficLight light = TrafficLight(0.0, 10);
     EXPECT_EQ(0, light.getPosition());
