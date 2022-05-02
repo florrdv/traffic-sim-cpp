@@ -68,6 +68,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(id_>=0, "Vehicle ID cannot be a negative integer");
+    \n ENSURE(Vehicle::id == id_, "Vehicle ID was not set properly");
     */
     void setId(int id);
 
