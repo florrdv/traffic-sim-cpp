@@ -198,11 +198,24 @@ void Road::tickBusStops() {
         // Check if there's a bus that can move again
         Vehicle* bus = busStop->getBus();
         if (bus != nullptr) {
-            if (waitTime / gSimTime > busStop->getTimeCount()) {
-                bus->accelerate();
+            int timeCount = busStop->getTimeCount();
+
+            // Handle busses leaving
+            if (bus != firstBus) {
+                // The bus has left, let's prepare for the next bus
                 busStop->removeBus();
                 busStop->setTimeCount(0);
-            } else busStop->setTimeCount(waitTime + 1);
+            }
+
+            // Handle busses waiting
+            if ((double) waitTime / (double) gSimTime < (double) timeCount) {
+                // Let's get the bus to leave
+                bus->accelerate();
+                // Make sure the bus is not stopped while it is stil leaving
+                firstBus = nullptr;
+
+            // Start counting once the bus has slowed down enough
+            } else if (bus->getSpeed() < 0.01) busStop->setTimeCount(timeCount + 1);
         }
 
         // No busses are driving towards the bus stop, continue to the next bus stop
@@ -216,7 +229,9 @@ void Road::tickBusStops() {
             firstBus->stop();
             busStop->setBus(firstBus);
         }
-            // Force the bus to decelerate if it's in the deceleration zone
+
+
+        // Force the bus to decelerate if it's in the deceleration zone
         else if (distanceToStop < gDecelerationDistance) firstBus->decelerate();
     }
 }
