@@ -147,3 +147,18 @@ double Vehicle::getSpeedMax() const {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     return speedMax;
 }
+
+Vehicle::Vehicle(double position, VehicleType t) : Entity(position), type(t) {
+    _init = this;
+
+    VehicleConstant constants = gVehicleConstants.at(t);
+    length = constants.gVehicleLength;
+    speedMax = constants.gSpeedMax;
+    speedMaxLimit = constants.gSpeedMax;
+    accelerationMax = constants.gAccelerationMax;
+    brakeMax = constants.gBrakeMax;
+    followMin = constants.gFollowMin;
+    simTime = gSimTime;
+    decelerationDistance = gDecelerationDistance;
+    decelerationFactor = gDecelerationFactor;
+}
