@@ -1,4 +1,5 @@
 #include "Crossroad.h"
+#include "Road.h"
 #include "../lib/DesignByContract.h"
 
 int Crossroad::getPositionForRoad(Road* road) {
@@ -15,6 +16,8 @@ Crossroad::Crossroad(CrossroadDetails details1, CrossroadDetails details2) : det
     REQUIRE(details2.road != nullptr, "Road can not be nullptr");
     REQUIRE(details1.position >= 0, "Position must be positive");
     REQUIRE(details2.position >= 0, "Position must be positive");
+    REQUIRE(details1.road->getLength() >= details1.position, "Position must be within road bounds");
+    REQUIRE(details2.road->getLength() >= details2.position, "Position must be within road bounds");
 
     _init = this;
 

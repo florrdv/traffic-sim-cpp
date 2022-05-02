@@ -17,44 +17,35 @@ TEST(CrossroadTests, CrossroadGenerationHappyDay) {
 TEST(CrossroadTests, CrossroadGenerationNegativePosition1) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, -10 }, CrossroadDetails { road2, 5 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, -10 }, CrossroadDetails { road2, 5 }), "Position must be positive");
 }
 
 TEST(CrossroadTests, CrossroadGenerationNegativePosition2) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, -20 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, -20 }), "Position must be positive");
 }
 
 TEST(CrossroadTests, CrossroadGenerationInvalidPosition1) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 110 }, CrossroadDetails { road2, 5 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 110 }, CrossroadDetails { road2, 5 }), "Position must be within road bounds");
 }
 
 TEST(CrossroadTests, CrossroadGenerationInvalidPosition2) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 90 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 90 }), "Position must be within road bounds");
 }
 
 TEST(CrossroadTests, CrossroadGenerationInvalidRoad1) {
     Road *road1 = nullptr;
     Road *road2 = new Road("bar", 80);
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 }), "Road can not be nullptr");
 }
 
 TEST(CrossroadTests, CrossroadGenerationInvalidRoad2) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = nullptr;
-    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 }), "Entity position cannot be a negative integer");
+    EXPECT_DEATH(Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 }), "Road can not be nullptr");
 }
-
-
-//TEST(CrossroadTests, PositionMutationHappyDay) {
-//    Road *road1 = new Road("foo", 100);
-//    Road *road2 = new Road("bar", 80);
-//    Crossroad crossroad = Crossroad(CrossroadDetails { road1, 10 }, CrossroadDetails { road2, 5 });
-//
-//    // TODO: Figure out what to test
-//}

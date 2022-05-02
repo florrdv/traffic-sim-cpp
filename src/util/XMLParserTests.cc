@@ -256,5 +256,5 @@ TEST(XMLParserTests, ParsingCrossroadPositionOutOfBound) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_DEATH(parser.parse(sim, xmlPath), "Road not long enough");
+    EXPECT_DEATH(parser.parse(sim, xmlPath), "Position must be within road bounds");
 }
