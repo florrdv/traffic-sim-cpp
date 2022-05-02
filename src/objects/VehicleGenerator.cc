@@ -33,7 +33,7 @@ VehicleType VehicleGenerator::getType() const {
 }
 
 VehicleGenerator::VehicleGenerator(int f, VehicleType t): Entity(0.0), type(t), frequency(f) {
-    ENSURE(f>0, "Frequency must be strictly positive");
+    REQUIRE(f>0, "Frequency must be strictly positive");
 
     _init = this;
 }
