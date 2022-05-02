@@ -92,6 +92,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(!name.empty(), "Road name cannot be empty");
+    \n ENSURE(Road::name == n, "Road name was not set properly");
     */
     void setName(const std::string &name);
 
@@ -103,6 +104,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(l>0, "Length must be strictly positive");
+    \n ENSURE(Road::length == l, "Road length was not set properly");
     */
     void setLength(double length);
 
@@ -159,6 +161,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(g != nullptr, "Cannot add empty generator to road");
+    \n ENSURE(generator == g, "Generator was not set properly");
      */
     void setGenerator(VehicleGenerator *g);
 
