@@ -44,7 +44,7 @@ TEST(RoadTests, VehiclesMutationInvalidPosition) {
 TEST(RoadTests, GeneratorMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getGenerator() == nullptr, "there should be no generator on the road yet");
-    VehicleGenerator *generator = new VehicleGenerator(0.0, VehicleType::Personal);
+    VehicleGenerator *generator = new VehicleGenerator(20.0, VehicleType::Personal);
     road.setGenerator(generator);
     ASSERT_EQ(generator, road.getGenerator());
 }
