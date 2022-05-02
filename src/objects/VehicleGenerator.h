@@ -15,6 +15,10 @@ private:
 
 public:
     // Constructors / destructors
+    /**
+    \n REQUIRE(f>0, "Frequency must be strictly positive");
+    \n ENSURE(_init == this, "_init reference must be set");
+    */
     VehicleGenerator(int f, VehicleType t);
     // General methods
     /**

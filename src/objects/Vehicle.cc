@@ -105,6 +105,8 @@ double Vehicle::getSpeedMax() const {
 }
 
 Vehicle::Vehicle(double position, VehicleType t) : Entity(position), type(t) {
+    REQUIRE(position >= 0, "Position has to be positive");
+    
     VehicleConstant constants = gVehicleConstants.at(t);
     length = constants.gVehicleLength;
     speedMax = constants.gSpeedMax;
