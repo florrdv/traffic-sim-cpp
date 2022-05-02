@@ -22,18 +22,11 @@
 
 #include <map>
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
-*/
 void XMLParser::validateNode(const pugi::xml_node &node, const std::string &name) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     ASSERT(!node.empty(), ("XML: no child found for " + name).c_str());
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "TicTacToe wasn't initialized properly");
-\n ENSURE(value>=0, "Parsed integer cannot be negative");
-*/
 int XMLParser::parsePositiveInteger(const std::string &s, const std::string &name,
                                     const bool strictlyPositive = false) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
@@ -51,10 +44,6 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
     return value;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(road != nullptr, "Road has to be generated");
-*/
 Road *XMLParser::parseRoad(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
@@ -98,9 +87,6 @@ std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::p
     return {{ firstRoadName, firstPos }, { secondRoadName, secondPos }};
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-*/
 VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) {
     // Default case
     if (node.empty()) return VehicleType::Personal;
@@ -114,10 +100,6 @@ VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) {
     else ASSERT(false, ("XML: unknown vehicle type '" + name + "'").c_str());
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(vehicle != nullptr, "Road has to be generated");
-*/
 Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
@@ -142,10 +124,6 @@ Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) {
     return vehicle;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(generator != nullptr, "Road has to be generated");
-*/
 VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
@@ -167,10 +145,6 @@ VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) {
     return generator;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-\n ENSURE(trafficLight != nullptr, "Road has to be generated");
-*/
 TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
@@ -193,11 +167,6 @@ TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
     return trafficLight;
 }
 
-
-/**
- \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
- \n ENSURE(busStop != nullptr, "Road has to be generated";
- */
 BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
@@ -223,9 +192,6 @@ BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
     return busStop;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-*/
 std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
@@ -252,10 +218,6 @@ std::pair<std::string, std::string> XMLParser::parseRoadReferences(const pugi::x
     return roads;
 }
 
-
-/**
-\n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-*/
 void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
