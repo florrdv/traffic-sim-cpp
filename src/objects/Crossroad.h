@@ -12,9 +12,13 @@ struct CrossroadDetails {
 };
 
 class Crossroad {
+private:
     std::pair<CrossroadDetails, CrossroadDetails> details;
 
     Crossroad* _init;
+
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
 
 public:
     /**
@@ -30,10 +34,6 @@ public:
     \n ENSURE(false, "Requested road not found");
     */
     int getPositionForRoad(Road* road);
-
-private:
-    // Safety specific
-    bool properlyInitialized() const { return _init == this; }
 };
 
 
