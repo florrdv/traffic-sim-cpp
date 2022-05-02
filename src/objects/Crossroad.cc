@@ -11,10 +11,12 @@ int Crossroad::getPositionForRoad(Road* road) {
 }
 
 Crossroad::Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) {
-    ENSURE(details1.road != nullptr, "Road can not be nullptr");
-    ENSURE(details2.road != nullptr, "Road can not be nullptr");
-    ENSURE(details1.position >= 0, "Position must be positive");
-    ENSURE(details2.position >= 0, "Position must be positive");
+    REQUIRE(details1.road != nullptr, "Road can not be nullptr");
+    REQUIRE(details2.road != nullptr, "Road can not be nullptr");
+    REQUIRE(details1.position >= 0, "Position must be positive");
+    REQUIRE(details2.position >= 0, "Position must be positive");
 
     _init = this;
+
+    ENSURE(_init == this, "_init reference must be set");
 }

@@ -22,10 +22,11 @@ private:
 
 public:
     /**
-    \n ENSURE(details1.road != nullptr, "Road can not be nullptr");
-    \n ENSURE(details2.road != nullptr, "Road can not be nullptr");
-    \n ENSURE(details1.position >= 0, "Position must be positive");
-    \n ENSURE(details2.position >= 0, "Position must be positive");
+    \n REQUIRE(details1.road != nullptr, "Road can not be nullptr");
+    \n REQUIRE(details2.road != nullptr, "Road can not be nullptr");
+    \n REQUIRE(details1.position >= 0, "Position must be positive");
+    \n REQUIRE(details2.position >= 0, "Position must be positive");
+    \n ENSURE(_init == this, "_init reference must be set");
     */
     Crossroad(CrossroadDetails details1, CrossroadDetails details2);
 
