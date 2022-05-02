@@ -17,7 +17,13 @@ class Crossroad {
     Crossroad* _init;
 
 public:
-    Crossroad(CrossroadDetails details1, CrossroadDetails details2) : details({details1, details2}) { _init = this; };
+    /**
+    \n ENSURE(details1.road != nullptr, "Road can not be nullptr");
+    \n ENSURE(details2.road != nullptr, "Road can not be nullptr");
+    \n ENSURE(details1.position >= 0, "Position must be positive");
+    \n ENSURE(details2.position >= 0, "Position must be positive");
+    */
+    Crossroad(CrossroadDetails details1, CrossroadDetails details2);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
