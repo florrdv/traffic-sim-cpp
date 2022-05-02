@@ -26,6 +26,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
     \n ENSURE(t >= 0, "Bus stop wait time must be positive");
+    \n ENSURE(BusStop::timeCount == t, "Time count was not set properly");
      */
     void setTimeCount(int timeCount);
 
@@ -37,6 +38,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
     \n ENSURE(w > 0, "Bus stop wait time must be strictly positive");
+    \n ENSURE(BusStop::waitTime == w, "Wait time was not set properly");
     */
     void setWaitTime(int waitTime);
 
@@ -47,7 +49,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
-    \n  ENSURE(b != nullptr, "Bus cannot be nullptr");
+    \n ENSURE(b != nullptr, "Bus cannot be nullptr");
+    \n ENSURE(BusStop::bus == b, "Bus was not set properly");
     */
     void setBus(Vehicle *bus);
 
