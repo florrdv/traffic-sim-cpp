@@ -35,7 +35,7 @@ private:
     std::vector<Vehicle *> vehicles;
     std::vector<TrafficLight *> trafficLights;
     std::vector<BusStop *> busStops;
-    std::vector<Crossroad *> crossRoads;
+    std::vector<Crossroad *> crossroads;
 
     VehicleGenerator *generator = nullptr;
 
