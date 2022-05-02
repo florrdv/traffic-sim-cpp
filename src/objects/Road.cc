@@ -8,6 +8,7 @@
  * File Created: Thursday, 3rd March 2022 5:12:46 pm
  */
 
+#include <algorithm>
 #include "Road.h"
 #include "../lib/DesignByContract.h"
 
@@ -53,15 +54,17 @@ void Road::addVehicle(Vehicle *v) {
     ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     v->setId(vehicles.size());
     vehicles.push_back(v);
+    ENSURE(std::find(vehicles.begin(), vehicles.end(), v) != vehicles.end(), "Vehicle was not added properly");
 }
 
 
 void Road::addTrafficLight(TrafficLight *t) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
-    
+
     ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     trafficLights.push_back(t);
+    ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(), "Traffic light was not added properly");
 }
 
 
@@ -287,20 +290,21 @@ const std::vector<BusStop *> &Road::getBusStops() const {
 
 const std::vector<Crossroad *> &Road::getCrossroads() const {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    return crossRoads;
+    return crossroads;
 }
 
 void Road::addCrossroad(Crossroad *c) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
-
-    Road::crossRoads.push_back(c);
+    Road::crossroads.push_back(c);
+    ENSURE(std::find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad was not added properly");
 }
 
 void Road::addBusStop(BusStop *b) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
+    ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");
 }
 
 Road::Road(std::string n, double l): name(n), length(l) {
