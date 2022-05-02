@@ -194,9 +194,12 @@ void Road::tickBusStops() {
         int waitTime = busStop->getWaitTime();
         // Get the first bus relative to the bus stop
         Vehicle *firstBus = getFirstBusToBusStop(busStop);
+
         // Check if there's a bus that can move again
-        if (busStop->getBus() != nullptr) {
-            if (waitTime * gSimTime > busStop->getTimeCount()) {
+        Vehicle* bus = busStop->getBus();
+        if (bus != nullptr) {
+            if (waitTime / gSimTime > busStop->getTimeCount()) {
+                bus->accelerate();
                 busStop->removeBus();
                 busStop->setTimeCount(0);
             } else busStop->setTimeCount(waitTime + 1);

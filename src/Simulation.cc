@@ -195,7 +195,10 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
 
     ASSERT(content.length() > 0, "Failed to read visualizer template");
 
-    // std::cout << content;
+    // Split file into header and footer
+    int pos = content.find("{}");
+    std::string header = content.substr(0, pos);
+    std::string footer = content.substr(pos + 2, content.length());
 
-    fileStream << std::setw(4) << j << std::endl;
+    fileStream << header << std::setw(4) << j << footer << std::endl;
 }

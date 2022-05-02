@@ -65,7 +65,7 @@
 <BUSHALTE>
     <baan>Middelheimlaan</baan>
     <positie>250</positie>
-    <wachttijd>20</wachttijd>
+    <wachttijd>5</wachttijd>
 </BUSHALTE>
 
 <KRUISPUNT>

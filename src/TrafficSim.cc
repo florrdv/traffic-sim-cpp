@@ -24,8 +24,8 @@ int main() {
 
     // sim1.writeOn(std::cout, 50);
 
-    std::ofstream f("out.json");
-    sim2.writeToFile(f, 50);
+    std::ofstream f("out.html");
+    sim2.writeToFile(f, 100);
     f.close();
 
     return 0;
