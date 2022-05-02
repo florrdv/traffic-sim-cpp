@@ -1,6 +1,19 @@
 #include <gtest/gtest.h>
 #include "VehicleGenerator.h"
 
+TEST(GeneratorTests, VehicleGenerationHappyDay) {
+    EXPECT_EXIT({new VehicleGenerator(10.0, VehicleType::Personal); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+TEST(GeneratorTests, VehicleGenerationZeroPosition) {
+    EXPECT_DEATH(new VehicleGenerator(0, VehicleType::Personal), "Frequency must be strictly positive");
+}
+
+TEST(GeneratorTests, VehicleGenerationNegativePosition) {
+    EXPECT_DEATH(new VehicleGenerator(-20, VehicleType::Personal), "Frequency must be strictly positive");
+}
+
 TEST(GeneratorTests, FrequencyMutationNegative) {
     VehicleGenerator* g = new VehicleGenerator(10.0, VehicleType::Personal);
     EXPECT_EQ(10.0, g->getFrequency());

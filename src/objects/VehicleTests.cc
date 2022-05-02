@@ -1,6 +1,15 @@
 #include <gtest/gtest.h>
 #include "Vehicle.h"
 
+TEST(VehicleTests, VehicleGenerationHappyDay) {
+    EXPECT_EXIT({Vehicle(0.0, VehicleType::Personal); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+TEST(VehicleTests, VehicleGenerationNegativePosition) {
+    EXPECT_DEATH(Vehicle(-20, VehicleType::Personal), "Entity position cannot be a negative integer");
+}
+
 TEST(VehicleTests, PositionMutationHappyDay) {
     Vehicle v = Vehicle(0.0, VehicleType::Personal);
     EXPECT_EQ(0.0, v.getPosition());

@@ -20,6 +20,7 @@ public:
     \n ENSURE(_init == this, "_init reference must be set");
     */
     VehicleGenerator(int f, VehicleType t);
+    
     // General methods
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
