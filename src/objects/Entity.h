@@ -4,6 +4,8 @@
 #include <gtest/gtest_prod.h>
 
 class Entity {
+    FRIEND_TEST(EntityTests, EntityGenerationHappyDay);
+    FRIEND_TEST(EntityTests, EntityGenerationNegativePosition);
     FRIEND_TEST(EntityTests, PositionMutationHappyDay);
     FRIEND_TEST(EntityTests, PositionMutationNegative);
     FRIEND_TEST(EntityTests, GetSetPosition);
