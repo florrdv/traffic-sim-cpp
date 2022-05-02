@@ -52,7 +52,6 @@ set(RELEASE_SOURCE_FILES
         src/Simulation.cc
         src/Simulation.h
 
-        
         src/objects/BusStop.cc
         src/objects/BusStop.h
         
