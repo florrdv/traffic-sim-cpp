@@ -8,7 +8,6 @@
  * File Created: Tuesday, 1st March 2022 1:54:22 pm
  */
 
-
 #include "Simulation.h"
 #include "data/Constants.h"
 #include "lib/DesignByContract.h"

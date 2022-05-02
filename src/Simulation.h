@@ -8,9 +8,6 @@
  * File Created: Thursday, 1st March 2022 10:27:21 pm
  */
 
-
-// Below are two lines serving as a so-called ``header guard''.
-// Prevents from loading the same .h file multiple times
 #ifndef TRAFFICSIM_SIMULATION_H
 #define TRAFFICSIM_SIMULATION_H
 
