@@ -9,7 +9,7 @@ Vehicle *BusStop::getBus() const {
 
 void BusStop::setBus(Vehicle *b) {
     REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
-
+    ENSURE(b != nullptr, "Bus cannot be nullptr");
     BusStop::bus = b;
 }
 

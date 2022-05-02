@@ -47,6 +47,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    \n  ENSURE(b != nullptr, "Bus cannot be nullptr");
     */
     void setBus(Vehicle *bus);
 
