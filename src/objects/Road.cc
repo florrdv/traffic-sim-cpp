@@ -240,6 +240,7 @@ void Road::tickVehicles(std::ostream &onStream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     // Loop over all vehicles
     for (Vehicle *vehicle: vehicles) {
+        // TODO: handle crossroads
         // Tick the relevant vehicle
         vehicle->tick(getLeadingVehicle(vehicle));
 
