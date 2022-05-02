@@ -26,6 +26,8 @@ public:
     \n REQUIRE(details2.road != nullptr, "Road can not be nullptr");
     \n REQUIRE(details1.position >= 0, "Position must be positive");
     \n REQUIRE(details2.position >= 0, "Position must be positive");
+    \n REQUIRE(details1.road->getLength() >= details1.position, "Position must be within road bounds");
+    \n REQUIRE(details2.road->getLength() >= details2.position, "Position must be within road bounds");
     \n ENSURE(_init == this, "_init reference must be set");
     */
     Crossroad(CrossroadDetails details1, CrossroadDetails details2);
