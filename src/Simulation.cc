@@ -62,9 +62,6 @@ int Simulation::countVehicles() {
     return amount;
 }
 
-/**
-\n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
-*/
 void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedup) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
