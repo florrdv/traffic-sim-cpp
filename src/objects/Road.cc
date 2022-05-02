@@ -280,3 +280,9 @@ void Road::addBusStop(BusStop *b) {
     REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
 }
+
+Road::Road(std::string n, double l): name(n), length(l) {
+    ENSURE(l >= 0, "Road length must be positive");
+
+    _init = this;
+}

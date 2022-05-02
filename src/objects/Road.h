@@ -12,6 +12,7 @@
  */
 
 #include <string>
+#include <utility>
 #include <vector>
 
 #include "Vehicle.h"
@@ -23,7 +24,6 @@
 
 class Road {
     FRIEND_TEST(RoadTests, TickVehicleGeneratorsHappyDay);
-
     FRIEND_TEST(RoadTests, TickTrafficLightsHappyDay);
 
 private:
@@ -71,7 +71,10 @@ private:
 
 public:
     // Constructors / destructors
-    Road(std::string n, double l) : name(n), length(l) { _init = this; }
+    /**
+    \n ENSURE(l >= 0, "Road length must be positive");
+    */
+    Road(std::string n, double l);
 
     ~Road() {
         REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly when calling destructor");
