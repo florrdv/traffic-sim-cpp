@@ -25,7 +25,10 @@ private:
 
 public:
     // Constructors / destructors
-    TrafficLight(double position, int c): Entity(position), cycle(c) { _init = this; }
+    /**
+    \n ENSURE(c > 0, "Cycle count must be strictly positive");
+    */
+    TrafficLight(double position, int c);
 
     // Regular methods
 
@@ -36,6 +39,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(c>0, "Traffic light cycle must be strictly positive");
+    \n ENSURE(TrafficLight::cycle == c, "Cycle was not set properly");
     */
     void setCycle(int cycles);
     
@@ -46,6 +50,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(c>=0, "Traffic light cycle must be positive");
+    \n ENSURE(cycleCount == count, "Cycle count was not set properly");
     */
     void setCycleCount(int cycleCount);
 
