@@ -105,8 +105,6 @@ double Vehicle::getSpeedMax() const {
 }
 
 Vehicle::Vehicle(double position, VehicleType t) : Entity(position), type(t) {
-    _init = this;
-
     VehicleConstant constants = gVehicleConstants.at(t);
     length = constants.gVehicleLength;
     speedMax = constants.gSpeedMax;
@@ -117,4 +115,7 @@ Vehicle::Vehicle(double position, VehicleType t) : Entity(position), type(t) {
     simTime = gSimTime;
     decelerationDistance = gDecelerationDistance;
     decelerationFactor = gDecelerationFactor;
+
+    _init = this;
+    ENSURE(_init == this, "_init reference must be set");
 }

@@ -19,6 +19,7 @@ public:
     // General methods
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
+    \n ENSURE(_init == this, "_init reference must be set");
     */
     int getFrequency() const;
 

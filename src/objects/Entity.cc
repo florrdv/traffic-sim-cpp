@@ -2,10 +2,12 @@
 #include "../lib/DesignByContract.h"
 
 Entity::Entity(double p) {
-    ENSURE(p>=0, "Entity position cannot be a negative integer");
+    REQUIRE(p>=0, "Entity position cannot be a negative integer");
     
     position = p;
     _init = this;
+
+    ENSURE(_init == this, "_init reference must be set");
 }
 
 double Entity::getPosition() const {
@@ -15,7 +17,7 @@ double Entity::getPosition() const {
 
 void Entity::setPosition(double p) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    ENSURE(p>=0, "Entity position must be a positive double");
+    REQUIRE(p>=0, "Entity position must be a positive double");
     position = p;
     ENSURE(position == p, "Position was not set properly");
 }

@@ -72,7 +72,8 @@ private:
 public:
     // Constructors / destructors
     /**
-    \n ENSURE(l >= 0, "Road length must be positive");
+    \n REQUIRE(l >= 0, "Road length must be positive");
+    \n ENSURE(_init == this, "_init reference must be set");
     */
     Road(std::string n, double l);
 

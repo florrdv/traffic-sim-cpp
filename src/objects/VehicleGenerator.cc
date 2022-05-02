@@ -36,4 +36,5 @@ VehicleGenerator::VehicleGenerator(int f, VehicleType t): Entity(0.0), type(t), 
     REQUIRE(f>0, "Frequency must be strictly positive");
 
     _init = this;
+    ENSURE(_init == this, "_init reference must be set");
 }

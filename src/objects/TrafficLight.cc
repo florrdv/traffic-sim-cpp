@@ -49,7 +49,8 @@ int TrafficLight::getCycleCount() const {
 }
 
 TrafficLight::TrafficLight(double position, int c) : Entity(position), cycle(c) {
-    ENSURE(c > 0, "Cycle count must be strictly positive");
+    REQUIRE(c > 0, "Cycle count must be strictly positive");
 
     _init = this;
+    ENSURE(_init == this, "_init reference must be set");
 }

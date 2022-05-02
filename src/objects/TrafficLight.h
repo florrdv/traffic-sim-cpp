@@ -26,7 +26,8 @@ private:
 public:
     // Constructors / destructors
     /**
-    \n ENSURE(c > 0, "Cycle count must be strictly positive");
+    \n REQUIRE(c > 0, "Cycle count must be strictly positive");
+    \n ENSURE(_init == this, "_init reference must be set");
     */
     TrafficLight(double position, int c);
 

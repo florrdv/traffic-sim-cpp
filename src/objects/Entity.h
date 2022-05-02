@@ -17,14 +17,15 @@ private:
 
 protected:
     /**
-    \n ENSURE(p>=0, "Entity position cannot be a negative integer")
+    \n REQUIRE(p>=0, "Entity position cannot be a negative integer")
+    \n ENSURE(_init == this, "_init reference must be set");
     */
     Entity(double p);
 
 public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n ENSURE(p>=0, "Entity position cannot be a negative integer");
+    \n REQUIRE(p>=0, "Entity position cannot be a negative integer");
     \n ENSURE(position == p, "Position was not set properly");
     */
     void setPosition(double p);
