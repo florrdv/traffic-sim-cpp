@@ -15,8 +15,7 @@ private:
 
 public:
     // Constructors / destructors
-    VehicleGenerator(int freq, VehicleType t): Entity(0.0), type(t), frequency(freq) {_init = this;}
-
+    VehicleGenerator(int f, VehicleType t);
     // General methods
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");

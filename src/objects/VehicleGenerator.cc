@@ -29,3 +29,9 @@ void VehicleGenerator::setFrequencyCount(int count) {
 VehicleType VehicleGenerator::getType() const {
     return type;
 }
+
+VehicleGenerator::VehicleGenerator(int f, VehicleType t): Entity(0.0), type(t), frequency(f) {
+    ENSURE(f>0, "Frequency must be strictly positive");
+
+    _init = this;
+}
