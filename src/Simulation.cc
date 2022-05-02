@@ -95,6 +95,8 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
 }
 
 nlohmann::json Simulation::dumpState() {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
+
     nlohmann::json j;
 
     std::vector<nlohmann::json> vehiclesSerialized;
@@ -128,6 +130,8 @@ nlohmann::json Simulation::dumpState() {
 }
 
 void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
+    
     nlohmann::json j;
     
     std::vector<nlohmann::json> roadsSerialized;
