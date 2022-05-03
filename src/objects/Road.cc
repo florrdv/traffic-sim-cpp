@@ -49,10 +49,10 @@ const std::vector<Vehicle *> &Road::getVehicles() const {
 
 
 void Road::addVehicle(Vehicle *v) {
+    REQUIRE(v != nullptr, "Cannot add empty vehicle to road");
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(v->getPosition() < length, "Road not long enough for vehicle");
 
-    ENSURE(v != nullptr, "Cannot add empty vehicle to road");
     v->setId(vehicles.size());
     vehicles.push_back(v);
     ENSURE(std::find(vehicles.begin(), vehicles.end(), v) != vehicles.end(), "Vehicle was not added properly");

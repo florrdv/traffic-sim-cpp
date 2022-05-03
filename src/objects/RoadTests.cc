@@ -57,6 +57,13 @@ TEST(RoadTests, VehiclesMutationHappyDay) {
     ASSERT_EQ(vehicle, road.getVehicles()[0]);
 }
 
+TEST(RoadTests, VehicleMutationInvalid) {
+    Road road = Road("example", 100.0);
+    Vehicle* vehicle = nullptr;
+
+    EXPECT_DEATH(road.addVehicle(vehicle), "Cannot add empty vehicle to road");
+}
+
 TEST(RoadTests, VehiclesMutationInvalidPosition) {
     Road road = Road("example", 100.0);
     ASSERT(road.getVehicles().empty(), "there should be no vehicles on the road yet");
@@ -119,4 +126,3 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
 
     EXPECT_EQ(expectedAfterTick, road.getVehicles().size() - 1);
 }
-
