@@ -48,7 +48,7 @@ void Simulation::addRoad(Road* r) {
     ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
 }
 
-Road* Simulation::findRoad(const std::string& roadName) {
+Road* Simulation::findRoad(const std::string& roadName) const {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling findRoad");
     for (Road* r : roads) {
         if (r->getName() == roadName) {
@@ -58,7 +58,7 @@ Road* Simulation::findRoad(const std::string& roadName) {
     return nullptr;
 }
 
-int Simulation::countVehicles() {
+int Simulation::countVehicles() const {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling countVehicles");
     int amount = 0;
     for (Road* road : roads) amount += road->getVehicles().size();
@@ -98,7 +98,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
     }
 }
 
-nlohmann::json Simulation::dumpState() {
+nlohmann::json Simulation::dumpState() const {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
     nlohmann::json j;
