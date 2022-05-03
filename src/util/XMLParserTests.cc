@@ -458,7 +458,7 @@ TEST(XMLParserTests, ParsingBusStopHappyDay) {
     EXPECT_EQ(20, busStop->getWaitTime());
 }
 
-TEST(XMLParserTests, ParsingCrossRoadHappyDay) {
+TEST(XMLParserTests, ParsingCrossroadHappyDay) {
     std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
     Simulation sim = Simulation();
 
@@ -480,3 +480,4 @@ TEST(XMLParserTests, ParsingCrossRoadHappyDay) {
     EXPECT_EQ(crossroad.second.first, "Groenenborgerlaan");
     EXPECT_EQ(crossroad.second.second, 500);
 }
+
