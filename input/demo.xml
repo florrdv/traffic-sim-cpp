@@ -1,0 +1,35 @@
+<BAAN>
+    <naam>Middelheimlaan</naam>
+    <lengte>400</lengte>
+</BAAN>
+
+<BAAN>
+    <naam>Floraliënlaan</naam>
+    <lengte>200</lengte>
+</BAAN>
+
+<BAAN>
+    <naam>Beukenlaan</naam>
+    <lengte>400</lengte>
+</BAAN>
+
+<BAAN>
+    <naam>Groenenborglaan</naam>
+    <lengte>400</lengte>
+</BAAN>
+
+<KRUISPUNT>
+    <baan positie="20">Middelheimlaan</baan>
+    <baan positie="100">Beukenlaan</baan>
+</KRUISPUNT>
+
+<KRUISPUNT>
+    <baan positie="350">Middelheimlaan</baan>
+    <baan positie="20">Floraliënlaan</baan>
+</KRUISPUNT>
+
+
+<KRUISPUNT>
+    <baan positie="350">Beukenlaan</baan>
+    <baan positie="100">Groenenborglaan</baan>
+</KRUISPUNT>
