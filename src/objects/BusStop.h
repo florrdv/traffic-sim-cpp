@@ -74,7 +74,6 @@ public:
     */
     void removeBus();
 
-private:
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };

@@ -75,7 +75,6 @@ public:
     
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
-
 };
 
 // Closing of the ``header guard''.
