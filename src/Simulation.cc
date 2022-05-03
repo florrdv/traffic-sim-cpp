@@ -231,6 +231,7 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     std::string header = content.substr(0, pos);
     std::string footer = content.substr(pos + 2, content.length());
 
+    // Write and flush file
     fileStream << header << std::setw(4) << j << footer << std::endl;
     fileStream.flush();
 }
