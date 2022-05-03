@@ -178,6 +178,7 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     j["roads"] = roadsSerialized;
     j["busStops"] = busStopsSerialized;
     j["simTime"] = gSimTime;
+    j["crossroads"] = crossroadsSerialized;
 
     NullBuffer null_buffer;
     std::ostream null_stream(&null_buffer);

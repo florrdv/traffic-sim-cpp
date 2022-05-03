@@ -229,7 +229,7 @@
                     relevantBusStops.forEach(busStop => drawBusStop(busStop))
                     
                     // Fetch all crossroads
-                    const relevantCrossRoads = (data.crossRoads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
+                    const relevantCrossRoads = (data.crossroads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
 
                     for (const [road1, road2] of relevantCrossRoads) {
                         const crossRoadOther = road1.name === road.name ? road2 : road1
