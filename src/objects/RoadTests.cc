@@ -11,6 +11,7 @@
 #include <cmath>
 #include <gtest/gtest.h>
 #include "Road.h"
+#include "TrafficLight.h"
 
 TEST(RoadTests, RoadGenerationHappyDay) {
     EXPECT_EXIT({Road("example", 100.0); fprintf(stderr, "Done"); exit(0);},
@@ -178,4 +179,10 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
     road.tickVehicleGenerators();
 
     EXPECT_EQ(expectedAfterTick, road.getVehicles().size() - 1);
+}
+
+TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
+    Road road = Road("example", 100.0);
+    TrafficLight
+    road.getFirstToTrafficLight(TrafficLight *trafficLight)
 }
