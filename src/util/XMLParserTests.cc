@@ -295,7 +295,6 @@ TEST(XMLParserTests, ParsingValidNode) {
 
 TEST(XMLParserTests, ParsingInvalidNode) {
     XMLParser parser;
-
     pugi::xml_node subject;
 
     EXPECT_DEATH(parser.validateNode(subject, "foo"), "XML: no child found for foo");

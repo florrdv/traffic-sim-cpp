@@ -68,14 +68,14 @@ TEST(CrossroadTests, CrossroadGenerationInvalidRoad2) {
     EXPECT_DEATH(Crossroad(new CrossroadDetails{road1, 10}, new CrossroadDetails{road2, 5}), "Road can not be nullptr");
 }
 
-TEST(CrossroadTests, CrossroadPositionGetter) {
+TEST(CrossroadTests, CrossroadGetPositionForRoadHappyDay) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
 
     Crossroad *crossroad = new Crossroad(new CrossroadDetails{road1, 10}, new CrossroadDetails{road2, 5});
 
-    EXPECT_EQ(100, crossroad->getPositionForRoad(road1));
-    EXPECT_EQ(80, crossroad->getPositionForRoad(road2));
+    EXPECT_EQ(10, crossroad->getPositionForRoad(road1));
+    EXPECT_EQ(5, crossroad->getPositionForRoad(road2));
 }
 
 TEST(CrossroadTests, CrossroadDetailsGetter) {
