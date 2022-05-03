@@ -45,6 +45,14 @@ public:
     Crossroad(CrossroadDetails* details1, CrossroadDetails* details2);
 
     /**
+    \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly when calling destructor");
+    */
+    ~Crossroad() {
+        delete details.first;
+        delete details.second;
+    }
+
+    /**
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
     \n ENSURE(EXISTS, "Requested road not found");
     */

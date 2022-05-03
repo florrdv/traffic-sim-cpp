@@ -77,6 +77,9 @@ public:
     */
     Road(std::string n, double l);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly when calling destructor");
+    */
     ~Road() {
         REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly when calling destructor");
         for (Vehicle *vehicle : vehicles) delete vehicle;
