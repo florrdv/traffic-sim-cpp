@@ -417,9 +417,10 @@ TEST(XMLParserTests, ParsingVehicleGeneratorHappyDay) {
     ASSERT(result, "XML: invalid file");
 
     pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 4);
 //    it++;
 //    it++;
 //    it++;
 //    it++;
-    pugi::xml_node trafficLightNode = *it;
+    // pugi::xml_node trafficLightNode = *it;
 }
