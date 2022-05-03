@@ -44,7 +44,7 @@ int XMLParser::parsePositiveInteger(const std::string &s, const std::string &nam
     return value;
 }
 
-Road *XMLParser::parseRoad(const pugi::xml_node &node) {
+Road *XMLParser::parseRoad(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -87,7 +87,7 @@ std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::p
     return {{ firstRoadName, firstPos }, { secondRoadName, secondPos }};
 }
 
-VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) {
+VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) const {
     // Default case
     if (node.empty()) return VehicleType::Personal;
 
@@ -100,7 +100,7 @@ VehicleType XMLParser::parseVehicleType(const pugi::xml_node &node) {
     else ASSERT(false, ("XML: unknown vehicle type '" + name + "'").c_str());
 }
 
-Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) {
+Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -124,7 +124,7 @@ Vehicle *XMLParser::parseVehicle(const pugi::xml_node &node) {
     return vehicle;
 }
 
-VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) {
+VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -145,7 +145,7 @@ VehicleGenerator *XMLParser::parseVehicleGenerator(const pugi::xml_node &node) {
     return generator;
 }
 
-TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
+TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -167,7 +167,7 @@ TrafficLight *XMLParser::parseTrafficLight(const pugi::xml_node &node) {
     return trafficLight;
 }
 
-BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
+BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     // Fetch nodes
@@ -192,7 +192,7 @@ BusStop *XMLParser::parseBusStop(const pugi::xml_node &node) {
     return busStop;
 }
 
-std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
+std::string XMLParser::parseRoadReference(const pugi::xml_node &node) const {
     // Fetch nodes
     pugi::xml_node roadNode = node.child("baan");
 
@@ -204,7 +204,7 @@ std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
     return road;
 }
 
-void XMLParser::parse(Simulation &sim, const std::string file) {
+void XMLParser::parse(Simulation &sim, const std::string file) const {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
     pugi::xml_document doc;

@@ -51,28 +51,28 @@ private:
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(road != nullptr, "Road has to be generated");
     */
-    Road* parseRoad(const pugi::xml_node& node);
+    Road* parseRoad(const pugi::xml_node& node) const;
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(vehicle != nullptr, "Road has to be generated");
     */
-    Vehicle* parseVehicle(const pugi::xml_node& node);
+    Vehicle* parseVehicle(const pugi::xml_node& node) const;
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(trafficLight != nullptr, "Road has to be generated");
     */
-    TrafficLight* parseTrafficLight(const pugi::xml_node& node);
+    TrafficLight* parseTrafficLight(const pugi::xml_node& node) const;
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(generator != nullptr, "Road has to be generated");
     */
-    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
+    VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(busStop != nullptr, "Road has to be generated";
     */
-    BusStop *parseBusStop(const pugi::xml_node &node);
+    BusStop *parseBusStop(const pugi::xml_node &node) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
@@ -82,12 +82,12 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    std::string parseRoadReference(const pugi::xml_node& node);
+    std::string parseRoadReference(const pugi::xml_node& node) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    VehicleType parseVehicleType(const pugi::xml_node& node);
+    VehicleType parseVehicleType(const pugi::xml_node& node) const;
 
 public:
     // Constructors / destructors
@@ -97,7 +97,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    void parse(Simulation& sim, const std::string file);
+    void parse(Simulation& sim, const std::string file) const;
 
     // Safety specific
     const bool properlyInitialized() const { return _init == this; }
