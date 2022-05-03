@@ -481,3 +481,22 @@ TEST(XMLParserTests, ParsingCrossroadHappyDay) {
     EXPECT_EQ(crossroad.second.second, 500);
 }
 
+TEST(XMLParserTests, ParsingRoadReferenceHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 2);
+
+    pugi::xml_node vehicleNode = *it;
+
+    std::string road = parser.parseRoadReference(vehicleNode);
+
+    EXPECT_EQ("Middelheimlaan", road);
+}
+
