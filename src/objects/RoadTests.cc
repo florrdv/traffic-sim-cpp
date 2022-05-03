@@ -184,6 +184,7 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
 TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
     Road road = Road("example", 100.0);
     TrafficLight* trafficLight = new TrafficLight(20.0, 10);
+    road.addTrafficLight(trafficLight);
 
     EXPECT_EXIT({road.getFirstToTrafficLight(trafficLight); fprintf(stderr, "Done"); exit(0);},
                 ::testing::ExitedWithCode(0), "Done");
