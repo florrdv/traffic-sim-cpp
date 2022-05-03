@@ -246,31 +246,7 @@ void Road::tickVehicles(std::ostream &onStream) {
     // Loop over all vehicles
     for (std::vector<Vehicle *>::iterator vehicle = vehicles.begin(); vehicle != vehicles.end();) {
         // Tick the relevant vehicle
-        (*vehicle)->tick(getLeadingVehicle(*vehicle));
-
-        // Initialize variables for crossroad logic
-        bool remove = false;
-        double vehiclePosition = (*vehicle)->getPosition();
-
-        // Check all crossroads
-        for (Crossroad* crossroad : crossroads) {
-            // Get crossroad position
-            double crossroadPosition = crossroad->getPositionForRoad(this);
-
-            // Check if the vehicle is in range
-            if (vehiclePosition < crossroadPosition && crossroadPosition - vehiclePosition < 0.01) {
-                int random = rand() % 2;
-                if (random == 1) {
-                    // Change roads
-                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
-                    CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
-                    
-                    (*vehicle)->setPosition(otherDetails->position);
-                    otherDetails->road->addVehicle(*vehicle);
-                    remove = true;
-                } 
-            }
-        }
+        bool remove = (*vehicle)->tick(getLeadingVehicle(*vehicle), this);
 
         // Print all information on the vehicle in
         // the requested format

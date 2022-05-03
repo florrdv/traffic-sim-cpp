@@ -10,6 +10,8 @@
 
 #include "Vehicle.h"
 #include "../lib/DesignByContract.h"
+#include "Crossroad.h"
+#include "Road.h"
 
 #include <cmath>
 #include <iostream>
@@ -68,10 +70,34 @@ void Vehicle::updateAcceleration(Vehicle *leadingVehicle) {
     ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
 }
 
-void Vehicle::tick(Vehicle *leadingVehicle) {
+bool Vehicle::tick(Vehicle *leadingVehicle, Road* road) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    double pBefore = getPosition();
+
     updateSpeed();
     updateAcceleration(leadingVehicle);
+
+    double pAfter = getPosition();
+
+    // Handle crossroads
+    std::vector<Crossroad *> crossroads = road->getCrossroads();
+    for (Crossroad* crossroad : crossroads) {
+        double crossroadPosition = crossroad->getPositionForRoad(road);
+        if (pAfter >= crossroadPosition && pBefore < crossroadPosition) {
+            int random = rand() % 2;
+            if (random == 1) {
+                // Change roads
+                std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
+                CrossroadDetails* otherDetails = details.first->road == road ? details.second : details.first;
+                
+                setPosition(otherDetails->position);
+                otherDetails->road->addVehicle(this);
+                return true;
+            }
+        }
+    }
+
+    return false;
 }
 
 void Vehicle::stop() {

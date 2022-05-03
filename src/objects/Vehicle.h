@@ -19,6 +19,7 @@
 #include "Entity.h"
 
 class VehicleTests;
+class Road;
 
 class Vehicle: public Entity {
     FRIEND_TEST(VehicleTests, UpdateAccelerationHappyDay);
@@ -106,7 +107,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
-    void tick(Vehicle* leadingVehicle);
+    bool tick(Vehicle* leadingVehicle, Road *road);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
