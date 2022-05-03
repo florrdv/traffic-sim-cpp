@@ -115,6 +115,14 @@ TEST(RoadTests, VehicleGeneratorMutationInvalid) {
     EXPECT_DEATH(road.setGenerator(nullptr), "Cannot add empty generator to road");
 }
 
+TEST(RoadTests, TrafficLightMutationHappyDay) {
+    Road road = Road("example", 100.0);
+    EXPECT_EQ(road.getTrafficLights().size(), 0);
+    TrafficLight* light = new TrafficLight(20.0, 10);
+    road.addTrafficLight(light);
+    EXPECT_EQ(light, road.getTrafficLights()[0]);
+}
+
 TEST(RoadTests, TrafficLightMutationInvalid) {
     Road road = Road("example", 100.0);
     EXPECT_DEATH(road.addTrafficLight(nullptr), "Cannot add empty traffic light to road");
