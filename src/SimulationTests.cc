@@ -1,7 +1,7 @@
 /*
  * Project: PSE Traffic Simulator
  * Author: Flor Ronsmans De Vry (flor.ronsmansdevry@student.uantwerpen.be), Achraf Yandouzi (achraf.yandouzi@student.uantwerpen.be)
- * Description: 
+ * Description:
  * Version: 1.0
  * License: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
  * -----
@@ -167,24 +167,6 @@ TEST(SimulationTests, ValidSimulationTest9) {
     std::string inPath = gTestInputFolder + "/ValidSimulationTest9.txt";
 
     std::string xmlPath = gTestInputFolder + "/ValidSimulationTest9.xml";
-
-    Simulation sim = Simulation();
-
-    XMLParser parser;
-    parser.parse(sim, xmlPath);
-
-    std::ofstream file(outPath);
-    sim.writeOn(file, 50, 500);
-    file.close();
-
-    EXPECT_TRUE(fileCompare(inPath, outPath));
-}
-
-TEST(SimulationTests, ValidSimulationTest10) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest10.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest10.txt";
-
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest10.xml";
 
     Simulation sim = Simulation();
 

@@ -173098,8 +173098,8 @@ Vehicle 7
 Time: T+ 45.0524s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.83504e-07
+-> Position: 79.8129
+-> Speed: 0.0202524
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173196,8 +173196,8 @@ Vehicle 7
 Time: T+ 45.069s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.81108e-07
+-> Position: 79.8137
+-> Speed: 0.0405044
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173294,8 +173294,8 @@ Vehicle 7
 Time: T+ 45.0856s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.78728e-07
+-> Position: 79.8149
+-> Speed: 0.0607564
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173392,8 +173392,8 @@ Vehicle 7
 Time: T+ 45.1022s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.76362e-07
+-> Position: 79.8164
+-> Speed: 0.0810084
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173490,8 +173490,8 @@ Vehicle 7
 Time: T+ 45.1188s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.74011e-07
+-> Position: 79.8183
+-> Speed: 0.10126
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173588,8 +173588,8 @@ Vehicle 7
 Time: T+ 45.1354s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.71674e-07
+-> Position: 79.8205
+-> Speed: 0.121512
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173686,8 +173686,8 @@ Vehicle 7
 Time: T+ 45.152s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.69352e-07
+-> Position: 79.823
+-> Speed: 0.141764
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173784,8 +173784,8 @@ Vehicle 7
 Time: T+ 45.1686s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.67045e-07
+-> Position: 79.8258
+-> Speed: 0.162016
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173882,8 +173882,8 @@ Vehicle 7
 Time: T+ 45.1852s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.64752e-07
+-> Position: 79.829
+-> Speed: 0.182268
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -173980,8 +173980,8 @@ Vehicle 7
 Time: T+ 45.2018s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.62474e-07
+-> Position: 79.8326
+-> Speed: 0.20252
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174078,8 +174078,8 @@ Vehicle 7
 Time: T+ 45.2184s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.60209e-07
+-> Position: 79.8364
+-> Speed: 0.222772
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174176,8 +174176,8 @@ Vehicle 7
 Time: T+ 45.235s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.57959e-07
+-> Position: 79.8406
+-> Speed: 0.243024
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174274,8 +174274,8 @@ Vehicle 7
 Time: T+ 45.2516s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.55723e-07
+-> Position: 79.8452
+-> Speed: 0.263276
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174372,8 +174372,8 @@ Vehicle 7
 Time: T+ 45.2682s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.53501e-07
+-> Position: 79.85
+-> Speed: 0.283528
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174470,8 +174470,8 @@ Vehicle 7
 Time: T+ 45.2848s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.51293e-07
+-> Position: 79.8553
+-> Speed: 0.30378
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174568,8 +174568,8 @@ Vehicle 7
 Time: T+ 45.3014s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.49098e-07
+-> Position: 79.8608
+-> Speed: 0.324032
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174674,8 +174674,8 @@ Vehicle 7
 Time: T+ 45.318s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.46918e-07
+-> Position: 79.8667
+-> Speed: 0.344284
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174780,8 +174780,8 @@ Vehicle 7
 Time: T+ 45.3346s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.4475e-07
+-> Position: 79.8729
+-> Speed: 0.364536
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174886,8 +174886,8 @@ Vehicle 7
 Time: T+ 45.3512s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.42597e-07
+-> Position: 79.8795
+-> Speed: 0.384788
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -174992,8 +174992,8 @@ Vehicle 7
 Time: T+ 45.3678s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.40457e-07
+-> Position: 79.8863
+-> Speed: 0.40504
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175098,8 +175098,8 @@ Vehicle 7
 Time: T+ 45.3844s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.3833e-07
+-> Position: 79.8936
+-> Speed: 0.425292
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175204,8 +175204,8 @@ Vehicle 7
 Time: T+ 45.401s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.36216e-07
+-> Position: 79.9011
+-> Speed: 0.445544
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175310,8 +175310,8 @@ Vehicle 7
 Time: T+ 45.4176s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.34116e-07
+-> Position: 79.909
+-> Speed: 0.465796
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175416,8 +175416,8 @@ Vehicle 7
 Time: T+ 45.4342s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.32029e-07
+-> Position: 79.9173
+-> Speed: 0.486048
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175522,8 +175522,8 @@ Vehicle 7
 Time: T+ 45.4508s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.29955e-07
+-> Position: 79.9258
+-> Speed: 0.5063
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175628,8 +175628,8 @@ Vehicle 7
 Time: T+ 45.4674s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.27894e-07
+-> Position: 79.9348
+-> Speed: 0.526552
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175734,8 +175734,8 @@ Vehicle 7
 Time: T+ 45.484s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.25845e-07
+-> Position: 79.944
+-> Speed: 0.546804
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175840,8 +175840,8 @@ Vehicle 7
 Time: T+ 45.5006s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.2381e-07
+-> Position: 79.9536
+-> Speed: 0.567056
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -175946,8 +175946,8 @@ Vehicle 7
 Time: T+ 45.5172s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.21787e-07
+-> Position: 79.9635
+-> Speed: 0.587308
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176052,8 +176052,8 @@ Vehicle 7
 Time: T+ 45.5338s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.19777e-07
+-> Position: 79.9738
+-> Speed: 0.607559
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176158,8 +176158,8 @@ Vehicle 7
 Time: T+ 45.5504s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.17779e-07
+-> Position: 79.9843
+-> Speed: 0.627811
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176264,8 +176264,8 @@ Vehicle 7
 Time: T+ 45.567s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.15794e-07
+-> Position: 79.9953
+-> Speed: 0.648063
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176370,8 +176370,8 @@ Vehicle 7
 Time: T+ 45.5836s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.13821e-07
+-> Position: 80.0065
+-> Speed: 0.668315
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176476,8 +176476,8 @@ Vehicle 7
 Time: T+ 45.6002s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.11861e-07
+-> Position: 80.0181
+-> Speed: 0.688567
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176582,8 +176582,8 @@ Vehicle 7
 Time: T+ 45.6168s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.09913e-07
+-> Position: 80.0301
+-> Speed: 0.708818
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176688,8 +176688,8 @@ Vehicle 7
 Time: T+ 45.6334s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.07977e-07
+-> Position: 80.0423
+-> Speed: 0.72907
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176794,8 +176794,8 @@ Vehicle 7
 Time: T+ 45.65s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.06053e-07
+-> Position: 80.0549
+-> Speed: 0.749322
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -176900,8 +176900,8 @@ Vehicle 7
 Time: T+ 45.6666s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.04141e-07
+-> Position: 80.0679
+-> Speed: 0.769573
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -177006,8 +177006,8 @@ Vehicle 7
 Time: T+ 45.6832s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.02241e-07
+-> Position: 80.0812
+-> Speed: 0.789825
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -177112,8 +177112,8 @@ Vehicle 7
 Time: T+ 45.6998s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 3.00353e-07
+-> Position: 80.0948
+-> Speed: 0.810077
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -177218,8 +177218,8 @@ Vehicle 7
 Time: T+ 45.7164s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.98477e-07
+-> Position: 80.1087
+-> Speed: 0.830328
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
@@ -177324,12 +177324,12 @@ Vehicle 7
 Time: T+ 45.733s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.96612e-07
+-> Position: 80.123
+-> Speed: 0.850579
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
--> Speed: 0
+-> Speed: 7.74123e-05
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177430,12 +177430,12 @@ Vehicle 7
 Time: T+ 45.7496s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.94759e-07
+-> Position: 80.1376
+-> Speed: 0.870831
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
--> Speed: 0
+-> Speed: 0.000356658
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177536,12 +177536,12 @@ Vehicle 7
 Time: T+ 45.7662s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.92918e-07
+-> Position: 80.1526
+-> Speed: 0.891082
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
--> Speed: 0
+-> Speed: 0.000837808
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177642,12 +177642,12 @@ Vehicle 7
 Time: T+ 45.7828s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.91088e-07
+-> Position: 80.1679
+-> Speed: 0.911333
 Vehicle 1
 -> Road: Middelheimlaan
 -> Position: 64.77
--> Speed: 0
+-> Speed: 0.00152083
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177748,12 +177748,12 @@ Vehicle 7
 Time: T+ 45.7994s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.8927e-07
+-> Position: 80.1835
+-> Speed: 0.931585
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7701
+-> Speed: 0.0024056
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177854,12 +177854,12 @@ Vehicle 7
 Time: T+ 45.816s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.87463e-07
+-> Position: 80.1995
+-> Speed: 0.951836
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7702
+-> Speed: 0.00349188
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -177960,12 +177960,12 @@ Vehicle 7
 Time: T+ 45.8326s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.85667e-07
+-> Position: 80.2158
+-> Speed: 0.972087
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7703
+-> Speed: 0.00477937
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178066,12 +178066,12 @@ Vehicle 7
 Time: T+ 45.8492s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.83883e-07
+-> Position: 80.2324
+-> Speed: 0.992338
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7704
+-> Speed: 0.00626766
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178172,12 +178172,12 @@ Vehicle 7
 Time: T+ 45.8658s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.82109e-07
+-> Position: 80.2494
+-> Speed: 1.01259
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7705
+-> Speed: 0.00795627
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178278,12 +178278,12 @@ Vehicle 7
 Time: T+ 45.8824s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.80347e-07
+-> Position: 80.2667
+-> Speed: 1.03284
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7707
+-> Speed: 0.00984462
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178384,12 +178384,12 @@ Vehicle 7
 Time: T+ 45.899s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.78596e-07
+-> Position: 80.2844
+-> Speed: 1.05309
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7709
+-> Speed: 0.0119321
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178490,12 +178490,12 @@ Vehicle 7
 Time: T+ 45.9156s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.76855e-07
+-> Position: 80.3024
+-> Speed: 1.07334
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7712
+-> Speed: 0.0142179
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178596,12 +178596,12 @@ Vehicle 7
 Time: T+ 45.9322s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.75126e-07
+-> Position: 80.3207
+-> Speed: 1.09359
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7715
+-> Speed: 0.0167014
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178702,12 +178702,12 @@ Vehicle 7
 Time: T+ 45.9488s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.73407e-07
+-> Position: 80.3394
+-> Speed: 1.11384
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7718
+-> Speed: 0.0193815
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178808,12 +178808,12 @@ Vehicle 7
 Time: T+ 45.9654s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.71699e-07
+-> Position: 80.3583
+-> Speed: 1.13409
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7722
+-> Speed: 0.0222576
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -178914,12 +178914,12 @@ Vehicle 7
 Time: T+ 45.982s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.70002e-07
+-> Position: 80.3777
+-> Speed: 1.15434
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7726
+-> Speed: 0.0253285
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179020,12 +179020,12 @@ Vehicle 7
 Time: T+ 45.9986s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.68315e-07
+-> Position: 80.3973
+-> Speed: 1.17459
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7731
+-> Speed: 0.0285932
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179126,12 +179126,12 @@ Vehicle 7
 Time: T+ 46.0152s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.66639e-07
+-> Position: 80.4173
+-> Speed: 1.19484
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7737
+-> Speed: 0.0320507
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179232,12 +179232,12 @@ Vehicle 7
 Time: T+ 46.0318s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.64974e-07
+-> Position: 80.4377
+-> Speed: 1.21509
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7743
+-> Speed: 0.0356997
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179338,12 +179338,12 @@ Vehicle 7
 Time: T+ 46.0484s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.63318e-07
+-> Position: 80.4584
+-> Speed: 1.23534
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.775
+-> Speed: 0.0395393
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179444,12 +179444,12 @@ Vehicle 7
 Time: T+ 46.065s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.61673e-07
+-> Position: 80.4794
+-> Speed: 1.25559
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7758
+-> Speed: 0.043568
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179550,12 +179550,12 @@ Vehicle 7
 Time: T+ 46.0816s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.60039e-07
+-> Position: 80.5007
+-> Speed: 1.27584
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7766
+-> Speed: 0.0477846
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179656,12 +179656,12 @@ Vehicle 7
 Time: T+ 46.0982s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.58414e-07
+-> Position: 80.5224
+-> Speed: 1.29609
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7775
+-> Speed: 0.0521879
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179762,12 +179762,12 @@ Vehicle 7
 Time: T+ 46.1148s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.568e-07
+-> Position: 80.5444
+-> Speed: 1.31634
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7785
+-> Speed: 0.0567765
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179868,12 +179868,12 @@ Vehicle 7
 Time: T+ 46.1314s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.55196e-07
+-> Position: 80.5668
+-> Speed: 1.33658
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7795
+-> Speed: 0.061549
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -179974,12 +179974,12 @@ Vehicle 7
 Time: T+ 46.148s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.53602e-07
+-> Position: 80.5895
+-> Speed: 1.35683
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7807
+-> Speed: 0.066504
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180080,12 +180080,12 @@ Vehicle 7
 Time: T+ 46.1646s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.52018e-07
+-> Position: 80.6125
+-> Speed: 1.37708
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7819
+-> Speed: 0.0716401
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180186,12 +180186,12 @@ Vehicle 7
 Time: T+ 46.1812s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.50443e-07
+-> Position: 80.6359
+-> Speed: 1.39733
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7832
+-> Speed: 0.0769558
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180292,12 +180292,12 @@ Vehicle 7
 Time: T+ 46.1978s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.48879e-07
+-> Position: 80.6596
+-> Speed: 1.41757
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7847
+-> Speed: 0.0824495
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180398,12 +180398,12 @@ Vehicle 7
 Time: T+ 46.2144s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.47324e-07
+-> Position: 80.6836
+-> Speed: 1.43782
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7862
+-> Speed: 0.0881199
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180504,12 +180504,12 @@ Vehicle 7
 Time: T+ 46.231s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.45779e-07
+-> Position: 80.708
+-> Speed: 1.45807
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7878
+-> Speed: 0.0939654
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180610,12 +180610,12 @@ Vehicle 7
 Time: T+ 46.2476s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.44244e-07
+-> Position: 80.7327
+-> Speed: 1.47832
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7895
+-> Speed: 0.0999843
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180716,12 +180716,12 @@ Vehicle 7
 Time: T+ 46.2642s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.42718e-07
+-> Position: 80.7577
+-> Speed: 1.49856
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7913
+-> Speed: 0.106175
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180822,12 +180822,12 @@ Vehicle 7
 Time: T+ 46.2808s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.41202e-07
+-> Position: 80.7831
+-> Speed: 1.51881
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7932
+-> Speed: 0.112537
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -180928,12 +180928,12 @@ Vehicle 7
 Time: T+ 46.2974s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.39695e-07
+-> Position: 80.8088
+-> Speed: 1.53905
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7953
+-> Speed: 0.119067
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181034,12 +181034,12 @@ Vehicle 7
 Time: T+ 46.314s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.38198e-07
+-> Position: 80.8349
+-> Speed: 1.5593
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7974
+-> Speed: 0.125764
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181140,12 +181140,12 @@ Vehicle 7
 Time: T+ 46.3306s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.3671e-07
+-> Position: 80.8613
+-> Speed: 1.57954
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.7997
+-> Speed: 0.132626
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181246,12 +181246,12 @@ Vehicle 7
 Time: T+ 46.3472s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.35231e-07
+-> Position: 80.888
+-> Speed: 1.59979
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.802
+-> Speed: 0.139653
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181352,12 +181352,12 @@ Vehicle 7
 Time: T+ 46.3638s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.33762e-07
+-> Position: 80.915
+-> Speed: 1.62003
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8045
+-> Speed: 0.146842
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181458,12 +181458,12 @@ Vehicle 7
 Time: T+ 46.3804s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.32301e-07
+-> Position: 80.9424
+-> Speed: 1.64028
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8072
+-> Speed: 0.154192
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181564,12 +181564,12 @@ Vehicle 7
 Time: T+ 46.397s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.3085e-07
+-> Position: 80.9702
+-> Speed: 1.66052
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8099
+-> Speed: 0.1617
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181670,12 +181670,12 @@ Vehicle 7
 Time: T+ 46.4136s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.29408e-07
+-> Position: 80.9982
+-> Speed: 1.68076
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8128
+-> Speed: 0.169366
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181776,12 +181776,12 @@ Vehicle 7
 Time: T+ 46.4302s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.27975e-07
+-> Position: 81.0266
+-> Speed: 1.701
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8158
+-> Speed: 0.177188
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181882,12 +181882,12 @@ Vehicle 7
 Time: T+ 46.4468s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.26551e-07
+-> Position: 81.0554
+-> Speed: 1.72125
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8189
+-> Speed: 0.185163
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -181988,12 +181988,12 @@ Vehicle 7
 Time: T+ 46.4634s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.25136e-07
+-> Position: 81.0845
+-> Speed: 1.74149
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8222
+-> Speed: 0.193292
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182094,12 +182094,12 @@ Vehicle 7
 Time: T+ 46.48s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.23729e-07
+-> Position: 81.1139
+-> Speed: 1.76173
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8256
+-> Speed: 0.20157
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182200,12 +182200,12 @@ Vehicle 7
 Time: T+ 46.4966s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.22332e-07
+-> Position: 81.1436
+-> Speed: 1.78197
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8292
+-> Speed: 0.209998
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182306,12 +182306,12 @@ Vehicle 7
 Time: T+ 46.5132s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.20943e-07
+-> Position: 81.1737
+-> Speed: 1.80221
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8329
+-> Speed: 0.218574
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182412,12 +182412,12 @@ Vehicle 7
 Time: T+ 46.5298s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.19563e-07
+-> Position: 81.2041
+-> Speed: 1.82245
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8367
+-> Speed: 0.227295
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182518,12 +182518,12 @@ Vehicle 7
 Time: T+ 46.5464s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.18191e-07
+-> Position: 81.2349
+-> Speed: 1.84269
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8407
+-> Speed: 0.236161
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182624,12 +182624,12 @@ Vehicle 7
 Time: T+ 46.563s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.16828e-07
+-> Position: 81.266
+-> Speed: 1.86293
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8448
+-> Speed: 0.245169
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182730,12 +182730,12 @@ Vehicle 7
 Time: T+ 46.5796s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.15474e-07
+-> Position: 81.2974
+-> Speed: 1.88316
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8491
+-> Speed: 0.254318
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182836,12 +182836,12 @@ Vehicle 7
 Time: T+ 46.5962s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.14127e-07
+-> Position: 81.3292
+-> Speed: 1.9034
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8536
+-> Speed: 0.263606
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -182942,12 +182942,12 @@ Vehicle 7
 Time: T+ 46.6128s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.1279e-07
+-> Position: 81.3613
+-> Speed: 1.92364
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8582
+-> Speed: 0.273032
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183048,12 +183048,12 @@ Vehicle 7
 Time: T+ 46.6294s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.11461e-07
+-> Position: 81.3937
+-> Speed: 1.94387
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.863
+-> Speed: 0.282594
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183154,12 +183154,12 @@ Vehicle 7
 Time: T+ 46.646s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.1014e-07
+-> Position: 81.4265
+-> Speed: 1.96411
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8679
+-> Speed: 0.292291
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183260,12 +183260,12 @@ Vehicle 7
 Time: T+ 46.6626s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.08827e-07
+-> Position: 81.4596
+-> Speed: 1.98434
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.873
+-> Speed: 0.302121
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183366,12 +183366,12 @@ Vehicle 7
 Time: T+ 46.6792s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.07522e-07
+-> Position: 81.493
+-> Speed: 2.00457
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8783
+-> Speed: 0.312082
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183472,12 +183472,12 @@ Vehicle 7
 Time: T+ 46.6958s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.06226e-07
+-> Position: 81.5268
+-> Speed: 2.02481
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8837
+-> Speed: 0.322173
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183578,12 +183578,12 @@ Vehicle 7
 Time: T+ 46.7124s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.04938e-07
+-> Position: 81.5609
+-> Speed: 2.04504
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8893
+-> Speed: 0.332392
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183684,12 +183684,12 @@ Vehicle 7
 Time: T+ 46.729s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.03658e-07
+-> Position: 81.5954
+-> Speed: 2.06527
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.8951
+-> Speed: 0.342738
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183790,12 +183790,12 @@ Vehicle 7
 Time: T+ 46.7456s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.02385e-07
+-> Position: 81.6302
+-> Speed: 2.0855
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.901
+-> Speed: 0.353209
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -183896,12 +183896,12 @@ Vehicle 7
 Time: T+ 46.7622s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 2.01121e-07
+-> Position: 81.6653
+-> Speed: 2.10573
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9072
+-> Speed: 0.363805
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184002,12 +184002,12 @@ Vehicle 7
 Time: T+ 46.7788s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.99865e-07
+-> Position: 81.7007
+-> Speed: 2.12596
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9135
+-> Speed: 0.374522
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184108,12 +184108,12 @@ Vehicle 7
 Time: T+ 46.7954s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.98616e-07
+-> Position: 81.7365
+-> Speed: 2.14619
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.92
+-> Speed: 0.38536
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184214,12 +184214,12 @@ Vehicle 7
 Time: T+ 46.812s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.97375e-07
+-> Position: 81.7727
+-> Speed: 2.16641
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9266
+-> Speed: 0.396317
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184320,12 +184320,12 @@ Vehicle 7
 Time: T+ 46.8286s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.96143e-07
+-> Position: 81.8091
+-> Speed: 2.18664
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9335
+-> Speed: 0.407392
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184426,12 +184426,12 @@ Vehicle 7
 Time: T+ 46.8452s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.94917e-07
+-> Position: 81.8459
+-> Speed: 2.20686
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9405
+-> Speed: 0.418584
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184532,12 +184532,12 @@ Vehicle 7
 Time: T+ 46.8618s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.937e-07
+-> Position: 81.8831
+-> Speed: 2.22709
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9477
+-> Speed: 0.42989
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184638,12 +184638,12 @@ Vehicle 7
 Time: T+ 46.8784s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.9249e-07
+-> Position: 81.9205
+-> Speed: 2.24731
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9552
+-> Speed: 0.44131
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184744,12 +184744,12 @@ Vehicle 7
 Time: T+ 46.895s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.91287e-07
+-> Position: 81.9584
+-> Speed: 2.26753
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9628
+-> Speed: 0.452842
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184850,12 +184850,12 @@ Vehicle 7
 Time: T+ 46.9116s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.90092e-07
+-> Position: 81.9965
+-> Speed: 2.28775
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9706
+-> Speed: 0.464485
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -184956,12 +184956,12 @@ Vehicle 7
 Time: T+ 46.9282s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.88905e-07
+-> Position: 82.035
+-> Speed: 2.30797
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9786
+-> Speed: 0.476237
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185062,12 +185062,12 @@ Vehicle 7
 Time: T+ 46.9448s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.87725e-07
+-> Position: 82.0738
+-> Speed: 2.32819
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9868
+-> Speed: 0.488097
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185168,12 +185168,12 @@ Vehicle 7
 Time: T+ 46.9614s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.86552e-07
+-> Position: 82.1129
+-> Speed: 2.3484
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 64.9952
+-> Speed: 0.500064
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185274,12 +185274,12 @@ Vehicle 7
 Time: T+ 46.978s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.85387e-07
+-> Position: 82.1524
+-> Speed: 2.36862
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0038
+-> Speed: 0.512136
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185380,12 +185380,12 @@ Vehicle 7
 Time: T+ 46.9946s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.84229e-07
+-> Position: 82.1923
+-> Speed: 2.38883
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0126
+-> Speed: 0.524312
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185486,12 +185486,12 @@ Vehicle 7
 Time: T+ 47.0112s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.83078e-07
+-> Position: 82.2324
+-> Speed: 2.40905
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0216
+-> Speed: 0.53659
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185592,12 +185592,12 @@ Vehicle 7
 Time: T+ 47.0278s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.81934e-07
+-> Position: 82.2729
+-> Speed: 2.42926
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0308
+-> Speed: 0.548971
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185698,12 +185698,12 @@ Vehicle 7
 Time: T+ 47.0444s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.80798e-07
+-> Position: 82.3137
+-> Speed: 2.44947
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0402
+-> Speed: 0.561451
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185804,12 +185804,12 @@ Vehicle 7
 Time: T+ 47.061s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.79668e-07
+-> Position: 82.3549
+-> Speed: 2.46968
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0499
+-> Speed: 0.57403
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -185910,12 +185910,12 @@ Vehicle 7
 Time: T+ 47.0776s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.78546e-07
+-> Position: 82.3964
+-> Speed: 2.48988
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0597
+-> Speed: 0.586706
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186016,12 +186016,12 @@ Vehicle 7
 Time: T+ 47.0942s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.7743e-07
+-> Position: 82.4382
+-> Speed: 2.51009
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0698
+-> Speed: 0.599479
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186122,12 +186122,12 @@ Vehicle 7
 Time: T+ 47.1108s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.76322e-07
+-> Position: 82.4804
+-> Speed: 2.5303
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0801
+-> Speed: 0.612347
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186228,12 +186228,12 @@ Vehicle 7
 Time: T+ 47.1274s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.75221e-07
+-> Position: 82.5229
+-> Speed: 2.5505
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.0905
+-> Speed: 0.62531
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186334,12 +186334,12 @@ Vehicle 7
 Time: T+ 47.144s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.74126e-07
+-> Position: 82.5658
+-> Speed: 2.5707
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1012
+-> Speed: 0.638364
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186440,12 +186440,12 @@ Vehicle 7
 Time: T+ 47.1606s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.73038e-07
+-> Position: 82.6089
+-> Speed: 2.5909
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1122
+-> Speed: 0.651511
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186546,12 +186546,12 @@ Vehicle 7
 Time: T+ 47.1772s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.71957e-07
+-> Position: 82.6524
+-> Speed: 2.6111
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1233
+-> Speed: 0.664748
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186652,12 +186652,12 @@ Vehicle 7
 Time: T+ 47.1938s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.70883e-07
+-> Position: 82.6963
+-> Speed: 2.63129
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1347
+-> Speed: 0.678074
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186758,12 +186758,12 @@ Vehicle 7
 Time: T+ 47.2104s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.69816e-07
+-> Position: 82.7405
+-> Speed: 2.65149
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1463
+-> Speed: 0.691488
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186864,12 +186864,12 @@ Vehicle 7
 Time: T+ 47.227s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.68755e-07
+-> Position: 82.785
+-> Speed: 2.67168
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1581
+-> Speed: 0.70499
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -186970,12 +186970,12 @@ Vehicle 7
 Time: T+ 47.2436s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.67701e-07
+-> Position: 82.8298
+-> Speed: 2.69187
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1701
+-> Speed: 0.718577
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187076,12 +187076,12 @@ Vehicle 7
 Time: T+ 47.2602s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.66653e-07
+-> Position: 82.875
+-> Speed: 2.71206
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1824
+-> Speed: 0.732249
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187182,12 +187182,12 @@ Vehicle 7
 Time: T+ 47.2768s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.65612e-07
+-> Position: 82.9206
+-> Speed: 2.73225
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.1949
+-> Speed: 0.746005
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187288,12 +187288,12 @@ Vehicle 7
 Time: T+ 47.2934s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.64577e-07
+-> Position: 82.9664
+-> Speed: 2.75243
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2076
+-> Speed: 0.759844
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187394,12 +187394,12 @@ Vehicle 7
 Time: T+ 47.31s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.63549e-07
+-> Position: 83.0126
+-> Speed: 2.77262
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2206
+-> Speed: 0.773764
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187500,12 +187500,12 @@ Vehicle 7
 Time: T+ 47.3266s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.62528e-07
+-> Position: 83.0591
+-> Speed: 2.7928
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2338
+-> Speed: 0.787765
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187606,12 +187606,12 @@ Vehicle 7
 Time: T+ 47.3432s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.61512e-07
+-> Position: 83.106
+-> Speed: 2.81298
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2472
+-> Speed: 0.801845
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187712,12 +187712,12 @@ Vehicle 7
 Time: T+ 47.3598s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.60503e-07
+-> Position: 83.1532
+-> Speed: 2.83315
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2609
+-> Speed: 0.816004
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187818,12 +187818,12 @@ Vehicle 7
 Time: T+ 47.3764s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.59501e-07
+-> Position: 83.2007
+-> Speed: 2.85333
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2748
+-> Speed: 0.830241
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -187924,12 +187924,12 @@ Vehicle 7
 Time: T+ 47.393s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.58504e-07
+-> Position: 83.2486
+-> Speed: 2.8735
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.2889
+-> Speed: 0.844554
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188030,12 +188030,12 @@ Vehicle 7
 Time: T+ 47.4096s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.57514e-07
+-> Position: 83.2968
+-> Speed: 2.89367
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3033
+-> Speed: 0.858943
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188136,12 +188136,12 @@ Vehicle 7
 Time: T+ 47.4262s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.5653e-07
+-> Position: 83.3453
+-> Speed: 2.91384
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3179
+-> Speed: 0.873407
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188242,12 +188242,12 @@ Vehicle 7
 Time: T+ 47.4428s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.55553e-07
+-> Position: 83.3942
+-> Speed: 2.934
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3328
+-> Speed: 0.887944
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188348,12 +188348,12 @@ Vehicle 7
 Time: T+ 47.4594s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.54581e-07
+-> Position: 83.4434
+-> Speed: 2.95417
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3479
+-> Speed: 0.902555
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188454,12 +188454,12 @@ Vehicle 7
 Time: T+ 47.476s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.53615e-07
+-> Position: 83.493
+-> Speed: 2.97433
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3632
+-> Speed: 0.917237
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188560,12 +188560,12 @@ Vehicle 7
 Time: T+ 47.4926s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.52656e-07
+-> Position: 83.5428
+-> Speed: 2.99449
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3788
+-> Speed: 0.93199
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188666,12 +188666,12 @@ Vehicle 7
 Time: T+ 47.5092s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.51702e-07
+-> Position: 83.593
+-> Speed: 3.01464
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.3946
+-> Speed: 0.946813
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188772,12 +188772,12 @@ Vehicle 7
 Time: T+ 47.5258s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.50754e-07
+-> Position: 83.6436
+-> Speed: 3.03479
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4107
+-> Speed: 0.961705
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188878,12 +188878,12 @@ Vehicle 7
 Time: T+ 47.5424s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.49813e-07
+-> Position: 83.6945
+-> Speed: 3.05494
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4271
+-> Speed: 0.976666
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -188984,12 +188984,12 @@ Vehicle 7
 Time: T+ 47.559s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.48877e-07
+-> Position: 83.7457
+-> Speed: 3.07509
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4437
+-> Speed: 0.991694
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189090,12 +189090,12 @@ Vehicle 7
 Time: T+ 47.5756s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.47947e-07
+-> Position: 83.7972
+-> Speed: 3.09524
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4605
+-> Speed: 1.00679
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189196,12 +189196,12 @@ Vehicle 7
 Time: T+ 47.5922s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.47022e-07
+-> Position: 83.8491
+-> Speed: 3.11538
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4776
+-> Speed: 1.02195
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189298,12 +189298,12 @@ Vehicle 7
 Time: T+ 47.6088s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.46104e-07
+-> Position: 83.9013
+-> Speed: 3.13552
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.4949
+-> Speed: 1.03718
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189400,12 +189400,12 @@ Vehicle 7
 Time: T+ 47.6254s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.45191e-07
+-> Position: 83.9539
+-> Speed: 3.15565
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.5125
+-> Speed: 1.05247
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189502,12 +189502,12 @@ Vehicle 7
 Time: T+ 47.642s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.44284e-07
+-> Position: 84.0068
+-> Speed: 3.17579
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.5304
+-> Speed: 1.06782
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189604,12 +189604,12 @@ Vehicle 7
 Time: T+ 47.6586s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.43383e-07
+-> Position: 84.06
+-> Speed: 3.19592
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.5485
+-> Speed: 1.08323
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189706,12 +189706,12 @@ Vehicle 7
 Time: T+ 47.6752s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.42487e-07
+-> Position: 84.1135
+-> Speed: 3.21604
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.5669
+-> Speed: 1.09871
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189808,12 +189808,12 @@ Vehicle 7
 Time: T+ 47.6918s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.41597e-07
+-> Position: 84.1674
+-> Speed: 3.23617
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.5855
+-> Speed: 1.11425
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -189910,12 +189910,12 @@ Vehicle 7
 Time: T+ 47.7084s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.40713e-07
+-> Position: 84.2216
+-> Speed: 3.25629
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.6044
+-> Speed: 1.12985
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190012,12 +190012,12 @@ Vehicle 7
 Time: T+ 47.725s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.39834e-07
+-> Position: 84.2762
+-> Speed: 3.27641
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.6235
+-> Speed: 1.14551
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190114,12 +190114,12 @@ Vehicle 7
 Time: T+ 47.7416s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.3896e-07
+-> Position: 84.3311
+-> Speed: 3.29652
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.6429
+-> Speed: 1.16123
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190216,12 +190216,12 @@ Vehicle 7
 Time: T+ 47.7582s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.38092e-07
+-> Position: 84.3863
+-> Speed: 3.31663
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.6626
+-> Speed: 1.177
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190318,12 +190318,12 @@ Vehicle 7
 Time: T+ 47.7748s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.37229e-07
+-> Position: 84.4419
+-> Speed: 3.33674
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.6825
+-> Speed: 1.19283
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190420,12 +190420,12 @@ Vehicle 7
 Time: T+ 47.7914s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.36372e-07
+-> Position: 84.4978
+-> Speed: 3.35684
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.7027
+-> Speed: 1.20872
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190522,12 +190522,12 @@ Vehicle 7
 Time: T+ 47.808s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.3552e-07
+-> Position: 84.554
+-> Speed: 3.37694
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.7232
+-> Speed: 1.22467
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190624,12 +190624,12 @@ Vehicle 7
 Time: T+ 47.8246s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.34674e-07
+-> Position: 84.6105
+-> Speed: 3.39704
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.7439
+-> Speed: 1.24067
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190726,12 +190726,12 @@ Vehicle 7
 Time: T+ 47.8412s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.33832e-07
+-> Position: 84.6674
+-> Speed: 3.41713
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.7649
+-> Speed: 1.25672
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190828,12 +190828,12 @@ Vehicle 7
 Time: T+ 47.8578s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.32996e-07
+-> Position: 84.7247
+-> Speed: 3.43722
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.7862
+-> Speed: 1.27283
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -190930,12 +190930,12 @@ Vehicle 7
 Time: T+ 47.8744s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.32166e-07
+-> Position: 84.7822
+-> Speed: 3.4573
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.8077
+-> Speed: 1.28899
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191032,12 +191032,12 @@ Vehicle 7
 Time: T+ 47.891s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.3134e-07
+-> Position: 84.8401
+-> Speed: 3.47738
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.8295
+-> Speed: 1.30521
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191134,12 +191134,12 @@ Vehicle 7
 Time: T+ 47.9076s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.3052e-07
+-> Position: 84.8983
+-> Speed: 3.49746
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.8516
+-> Speed: 1.32147
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191236,12 +191236,12 @@ Vehicle 7
 Time: T+ 47.9242s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.29704e-07
+-> Position: 84.9569
+-> Speed: 3.51753
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.8739
+-> Speed: 1.33779
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191338,12 +191338,12 @@ Vehicle 7
 Time: T+ 47.9408s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.28894e-07
+-> Position: 85.0158
+-> Speed: 3.5376
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.8965
+-> Speed: 1.35416
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191440,12 +191440,12 @@ Vehicle 7
 Time: T+ 47.9574s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.28089e-07
+-> Position: 85.075
+-> Speed: 3.55766
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.9194
+-> Speed: 1.37058
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191542,12 +191542,12 @@ Vehicle 7
 Time: T+ 47.974s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.27289e-07
+-> Position: 85.1346
+-> Speed: 3.57772
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.9426
+-> Speed: 1.38705
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191644,12 +191644,12 @@ Vehicle 7
 Time: T+ 47.9906s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.26494e-07
+-> Position: 85.1944
+-> Speed: 3.59778
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.966
+-> Speed: 1.40356
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191746,12 +191746,12 @@ Vehicle 7
 Time: T+ 48.0072s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.25703e-07
+-> Position: 85.2547
+-> Speed: 3.61783
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 65.9897
+-> Speed: 1.42013
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191848,12 +191848,12 @@ Vehicle 7
 Time: T+ 48.0238s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.24918e-07
+-> Position: 85.3152
+-> Speed: 3.63788
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.0137
+-> Speed: 1.43674
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -191950,12 +191950,12 @@ Vehicle 7
 Time: T+ 48.0404s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.24138e-07
+-> Position: 85.3761
+-> Speed: 3.65792
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.038
+-> Speed: 1.4534
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192052,12 +192052,12 @@ Vehicle 7
 Time: T+ 48.057s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.23362e-07
+-> Position: 85.4373
+-> Speed: 3.67796
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.0625
+-> Speed: 1.47011
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192154,12 +192154,12 @@ Vehicle 7
 Time: T+ 48.0736s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.22592e-07
+-> Position: 85.4989
+-> Speed: 3.69799
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.0873
+-> Speed: 1.48686
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192256,12 +192256,12 @@ Vehicle 7
 Time: T+ 48.0902s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.21826e-07
+-> Position: 85.5608
+-> Speed: 3.71802
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.1124
+-> Speed: 1.50366
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192358,12 +192358,12 @@ Vehicle 7
 Time: T+ 48.1068s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.21065e-07
+-> Position: 85.623
+-> Speed: 3.73804
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.1378
+-> Speed: 1.5205
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192460,12 +192460,12 @@ Vehicle 7
 Time: T+ 48.1234s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.20309e-07
+-> Position: 85.6855
+-> Speed: 3.75806
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.1635
+-> Speed: 1.53738
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192562,12 +192562,12 @@ Vehicle 7
 Time: T+ 48.14s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.19557e-07
+-> Position: 85.7484
+-> Speed: 3.77807
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.1894
+-> Speed: 1.55431
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192664,12 +192664,12 @@ Vehicle 7
 Time: T+ 48.1566s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.1881e-07
+-> Position: 85.8116
+-> Speed: 3.79808
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.2157
+-> Speed: 1.57129
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192766,12 +192766,12 @@ Vehicle 7
 Time: T+ 48.1732s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.18068e-07
+-> Position: 85.8752
+-> Speed: 3.81808
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.2422
+-> Speed: 1.5883
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192868,12 +192868,12 @@ Vehicle 7
 Time: T+ 48.1898s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.1733e-07
+-> Position: 85.9391
+-> Speed: 3.83808
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.2689
+-> Speed: 1.60536
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -192970,12 +192970,12 @@ Vehicle 7
 Time: T+ 48.2064s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.16597e-07
+-> Position: 86.0033
+-> Speed: 3.85807
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.296
+-> Speed: 1.62246
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193072,12 +193072,12 @@ Vehicle 7
 Time: T+ 48.223s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.15869e-07
+-> Position: 86.0678
+-> Speed: 3.87806
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.3234
+-> Speed: 1.6396
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193174,12 +193174,12 @@ Vehicle 7
 Time: T+ 48.2396s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.15145e-07
+-> Position: 86.1327
+-> Speed: 3.89804
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.351
+-> Speed: 1.65679
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193276,12 +193276,12 @@ Vehicle 7
 Time: T+ 48.2562s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.14426e-07
+-> Position: 86.1979
+-> Speed: 3.91801
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.379
+-> Speed: 1.67401
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193378,12 +193378,12 @@ Vehicle 7
 Time: T+ 48.2728s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.13711e-07
+-> Position: 86.2634
+-> Speed: 3.93798
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.4072
+-> Speed: 1.69127
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193480,12 +193480,12 @@ Vehicle 7
 Time: T+ 48.2894s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.13001e-07
+-> Position: 86.3293
+-> Speed: 3.95794
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.4357
+-> Speed: 1.70857
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193582,12 +193582,12 @@ Vehicle 7
 Time: T+ 48.306s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.12295e-07
+-> Position: 86.3955
+-> Speed: 3.9779
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.4645
+-> Speed: 1.72591
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193684,12 +193684,12 @@ Vehicle 7
 Time: T+ 48.3226s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.11593e-07
+-> Position: 86.462
+-> Speed: 3.99785
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.4936
+-> Speed: 1.74329
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193794,12 +193794,12 @@ Vehicle 7
 Time: T+ 48.3392s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.10896e-07
+-> Position: 86.5289
+-> Speed: 4.0178
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.5229
+-> Speed: 1.7607
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -193904,12 +193904,12 @@ Vehicle 7
 Time: T+ 48.3558s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.10204e-07
+-> Position: 86.5961
+-> Speed: 4.03774
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.5526
+-> Speed: 1.77816
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194014,12 +194014,12 @@ Vehicle 7
 Time: T+ 48.3724s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.09515e-07
+-> Position: 86.6636
+-> Speed: 4.05767
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.5825
+-> Speed: 1.79565
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194124,12 +194124,12 @@ Vehicle 7
 Time: T+ 48.389s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.08831e-07
+-> Position: 86.7314
+-> Speed: 4.0776
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.6128
+-> Speed: 1.81318
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194234,12 +194234,12 @@ Vehicle 7
 Time: T+ 48.4056s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.08151e-07
+-> Position: 86.7996
+-> Speed: 4.09752
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.6433
+-> Speed: 1.83074
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194344,12 +194344,12 @@ Vehicle 7
 Time: T+ 48.4222s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.07476e-07
+-> Position: 86.8681
+-> Speed: 4.11743
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.6742
+-> Speed: 1.84834
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194454,12 +194454,12 @@ Vehicle 7
 Time: T+ 48.4388s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.06804e-07
+-> Position: 86.937
+-> Speed: 4.13734
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.7053
+-> Speed: 1.86597
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194564,12 +194564,12 @@ Vehicle 7
 Time: T+ 48.4554s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.06137e-07
+-> Position: 87.0062
+-> Speed: 4.15724
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.7367
+-> Speed: 1.88364
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194674,12 +194674,12 @@ Vehicle 7
 Time: T+ 48.472s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.05474e-07
+-> Position: 87.0757
+-> Speed: 4.17714
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.7684
+-> Speed: 1.90134
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194784,12 +194784,12 @@ Vehicle 7
 Time: T+ 48.4886s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.04815e-07
+-> Position: 87.1455
+-> Speed: 4.19702
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.8004
+-> Speed: 1.91908
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -194894,12 +194894,12 @@ Vehicle 7
 Time: T+ 48.5052s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.0416e-07
+-> Position: 87.2157
+-> Speed: 4.2169
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.8327
+-> Speed: 1.93685
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195004,12 +195004,12 @@ Vehicle 7
 Time: T+ 48.5218s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.0351e-07
+-> Position: 87.2862
+-> Speed: 4.23678
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.8653
+-> Speed: 1.95465
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195114,12 +195114,12 @@ Vehicle 7
 Time: T+ 48.5384s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.02863e-07
+-> Position: 87.357
+-> Speed: 4.25664
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.8982
+-> Speed: 1.97249
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195224,12 +195224,12 @@ Vehicle 7
 Time: T+ 48.555s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.0222e-07
+-> Position: 87.4281
+-> Speed: 4.2765
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.9314
+-> Speed: 1.99036
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195334,12 +195334,12 @@ Vehicle 7
 Time: T+ 48.5716s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.01582e-07
+-> Position: 87.4996
+-> Speed: 4.29635
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.9649
+-> Speed: 2.00826
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195444,12 +195444,12 @@ Vehicle 7
 Time: T+ 48.5882s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.00947e-07
+-> Position: 87.5714
+-> Speed: 4.31619
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 66.9987
+-> Speed: 2.0262
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195554,12 +195554,12 @@ Vehicle 7
 Time: T+ 48.6048s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 1.00317e-07
+-> Position: 87.6436
+-> Speed: 4.33603
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.0327
+-> Speed: 2.04416
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195664,12 +195664,12 @@ Vehicle 7
 Time: T+ 48.6214s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.96901e-08
+-> Position: 87.7161
+-> Speed: 4.35586
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.0671
+-> Speed: 2.06215
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195774,12 +195774,12 @@ Vehicle 7
 Time: T+ 48.638s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.90674e-08
+-> Position: 87.7889
+-> Speed: 4.37568
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.1018
+-> Speed: 2.08018
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195884,12 +195884,12 @@ Vehicle 7
 Time: T+ 48.6546s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.84485e-08
+-> Position: 87.862
+-> Speed: 4.39549
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.1368
+-> Speed: 2.09824
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -195994,12 +195994,12 @@ Vehicle 7
 Time: T+ 48.6712s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.78335e-08
+-> Position: 87.9355
+-> Speed: 4.4153
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.1721
+-> Speed: 2.11632
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196104,12 +196104,12 @@ Vehicle 7
 Time: T+ 48.6878s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.72224e-08
+-> Position: 88.0092
+-> Speed: 4.43509
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.2076
+-> Speed: 2.13444
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196214,12 +196214,12 @@ Vehicle 7
 Time: T+ 48.7044s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.6615e-08
+-> Position: 88.0834
+-> Speed: 4.45488
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.2435
+-> Speed: 2.15258
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196324,12 +196324,12 @@ Vehicle 7
 Time: T+ 48.721s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.60115e-08
+-> Position: 88.1578
+-> Speed: 4.47466
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.2797
+-> Speed: 2.17076
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196434,12 +196434,12 @@ Vehicle 7
 Time: T+ 48.7376s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.54117e-08
+-> Position: 88.2326
+-> Speed: 4.49443
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.3162
+-> Speed: 2.18896
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196544,12 +196544,12 @@ Vehicle 7
 Time: T+ 48.7542s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.48157e-08
+-> Position: 88.3077
+-> Speed: 4.51419
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.353
+-> Speed: 2.20719
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196654,12 +196654,12 @@ Vehicle 7
 Time: T+ 48.7708s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.42234e-08
+-> Position: 88.3831
+-> Speed: 4.53395
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.3901
+-> Speed: 2.22544
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196764,12 +196764,12 @@ Vehicle 7
 Time: T+ 48.7874s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.36348e-08
+-> Position: 88.4589
+-> Speed: 4.55369
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.4275
+-> Speed: 2.24373
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196874,12 +196874,12 @@ Vehicle 7
 Time: T+ 48.804s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.30499e-08
+-> Position: 88.5349
+-> Speed: 4.57343
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.4652
+-> Speed: 2.26204
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -196984,12 +196984,12 @@ Vehicle 7
 Time: T+ 48.8206s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.24686e-08
+-> Position: 88.6113
+-> Speed: 4.59316
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.5032
+-> Speed: 2.28038
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197094,12 +197094,12 @@ Vehicle 7
 Time: T+ 48.8372s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.1891e-08
+-> Position: 88.6881
+-> Speed: 4.61287
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.5415
+-> Speed: 2.29875
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197204,12 +197204,12 @@ Vehicle 7
 Time: T+ 48.8538s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.13169e-08
+-> Position: 88.7651
+-> Speed: 4.63258
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.5801
+-> Speed: 2.31714
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197314,12 +197314,12 @@ Vehicle 7
 Time: T+ 48.8704s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.07465e-08
+-> Position: 88.8425
+-> Speed: 4.65228
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.619
+-> Speed: 2.33556
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197424,12 +197424,12 @@ Vehicle 7
 Time: T+ 48.887s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 9.01796e-08
+-> Position: 88.9203
+-> Speed: 4.67197
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.6583
+-> Speed: 2.354
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197534,12 +197534,12 @@ Vehicle 7
 Time: T+ 48.9036s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.96163e-08
+-> Position: 88.9983
+-> Speed: 4.69165
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.6978
+-> Speed: 2.37247
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197644,12 +197644,12 @@ Vehicle 7
 Time: T+ 48.9202s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.90565e-08
+-> Position: 89.0767
+-> Speed: 4.71133
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.7376
+-> Speed: 2.39096
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197754,12 +197754,12 @@ Vehicle 7
 Time: T+ 48.9368s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.85001e-08
+-> Position: 89.1554
+-> Speed: 4.73099
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.7778
+-> Speed: 2.40948
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197864,12 +197864,12 @@ Vehicle 7
 Time: T+ 48.9534s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.79473e-08
+-> Position: 89.2344
+-> Speed: 4.75064
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.8183
+-> Speed: 2.42802
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -197974,12 +197974,12 @@ Vehicle 7
 Time: T+ 48.97s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.73979e-08
+-> Position: 89.3137
+-> Speed: 4.77028
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.859
+-> Speed: 2.44659
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198084,12 +198084,12 @@ Vehicle 7
 Time: T+ 48.9866s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.68519e-08
+-> Position: 89.3934
+-> Speed: 4.78991
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.9001
+-> Speed: 2.46518
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198194,12 +198194,12 @@ Vehicle 7
 Time: T+ 49.0032s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.63094e-08
+-> Position: 89.4734
+-> Speed: 4.80953
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.9415
+-> Speed: 2.4838
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198304,12 +198304,12 @@ Vehicle 7
 Time: T+ 49.0198s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.57702e-08
+-> Position: 89.5537
+-> Speed: 4.82914
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 67.9832
+-> Speed: 2.50243
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198414,12 +198414,12 @@ Vehicle 7
 Time: T+ 49.0364s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.52344e-08
+-> Position: 89.6344
+-> Speed: 4.84874
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.0252
+-> Speed: 2.52109
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198524,12 +198524,12 @@ Vehicle 7
 Time: T+ 49.053s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.4702e-08
+-> Position: 89.7154
+-> Speed: 4.86833
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.0675
+-> Speed: 2.53978
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198634,12 +198634,12 @@ Vehicle 7
 Time: T+ 49.0696s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.41729e-08
+-> Position: 89.7967
+-> Speed: 4.88791
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.1101
+-> Speed: 2.55848
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198744,12 +198744,12 @@ Vehicle 7
 Time: T+ 49.0862s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.36471e-08
+-> Position: 89.8783
+-> Speed: 4.90748
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.1531
+-> Speed: 2.57721
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198854,12 +198854,12 @@ Vehicle 7
 Time: T+ 49.1028s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.31245e-08
+-> Position: 89.9603
+-> Speed: 4.92703
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.1963
+-> Speed: 2.59596
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -198964,12 +198964,12 @@ Vehicle 7
 Time: T+ 49.1194s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.26053e-08
+-> Position: 90.0425
+-> Speed: 4.94658
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.2399
+-> Speed: 2.61473
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199074,12 +199074,12 @@ Vehicle 7
 Time: T+ 49.136s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.20892e-08
+-> Position: 90.1251
+-> Speed: 4.96611
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.2837
+-> Speed: 2.63353
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199184,12 +199184,12 @@ Vehicle 7
 Time: T+ 49.1526s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.15764e-08
+-> Position: 90.2081
+-> Speed: 4.98564
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.3279
+-> Speed: 2.65234
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199294,12 +199294,12 @@ Vehicle 7
 Time: T+ 49.1692s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.10668e-08
+-> Position: 90.2913
+-> Speed: 5.00515
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.3724
+-> Speed: 2.67117
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199404,12 +199404,12 @@ Vehicle 7
 Time: T+ 49.1858s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.05604e-08
+-> Position: 90.3749
+-> Speed: 5.02465
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.4172
+-> Speed: 2.69003
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199514,12 +199514,12 @@ Vehicle 7
 Time: T+ 49.2024s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 8.00572e-08
+-> Position: 90.4588
+-> Speed: 5.04413
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.4624
+-> Speed: 2.70891
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
@@ -199624,16 +199624,16 @@ Vehicle 7
 Time: T+ 49.219s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.95571e-08
+-> Position: 90.543
+-> Speed: 5.06361
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.5078
+-> Speed: 2.7278
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
--> Speed: 0
+-> Speed: 4.02253e-05
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -199734,16 +199734,16 @@ Vehicle 7
 Time: T+ 49.2356s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.90601e-08
+-> Position: 90.6275
+-> Speed: 5.08307
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.5536
+-> Speed: 2.74672
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
--> Speed: 0
+-> Speed: 0.000248238
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -199844,16 +199844,16 @@ Vehicle 7
 Time: T+ 49.2522s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.85662e-08
+-> Position: 90.7124
+-> Speed: 5.10252
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.5996
+-> Speed: 2.76565
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
--> Speed: 0
+-> Speed: 0.000622857
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -199954,16 +199954,16 @@ Vehicle 7
 Time: T+ 49.2688s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.80754e-08
+-> Position: 90.7976
+-> Speed: 5.12196
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.646
+-> Speed: 2.78461
 Vehicle 2
 -> Road: Middelheimlaan
 -> Position: 53.5873
--> Speed: 0
+-> Speed: 0.0011629
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200064,16 +200064,16 @@ Vehicle 7
 Time: T+ 49.2854s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.75877e-08
+-> Position: 90.8831
+-> Speed: 5.14139
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.6927
+-> Speed: 2.80358
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5874
+-> Speed: 0.00186718
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200174,16 +200174,16 @@ Vehicle 7
 Time: T+ 49.302s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.7103e-08
+-> Position: 90.9689
+-> Speed: 5.1608
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.7397
+-> Speed: 2.82258
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5874
+-> Speed: 0.00273451
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200284,16 +200284,16 @@ Vehicle 7
 Time: T+ 49.3186s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.66214e-08
+-> Position: 91.0551
+-> Speed: 5.18021
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.787
+-> Speed: 2.84159
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5875
+-> Speed: 0.0037637
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200394,16 +200394,16 @@ Vehicle 7
 Time: T+ 49.3352s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.61427e-08
+-> Position: 91.1415
+-> Speed: 5.19959
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.8347
+-> Speed: 2.86062
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5876
+-> Speed: 0.00495357
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200504,16 +200504,16 @@ Vehicle 7
 Time: T+ 49.3518s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.56671e-08
+-> Position: 91.2283
+-> Speed: 5.21897
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.8826
+-> Speed: 2.87967
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5877
+-> Speed: 0.00630292
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200614,16 +200614,16 @@ Vehicle 7
 Time: T+ 49.3684s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.51944e-08
+-> Position: 91.3154
+-> Speed: 5.23833
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.9309
+-> Speed: 2.89873
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5878
+-> Speed: 0.00781056
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200724,16 +200724,16 @@ Vehicle 7
 Time: T+ 49.385s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.47247e-08
+-> Position: 91.4029
+-> Speed: 5.25768
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 68.9795
+-> Speed: 2.91782
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.588
+-> Speed: 0.00947531
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200834,16 +200834,16 @@ Vehicle 7
 Time: T+ 49.4016s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.42579e-08
+-> Position: 91.4906
+-> Speed: 5.27702
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.0284
+-> Speed: 2.93692
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5882
+-> Speed: 0.011296
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -200944,16 +200944,16 @@ Vehicle 7
 Time: T+ 49.4182s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.3794e-08
+-> Position: 91.5787
+-> Speed: 5.29634
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.0777
+-> Speed: 2.95604
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5884
+-> Speed: 0.0132714
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201054,16 +201054,16 @@ Vehicle 7
 Time: T+ 49.4348s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.3333e-08
+-> Position: 91.6671
+-> Speed: 5.31565
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.1272
+-> Speed: 2.97517
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5887
+-> Speed: 0.0154003
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201164,16 +201164,16 @@ Vehicle 7
 Time: T+ 49.4514s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.28749e-08
+-> Position: 91.7558
+-> Speed: 5.33494
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.1771
+-> Speed: 2.99433
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.589
+-> Speed: 0.0176816
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201274,16 +201274,16 @@ Vehicle 7
 Time: T+ 49.468s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.24197e-08
+-> Position: 91.8449
+-> Speed: 5.35422
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.2273
+-> Speed: 3.0135
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5894
+-> Speed: 0.020114
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201384,16 +201384,16 @@ Vehicle 7
 Time: T+ 49.4846s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.19673e-08
+-> Position: 91.9342
+-> Speed: 5.37349
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.2778
+-> Speed: 3.03268
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5898
+-> Speed: 0.0226964
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201494,16 +201494,16 @@ Vehicle 7
 Time: T+ 49.5012s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.15177e-08
+-> Position: 92.0239
+-> Speed: 5.39274
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.3286
+-> Speed: 3.05189
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5902
+-> Speed: 0.0254276
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201604,16 +201604,16 @@ Vehicle 7
 Time: T+ 49.5178s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.1071e-08
+-> Position: 92.1139
+-> Speed: 5.41198
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.3797
+-> Speed: 3.07111
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5907
+-> Speed: 0.0283065
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201714,16 +201714,16 @@ Vehicle 7
 Time: T+ 49.5344s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.0627e-08
+-> Position: 92.2042
+-> Speed: 5.4312
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.4312
+-> Speed: 3.09034
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5913
+-> Speed: 0.0313318
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201824,16 +201824,16 @@ Vehicle 7
 Time: T+ 49.551s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 7.01858e-08
+-> Position: 92.2949
+-> Speed: 5.45041
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.483
+-> Speed: 3.10959
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5919
+-> Speed: 0.0345023
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -201934,16 +201934,16 @@ Vehicle 7
 Time: T+ 49.5676s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.97474e-08
+-> Position: 92.3858
+-> Speed: 5.46961
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.5351
+-> Speed: 3.12886
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5925
+-> Speed: 0.037817
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202044,16 +202044,16 @@ Vehicle 7
 Time: T+ 49.5842s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.93117e-08
+-> Position: 92.4771
+-> Speed: 5.48879
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.5875
+-> Speed: 3.14814
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5932
+-> Speed: 0.0412746
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202154,16 +202154,16 @@ Vehicle 7
 Time: T+ 49.6008s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.88787e-08
+-> Position: 92.5687
+-> Speed: 5.50795
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.6402
+-> Speed: 3.16743
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.594
+-> Speed: 0.0448739
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202264,16 +202264,16 @@ Vehicle 7
 Time: T+ 49.6174s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.84484e-08
+-> Position: 92.6606
+-> Speed: 5.5271
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.6933
+-> Speed: 3.18674
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5948
+-> Speed: 0.0486139
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202374,16 +202374,16 @@ Vehicle 7
 Time: T+ 49.634s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.80208e-08
+-> Position: 92.7528
+-> Speed: 5.54623
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.7467
+-> Speed: 3.20607
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5957
+-> Speed: 0.0524933
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202484,16 +202484,16 @@ Vehicle 7
 Time: T+ 49.6506s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.75959e-08
+-> Position: 92.8454
+-> Speed: 5.56535
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.8004
+-> Speed: 3.22541
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5967
+-> Speed: 0.0565111
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202594,16 +202594,16 @@ Vehicle 7
 Time: T+ 49.6672s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.71736e-08
+-> Position: 92.9382
+-> Speed: 5.58445
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.8544
+-> Speed: 3.24476
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5978
+-> Speed: 0.0606659
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202704,16 +202704,16 @@ Vehicle 7
 Time: T+ 49.6838s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.6754e-08
+-> Position: 93.0314
+-> Speed: 5.60354
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.9087
+-> Speed: 3.26413
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.5989
+-> Speed: 0.0649568
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202814,16 +202814,16 @@ Vehicle 7
 Time: T+ 49.7004s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.6337e-08
+-> Position: 93.1249
+-> Speed: 5.6226
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 69.9634
+-> Speed: 3.28351
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6001
+-> Speed: 0.0693826
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -202924,16 +202924,16 @@ Vehicle 7
 Time: T+ 49.717s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.59226e-08
+-> Position: 93.2187
+-> Speed: 5.64166
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.0184
+-> Speed: 3.30291
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6013
+-> Speed: 0.0739421
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203034,16 +203034,16 @@ Vehicle 7
 Time: T+ 49.7336s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.55108e-08
+-> Position: 93.3128
+-> Speed: 5.6607
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.0737
+-> Speed: 3.32232
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6027
+-> Speed: 0.0786342
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203144,16 +203144,16 @@ Vehicle 7
 Time: T+ 49.7502s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.51016e-08
+-> Position: 93.4073
+-> Speed: 5.67972
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.1293
+-> Speed: 3.34174
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6041
+-> Speed: 0.0834578
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203254,16 +203254,16 @@ Vehicle 7
 Time: T+ 49.7668s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.46949e-08
+-> Position: 93.502
+-> Speed: 5.69872
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.1853
+-> Speed: 3.36118
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6056
+-> Speed: 0.0884117
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203364,16 +203364,16 @@ Vehicle 7
 Time: T+ 49.7834s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.42908e-08
+-> Position: 93.5971
+-> Speed: 5.71771
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.2416
+-> Speed: 3.38062
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6072
+-> Speed: 0.0934949
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203474,16 +203474,16 @@ Vehicle 7
 Time: T+ 49.8s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.38891e-08
+-> Position: 93.6925
+-> Speed: 5.73668
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.2982
+-> Speed: 3.40009
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6089
+-> Speed: 0.0987062
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203584,16 +203584,16 @@ Vehicle 7
 Time: T+ 49.8166s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.349e-08
+-> Position: 93.7882
+-> Speed: 5.75563
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.3551
+-> Speed: 3.41956
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6106
+-> Speed: 0.104045
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203694,16 +203694,16 @@ Vehicle 7
 Time: T+ 49.8332s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.30934e-08
+-> Position: 93.8842
+-> Speed: 5.77457
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.4123
+-> Speed: 3.43905
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6125
+-> Speed: 0.109509
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203804,16 +203804,16 @@ Vehicle 7
 Time: T+ 49.8498s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.26993e-08
+-> Position: 93.9805
+-> Speed: 5.79349
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.4699
+-> Speed: 3.45854
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6145
+-> Speed: 0.115098
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -203914,16 +203914,16 @@ Vehicle 7
 Time: T+ 49.8664s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.23076e-08
+-> Position: 94.0772
+-> Speed: 5.81239
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.5278
+-> Speed: 3.47805
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6165
+-> Speed: 0.120811
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204024,16 +204024,16 @@ Vehicle 7
 Time: T+ 49.883s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.19184e-08
+-> Position: 94.1741
+-> Speed: 5.83127
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.586
+-> Speed: 3.49758
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6187
+-> Speed: 0.126647
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204134,16 +204134,16 @@ Vehicle 7
 Time: T+ 49.8996s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.15316e-08
+-> Position: 94.2714
+-> Speed: 5.85014
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.6446
+-> Speed: 3.51711
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6209
+-> Speed: 0.132604
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204244,16 +204244,16 @@ Vehicle 7
 Time: T+ 49.9162s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.11472e-08
+-> Position: 94.369
+-> Speed: 5.86898
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.7035
+-> Speed: 3.53666
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6233
+-> Speed: 0.138682
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204354,16 +204354,16 @@ Vehicle 7
 Time: T+ 49.9328s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.07652e-08
+-> Position: 94.4669
+-> Speed: 5.88781
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.7626
+-> Speed: 3.55621
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6257
+-> Speed: 0.144879
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204464,16 +204464,16 @@ Vehicle 7
 Time: T+ 49.9494s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.03857e-08
+-> Position: 94.5651
+-> Speed: 5.90662
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.8222
+-> Speed: 3.57578
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6283
+-> Speed: 0.151195
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204574,16 +204574,16 @@ Vehicle 7
 Time: T+ 49.966s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 6.00084e-08
+-> Position: 94.6636
+-> Speed: 5.92542
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.882
+-> Speed: 3.59536
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.631
+-> Speed: 0.157628
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204684,16 +204684,16 @@ Vehicle 7
 Time: T+ 49.9826s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 5.96336e-08
+-> Position: 94.7624
+-> Speed: 5.94419
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 70.9422
+-> Speed: 3.61495
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6337
+-> Speed: 0.164177
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
@@ -204794,16 +204794,16 @@ Vehicle 7
 Time: T+ 49.9992s
 Vehicle 0
 -> Road: Middelheimlaan
--> Position: 79.8124
--> Speed: 5.92611e-08
+-> Position: 94.8616
+-> Speed: 5.96295
 Vehicle 1
 -> Road: Middelheimlaan
--> Position: 64.77
--> Speed: 0
+-> Position: 71.0027
+-> Speed: 3.63455
 Vehicle 2
 -> Road: Middelheimlaan
--> Position: 53.5873
--> Speed: 0
+-> Position: 53.6366
+-> Speed: 0.170842
 Vehicle 3
 -> Road: Middelheimlaan
 -> Position: 39.0971
