@@ -66,7 +66,7 @@ Road *XMLParser::parseRoad(const pugi::xml_node &node) {
     return road;
 }
 
-std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::parseCrossRoad(const pugi::xml_node &node) const {
+std::pair<std::pair<std::string, int>, std::pair<std::string, int>> XMLParser::parseCrossroad(const pugi::xml_node &node) const {
     REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
 
     pugi::xml_node firstRoadNode = node.first_child();
@@ -278,7 +278,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
             busStops[road].push_back(busStop);
         } else if (name == "KRUISPUNT") {
             // Parse cross road
-            std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossRoad = parseCrossRoad(node);
+            std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossRoad = parseCrossroad(node);
 
             // Verify and register cross road
             crossroads.push_back(crossRoad);

@@ -29,6 +29,8 @@ class XMLParser {
     FRIEND_TEST(XMLParserTests, ParsingVehicleHappyDay);
     FRIEND_TEST(XMLParserTests, ParsingTrafficLightHappyDay);
     FRIEND_TEST(XMLParserTests, ParsingVehicleGeneratorHappyDay);
+    FRIEND_TEST(XMLParserTests, ParsingBusStopHappyDay);
+    FRIEND_TEST(XMLParserTests, ParsingCrossRoadHappyDay);
 
 private:
     XMLParser* _init;
@@ -73,7 +75,7 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    std::pair<std::pair<std::string, int>, std::pair<std::string, int>> parseCrossRoad(const pugi::xml_node &node) const;
+    std::pair<std::pair<std::string, int>, std::pair<std::string, int>> parseCrossroad(const pugi::xml_node &node) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
