@@ -117,19 +117,23 @@ TEST(RoadTests, VehicleGeneratorMutationInvalid) {
 
 TEST(RoadTests, CrossroadMutationHappyDay) {
     Road* road1 = new Road("john", 100.0);
-    EXPECT_EQ(road1->getCrossroads().size(), 0);
     Road* road2 = new Road("doe", 100.0);
+
+    EXPECT_EQ(road1->getCrossroads().size(), 0);
+
     Crossroad* crossroad = new Crossroad(new CrossroadDetails{ road1, 25 }, new CrossroadDetails{ road2, 25 });
     road1->addCrossroad(crossroad);
+
     EXPECT_EQ(crossroad, road1->getCrossroads()[0]);
+
+    delete road1;
+    delete road2;
 }
 
-TEST(RoadTests, CrossroadMutationHappyDay) {
-    Road road = Road("example", 100.0);
-    EXPECT_EQ(road.getTrafficLights().size(), 0);
-    TrafficLight* light = new TrafficLight(20.0, 10);
-    road.addTrafficLight(light);
-    EXPECT_EQ(light, road.getTrafficLights()[0]);
+TEST(RoadTests, CrossroadMutationInvalid) {
+    Road road1 = Road("john", 100.0);
+
+    EXPECT_DEATH(road1.addCrossroad(nullptr), "Crossroad cannot be nullptr");
 }
 
 TEST(RoadTests, TrafficLightMutationHappyDay) {
