@@ -14,7 +14,6 @@
 #include "Simulation.h"
 
 int main() {
-
     XMLParser parser;
     Simulation sim1 = Simulation();
     Simulation sim2 = Simulation();

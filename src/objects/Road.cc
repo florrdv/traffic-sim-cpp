@@ -244,6 +244,18 @@ void Road::tickVehicles(std::ostream &onStream) {
     // Loop over all vehicles
     for (Vehicle *vehicle: vehicles) {
         // TODO: handle crossroads
+        double vehiclePosition = vehicle->getPosition();
+        for (Crossroad* crossroad : crossroads) {
+            double crossroadPosition = crossroad->getPositionForRoad(this);
+            if (vehiclePosition < crossroadPosition && crossroadPosition - vehiclePosition < 0.01) {
+                int random = rand() % 2;
+                if (random == 1) {
+                    // Change roads
+                    Road* road = crossroad->
+                } 
+            }
+        }
+
         // Tick the relevant vehicle
         vehicle->tick(getLeadingVehicle(vehicle));
 

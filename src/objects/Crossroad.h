@@ -23,7 +23,7 @@ struct CrossroadDetails {
 
 class Crossroad {
 private:
-    std::pair<CrossroadDetails, CrossroadDetails> details;
+    std::pair<CrossroadDetails*, CrossroadDetails*> details;
 
     Crossroad* _init;
 
@@ -32,6 +32,8 @@ private:
 
 public:
     /**
+    \n REQUIRE(details1 != nullptr, "Crossroad can not be nullptr");
+    \n REQUIRE(details2 != nullptr, "Crossroad can not be nullptr");
     \n REQUIRE(details1.road != nullptr, "Road can not be nullptr");
     \n REQUIRE(details2.road != nullptr, "Road can not be nullptr");
     \n REQUIRE(details1.position >= 0, "Position must be positive");
@@ -40,13 +42,18 @@ public:
     \n REQUIRE(details2.road->getLength() >= details2.position, "Position must be within road bounds");
     \n ENSURE(_init == this, "_init reference must be set");
     */
-    Crossroad(CrossroadDetails details1, CrossroadDetails details2);
+    Crossroad(CrossroadDetails* details1, CrossroadDetails* details2);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
-    \n ENSURE(false, "Requested road not found");
+    \n ENSURE(EXISTS, "Requested road not found");
     */
-    int getPositionForRoad(Road* road);
+    int getPositionForRoad(Road* road) const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
+    */
+    std::pair<CrossroadDetails*, CrossroadDetails*> getDetails() const;
 };
 
 

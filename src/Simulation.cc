@@ -23,6 +23,9 @@
 
 
 Simulation::Simulation() {
+    // Initialize random number generator
+    srand((unsigned) time(0));
+
     _init = this;
     ENSURE(this->properlyInitialized(), "constructor must end in properlyInitialized state");
 }
