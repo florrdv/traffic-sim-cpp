@@ -110,6 +110,11 @@ TEST(RoadTests, VehicleGeneratorMutationHappyDay) {
     EXPECT_EQ(generator, road.getGenerator());
 }
 
+TEST(RoadTests, VehicleGeneratorMutationInvalid) {
+    Road road = Road("example", 100.0);
+    EXPECT_DEATH(road.setGenerator(nullptr), "Cannot add empty generator to road");
+}
+
 TEST(RoadTests, TickTrafficLightsHappyDay) {
     Road road = Road("example", 100.0);
     int cycle = 10;
