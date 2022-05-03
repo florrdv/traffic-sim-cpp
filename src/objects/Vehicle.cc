@@ -72,11 +72,14 @@ void Vehicle::updateAcceleration(Vehicle *leadingVehicle) {
 
 bool Vehicle::tick(Vehicle *leadingVehicle, Road* road) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    // Grab the initial position
     double pBefore = getPosition();
 
+    // Update the vehicles position
     updateSpeed();
     updateAcceleration(leadingVehicle);
 
+    // Grab the new positoin
     double pAfter = getPosition();
 
     // Handle crossroads
@@ -84,19 +87,26 @@ bool Vehicle::tick(Vehicle *leadingVehicle, Road* road) {
     for (Crossroad* crossroad : crossroads) {
         double crossroadPosition = crossroad->getPositionForRoad(road);
         if (pAfter >= crossroadPosition && pBefore < crossroadPosition) {
+            // 1/2 chance to move roads
             int random = rand() % 2;
+
+            // Vehicle has to move roads
             if (random == 1) {
-                // Change roads
+                // Get other road info
                 std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
                 CrossroadDetails* otherDetails = details.first->road == road ? details.second : details.first;
                 
+                // Move to other road
                 setPosition(otherDetails->position);
                 otherDetails->road->addVehicle(this);
+
+                // Return a boolean indicating that the vehicle should be removed
                 return true;
             }
         }
     }
 
+    // Return a boolean indicating that the vehicle should NOT be removed
     return false;
 }
 

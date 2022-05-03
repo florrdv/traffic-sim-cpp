@@ -10,6 +10,7 @@
 
 #include <gtest/gtest.h>
 #include "Vehicle.h"
+#include "Road.h"
 
 TEST(VehicleTests, VehicleGenerationHappyDay) {
     EXPECT_EXIT({Vehicle(0.0, VehicleType::Personal); fprintf(stderr, "Done"); exit(0);},
@@ -35,14 +36,15 @@ TEST(VehicleTests, PositionMutationNegative) {
 
 TEST(VehicleTests, TickHappyDay) {
     Vehicle v = Vehicle(0.0, VehicleType::Personal);
+    Road* road = new Road("John", 100);
 
     EXPECT_EQ(0.0, v.getSpeed());
     EXPECT_EQ(0.0, v.getAcceleration());
     EXPECT_EQ(0.0, v.getPosition());
 
     // Tick twice
-    v.tick(nullptr);
-    v.tick(nullptr);
+    v.tick(nullptr, road);
+    v.tick(nullptr, road);
 
     EXPECT_TRUE(std::abs(v.getSpeed() - 0.023903999999999998) < 0.00001);
     EXPECT_TRUE(std::abs(v.getAcceleration() - 1.4399999999938082) < 0.00001);

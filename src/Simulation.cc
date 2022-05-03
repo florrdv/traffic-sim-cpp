@@ -156,6 +156,17 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
        }
     }
 
+    std::vector<nlohmann::json> crossroadsSerialized;
+    for (Road* road : roads) {
+       for (Crossroad* crossroad : road->getCrossroads()) {
+           nlohmann::json b;
+           b["road"] = road->getName();
+           b["position"] = busStop->getPosition();
+
+            busStopsSerialized.push_back(b);
+       }
+    }
+
     j["roads"] = roadsSerialized;
     j["busStops"] = busStopsSerialized;
     j["simTime"] = gSimTime;
