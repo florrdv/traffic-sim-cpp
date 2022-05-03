@@ -381,7 +381,7 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
         CrossroadDetails* details2 = details[1];
         Crossroad* crossroadParsed = new Crossroad(details1, details2);
         details1->road->addCrossroad(crossroadParsed);
-        details2->road->addCrossroad(crossroadParsed);
+        details2->road->addCrossroad(crossroadParsed->clone());
     }
 }
 
