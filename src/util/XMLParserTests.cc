@@ -349,4 +349,21 @@ TEST(XMLParserTests, ParsingPositiveIntegerNegative) {
     EXPECT_DEATH(parser.parsePositiveInteger(positionString, "positie", true), "strictly positive");
 }
 
+TEST(XMLParserTests, ParsingRoadHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    pugi::xml_node roadNode = *it;
+
+    Road *road = parser.parseRoad(roadNode);
+
+    EXPECT_EQ("Middelheimlaan", road->getName());
+    EXPECT_EQ(10, road->getLength());
+}
 
