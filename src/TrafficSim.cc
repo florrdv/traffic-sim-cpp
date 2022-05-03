@@ -21,7 +21,7 @@ int main() {
     parser.parse(sim1, "../input/testing/ValidSimulationTest10.xml");
     parser.parse(sim2, "../input/testing/ValidSimulationTest10.xml");
 
-    // sim1.writeOn(std::cout, 50);
+    sim1.writeOn(std::cout, 100);
 
     std::ofstream f("out.html");
     sim2.writeToFile(f, 100);
