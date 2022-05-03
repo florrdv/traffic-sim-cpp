@@ -136,8 +136,7 @@ nlohmann::json Simulation::dumpState() {
 void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
-    nlohmann::json j;
-    
+    // Serialize all roads
     std::vector<nlohmann::json> roadsSerialized;
     for (Road* road : roads) {
         nlohmann::json roadSerialized;
@@ -147,6 +146,7 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
         roadsSerialized.push_back(roadSerialized);
     }
 
+    // Serialize all bus stops
     std::vector<nlohmann::json> busStopsSerialized;
     for (Road* road : roads) {
        for (BusStop* busStop : road->getBusStops()) {
@@ -158,6 +158,7 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
        }
     }
 
+    // Serialize all crossroads
     std::vector<nlohmann::json> crossroadsSerialized;
     for (Road* road : roads) {
        for (Crossroad* crossroad : road->getCrossroads()) {
@@ -176,14 +177,18 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
        }
     }
 
+    // Create the encapsulating JSON object
+    nlohmann::json j;
     j["roads"] = roadsSerialized;
     j["busStops"] = busStopsSerialized;
     j["simTime"] = gSimTime;
     j["crossroads"] = crossroadsSerialized;
 
+    // Create nullbuffer
     NullBuffer null_buffer;
     std::ostream null_stream(&null_buffer);
 
+    // Create log container
     std::vector<nlohmann::json> logs;
 
     // Loop while there are still vehicles
@@ -210,12 +215,15 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
         timestamp++;
     }
 
+    // Set logs on master object
     j["logs"] = logs;
 
+    // Grab the template
     std::ifstream ifs("../visualizer.html");
     std::string content( (std::istreambuf_iterator<char>(ifs) ),
                        (std::istreambuf_iterator<char>()    ) );
 
+    // Make sure the template was loaded correctly
     ASSERT(content.length() > 0, "Failed to read visualizer template");
 
     // Split file into header and footer
@@ -224,4 +232,5 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     std::string footer = content.substr(pos + 2, content.length());
 
     fileStream << header << std::setw(4) << j << footer << std::endl;
+    fileStream.flush();
 }
