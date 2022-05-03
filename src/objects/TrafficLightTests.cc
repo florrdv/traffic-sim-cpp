@@ -63,6 +63,7 @@ TEST(TrafficLightTests, CycleMutationNegative) {
 TEST(TrafficLightTests, ToggleHappyDay) {
     TrafficLight light = TrafficLight(0.0, 10);
     bool beforeToggle = light.isGreen();
+    EXPECT_EQ(beforeToggle, false);
     light.toggle();
     EXPECT_NE(beforeToggle, light.isGreen());
 }

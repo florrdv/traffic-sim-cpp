@@ -38,6 +38,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     */
     int getCycle() const;
+    
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(c>0, "Traffic light cycle must be strictly positive");
