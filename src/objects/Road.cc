@@ -138,6 +138,7 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
 Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(busStop != nullptr, "Bus stop cannot be nullptr");
+    REQUIRE(std::find(busStops.begin(), busStops.end(), busStop) != busStops.end(), "Bus stop must be on road");
 
     int busStopPosition = busStop->getPosition();
     Vehicle *firstBus = nullptr;

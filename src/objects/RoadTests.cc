@@ -184,10 +184,11 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
 TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
     Road road = Road("example", 100.0);
     TrafficLight* trafficLight = new TrafficLight(20.0, 10);
+    Vehicle* vehicle = new Vehicle(10, VehicleType::Personal);
+    road.addVehicle(vehicle);
     road.addTrafficLight(trafficLight);
 
-    EXPECT_EXIT({road.getFirstToTrafficLight(trafficLight); fprintf(stderr, "Done"); exit(0);},
-                ::testing::ExitedWithCode(0), "Done");
+    EXPECT_EQ(road.getFirstToTrafficLight(trafficLight), vehicle);
 }
 
 TEST(RoadTests, GetFirstToTrafficLightInvalid) {
@@ -199,4 +200,26 @@ TEST(RoadTests, GetFirstToTrafficLightUnknown) {
     Road road = Road("example", 100.0);
     TrafficLight* trafficLight = new TrafficLight(20.0, 10);
     EXPECT_DEATH(road.getFirstToTrafficLight(trafficLight), "Traffic light must be on road");
+}
+
+TEST(RoadTests, GetFirstBusToBusStopHappyDay) {
+    Road road = Road("example", 100.0);
+    BusStop* busStop = new BusStop(20, 20);
+    Vehicle* vehicle = new Vehicle(10, VehicleType::Bus);
+    road.addVehicle(vehicle);
+    road.addBusStop(busStop);
+
+    EXPECT_EQ(road.getFirstBusToBusStop(busStop), vehicle);
+}
+
+TEST(RoadTests, GetFirstBusToBusStopInvalid) {
+    Road road = Road("example", 100.0);
+    EXPECT_DEATH(road.getFirstBusToBusStop(nullptr), "Bus stop cannot be nullptr");
+}
+
+TEST(RoadTests, GetFirstBusToBusStopUnknown) {
+    Road road = Road("example", 100.0);
+    BusStop* busStop = new BusStop(20, 20);
+
+    EXPECT_DEATH(road.getFirstBusToBusStop(busStop), "Bus stop must be on road");
 }

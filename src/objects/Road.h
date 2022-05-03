@@ -147,6 +147,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n REQUIRE(busStop != nullptr, "Bus stop cannot be nullptr");
+    \n REQUIRE(std::find(busStops.begin(), busStops.end(), busStop) != busStops.end(), "Bus stop must be on road");
     */
     Vehicle *getFirstBusToBusStop(BusStop *busStop) const;
 
