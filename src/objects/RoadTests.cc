@@ -12,6 +12,7 @@
 #include <gtest/gtest.h>
 #include "Road.h"
 #include "TrafficLight.h"
+#include "../lib/NullBuffer.h"
 
 TEST(RoadTests, RoadGenerationHappyDay) {
     EXPECT_EXIT({Road("example", 100.0); fprintf(stderr, "Done"); exit(0);},
@@ -182,20 +183,23 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
 }
 
 TEST(RoadTests, TickBusStopsHappyDay) {
+    NullBuffer null_buffer;
+    std::ostream null_stream(&null_buffer);
+
     Road road = Road("example", 100.0);
     int waitTime = 2;
     BusStop* busStop = new BusStop(50, waitTime);
-    Vehicle* bus = new Vehicle(49, VehicleType::Bus);
+    Vehicle* bus = new Vehicle(49.9, VehicleType::Bus);
     road.addBusStop(busStop);
     road.addVehicle(bus);
 
-    int requiredTicks = std::round(waitTime / gSimTime); 
+    int requiredTicks = std::round((double) waitTime / (double) gSimTime); 
 
-    for (int i = 0; i < requiredTicks / 2; i++) road.tickBusStops();
+    for (int i = 0; i < requiredTicks / 2; i++) {road.tickBusStops(); road.tickVehicles(null_stream);}
     EXPECT_TRUE(bus->getPosition() < busStop->getPosition());
 
-    // 100 tick margin
-    for (int i = 0; i < requiredTicks / 2 + 100; i++) road.tickBusStops();
+    // 50 tick margin
+    for (int i = 0; i < requiredTicks / 2 + 50; i++) {road.tickBusStops(); road.tickVehicles(null_stream);}
     EXPECT_TRUE(bus->getPosition() > busStop->getPosition());
 }
 
