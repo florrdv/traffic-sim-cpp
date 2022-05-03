@@ -115,6 +115,23 @@ TEST(RoadTests, VehicleGeneratorMutationInvalid) {
     EXPECT_DEATH(road.setGenerator(nullptr), "Cannot add empty generator to road");
 }
 
+TEST(RoadTests, CrossroadMutationHappyDay) {
+    Road* road1 = new Road("john", 100.0);
+    EXPECT_EQ(road1->getCrossroads().size(), 0);
+    Road* road2 = new Road("doe", 100.0);
+    Crossroad* crossroad = new Crossroad(new CrossroadDetails{ road1, 25 }, new CrossroadDetails{ road2, 25 });
+    road1->addCrossroad(crossroad);
+    EXPECT_EQ(crossroad, road1->getCrossroads()[0]);
+}
+
+TEST(RoadTests, CrossroadMutationHappyDay) {
+    Road road = Road("example", 100.0);
+    EXPECT_EQ(road.getTrafficLights().size(), 0);
+    TrafficLight* light = new TrafficLight(20.0, 10);
+    road.addTrafficLight(light);
+    EXPECT_EQ(light, road.getTrafficLights()[0]);
+}
+
 TEST(RoadTests, TrafficLightMutationHappyDay) {
     Road road = Road("example", 100.0);
     EXPECT_EQ(road.getTrafficLights().size(), 0);
