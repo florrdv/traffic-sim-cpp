@@ -43,8 +43,8 @@ TEST(VehicleTests, TickHappyDay) {
     EXPECT_EQ(0.0, v.getPosition());
 
     // Tick twice
-    v.tick(nullptr, road);
-    v.tick(nullptr, road);
+    v.tick(nullptr);
+    v.tick(nullptr);
 
     EXPECT_TRUE(std::abs(v.getSpeed() - 0.023903999999999998) < 0.00001);
     EXPECT_TRUE(std::abs(v.getAcceleration() - 1.4399999999938082) < 0.00001);

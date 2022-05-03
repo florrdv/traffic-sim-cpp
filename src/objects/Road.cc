@@ -253,36 +253,39 @@ void Road::tickVehicles(std::ostream &onStream) {
 
     // Loop over all vehicles
     for (std::vector<Vehicle *>::iterator vehicle = vehicles.begin(); vehicle != vehicles.end();) {
-        // Tick the relevant vehicle
+        // Save position before tick
         double pBefore = (*vehicle)->getPosition();
-        (*vehicle)->tick(getLeadingVehicle(*vehicle), this);
+        // Tick the relevant vehicle
+        (*vehicle)->tick(getLeadingVehicle(*vehicle));
+        // Save position after tick
         double pAfter = (*vehicle)->getPosition();
 
+        // Create boolean to keep track of removal
         bool remove = false;
-
         // Handle crossroads
-    std::vector<Crossroad *> crossroads = getCrossroads();
-    for (Crossroad* crossroad : crossroads) {
-        double crossroadPosition = crossroad->getPositionForRoad(this);
-        if (pAfter >= crossroadPosition && pBefore < crossroadPosition) {
-            // 1/2 chance to move roads
-            int random = rand() % 2;
+        std::vector<Crossroad *> crossroads = getCrossroads();
+        for (Crossroad* crossroad : crossroads) {
+            // Get crossroad position
+            double crossroadPosition = crossroad->getPositionForRoad(this);
+            if (pAfter >= crossroadPosition && pBefore < crossroadPosition) {
+                // 1/2 chance to move roads
+                int random = rand() % 2;
 
-            // Vehicle has to move roads
-            if (random == 1) {
-                // Get other road info
-                std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
-                CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
+                // Vehicle has to move roads
+                if (random == 1) {
+                    // Get other road info
+                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
+                    CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
                 
-                // Move to other road
-                (*vehicle)->setPosition(otherDetails->position);
-                otherDetails->road->addVehicle(*vehicle);
+                    // Move to other road
+                    (*vehicle)->setPosition(otherDetails->position);
+                    otherDetails->road->addVehicle(*vehicle);
 
-                // Return a boolean indicating that the vehicle should be removed
-                remove = true;
+                    // Set a boolean indicating that the vehicle should be removed
+                    remove = true;
+                }
             }
         }
-    }
 
 
         // Print all information on the vehicle in

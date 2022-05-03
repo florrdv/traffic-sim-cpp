@@ -70,9 +70,8 @@ void Vehicle::updateAcceleration(Vehicle *leadingVehicle) {
     ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
 }
 
-bool Vehicle::tick(Vehicle *leadingVehicle, Road* road) {
+void Vehicle::tick(Vehicle *leadingVehicle) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    REQUIRE(road != nullptr, "Road cannot be nullptr");
     // Update the vehicles position
     updateSpeed();
     updateAcceleration(leadingVehicle);

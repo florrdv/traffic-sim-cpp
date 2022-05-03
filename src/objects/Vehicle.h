@@ -106,9 +106,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n REQUIRE(road != nullptr, "Road cannot be nullptr");
     */
-    bool tick(Vehicle* leadingVehicle, Road *road);
+    void tick(Vehicle* leadingVehicle);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
