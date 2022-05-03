@@ -248,10 +248,16 @@ void Road::tickVehicles(std::ostream &onStream) {
         // Tick the relevant vehicle
         (*vehicle)->tick(getLeadingVehicle(*vehicle));
 
+        // Initialize variables for crossroad logic
         bool remove = false;
         double vehiclePosition = (*vehicle)->getPosition();
+
+        // Check all crossroads
         for (Crossroad* crossroad : crossroads) {
+            // Get crossroad position
             double crossroadPosition = crossroad->getPositionForRoad(this);
+
+            // Check if the vehicle is in range
             if (vehiclePosition < crossroadPosition && crossroadPosition - vehiclePosition < 0.01) {
                 int random = rand() % 2;
                 if (random == 1) {
