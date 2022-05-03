@@ -103,7 +103,11 @@ TEST(RoadTests, BusStopMutationInvalidPosition) {
 
 TEST(RoadTests, VehicleGeneratorMutationHappyDay) {
     Road road = Road("example", 100.0);
-    EXPECT_DEATH(road.addBusStop(nullptr), "Bus stop cannot be nullptr");
+    VehicleGenerator* generator = new VehicleGenerator(10, VehicleType::Personal);
+    EXPECT_EQ(nullptr, road.getGenerator());
+
+    road.setGenerator(generator);
+    EXPECT_EQ(generator, road.getGenerator());
 }
 
 TEST(RoadTests, TickTrafficLightsHappyDay) {
