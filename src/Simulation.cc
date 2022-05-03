@@ -43,6 +43,7 @@ std::vector<Road*> Simulation::getRoads() const {
 
 void Simulation::addRoad(Road* r) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    REQUIRE(r != nullptr, "Road cannot be nullptr");
     roads.push_back(r);
     ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
 }

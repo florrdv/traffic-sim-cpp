@@ -48,6 +48,7 @@ public:
     // Regular methods
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
+    \n REQUIRE(r != nullptr, "Road cannot be nullptr");
     \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
     */
     void addRoad(Road* r);
