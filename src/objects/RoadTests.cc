@@ -236,12 +236,8 @@ TEST(RoadTests, GetLeadingVehicleHappyDay) {
 
 TEST(RoadTests, GetLeadingVehicleInvalid) {
     Road road = Road("example", 100.0);
-    Vehicle* vehicle1 = new Vehicle(10, VehicleType::Personal);
-    Vehicle* vehicle2 = new Vehicle(20, VehicleType::Personal);
-    road.addVehicle(vehicle1);
-    road.addVehicle(vehicle2);
 
-    EXPECT_EQ(road.getLeadingVehicle(vehicle1), vehicle2);
+    EXPECT_DEATH(road.getLeadingVehicle(nullptr), "Vehicle may not be a nullptr");
 }
 
 TEST(RoadTests, GetLeadingVehicleUnknown) {
