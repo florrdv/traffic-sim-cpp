@@ -25,6 +25,7 @@ class XMLParser {
     FRIEND_TEST(XMLParserTests, ParsingInvalidNode);
     FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerHappyDay);
     FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerNegative);
+    FRIEND_TEST(XMLParserTests, ParsingRoadHappyDay);
 
 private:
     XMLParser* _init;
