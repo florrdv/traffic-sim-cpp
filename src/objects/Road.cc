@@ -162,7 +162,7 @@ Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
 
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    Vehicle *v = new Vehicle(0, VehicleType::Personal);
+    Vehicle *v = new Vehicle(0, type);
     addVehicle(v);
 }
 

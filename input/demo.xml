@@ -1,6 +1,6 @@
 <BAAN>
     <naam>Middelheimlaan</naam>
-    <lengte>400</lengte>
+    <lengte>600</lengte>
 </BAAN>
 
 <BAAN>
@@ -18,18 +18,47 @@
     <lengte>400</lengte>
 </BAAN>
 
+<BAAN>
+    <naam>Lindendreef</naam>
+    <lengte>300</lengte>
+</BAAN>
+
 <KRUISPUNT>
-    <baan positie="20">Middelheimlaan</baan>
+    <baan positie="150">Middelheimlaan</baan>
     <baan positie="100">Beukenlaan</baan>
 </KRUISPUNT>
 
 <KRUISPUNT>
     <baan positie="350">Middelheimlaan</baan>
-    <baan positie="20">Floraliënlaan</baan>
+    <baan positie="75">Floraliënlaan</baan>
 </KRUISPUNT>
-
 
 <KRUISPUNT>
     <baan positie="350">Beukenlaan</baan>
     <baan positie="100">Groenenborglaan</baan>
 </KRUISPUNT>
+
+<KRUISPUNT>
+    <baan positie="150">Floraliënlaan</baan>
+    <baan positie="75">Lindendreef</baan>
+</KRUISPUNT>
+
+
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>
+
+<VOERTUIGGENERATOR>
+    <baan>Lindendreef</baan>
+    <frequentie>3</frequentie>
+    <type>ziekenwagen</type>
+</VOERTUIGGENERATOR>
+
+<VOERTUIG>
+    <baan>Lindendreef</baan>
+    <positie>10</positie>
+    <type>ziekenwagen</type>
+</VOERTUIG>
+
