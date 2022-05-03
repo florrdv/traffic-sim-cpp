@@ -26,7 +26,7 @@ class XMLParser {
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    void validateNode(const pugi::xml_node& node, const std::string& nam) const;
+    void validateNode(const pugi::xml_node& node, const std::string& name) const;
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(value>=0, "Parsed integer cannot be negative");
