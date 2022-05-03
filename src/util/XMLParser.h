@@ -55,14 +55,14 @@ class XMLParser {
     VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 
     /**
-     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-     \n ENSURE(busStop != nullptr, "Road has to be generated";
-     */
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(busStop != nullptr, "Road has to be generated";
+    */
     BusStop *parseBusStop(const pugi::xml_node &node);
 
     /**
-     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-     */
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     std::pair<std::pair<std::string, int>, std::pair<std::string, int>> parseCrossRoad(const pugi::xml_node &node) const;
 
     /**
