@@ -18,3 +18,9 @@
     <positie>90</positie>
     <cyclus>15</cyclus>
 </VERKEERSLICHT>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>3</frequentie>
+    <type>politiecombi</type>
+</VOERTUIGGENERATOR>

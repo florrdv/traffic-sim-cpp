@@ -377,8 +377,8 @@ TEST(XMLParserTests, ParsingVehicleHappyDay) {
     ASSERT(result, "XML: invalid file");
 
     pugi::xml_node_iterator it = doc.begin();
-    it++;
-    it++;
+    std::advance(it, 2);
+
     pugi::xml_node vehicleNode = *it;
 
     Vehicle *vehicle = parser.parseVehicle(vehicleNode);
@@ -396,9 +396,8 @@ TEST(XMLParserTests, ParsingTrafficLightHappyDay) {
     ASSERT(result, "XML: invalid file");
 
     pugi::xml_node_iterator it = doc.begin();
-    it++;
-    it++;
-    it++;
+    std::advance(it, 3);
+
     pugi::xml_node trafficLightNode = *it;
 
     TrafficLight *trafficLight = parser.parseTrafficLight(trafficLightNode);
@@ -418,9 +417,11 @@ TEST(XMLParserTests, ParsingVehicleGeneratorHappyDay) {
 
     pugi::xml_node_iterator it = doc.begin();
     std::advance(it, 4);
-//    it++;
-//    it++;
-//    it++;
-//    it++;
-    // pugi::xml_node trafficLightNode = *it;
+
+    pugi::xml_node vehicleGeneratorNode = *it;
+
+    VehicleGenerator* vehicleGenerator = parser.parseVehicleGenerator(vehicleGeneratorNode);
+
+    EXPECT_EQ(3, vehicleGenerator->getFrequency());
+    EXPECT_EQ(VehicleType::Police, vehicleGenerator->getType());
 }
