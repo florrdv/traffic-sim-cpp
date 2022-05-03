@@ -95,7 +95,7 @@
                 for (const log of data.logs) {
                     clearVehicles()
                     clearTrafficLights()
-                    
+
                     for (const vehicle of log.vehicles) drawVehicle(vehicle)
                     for (const trafficLight of log.trafficLights) drawTrafficLight(trafficLight)
 
@@ -182,7 +182,7 @@
                 function placeRoad(roadIndex, start, invert) {
                     const road = data.roads[roadIndex]
                     if (road.drawn) return
-                    
+
                     // Create label
                     const text = new PIXI.Text(road.name, {
                         fontFamily: 'Arial',
@@ -200,7 +200,7 @@
                         text.y = start.y + 70
                     }
                     viewport.addChild(text);
-                    
+
                     // Draw road itself
                     [...Array(road.length / roadElementLength).keys()].forEach((i) => {
                         let roadElement
@@ -227,18 +227,18 @@
                     // Fetch all busstops
                     const relevantBusStops = (data.busStops || []).filter(busStop => busStop.road === road.name)
                     relevantBusStops.forEach(busStop => drawBusStop(busStop))
-                    
-                    // Fetch all crossroads
-                    const relevantCrossRoads = (data.crossroads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
 
-                    for (const [road1, road2] of relevantCrossRoads) {
+                    // Fetch all crossroads
+                    const relevantCrossroads = (data.crossroads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
+
+                    for (const [road1, road2] of relevantCrossroads) {
                         const crossRoadOther = road1.name === road.name ? road2 : road1
                         const crossRoadCurrent = road1.name === road.name ? road1 : road2
 
                         const otherRoad = data.roads.find((r) => r.name === crossRoadOther.name)
                         if (otherRoad.drawn) continue
 
-                        if (invert) { 
+                        if (invert) {
                             const crossRoadX = start.x
                             const crossRoadY = start.y + (crossRoadCurrent.position / roadElementLength) * roadElementTextureVertical.height;
 
@@ -247,7 +247,7 @@
                             c.y = crossRoadY - crossRoadTexture.height / 2 - 2
 
                             viewport.addChild(c)
-                            
+
                             const offsetX = ((otherRoad.length / roadElementLength) * roadElementTextureHorizontal.width * crossRoadOther.position) / otherRoad.length
                             const offsetY = ((road.length / roadElementLength) * roadElementTextureVertical.height * crossRoadCurrent.position) / road.length
                             placeRoad(data.roads.indexOf(otherRoad), { x: start.x - offsetX, y: start.y + offsetY }, !invert)

@@ -257,8 +257,8 @@ TEST(XMLParserTests, ParsingCrossroadUndefinedRoad) {
     EXPECT_DEATH(parser.parse(sim, xmlPath), "unknown road");
 }
 
-TEST(XMLParserTests, ParsingCrossRoadInvalidRoadCombination) {
-    std::string xmlPath = gTestInputFolder + "/ParsingCrossRoadInvalidRoadCombination.xml";
+TEST(XMLParserTests, ParsingCrossroadInvalidRoadCombination) {
+    std::string xmlPath = gTestInputFolder + "/ParsingCrossroadInvalidRoadCombination.xml";
     Simulation sim = Simulation();
 
     XMLParser parser;
