@@ -9,6 +9,7 @@
  */
 
 #include <algorithm>
+#include "Crossroad.h"
 #include "Road.h"
 #include "../lib/DesignByContract.h"
 
@@ -241,30 +242,39 @@ void Road::tickBusStops() {
 
 void Road::tickVehicles(std::ostream &onStream) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+
     // Loop over all vehicles
-    for (Vehicle *vehicle: vehicles) {
-        // TODO: handle crossroads
-        double vehiclePosition = vehicle->getPosition();
+    for (std::vector<Vehicle *>::iterator vehicle = vehicles.begin(); vehicle != vehicles.end();) {
+        // Tick the relevant vehicle
+        (*vehicle)->tick(getLeadingVehicle(*vehicle));
+
+        bool remove = false;
+        double vehiclePosition = (*vehicle)->getPosition();
         for (Crossroad* crossroad : crossroads) {
             double crossroadPosition = crossroad->getPositionForRoad(this);
             if (vehiclePosition < crossroadPosition && crossroadPosition - vehiclePosition < 0.01) {
                 int random = rand() % 2;
                 if (random == 1) {
                     // Change roads
-                    // Road* road = crossroad->
+                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
+                    CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
+                    
+                    (*vehicle)->setPosition(otherDetails->position);
+                    otherDetails->road->addVehicle(*vehicle);
+                    remove = true;
                 } 
             }
         }
 
-        // Tick the relevant vehicle
-        vehicle->tick(getLeadingVehicle(vehicle));
-
         // Print all information on the vehicle in
         // the requested format
-        onStream << "Vehicle " << vehicle->getId() << std::endl;
+        onStream << "Vehicle " << (*vehicle)->getId() << std::endl;
         onStream << "-> Road: " << getName() << std::endl;
-        onStream << "-> Position: " << vehicle->getPosition() << std::endl;
-        onStream << "-> Speed: " << vehicle->getSpeed() << std::endl;
+        onStream << "-> Position: " << (*vehicle)->getPosition() << std::endl;
+        onStream << "-> Speed: " << (*vehicle)->getSpeed() << std::endl;
+
+        if (remove) vehicles.erase(vehicle);
+        else vehicle++;
     }
 }
 
