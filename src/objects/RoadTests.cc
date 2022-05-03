@@ -246,3 +246,10 @@ TEST(RoadTests, GetLeadingVehicleUnknown) {
 
     EXPECT_DEATH(road.getLeadingVehicle(vehicle1), "Vehicle must be on road");
 }
+
+TEST(RoadTests, SpawnVehicleHappyDay) {
+    Road road = Road("example", 100.0);
+    EXPECT_EQ(road.getVehicles().size(), 0);
+    road.spawnVehicle(VehicleType::Personal);
+    EXPECT_EQ(road.getVehicles().size(), 1);
+}
