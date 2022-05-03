@@ -367,3 +367,22 @@ TEST(XMLParserTests, ParsingRoadHappyDay) {
     EXPECT_EQ(10, road->getLength());
 }
 
+TEST(XMLParserTests, ParsingVehicleHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    it++;
+    it++;
+    pugi::xml_node vehicleNode = *it;
+
+    Vehicle *vehicle = parser.parseVehicle(vehicleNode);
+
+    EXPECT_EQ(10, vehicle->getPosition());
+}
+

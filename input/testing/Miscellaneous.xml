@@ -7,3 +7,8 @@
     <baan>Middelheimlaan</baan>
     <positie>-10</positie>
 </VOERTUIG>
+
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>10</positie>
+</VOERTUIG>
