@@ -310,8 +310,8 @@ void Road::addCrossroad(Crossroad *c) {
 }
 
 void Road::addBusStop(BusStop *b) {
-    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     REQUIRE(b != nullptr, "Bus stop cannot be nullptr");
+    REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
     ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");

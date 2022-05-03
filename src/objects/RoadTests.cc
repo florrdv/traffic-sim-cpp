@@ -89,11 +89,21 @@ TEST(RoadTests, BusStopMutationHappyDay) {
     ASSERT_EQ(road.getBusStops()[0], busStop);
 }
 
+TEST(RoadTests, BusStopMutationInvalid) {
+    Road road = Road("example", 100.0);
+    EXPECT_DEATH(road.addBusStop(nullptr), "Bus stop cannot be nullptr");
+}
+
 TEST(RoadTests, BusStopMutationInvalidPosition) {
     Road road = Road("example", 100.0);
     ASSERT(road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
     BusStop *busStop = new BusStop(200, VehicleType::Personal);
     EXPECT_DEATH(road.addBusStop(busStop), "Road not long enough for");
+}
+
+TEST(RoadTests, VehicleGeneratorMutationHappyDay) {
+    Road road = Road("example", 100.0);
+    EXPECT_DEATH(road.addBusStop(nullptr), "Bus stop cannot be nullptr");
 }
 
 TEST(RoadTests, TickTrafficLightsHappyDay) {
