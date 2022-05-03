@@ -181,6 +181,24 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
     EXPECT_EQ(expectedAfterTick, road.getVehicles().size() - 1);
 }
 
+TEST(RoadTests, TickBusStopsHappyDay) {
+    Road road = Road("example", 100.0);
+    int waitTime = 2;
+    BusStop* busStop = new BusStop(50, waitTime);
+    Vehicle* bus = new Vehicle(49, VehicleType::Bus);
+    road.addBusStop(busStop);
+    road.addVehicle(bus);
+
+    int requiredTicks = std::round(waitTime / gSimTime); 
+
+    for (int i = 0; i < requiredTicks / 2; i++) road.tickBusStops();
+    EXPECT_TRUE(bus->getPosition() < busStop->getPosition());
+
+    // 100 tick margin
+    for (int i = 0; i < requiredTicks / 2 + 100; i++) road.tickBusStops();
+    EXPECT_TRUE(bus->getPosition() > busStop->getPosition());
+}
+
 TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
     Road road = Road("example", 100.0);
     TrafficLight* trafficLight = new TrafficLight(20.0, 10);

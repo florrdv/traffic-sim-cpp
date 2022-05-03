@@ -26,6 +26,7 @@ class Road {
     FRIEND_TEST(RoadTests, TickVehicleGeneratorsHappyDay);
     FRIEND_TEST(RoadTests, TickTrafficLightsHappyDay);
     FRIEND_TEST(RoadTests, SpawnVehicleHappyDay);
+    FRIEND_TEST(RoadTests, TickBusStopsHappyDay);
 
 private:
     Road *_init;
