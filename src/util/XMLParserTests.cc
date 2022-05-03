@@ -500,3 +500,4 @@ TEST(XMLParserTests, ParsingRoadReferenceHappyDay) {
     EXPECT_EQ("Middelheimlaan", road);
 }
 
+

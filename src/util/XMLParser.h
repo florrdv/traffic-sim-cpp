@@ -32,6 +32,7 @@ class XMLParser {
     FRIEND_TEST(XMLParserTests, ParsingBusStopHappyDay);
     FRIEND_TEST(XMLParserTests, ParsingCrossroadHappyDay);
     FRIEND_TEST(XMLParserTests, ParsingRoadReferenceHappyDay);
+    FRIEND_TEST(XMLParserTests, ParsingVehicleTypeHappyDay);
 
 private:
     XMLParser* _init;
