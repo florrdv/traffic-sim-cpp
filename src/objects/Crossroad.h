@@ -62,6 +62,11 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
     */
     std::pair<CrossroadDetails*, CrossroadDetails*> getDetails() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
+    */
+    Crossroad* clone() const;
 };
 
 

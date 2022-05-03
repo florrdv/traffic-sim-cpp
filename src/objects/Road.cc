@@ -116,7 +116,7 @@ void Road::cleanup() {
 Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
-    REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(), "Traffic light has to be on road");
+    REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(), "Traffic light must be on road");
 
     int trafficLightPosition = trafficLight->getPosition();
     Vehicle *firstVehicle = nullptr;

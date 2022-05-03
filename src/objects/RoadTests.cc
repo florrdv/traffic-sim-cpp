@@ -183,6 +183,19 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
 
 TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
     Road road = Road("example", 100.0);
-    TrafficLight
-    road.getFirstToTrafficLight(TrafficLight *trafficLight)
+    TrafficLight* trafficLight = new TrafficLight(20.0, 10);
+
+    EXPECT_EXIT({road.getFirstToTrafficLight(trafficLight); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+TEST(RoadTests, GetFirstToTrafficLightInvalid) {
+    Road road = Road("example", 100.0);
+    EXPECT_DEATH(road.getFirstToTrafficLight(nullptr), "Traffic light cannot be nullptr");
+}
+
+TEST(RoadTests, GetFirstToTrafficLightUnknown) {
+    Road road = Road("example", 100.0);
+    TrafficLight* trafficLight = new TrafficLight(20.0, 10);
+    EXPECT_DEATH(road.getFirstToTrafficLight(trafficLight), "Traffic light must be on road");
 }

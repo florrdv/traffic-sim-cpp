@@ -140,6 +140,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
+    \n REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(), "Traffic light has to be on road");
     */
     Vehicle *getFirstToTrafficLight(TrafficLight *trafficLight) const;
 
