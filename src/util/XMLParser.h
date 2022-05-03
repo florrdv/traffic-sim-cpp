@@ -85,11 +85,6 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    std::pair<std::string, std::string> parseRoadReferences(const pugi::xml_node &node);
-
-    /**
-    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-    */
     VehicleType parseVehicleType(const pugi::xml_node& node);
 
 public:

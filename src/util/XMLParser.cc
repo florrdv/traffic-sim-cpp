@@ -204,20 +204,6 @@ std::string XMLParser::parseRoadReference(const pugi::xml_node &node) {
     return road;
 }
 
-std::pair<std::string, std::string> XMLParser::parseRoadReferences(const pugi::xml_node &node) {
-    // Fetch nodes
-    pugi::xml_node firstRoadNode = node.first_child();
-    pugi::xml_node secondRoadNode = firstRoadNode.next_sibling();
-
-    // Check if the nodes exist
-    validateNode(firstRoadNode, "road");
-    validateNode(secondRoadNode, "road");
-
-    // Parse road names
-    std::pair<std::string, std::string> roads = {firstRoadNode.text().as_string(), secondRoadNode.text().as_string()};
-    return roads;
-}
-
 void XMLParser::parse(Simulation &sim, const std::string file) {
     REQUIRE(this->properlyInitialized(), "Parser was not properly initialized");
     // Load input file
