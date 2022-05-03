@@ -21,6 +21,12 @@
 #include "../objects/Crossroad.h"
 
 class XMLParser {
+    FRIEND_TEST(XMLParserTests, ParsingValidNode);
+    FRIEND_TEST(XMLParserTests, ParsingInvalidNode);
+    FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerHappyDay);
+    FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerNegative);
+
+private:
     XMLParser* _init;
 
     /**
