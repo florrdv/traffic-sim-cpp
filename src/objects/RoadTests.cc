@@ -223,3 +223,5 @@ TEST(RoadTests, GetFirstBusToBusStopUnknown) {
 
     EXPECT_DEATH(road.getFirstBusToBusStop(busStop), "Bus stop must be on road");
 }
+
+TEST(RoadTests, GetLeadingVehicle)

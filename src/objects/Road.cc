@@ -83,19 +83,21 @@ VehicleGenerator *Road::getGenerator() const {
 
 void Road::setGenerator(VehicleGenerator *g) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    ENSURE(g != nullptr, "Cannot add empty generator to road");
+    REQUIRE(g != nullptr, "Cannot add empty generator to road");
     generator = g;
     ENSURE(generator == g, "Generator was not set properly");
 }
 
 
-Vehicle *Road::getLeadingVehicle(Vehicle *v) {
+Vehicle *Road::getLeadingVehicle(Vehicle *vehicle) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    REQUIRE(vehicle != nullptr, "Vehicle may not be a nullptr");
+    REQUIRE(std::find(vehicles.begin(), vehicles.end(), vehicle) != vehicles.end(), "Vehicle must be on road");
     Vehicle *leadingVehicle = nullptr;
     for (Vehicle *candidate: vehicles) {
-        if (candidate->getPosition() <= v->getPosition()) continue;
+        if (candidate->getPosition() <= vehicle->getPosition()) continue;
         if (leadingVehicle == nullptr ||
-            leadingVehicle->getPosition() - v->getPosition() > candidate->getPosition() - v->getPosition())
+            leadingVehicle->getPosition() - vehicle->getPosition() > candidate->getPosition() - vehicle->getPosition())
             leadingVehicle = candidate;
     }
     return leadingVehicle;

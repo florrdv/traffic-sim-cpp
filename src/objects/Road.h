@@ -134,8 +134,10 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(vehicle != nullptr, "Vehicle may not be a nullptr");
+    \n REQUIRE(std::find(vehicles.begin(), vehicles.end(), vehicle) != vehicles.end(), "Vehicle must be on road");
     */
-    Vehicle *getLeadingVehicle(Vehicle *v);
+    Vehicle *getLeadingVehicle(Vehicle *vehicle);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
@@ -158,11 +160,11 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n ENSURE(t != nullptr, "Cannot add empty traffic light to road");
-    \n REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
-    \n ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(), "Traffic light was not added properly");
+    \n ENSURE(trafficLight != nullptr, "Cannot add empty traffic light to road");
+    \n REQUIRE(trafficLight->getPosition() < length, "Road not long enough for traffic light");
+    \n ENSURE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(), "Traffic light was not added properly");
     */
-    void addTrafficLight(TrafficLight *t);
+    void addTrafficLight(TrafficLight *trafficLight);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
@@ -171,7 +173,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n ENSURE(g != nullptr, "Cannot add empty generator to road");
+    \n REQUIRE(g != nullptr, "Cannot add empty generator to road");
     \n ENSURE(generator == g, "Generator was not set properly");
      */
     void setGenerator(VehicleGenerator *g);
