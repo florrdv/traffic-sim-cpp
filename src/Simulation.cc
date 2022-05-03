@@ -13,6 +13,7 @@
 #include "lib/DesignByContract.h"
 #include "lib/json.hpp"
 #include "lib/NullBuffer.h"
+#include "objects/Crossroad.h"
 
 #include <chrono>
 #include <fstream>
@@ -138,32 +139,39 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     
     std::vector<nlohmann::json> roadsSerialized;
     for (Road* road : roads) {
-        nlohmann::json r;
-        r["name"] = road->getName();
-        r["length"] = road->getLength();
+        nlohmann::json roadSerialized;
+        roadSerialized["name"] = road->getName();
+        roadSerialized["length"] = road->getLength();
 
-        roadsSerialized.push_back(r);
+        roadsSerialized.push_back(roadSerialized);
     }
 
     std::vector<nlohmann::json> busStopsSerialized;
     for (Road* road : roads) {
        for (BusStop* busStop : road->getBusStops()) {
-           nlohmann::json b;
-           b["road"] = road->getName();
-           b["position"] = busStop->getPosition();
+           nlohmann::json busStopSerialized;
+           busStopSerialized["road"] = road->getName();
+           busStopSerialized["position"] = busStop->getPosition();
 
-            busStopsSerialized.push_back(b);
+            busStopsSerialized.push_back(busStopSerialized);
        }
     }
 
     std::vector<nlohmann::json> crossroadsSerialized;
     for (Road* road : roads) {
        for (Crossroad* crossroad : road->getCrossroads()) {
-           nlohmann::json b;
-           b["road"] = road->getName();
-           b["position"] = busStop->getPosition();
+            std::pair<CrossroadDetails *, CrossroadDetails *> details = crossroad->getDetails();
 
-            busStopsSerialized.push_back(b);
+            nlohmann::json road1Serialized;
+            road1Serialized["name"] = details.first->road->getName();
+            road1Serialized["position"] = details.first->position;
+
+            nlohmann::json road2Serialized;
+            road2Serialized["name"] = details.second->road->getName();
+            road2Serialized["position"] = details.second->position;
+
+            std::vector<nlohmann::json> crossroadSerialized = { road1Serialized, road2Serialized };
+            crossroadsSerialized.push_back(crossroadSerialized);
        }
     }
 
