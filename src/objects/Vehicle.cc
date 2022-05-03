@@ -72,6 +72,7 @@ void Vehicle::updateAcceleration(Vehicle *leadingVehicle) {
 
 bool Vehicle::tick(Vehicle *leadingVehicle, Road* road) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    REQUIRE(road != nullptr, "Road cannot be nullptr");
     // Grab the initial position
     double pBefore = getPosition();
 
