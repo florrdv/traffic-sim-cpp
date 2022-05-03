@@ -12,3 +12,9 @@
     <baan>Middelheimlaan</baan>
     <positie>10</positie>
 </VOERTUIG>
+
+<VERKEERSLICHT>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <cyclus>15</cyclus>
+</VERKEERSLICHT>

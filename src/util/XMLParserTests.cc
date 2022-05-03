@@ -386,3 +386,23 @@ TEST(XMLParserTests, ParsingVehicleHappyDay) {
     EXPECT_EQ(10, vehicle->getPosition());
 }
 
+TEST(XMLParserTests, ParsingTrafficLightHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    it++;
+    it++;
+    it++;
+    pugi::xml_node trafficLightNode = *it;
+
+    TrafficLight *trafficLight = parser.parseTrafficLight(trafficLightNode);
+
+    EXPECT_EQ(90, trafficLight ->getPosition());
+    EXPECT_EQ(15, trafficLight ->getCycle());
+}
