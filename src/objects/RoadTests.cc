@@ -12,6 +12,7 @@
 #include <gtest/gtest.h>
 #include "Road.h"
 #include "TrafficLight.h"
+#include "../lib/NullBuffer.h"
 
 TEST(RoadTests, RoadGenerationHappyDay) {
     EXPECT_EXIT({Road("example", 100.0); fprintf(stderr, "Done"); exit(0);},
@@ -181,6 +182,27 @@ TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
     EXPECT_EQ(expectedAfterTick, road.getVehicles().size() - 1);
 }
 
+TEST(RoadTests, TickBusStopsHappyDay) {
+    NullBuffer null_buffer;
+    std::ostream null_stream(&null_buffer);
+
+    Road road = Road("example", 100.0);
+    int waitTime = 2;
+    BusStop* busStop = new BusStop(50, waitTime);
+    Vehicle* bus = new Vehicle(49.9, VehicleType::Bus);
+    road.addBusStop(busStop);
+    road.addVehicle(bus);
+
+    int requiredTicks = std::round((double) waitTime / (double) gSimTime); 
+
+    for (int i = 0; i < requiredTicks / 2; i++) {road.tickBusStops(); road.tickVehicles(null_stream);}
+    EXPECT_TRUE(bus->getPosition() < busStop->getPosition());
+
+    // 50 tick margin
+    for (int i = 0; i < requiredTicks / 2 + 50; i++) {road.tickBusStops(); road.tickVehicles(null_stream);}
+    EXPECT_TRUE(bus->getPosition() > busStop->getPosition());
+}
+
 TEST(RoadTests, GetFirstToTrafficLightHappyDay) {
     Road road = Road("example", 100.0);
     TrafficLight* trafficLight = new TrafficLight(20.0, 10);
@@ -245,4 +267,11 @@ TEST(RoadTests, GetLeadingVehicleUnknown) {
     Vehicle* vehicle1 = new Vehicle(10, VehicleType::Personal);
 
     EXPECT_DEATH(road.getLeadingVehicle(vehicle1), "Vehicle must be on road");
+}
+
+TEST(RoadTests, SpawnVehicleHappyDay) {
+    Road road = Road("example", 100.0);
+    EXPECT_EQ(road.getVehicles().size(), 0);
+    road.spawnVehicle(VehicleType::Personal);
+    EXPECT_EQ(road.getVehicles().size(), 1);
 }
