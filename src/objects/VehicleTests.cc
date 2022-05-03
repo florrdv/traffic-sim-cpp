@@ -36,7 +36,6 @@ TEST(VehicleTests, PositionMutationNegative) {
 
 TEST(VehicleTests, TickHappyDay) {
     Vehicle v = Vehicle(0.0, VehicleType::Personal);
-    Road* road = new Road("John", 100);
 
     EXPECT_EQ(0.0, v.getSpeed());
     EXPECT_EQ(0.0, v.getAcceleration());

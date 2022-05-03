@@ -293,22 +293,12 @@ TEST(XMLParserTests, ParsingValidNode) {
                 ::testing::ExitedWithCode(0), "Done");
 }
 
-// TODO: Figure out why validateNode() is not functioning properly (or what I'm doing wrong)
 TEST(XMLParserTests, ParsingInvalidNode) {
-    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
-    Simulation sim = Simulation();
-
     XMLParser parser;
-    pugi::xml_document doc;
-    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
-    ASSERT(result, "XML: invalid file");
 
-    pugi::xml_node_iterator it = doc.begin();
-    pugi::xml_node node = *it;
+    pugi::xml_node subject;
 
-    pugi::xml_node counterfeitChild = node.child("foo");
-
-    EXPECT_DEATH(parser.validateNode(node, "foo"), "No child found for foo");
+    EXPECT_DEATH(parser.validateNode(subject, "foo"), "XML: no child found for foo");
 }
 
 TEST(XMLParserTests, ParsingPositiveIntegerHappyDay) {
