@@ -94,7 +94,7 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         timestamp++;
 
         // Sleep until the next simulation tick
-         std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
+        std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
     }
 }
 

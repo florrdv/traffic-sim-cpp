@@ -43,18 +43,53 @@
     <baan positie="75">Lindendreef</baan>
 </KRUISPUNT>
 
+<VERKEERSLICHT>
+    <baan>Beukenlaan</baan>
+    <positie>90</positie>
+    <cyclus>60</cyclus>
+</VERKEERSLICHT>
 
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
-    <positie>90</positie>
-    <cyclus>15</cyclus>
+    <positie>130</positie>
+    <cyclus>30</cyclus>
+</VERKEERSLICHT>
+
+<VERKEERSLICHT>
+    <baan>Floraliënlaan</baan>
+    <positie>140</positie>
+    <cyclus>60</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIGGENERATOR>
     <baan>Lindendreef</baan>
-    <frequentie>3</frequentie>
+    <frequentie>15</frequentie>
     <type>ziekenwagen</type>
 </VOERTUIGGENERATOR>
+
+<VOERTUIGGENERATOR>
+    <baan>Middelheimlaan</baan>
+    <frequentie>5</frequentie>
+    <type>auto</type>
+</VOERTUIGGENERATOR>
+
+<VOERTUIG>
+    <baan>Beukenlaan</baan>
+    <positie>10</positie>
+    <type>brandweerwagen</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Beukenlaan</baan>
+    <positie>20</positie>
+    <type>brandweerwagen</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Beukenlaan</baan>
+    <positie>30</positie>
+    <type>politiecombi</type>
+</VOERTUIG>
 
 <VOERTUIG>
     <baan>Lindendreef</baan>
@@ -62,3 +97,20 @@
     <type>ziekenwagen</type>
 </VOERTUIG>
 
+<VOERTUIG>
+    <baan>Floraliënlaan</baan>
+    <positie>10</positie>
+    <type>bus</type>
+</VOERTUIG>
+
+<BUSHALTE>
+    <baan>Floraliënlaan</baan>
+    <positie>60</positie>
+    <wachttijd>10</wachttijd>
+</BUSHALTE>
+
+<BUSHALTE>
+    <baan>Middelheimlaan</baan>
+    <positie>400</positie>
+    <wachttijd>10</wachttijd>
+</BUSHALTE>
