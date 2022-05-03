@@ -60,10 +60,10 @@ void Road::addVehicle(Vehicle *v) {
 
 
 void Road::addTrafficLight(TrafficLight *t) {
+    ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
 
-    ENSURE(t != nullptr, "Cannot add empty traffic light to road");
     trafficLights.push_back(t);
     ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(), "Traffic light was not added properly");
 }

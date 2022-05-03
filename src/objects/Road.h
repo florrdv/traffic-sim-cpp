@@ -151,8 +151,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
     \n ENSURE(t != nullptr, "Cannot add empty traffic light to road");
+    \n REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
     \n ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(), "Traffic light was not added properly");
     */
     void addTrafficLight(TrafficLight *t);
