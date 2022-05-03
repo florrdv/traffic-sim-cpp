@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.6)
 project(pse_traffic_sim)
 
 set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_FLAGS "-Wall -Werror")
+#set(CMAKE_CXX_FLAGS "-Wall -Werror")
 # set(CMAKE_CXX_FLAGS "-Wall")
 set(CMAKE_EXE_LINKER_FLAGS -pthread)
 
@@ -54,10 +54,10 @@ set(RELEASE_SOURCE_FILES
 
         src/objects/BusStop.cc
         src/objects/BusStop.h
-        
+
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
-        
+
         src/TrafficSim.cc
 )
 
@@ -105,11 +105,11 @@ set(DEBUG_SOURCE_FILES
         src/Simulation.cc
         src/Simulation.h
         src/SimulationTests.cc
-        
+
         src/objects/BusStop.cc
         src/objects/BusStop.h
         src/objects/BusStopTests.cc
-        
+
         src/objects/Crossroad.cc
         src/objects/Crossroad.h
         src/objects/CrossroadTests.cc

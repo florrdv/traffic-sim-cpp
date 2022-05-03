@@ -24,3 +24,14 @@
     <frequentie>3</frequentie>
     <type>politiecombi</type>
 </VOERTUIGGENERATOR>
+
+<BUSHALTE>
+    <baan>Middelheimlaan</baan>
+    <positie>90</positie>
+    <wachttijd>20</wachttijd>
+</BUSHALTE>
+
+<KRUISPUNT>
+    <baan positie="250">Middelheimlaan</baan>
+    <baan positie="500">Groenenborgerlaan</baan>
+</KRUISPUNT>

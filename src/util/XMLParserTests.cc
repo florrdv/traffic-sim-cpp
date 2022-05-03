@@ -145,7 +145,11 @@ TEST(XMLParserTests, ParsingHappyDay) {
     Simulation sim = Simulation();
 
     XMLParser parser;
-    EXPECT_EXIT({parser.parse(sim, xmlPath); fprintf(stderr, "Parsed successfully"); exit(0);},
+    EXPECT_EXIT({
+                    parser.parse(sim, xmlPath);
+                    fprintf(stderr, "Parsed successfully");
+                    exit(0);
+                },
                 ::testing::ExitedWithCode(0), "Parsed successfully");
 }
 
@@ -284,12 +288,20 @@ TEST(XMLParserTests, ParsingValidNode) {
 
     pugi::xml_node nameNode = roadNode.child("naam");
 
-    EXPECT_EXIT({parser.validateNode(nameNode, "naam"); fprintf(stderr, "Done"); exit(0);},
-              ::testing::ExitedWithCode(0), "Done");
+    EXPECT_EXIT({
+                    parser.validateNode(nameNode, "naam");
+                    fprintf(stderr, "Done");
+                    exit(0);
+                },
+                ::testing::ExitedWithCode(0), "Done");
 
     pugi::xml_node lengthNode = roadNode.child("lengte");
 
-    EXPECT_EXIT({parser.validateNode(lengthNode, "lengte"); fprintf(stderr, "Done"); exit(0);},
+    EXPECT_EXIT({
+                    parser.validateNode(lengthNode, "lengte");
+                    fprintf(stderr, "Done");
+                    exit(0);
+                },
                 ::testing::ExitedWithCode(0), "Done");
 }
 
@@ -402,8 +414,8 @@ TEST(XMLParserTests, ParsingTrafficLightHappyDay) {
 
     TrafficLight *trafficLight = parser.parseTrafficLight(trafficLightNode);
 
-    EXPECT_EQ(90, trafficLight ->getPosition());
-    EXPECT_EQ(15, trafficLight ->getCycle());
+    EXPECT_EQ(90, trafficLight->getPosition());
+    EXPECT_EQ(15, trafficLight->getCycle());
 }
 
 TEST(XMLParserTests, ParsingVehicleGeneratorHappyDay) {
@@ -420,8 +432,51 @@ TEST(XMLParserTests, ParsingVehicleGeneratorHappyDay) {
 
     pugi::xml_node vehicleGeneratorNode = *it;
 
-    VehicleGenerator* vehicleGenerator = parser.parseVehicleGenerator(vehicleGeneratorNode);
+    VehicleGenerator *vehicleGenerator = parser.parseVehicleGenerator(vehicleGeneratorNode);
 
     EXPECT_EQ(3, vehicleGenerator->getFrequency());
     EXPECT_EQ(VehicleType::Police, vehicleGenerator->getType());
+}
+
+TEST(XMLParserTests, ParsingBusStopHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 5);
+
+    pugi::xml_node busStopNode = *it;
+
+    BusStop *busStop = parser.parseBusStop(busStopNode);
+
+    EXPECT_EQ(90, busStop->getPosition());
+    EXPECT_EQ(20, busStop->getWaitTime());
+}
+
+TEST(XMLParserTests, ParsingCrossRoadHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 6);
+
+    pugi::xml_node crossroadNode = *it;
+
+    std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossroad = parser.parseCrossroad(crossroadNode);
+
+    EXPECT_EQ(crossroad.first.first, "Middelheimlaan");
+    EXPECT_EQ(crossroad.first.second, 250);
+
+    EXPECT_EQ(crossroad.second.first, "Groenenborgerlaan");
+    EXPECT_EQ(crossroad.second.second, 500);
 }
