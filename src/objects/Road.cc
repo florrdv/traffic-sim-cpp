@@ -251,7 +251,7 @@ void Road::tickVehicles(std::ostream &onStream) {
                 int random = rand() % 2;
                 if (random == 1) {
                     // Change roads
-                    Road* road = crossroad->
+                    // Road* road = crossroad->
                 } 
             }
         }

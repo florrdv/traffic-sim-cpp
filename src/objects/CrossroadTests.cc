@@ -14,6 +14,16 @@ TEST(CrossroadTests, CrossroadGenerationHappyDay) {
                 ::testing::ExitedWithCode(0), "Done");
 }
 
+TEST(CrossroadTests, CrossroadGenerationInvalidDetails1) {
+    Road *road2 = new Road("bar", 80);
+    EXPECT_DEATH(new Crossroad(nullptr, new CrossroadDetails { road2, 5 }), "Crossroad can not be nullptr");
+}
+
+TEST(CrossroadTests, CrossroadGenerationInvalidDetails2) {
+    Road *road1 = new Road("foo", 100);
+    EXPECT_DEATH(Crossroad(new CrossroadDetails { road1, 20 }, nullptr), "Crossroad can not be nullptr");
+}
+
 TEST(CrossroadTests, CrossroadGenerationNegativePosition1) {
     Road *road1 = new Road("foo", 100);
     Road *road2 = new Road("bar", 80);
