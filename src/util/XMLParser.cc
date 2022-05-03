@@ -367,21 +367,21 @@ void XMLParser::parse(Simulation &sim, const std::string file) {
 
     // Cross roads
     for (std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossroad : crossroads) {
-        std::vector<CrossroadDetails> details;
+        std::vector<CrossroadDetails*> details;
         for (std::pair<std::string, int> pair : { crossroad.first, crossroad.second }) {
             Road *road = sim.findRoad(pair.first);
             ASSERT(road != nullptr, ("XML: unknown road " + pair.first).c_str());
 
-            details.push_back(CrossroadDetails {road, pair.second});
+            details.push_back(new CrossroadDetails {road, pair.second});
         }
 
         ASSERT(details.size() == 2, "XML: invalid cross road");
 
-        CrossroadDetails details1 = details[0];
-        CrossroadDetails details2 = details[1];
+        CrossroadDetails* details1 = details[0];
+        CrossroadDetails* details2 = details[1];
         Crossroad* crossroadParsed = new Crossroad(details1, details2);
-        details1.road->addCrossroad(crossroadParsed);
-        details2.road->addCrossroad(crossroadParsed);
+        details1->road->addCrossroad(crossroadParsed);
+        details2->road->addCrossroad(crossroadParsed);
     }
 }
 
