@@ -113,9 +113,11 @@ void Road::cleanup() {
 }
 
 
-Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
+Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    int trafficLightPosition = t->getPosition();
+    REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
+
+    int trafficLightPosition = trafficLight->getPosition();
     Vehicle *firstVehicle = nullptr;
     for (Vehicle *vehicle: vehicles) {
         double distanceToLight = ((double) trafficLightPosition) - vehicle->getPosition();
@@ -132,9 +134,11 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *t) const {
 }
 
 
-Vehicle *Road::getFirstBusToBusStop(BusStop *b) const {
+Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    int busStopPosition = b->getPosition();
+    REQUIRE(busStop != nullptr, "Bus stop cannot be nullptr");
+
+    int busStopPosition = busStop->getPosition();
     Vehicle *firstBus = nullptr;
     for (Vehicle *bus: vehicles) {
         if (bus->getType() != Bus) continue;
@@ -299,6 +303,7 @@ const std::vector<Crossroad *> &Road::getCrossroads() const {
 
 void Road::addCrossroad(Crossroad *c) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    REQUIRE(c != nullptr, "Crossroad cannot be nullptr");
     REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
     Road::crossroads.push_back(c);
     ENSURE(std::find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad was not added properly");
@@ -306,6 +311,7 @@ void Road::addCrossroad(Crossroad *c) {
 
 void Road::addBusStop(BusStop *b) {
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    REQUIRE(b != nullptr, "Bus stop cannot be nullptr");
     REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
     ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");

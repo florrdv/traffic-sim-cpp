@@ -121,9 +121,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
-    \n REQUIRE(v->getPosition() < length, "Road not long enough for vehicle");
-
     \n ENSURE(v != nullptr, "Cannot add empty vehicle to road");
+    \n REQUIRE(v->getPosition() < length, "Road not long enough for vehicle");
     \n ENSURE(std::find(vehicles.begin(), vehicles.end(), v) != vehicles.end(), "Vehicle was not added properly");
     */
     void addVehicle(Vehicle *v);
@@ -135,11 +134,13 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
     */
     Vehicle *getFirstToTrafficLight(TrafficLight *trafficLight) const;
 
     /**
-    \n
+    \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(busStop != nullptr, "Bus stop cannot be nullptr");
     */
     Vehicle *getFirstBusToBusStop(BusStop *busStop) const;
 
@@ -175,6 +176,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(c != nullptr, "Crossroad cannot be nullptr");
     \n REQUIRE(c->getPositionForRoad(this) > length, "Road not long enough for crossroad");
     \n ENSURE(std::find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad was not added properly");
      */
@@ -182,10 +184,11 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n REQUIRE(b != nullptr, "Bus stop cannot be nullptr");
     \n REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     \n ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");
     */
-    void addBusStop(BusStop *c);
+    void addBusStop(BusStop *b);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
