@@ -21,12 +21,18 @@
 #include "../objects/Crossroad.h"
 
 class XMLParser {
+    FRIEND_TEST(XMLParserTests, ParsingValidNode);
+    FRIEND_TEST(XMLParserTests, ParsingInvalidNode);
+    FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerHappyDay);
+    FRIEND_TEST(XMLParserTests, ParsingPositiveIntegerNegative);
+
+private:
     XMLParser* _init;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     */
-    void validateNode(const pugi::xml_node& node, const std::string& nam) const;
+    void validateNode(const pugi::xml_node& node, const std::string& name) const;
     /**
     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
     \n ENSURE(value>=0, "Parsed integer cannot be negative");
@@ -55,14 +61,14 @@ class XMLParser {
     VehicleGenerator* parseVehicleGenerator(const pugi::xml_node& node);
 
     /**
-     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-     \n ENSURE(busStop != nullptr, "Road has to be generated";
-     */
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    \n ENSURE(busStop != nullptr, "Road has to be generated";
+    */
     BusStop *parseBusStop(const pugi::xml_node &node);
 
     /**
-     \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
-     */
+    \n REQUIRE(this->properlyInitialized(), "XMLParser wasn't initialized properly");
+    */
     std::pair<std::pair<std::string, int>, std::pair<std::string, int>> parseCrossRoad(const pugi::xml_node &node) const;
 
     /**

@@ -268,3 +268,83 @@ TEST(XMLParserTests, ParsingCrossroadPositionOutOfBound) {
     XMLParser parser;
     EXPECT_DEATH(parser.parse(sim, xmlPath), "Position must be within road bounds");
 }
+
+TEST(XMLParserTests, ParsingValidNode) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    pugi::xml_node roadNode = *it;
+
+
+    pugi::xml_node nameNode = roadNode.child("naam");
+
+    EXPECT_EXIT({parser.validateNode(nameNode, "naam"); fprintf(stderr, "Done"); exit(0);},
+              ::testing::ExitedWithCode(0), "Done");
+
+    pugi::xml_node lengthNode = roadNode.child("lengte");
+
+    EXPECT_EXIT({parser.validateNode(lengthNode, "lengte"); fprintf(stderr, "Done"); exit(0);},
+                ::testing::ExitedWithCode(0), "Done");
+}
+
+// TODO: Figure out why validateNode() is not functioning properly (or what I'm doing wrong)
+TEST(XMLParserTests, ParsingInvalidNode) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    pugi::xml_node node = *it;
+
+    pugi::xml_node counterfeitChild = node.child("foo");
+
+    EXPECT_DEATH(parser.validateNode(node, "foo"), "No child found for foo");
+}
+
+TEST(XMLParserTests, ParsingPositiveIntegerHappyDay) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    pugi::xml_node node = *it;
+
+    pugi::xml_node lengthNode = node.child("lengte");
+    std::string lengthString = lengthNode.text().as_string();
+
+    EXPECT_EQ(10, parser.parsePositiveInteger(lengthString, "lengte", true));
+}
+
+TEST(XMLParserTests, ParsingPositiveIntegerNegative) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    it++;
+    pugi::xml_node vehicleNode = *it;
+
+    pugi::xml_node positionNode = vehicleNode.child("positie");
+    std::string positionString = positionNode.text().as_string();
+
+    EXPECT_DEATH(parser.parsePositiveInteger(positionString, "positie", true), "strictly positive");
+}
+
