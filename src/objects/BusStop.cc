@@ -13,7 +13,7 @@
 
 BusStop::BusStop(double position, int w) : Entity(position), waitTime(w) {
     REQUIRE(position >= 0, "Position has to be positive");
-    REQUIRE(w >= 0, "Wait time has to be positive");
+    REQUIRE(w > 0, "Wait time has to be strictly positive");
     _init = this;
     ENSURE(_init == this, "_init reference must be set");
 }

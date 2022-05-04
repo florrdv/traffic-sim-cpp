@@ -84,7 +84,7 @@ TEST(RoadTests, GeneratorMutationHappyDay) {
 TEST(RoadTests, BusStopMutationHappyDay) {
     Road road = Road("example", 100.0);
     ASSERT(road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
-    BusStop *busStop = new BusStop(10, VehicleType::Personal);
+    BusStop *busStop = new BusStop(10, 10);
     road.addBusStop(busStop);
 
     ASSERT_EQ(road.getBusStops().size(), 1);
@@ -99,7 +99,7 @@ TEST(RoadTests, BusStopMutationInvalid) {
 TEST(RoadTests, BusStopMutationInvalidPosition) {
     Road road = Road("example", 100.0);
     ASSERT(road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
-    BusStop *busStop = new BusStop(200, VehicleType::Personal);
+    BusStop *busStop = new BusStop(200, 10);
     EXPECT_DEATH(road.addBusStop(busStop), "Road not long enough for");
 }
 
@@ -193,7 +193,7 @@ TEST(RoadTests, TickBusStopsHappyDay) {
     road.addBusStop(busStop);
     road.addVehicle(bus);
 
-    int requiredTicks = std::round((double) waitTime / (double) gSimTime); 
+    int requiredTicks = std::round((double) waitTime / (double) gSimTime);
 
     for (int i = 0; i < requiredTicks / 2; i++) {road.tickBusStops(); road.tickVehicles(null_stream);}
     EXPECT_TRUE(bus->getPosition() < busStop->getPosition());
