@@ -8,7 +8,6 @@
  * File Created: Wednesday, 23rd March 2022 8:12:52 pm
  */
 
-#include <vector>
 #include "Constants.h"
 
 std::map<VehicleType, VehicleConstant> gVehicleConstants = {
@@ -64,7 +63,7 @@ std::map<VehicleType, VehicleConstant> gVehicleConstants = {
     }
 };
 
-priorityVehicleTypes = {VehicleType::Police, VehicleType::Ambulance, VehicleType::FireTruck};
+std::vector<VehicleType> priorityVehicleTypes = {VehicleType::Police, VehicleType::Ambulance, VehicleType::FireTruck};
 
 double gBrakeDistance           = 15;
 double gSimTime                 = 0.0166;

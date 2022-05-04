@@ -12,6 +12,7 @@
 #define __PROJECTS_PSE_TRAFFIC_SIM_SRC_DATA_CONSTANTS_CC_
 
 #include <string>
+#include <vector>
 #include <map>
 
 enum VehicleType {
@@ -30,7 +31,7 @@ struct VehicleConstant {
     double  gFollowMin;
 };
 
-std::vector<VehicleType> priorityVehicleTypes;
+extern std::vector<VehicleType> priorityVehicleTypes;
 
 extern std::map<VehicleType, VehicleConstant> gVehicleConstants;
 
