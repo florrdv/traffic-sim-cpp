@@ -554,3 +554,5 @@ TEST(XMLParserTests, ParsingVehicleTypeUnknownType) {
 
     EXPECT_DEATH(parser.parseVehicleType(vehicleNode), "unknown vehicle type");
 }
+
+//TEST()
