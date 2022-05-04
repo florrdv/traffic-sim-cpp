@@ -48,8 +48,10 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(speed >= 0, "Vehicle speed must be positive");
+    \n ENSURE(getPosition() >= 0, "Vehicle position must be positive");
     */
     void updateSpeed();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");

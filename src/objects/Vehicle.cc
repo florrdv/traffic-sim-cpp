@@ -52,6 +52,8 @@ void Vehicle::updateSpeed() {
         speed = newSpeed;
         setPosition(getPosition() + speed * simTime + acceleration * std::pow(simTime, 2) / 2);
     }
+
+    ENSURE(getPosition() >= 0, "Vehicle position must be positive");
     ENSURE(speed >= 0, "Vehicle speed must be positive");
 }
 
