@@ -18198,7 +18198,7 @@
 }
                 const roadElementTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/roadh.png', { mipmap: true })
                 const roadElementTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/roadv.png', { mipmap: true })
-                const crossRoadTexture = await PIXI.Texture.fromURL("https://img.fuserobotics.io/crossroad.png", { mipmap: true })
+                const crossroadTexture = await PIXI.Texture.fromURL("https://img.fuserobotics.io/crossroad.png", { mipmap: true })
                 const roadElementLength = 25
 
                 const personalVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/personalh.png', { mipmap: true })
@@ -18417,42 +18417,42 @@
                     relevantBusStops.forEach(busStop => drawBusStop(busStop))
 
                     // Fetch all crossroads
-                    const relevantCrossroads = (data.crossroads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
+                    const relevantCrossroads = (data.crossroads || []).filter((crossroad) => crossroad.find((r) => road.name === r.name))
 
                     for (const [road1, road2] of relevantCrossroads) {
-                        const crossRoadOther = road1.name === road.name ? road2 : road1
-                        const crossRoadCurrent = road1.name === road.name ? road1 : road2
+                        const crossroadOther = road1.name === road.name ? road2 : road1
+                        const crossroadCurrent = road1.name === road.name ? road1 : road2
 
-                        const otherRoad = data.roads.find((r) => r.name === crossRoadOther.name)
+                        const otherRoad = data.roads.find((r) => r.name === crossroadOther.name)
                         if (otherRoad.drawn) continue
 
                         if (invert) {
-                            const crossRoadX = start.x
-                            const crossRoadY = start.y + (crossRoadCurrent.position / roadElementLength) * roadElementTextureVertical.height;
+                            const crossroadX = start.x
+                            const crossroadY = start.y + (crossroadCurrent.position / roadElementLength) * roadElementTextureVertical.height;
 
-                            const c = new PIXI.Sprite(crossRoadTexture)
+                            const c = new PIXI.Sprite(crossroadTexture)
                             c.zIndex = -1
-                            c.x = crossRoadX - crossRoadTexture.width / 2 + 1
-                            c.y = crossRoadY - crossRoadTexture.height / 2 - 2
+                            c.x = crossroadX - crossroadTexture.width / 2 + 1
+                            c.y = crossroadY - crossroadTexture.height / 2 - 2
 
                             viewport.addChild(c)
 
-                            const offsetX = ((otherRoad.length / roadElementLength) * roadElementTextureHorizontal.width * crossRoadOther.position) / otherRoad.length
-                            const offsetY = ((road.length / roadElementLength) * roadElementTextureVertical.height * crossRoadCurrent.position) / road.length
+                            const offsetX = ((otherRoad.length / roadElementLength) * roadElementTextureHorizontal.width * crossroadOther.position) / otherRoad.length
+                            const offsetY = ((road.length / roadElementLength) * roadElementTextureVertical.height * crossroadCurrent.position) / road.length
                             placeRoad(data.roads.indexOf(otherRoad), { x: start.x - offsetX, y: start.y + offsetY }, !invert)
                         } else {
-                            const crossRoadX = start.x + (crossRoadCurrent.position / roadElementLength) * roadElementTextureHorizontal.width
-                            const crossRoadY = start.y;
+                            const crossroadX = start.x + (crossroadCurrent.position / roadElementLength) * roadElementTextureHorizontal.width
+                            const crossroadY = start.y;
 
-                            const c = new PIXI.Sprite(crossRoadTexture)
+                            const c = new PIXI.Sprite(crossroadTexture)
                             c.zIndex = -1
-                            c.x = crossRoadX - crossRoadTexture.width / 2 + 1
-                            c.y = crossRoadY - crossRoadTexture.height / 2 - 2
+                            c.x = crossroadX - crossroadTexture.width / 2 + 1
+                            c.y = crossroadY - crossroadTexture.height / 2 - 2
 
                             viewport.addChild(c)
 
-                            const offsetX = ((road.length / roadElementLength) * roadElementTextureHorizontal.width * crossRoadCurrent.position) / road.length
-                            const offsetY = ((otherRoad.length / roadElementLength) * roadElementTextureVertical.height * crossRoadOther.position) / otherRoad.length
+                            const offsetX = ((road.length / roadElementLength) * roadElementTextureHorizontal.width * crossroadCurrent.position) / road.length
+                            const offsetY = ((otherRoad.length / roadElementLength) * roadElementTextureVertical.height * crossroadOther.position) / otherRoad.length
                             placeRoad(data.roads.indexOf(otherRoad), { x: start.x + offsetX, y: start.y - offsetY }, !invert)
                         }
                     }
