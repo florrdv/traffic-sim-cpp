@@ -537,3 +537,20 @@ TEST(XMLParserTests, ParsingCrossroadDuplicate) {
 
     EXPECT_DEATH(parser.parseCrossroad(crossroadNode), "invalid road combination");
 }
+
+TEST(XMLParserTests, ParsingVehicleTypeUnknownType) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 8);
+
+    pugi::xml_node vehicleNode = *it;
+
+    EXPECT_DEATH(parser.parseVehicleType(vehicleNode), "unknown vehicle type");
+}

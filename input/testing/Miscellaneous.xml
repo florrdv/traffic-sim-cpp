@@ -48,3 +48,10 @@
     <baan positie="250">Middelheimlaan</baan>
     <baan positie="500">Middelheimlaan</baan>
 </KRUISPUNT>
+
+<!--it 8-->
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>10</positie>
+    <type>foo</type>
+</VOERTUIG>
