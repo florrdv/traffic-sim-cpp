@@ -18,7 +18,7 @@ class TrafficLight: public Entity {
 private:
     TrafficLight* _init;
 
-    int cycle{};
+    int cycle = 0;
     bool green=false;
 
     int cycleCount = 0;
@@ -50,6 +50,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     */
     int getCycleCount() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(c>=0, "Traffic light cycle must be positive");
@@ -59,6 +60,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
+    \n ENSURE(before != after, "Traffic light color was not changed");
     */
     bool isGreen() const;
 
