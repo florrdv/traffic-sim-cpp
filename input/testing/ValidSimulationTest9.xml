@@ -16,8 +16,8 @@
 
 <VERKEERSLICHT>
     <baan>Groenenborgerlaan</baan>
-    <positie>20</positie>
-    <cyclus>12</cyclus>
+    <positie>100</positie>
+    <cyclus>20</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIG>
@@ -42,6 +42,12 @@
     <baan>Groenenborgerlaan</baan>
     <positie>20</positie>
     <type>brandweerwagen</type>
+</VOERTUIG>
+
+<VOERTUIG>
+    <baan>Groenenborgerlaan</baan>
+    <positie>15</positie>
+    <type>auto</type>
 </VOERTUIG>
 
 <VOERTUIGGENERATOR>

@@ -127,7 +127,11 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
 
     int trafficLightPosition = trafficLight->getPosition();
     Vehicle *firstVehicle = nullptr;
-    for (Vehicle *vehicle: vehicles) {
+    for (Vehicle *vehicle : vehicles) {
+        if (std::find(priorityVehicleTypes.begin(), priorityVehicleTypes.end(), vehicle->getType()) !=
+                priorityVehicleTypes.end())
+                continue;
+        
         double distanceToLight = ((double) trafficLightPosition) - vehicle->getPosition();
         if (firstVehicle == nullptr) {
             if (distanceToLight > 0) firstVehicle = vehicle;
@@ -198,10 +202,6 @@ void Road::tickTrafficLights() {
         // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->isGreen()) firstVehicle->accelerate();
         else {
-            if (std::find(priorityVehicleTypes.begin(), priorityVehicleTypes.end(), firstVehicle->getType()) !=
-                priorityVehicleTypes.end())
-                continue;
-
             // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 

@@ -89,14 +89,17 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     double getSpeed() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     double getSpeedMax() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     double getAcceleration() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
@@ -114,13 +117,11 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n ENSURE(acceleration <= accelerationBefore, "Acceleration should not increase while stopping");
     */
     void stop();
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    \n ENSURE(speedMax <= speedBefore, "Speed should not increase while decelerating");
     */
     void decelerate();
 

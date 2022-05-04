@@ -82,18 +82,11 @@ void Vehicle::tick(Vehicle *leadingVehicle) {
 
 void Vehicle::stop() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    double accelerationBefore = acceleration;
     acceleration = -brakeMax * speed / speedMax;
-
-    ENSURE(acceleration <= accelerationBefore, "Acceleration should not increase while stopping");
 }
 
 void Vehicle::decelerate() {
-    REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
-    double speedBefore = speedMax;
     speedMax = decelerationFactor * speedMaxLimit;
-
-    ENSURE(speedMax <= speedBefore, "Speed should not increase while decelerating");
 }
 
 void Vehicle::accelerate() {

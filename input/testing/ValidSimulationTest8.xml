@@ -16,7 +16,7 @@
 
 <VERKEERSLICHT>
     <baan>Groenenborgerlaan</baan>
-    <positie>0</positie>
+    <positie>60</positie>
     <cyclus>12</cyclus>
 </VERKEERSLICHT>
 
@@ -31,8 +31,8 @@
 </VOERTUIG>
 
 <VOERTUIG>
-<baan>Middelheimlaan</baan>
-<positie>0</positie>
+    <baan>Middelheimlaan</baan>
+    <positie>0</positie>
 </VOERTUIG>
 
 <VOERTUIG>
