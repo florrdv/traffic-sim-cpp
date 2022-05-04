@@ -19,6 +19,8 @@ int Crossroad::getPositionForRoad(Road* road) const {
 
     if (details.first->road == road) return details.first->position;
     if (details.second->road == road) return details.second->position;
+
+    return 0;
 }
 
 Crossroad::Crossroad(CrossroadDetails* details1, CrossroadDetails* details2) : details({details1, details2}) {
