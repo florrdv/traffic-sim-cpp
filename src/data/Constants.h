@@ -37,7 +37,6 @@ extern double gSimTime;
 extern double gDecelerationDistance;
 extern double gDecelerationFactor;
 
-
 static std::string gTestInputFolder = "../input/testing";
 static std::string gTestOutputFolder = "../output/testing";
 

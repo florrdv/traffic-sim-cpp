@@ -83,11 +83,11 @@ TEST(RoadTests, GeneratorMutationHappyDay) {
 
 TEST(RoadTests, BusStopMutationHappyDay) {
     Road road = Road("example", 100.0);
-    ASSERT(road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
+    ASSERT((int) road.getBusStops().size() == 0, "there should be no bus stops on the road yet");
     BusStop *busStop = new BusStop(10, 10);
     road.addBusStop(busStop);
 
-    ASSERT_EQ(road.getBusStops().size(), 1);
+    ASSERT_EQ((int) road.getBusStops().size(), 1);
     ASSERT_EQ(road.getBusStops()[0], busStop);
 }
 
