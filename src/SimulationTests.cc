@@ -181,8 +181,8 @@ TEST(SimulationTests, ValidSimulationStdout9) {
 }
 
 TEST(SimulationTests, ValidSimulationHTML1) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.html";
 
     std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
 
@@ -192,17 +192,17 @@ TEST(SimulationTests, ValidSimulationHTML1) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML2) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest2.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest2.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest2.xml";
 
     Simulation sim = Simulation();
 
@@ -210,17 +210,17 @@ TEST(SimulationTests, ValidSimulationHTML2) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML3) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest3.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest3.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest3.xml";
 
     Simulation sim = Simulation();
 
@@ -228,17 +228,17 @@ TEST(SimulationTests, ValidSimulationHTML3) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML4) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest4.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest4.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest4.xml";
 
     Simulation sim = Simulation();
 
@@ -246,17 +246,17 @@ TEST(SimulationTests, ValidSimulationHTML4) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML5) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest5.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest5.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest5.xml";
 
     Simulation sim = Simulation();
 
@@ -264,17 +264,17 @@ TEST(SimulationTests, ValidSimulationHTML5) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML6) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest6.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest6.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest6.xml";
 
     Simulation sim = Simulation();
 
@@ -282,17 +282,17 @@ TEST(SimulationTests, ValidSimulationHTML6) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML7) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest7.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest7.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest7.xml";
 
     Simulation sim = Simulation();
 
@@ -300,17 +300,17 @@ TEST(SimulationTests, ValidSimulationHTML7) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML8) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest8.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest8.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest8.xml";
 
     Simulation sim = Simulation();
 
@@ -318,17 +318,17 @@ TEST(SimulationTests, ValidSimulationHTML8) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
 TEST(SimulationTests, ValidSimulationHTML9) {
-    std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
-    std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
+    std::string outPath = gTestOutputFolder + "/ValidSimulationTest9.html";
+    std::string inPath = gTestInputFolder + "/ValidSimulationTest9.html";
 
-    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest1.xml";
+    std::string xmlPath = gTestInputFolder + "/ValidSimulationTest9.xml";
 
     Simulation sim = Simulation();
 
@@ -336,7 +336,7 @@ TEST(SimulationTests, ValidSimulationHTML9) {
     parser.parse(sim, xmlPath);
 
     std::ofstream file(outPath);
-    sim.writeOn(file, 0, 500);
+    sim.writeToFile(file, 50);
     file.close();
 
     EXPECT_TRUE(fileCompare(inPath, outPath));
