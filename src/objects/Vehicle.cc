@@ -98,6 +98,8 @@ void Vehicle::decelerate() {
 void Vehicle::accelerate() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     speedMax = speedMaxLimit;
+    
+    ENSURE(std::abs(speedMax - speedMaxLimit) < std::numeric_limits<double>::epsilon(), "Speed was not set correctly on acceleration");
 }
 
 double Vehicle::getAcceleration() const {

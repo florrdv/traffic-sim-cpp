@@ -126,6 +126,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(std::abs(speedMax - speedMaxLimit) < std::numeric_limits<double>::epsilon(), "Speed was not set correctly on acceleration");
     */
     void accelerate();
 
