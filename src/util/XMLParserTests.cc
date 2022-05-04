@@ -305,7 +305,6 @@ TEST(XMLParserTests, ParsingValidNode) {
                 ::testing::ExitedWithCode(0), "Done");
 }
 
-// TODO: Figure out why validateNode() is not functioning properly (or what I'm doing wrong)
 TEST(XMLParserTests, ParsingInvalidNode) {
     std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
     Simulation sim = Simulation();
@@ -472,7 +471,8 @@ TEST(XMLParserTests, ParsingCrossroadHappyDay) {
 
     pugi::xml_node crossroadNode = *it;
 
-    std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossroad = parser.parseCrossroad(crossroadNode);
+    std::pair<std::pair<std::string, int>, std::pair<std::string, int>> crossroad = parser.parseCrossroad(
+            crossroadNode);
 
     EXPECT_EQ(crossroad.first.first, "Middelheimlaan");
     EXPECT_EQ(crossroad.first.second, 250);
@@ -519,4 +519,21 @@ TEST(XMLParserTests, ParsingVehicleTypeHappyDay) {
     VehicleType type = parser.parseVehicleType(vehicleTypeNode);
 
     EXPECT_EQ(type, VehicleType::Police);
+}
+
+TEST(XMLParserTests, ParsingCrossroadDuplicate) {
+    std::string xmlPath = gTestInputFolder + "/Miscellaneous.xml";
+    Simulation sim = Simulation();
+
+    XMLParser parser;
+    pugi::xml_document doc;
+    pugi::xml_parse_result result = doc.load_file(xmlPath.c_str());
+    ASSERT(result, "XML: invalid file");
+
+    pugi::xml_node_iterator it = doc.begin();
+    std::advance(it, 7);
+
+    pugi::xml_node crossroadNode = *it;
+
+    EXPECT_DEATH(parser.parseCrossroad(crossroadNode), "invalid road combination");
 }
