@@ -163,8 +163,13 @@ Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
 
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
+    int countBefore = vehicles.size();
+    
     Vehicle *v = new Vehicle(0, type);
     addVehicle(v);
+
+    int countAfter = vehicles.size();
+    ENSURE(countAfter == countBefore + 1, "Vehicle was not spawned correctly");
 }
 
 void Road::tickTrafficLights() {

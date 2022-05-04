@@ -68,6 +68,7 @@ private:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    \n ENSURE(countAfter == countBefore + 1, "Vehicle was not spawned correctly");
     */
     void spawnVehicle(const VehicleType &type);
 
