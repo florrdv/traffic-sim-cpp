@@ -223,7 +223,7 @@ void Road::tickBusStops() {
             if ((double) waitTime / (double) gSimTime < (double) timeCount) {
                 // Let's get the bus to leave
                 bus->accelerate();
-                // Make sure the bus is not stopped while it is stil leaving
+                // Make sure the bus is not stopped while it is still leaving
                 firstBus = nullptr;
 
             // Start counting once the bus has slowed down enough
@@ -273,9 +273,9 @@ void Road::tickVehicles(std::ostream &onStream) {
                 // Vehicle has to move roads
                 if (random == 1) {
                     // Get other road info
-                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails(); 
+                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails();
                     CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
-                
+
                     // Move to other road
                     (*vehicle)->setPosition(otherDetails->position);
                     otherDetails->road->addVehicle(*vehicle);
@@ -345,8 +345,8 @@ void Road::addCrossroad(Crossroad *c) {
 }
 
 void Road::addBusStop(BusStop *b) {
-    REQUIRE(b != nullptr, "Bus stop cannot be nullptr");
     REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
+    REQUIRE(b != nullptr, "Bus stop cannot be nullptr");
     REQUIRE(b->getPosition() < length, "Road not long enough for bus stop");
     busStops.push_back(b);
     ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");
