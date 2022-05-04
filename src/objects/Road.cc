@@ -263,7 +263,6 @@ void Road::tickVehicles(std::ostream &onStream) {
         // Create boolean to keep track of removal
         bool remove = false;
         // Handle crossroads
-        std::vector<Crossroad *> crossroads = getCrossroads();
         for (Crossroad* crossroad : crossroads) {
             // Get crossroad position
             double crossroadPosition = crossroad->getPositionForRoad(this);
