@@ -48,8 +48,10 @@ private:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(speed >= 0, "Vehicle speed must be positive");
+    \n ENSURE(getPosition() >= 0, "Vehicle position must be positive");
     */
     void updateSpeed();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(acceleration <= accelerationMax, "Vehicle acceleration cannot be greater than max acceleration");
@@ -70,6 +72,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     int getId() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(id_>=0, "Vehicle ID cannot be a negative integer");
@@ -111,14 +114,19 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(acceleration <= accelerationBefore, "Acceleration should not increase while stopping");
     */
     void stop();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(speedMax <= speedBefore, "Speed should not increase while decelerating");
     */
     void decelerate();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(std::abs(speedMax - speedMaxLimit) < std::numeric_limits<double>::epsilon(), "Speed was not set correctly on acceleration");
     */
     void accelerate();
 

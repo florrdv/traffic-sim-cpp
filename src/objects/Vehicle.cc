@@ -52,6 +52,8 @@ void Vehicle::updateSpeed() {
         speed = newSpeed;
         setPosition(getPosition() + speed * simTime + acceleration * std::pow(simTime, 2) / 2);
     }
+
+    ENSURE(getPosition() >= 0, "Vehicle position must be positive");
     ENSURE(speed >= 0, "Vehicle speed must be positive");
 }
 
@@ -79,17 +81,25 @@ void Vehicle::tick(Vehicle *leadingVehicle) {
 
 void Vehicle::stop() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    double accelerationBefore = acceleration;
     acceleration = -brakeMax * speed / speedMax;
+
+    ENSURE(acceleration <= accelerationBefore, "Acceleration should not increase while stopping");
 }
 
 void Vehicle::decelerate() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    double speedBefore = speedMax;
     speedMax = decelerationFactor * speedMaxLimit;
+
+    ENSURE(speedMax <= speedBefore, "Speed should not increase while decelerating");
 }
 
 void Vehicle::accelerate() {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     speedMax = speedMaxLimit;
+    
+    ENSURE(std::abs(speedMax - speedMaxLimit) < std::numeric_limits<double>::epsilon(), "Speed was not set correctly on acceleration");
 }
 
 double Vehicle::getAcceleration() const {
