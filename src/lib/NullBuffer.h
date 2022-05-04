@@ -13,6 +13,7 @@
 
 #include <iostream>
 
+// Inspired by: https://stackoverflow.com/questions/11826554/standard-no-op-output-stream
 class NullBuffer : public std::streambuf
 {
 public:

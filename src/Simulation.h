@@ -33,11 +33,11 @@ private:
     \n REQUIRE(properlyInitialized(), "constructor must end in properlyInitialized state");
     \n ENSURE(amount >= 0, "Cannot have a negative amount of vehicles");
     */
-    int countVehicles();
+    int countVehicles() const;
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
     */
-    nlohmann::json dumpState();
+    nlohmann::json dumpState() const;
 public:
     Simulation();
     /**
@@ -56,7 +56,7 @@ public:
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    Road* findRoad(const std::string& roadName);
+    Road* findRoad(const std::string& roadName) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling writeOn");
@@ -75,7 +75,6 @@ public:
     
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
-
 };
 
 // Closing of the ``header guard''.

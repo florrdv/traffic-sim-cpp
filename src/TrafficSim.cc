@@ -18,10 +18,10 @@ int main() {
     Simulation sim1 = Simulation();
     Simulation sim2 = Simulation();
 
-    parser.parse(sim1, "../input/example.xml");
-    parser.parse(sim2, "../input/example.xml");
+    parser.parse(sim1, "../input/demo.xml");
+    parser.parse(sim2, "../input/demo.xml");
 
-    // sim1.writeOn(std::cout, 50);
+    sim1.writeOn(std::cout, 180, 2);
 
     std::ofstream f("out.html");
     sim2.writeToFile(f, 100);

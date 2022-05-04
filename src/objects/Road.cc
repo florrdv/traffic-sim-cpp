@@ -89,7 +89,7 @@ void Road::setGenerator(VehicleGenerator *g) {
 }
 
 
-Vehicle *Road::getLeadingVehicle(Vehicle *vehicle) {
+Vehicle *Road::getLeadingVehicle(Vehicle *vehicle) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(vehicle != nullptr, "Vehicle may not be a nullptr");
     REQUIRE(std::find(vehicles.begin(), vehicles.end(), vehicle) != vehicles.end(), "Vehicle must be on road");
@@ -162,7 +162,7 @@ Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
 
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
-    Vehicle *v = new Vehicle(0, VehicleType::Personal);
+    Vehicle *v = new Vehicle(0, type);
     addVehicle(v);
 }
 

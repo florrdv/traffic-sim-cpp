@@ -24,9 +24,6 @@ private:
 
     double position{};
 
-    // Safety specific
-    bool properlyInitialized() const { return _init == this; }
-
 protected:
     /**
     \n REQUIRE(p>=0, "Entity position cannot be a negative integer")
@@ -47,7 +44,8 @@ public:
     */
     double getPosition() const;
 
-
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
 };
 
 #endif // __PROJECTS_PSE_TRAFFIC_SIM_SRC_OBJECTS_ENTITY_H_

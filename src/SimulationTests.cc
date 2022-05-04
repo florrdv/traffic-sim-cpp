@@ -18,7 +18,7 @@
 #include "Simulation.h"
 
 
-TEST(SimulationTests, ValidSimulationTest1) {
+TEST(SimulationTests, ValidSimulationTestOutput1) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest1.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest1.txt";
 
@@ -36,7 +36,7 @@ TEST(SimulationTests, ValidSimulationTest1) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest2) {
+TEST(SimulationTests, ValidSimulationOutput2) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest2.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest2.txt";
 
@@ -54,7 +54,7 @@ TEST(SimulationTests, ValidSimulationTest2) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest3) {
+TEST(SimulationTests, ValidSimulationOutput3) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest3.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest3.txt";
 
@@ -72,7 +72,7 @@ TEST(SimulationTests, ValidSimulationTest3) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest4) {
+TEST(SimulationTests, ValidSimulationOutput4) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest4.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest4.txt";
 
@@ -90,7 +90,7 @@ TEST(SimulationTests, ValidSimulationTest4) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest5) {
+TEST(SimulationTests, ValidSimulationOutput5) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest5.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest5.txt";
 
@@ -108,7 +108,7 @@ TEST(SimulationTests, ValidSimulationTest5) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest6) {
+TEST(SimulationTests, ValidSimulationOutput6) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest6.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest6.txt";
 
@@ -126,7 +126,7 @@ TEST(SimulationTests, ValidSimulationTest6) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest7) {
+TEST(SimulationTests, ValidSimulationOutput7) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest7.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest7.txt";
 
@@ -144,7 +144,7 @@ TEST(SimulationTests, ValidSimulationTest7) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest8) {
+TEST(SimulationTests, ValidSimulationOutput8) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest8.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest8.txt";
 
@@ -162,7 +162,7 @@ TEST(SimulationTests, ValidSimulationTest8) {
     EXPECT_TRUE(fileCompare(inPath, outPath));
 }
 
-TEST(SimulationTests, ValidSimulationTest9) {
+TEST(SimulationTests, ValidSimulationOutput9) {
     std::string outPath = gTestOutputFolder + "/ValidSimulationTest9.txt";
     std::string inPath = gTestInputFolder + "/ValidSimulationTest9.txt";
 

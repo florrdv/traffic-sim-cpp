@@ -26,10 +26,6 @@ private:
     std::pair<CrossroadDetails*, CrossroadDetails*> details;
 
     Crossroad* _init;
-
-    // Safety specific
-    bool properlyInitialized() const { return _init == this; }
-
 public:
     /**
     \n REQUIRE(details1 != nullptr, "Crossroad can not be nullptr");
@@ -67,6 +63,9 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
     */
     Crossroad* clone() const;
+
+    // Safety specific
+    bool properlyInitialized() const { return _init == this; }
 };
 
 

@@ -139,7 +139,7 @@ public:
     \n REQUIRE(vehicle != nullptr, "Vehicle may not be a nullptr");
     \n REQUIRE(std::find(vehicles.begin(), vehicles.end(), vehicle) != vehicles.end(), "Vehicle must be on road");
     */
-    Vehicle *getLeadingVehicle(Vehicle *vehicle);
+    Vehicle *getLeadingVehicle(Vehicle *vehicle) const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");

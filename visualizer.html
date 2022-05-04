@@ -121,7 +121,7 @@
 
                     const texture = !road.invert ? vehicleTypes[vehicle.type][0] : vehicleTypes[vehicle.type][1]
                     const sprite = new PIXI.Sprite(texture)
-                    sprite.scale.set(2, 2)
+                    sprite.scale.set(1.5, 1.5)
 
                     let x, y
                     if (road.invert) {
@@ -209,13 +209,13 @@
 
                             roadElement.y = start.y + i * roadElementTextureVertical.height
                             roadElement.x = start.x - roadElementTextureVertical.width / 2
-                            roadElement.zIndex = -1
+                            roadElement.zIndex = -2
                         } else {
                             roadElement = new PIXI.Sprite(roadElementTextureHorizontal)
 
                             roadElement.y = start.y - roadElementTextureHorizontal.height / 2
                             roadElement.x = start.x + i * roadElementTextureHorizontal.width
-                            roadElement.zIndex = -1
+                            roadElement.zIndex = -2
                         }
                         viewport.addChild(roadElement)
                     })
@@ -243,6 +243,7 @@
                             const crossRoadY = start.y + (crossRoadCurrent.position / roadElementLength) * roadElementTextureVertical.height;
 
                             const c = new PIXI.Sprite(crossRoadTexture)
+                            c.zIndex = -1
                             c.x = crossRoadX - crossRoadTexture.width / 2 + 1
                             c.y = crossRoadY - crossRoadTexture.height / 2 - 2
 
@@ -256,6 +257,7 @@
                             const crossRoadY = start.y;
 
                             const c = new PIXI.Sprite(crossRoadTexture)
+                            c.zIndex = -1
                             c.x = crossRoadX - crossRoadTexture.width / 2 + 1
                             c.y = crossRoadY - crossRoadTexture.height / 2 - 2
 
