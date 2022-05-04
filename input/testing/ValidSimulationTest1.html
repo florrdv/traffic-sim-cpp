@@ -1,0 +1,2540 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://pixijs.download/release/pixi.min.js"></script>
+        <script src="https://github.com/davidfig/pixi-viewport/releases/download/4.34.4/viewport.min.min.js"></script>
+    </head>
+    <body style="margin: 0">
+        <script>
+            async function main() {
+                const data = {
+    "busStops": [],
+    "crossroads": [],
+    "logs": [
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.0,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.0,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.0005952096,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.0015872255999974405,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.002976047999954786,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.0047616767997184775,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.006944111998896091,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.009523353596692541,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.012499401591705333,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.01587225598167888,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.019641916763217852,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.023808383931459592,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.028371657479705582,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.03333173739901195,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.03868862367773904,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.044442316301060006,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.050592815250428524,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.05714012050300547,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.06408423203104473,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.07142514980123797,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.07916287377401855,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.08729740390282446,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.09582874013332027,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.10475688240257816,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.11408183063821803,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.12380358475750665,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.13392214466641578,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.14443751025863955,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.15534968141457056,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.1666586580002355,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.1783644398661893,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.19046702684636874,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.20296641875690494,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.215862615394895,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.2291556165371326,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.24284542193879766,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.2569320313321052,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.27141544442491305,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.28629566089928893,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.3015726804100362,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.31724650258317905,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.33331712701440647,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.34978455326747554,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.36664878087257363,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.38390980932463975,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.40156763808164486,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.41962226656283136,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.43807369414691194,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.4569219201702268,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.4761669439248607,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.4958087646567187,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.5158473815635612,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.536282793792998,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.5571150004404413,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.5783440005470178,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.599969793097441,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.6219923770178405,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.6444117511735525,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.6672279143668683,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.6904408653347422,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.7140506027464587,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.7380571252012584,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.7624604312259242,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.7872605192723248,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.8124573877149192,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.8380510348482194,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.8640414588842126,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.8904286579497425,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.9172126300838498,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.944393373235072,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.9719708852587028,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 0.9999451639140099,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.028316206861413,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.0570840116596194,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.0862485757627225,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.1158098965172552,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.1457679711592048,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.1761227968109882,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.2068743704783844,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.2380226890474277,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.2695677492812596,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.3015095478169403,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.3338480811622204,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.3665833456922705,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.3997153376463713,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.4332440531245636,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.467169488084256,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.5014916383367947,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.5362104995439902,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.5713260672146059,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.6068383367008037,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.6427473031945523,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.6790529617239929,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.715755307149765,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.752854334161293,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.7903500372730303,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.8282424108206656,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.8665314489572882,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.9052171456495117,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.94429949467356,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 1.9837784896113102,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.0236541238462995,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.0639263905596876,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.1045952827261827,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.1456607931099243,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.18712291426033,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.2289816385078987,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.271236957959976,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.3138888644964797,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.3569373497655848,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.4003824051793687,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.4442240219094185,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.488462190882396,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.533096902775566,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.578128148012282,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.6235559167574363,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.669380198912867,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.715600984112727,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.7622182617188162,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.8092320208158683,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.8566422502068054,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.9044489384079504,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 2.952652073644199,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.0012516438441543,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.0502476366352242,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.099640039338676,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.1494288389646545,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.199614022207163,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.250195575439003,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.3011734847066747,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.352547735725244,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.404318313873164,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.456485204187065,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.509048391356502,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.562007859718665,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.6153635932530523,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.6691155755761042,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.7232637899358005,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.7778082192062197,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.8327488458820596,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.88808565207312,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.943818619498752,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 3.9999477294822636,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.056472962945294,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.113394300402143,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.170711721954077,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.228425207283579,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.286534735648582,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.345040285876648,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.403941836359122,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.463239365045244,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.522932849436231,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.583022266579309,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.643507593061726,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.704388805004718,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.765665878057442,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.827338787390874,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.88940750769167,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 4.9518720131559935,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.014732277483304,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.077988273870116,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.141639975003719,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.205687353055861,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.270130379676404,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.334969025986938,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.4002032625743634,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.4658330594844395,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.5318583862152995,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.598279211710928,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.6650955043546105,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.732307231962347,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.799914361776225,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.867916860457774,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 5.936314694081274,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.005107828127035,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.07429622747465,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.143879856396206,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.213858678549466,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.284232656971025,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.355001754069426,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.426165931618247,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.497725150749156,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.569679371944942,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.6420285550325024,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.714772659175809,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.787911642868839,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.8614454639284785,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 6.935374079487393,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.009697445986871,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.084415519169635,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.159528254072627,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.235035605019759,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.310937525614639,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.38723396873327,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.463924886516713,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.5410102303637325,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.618489950923402,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.696363998087692,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.774632320984027,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.853294867967813,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 7.932351586614941,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.011802423714265,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.091647325260048,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.171886236444394,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.252519101649634,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.333545864440712,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.414966467557525,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.496780852907248,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.578988961556634,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.661590733724287,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.74458610877291,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.82797502520154,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.911757420637748,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 8.995933231829815,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.080502394638899,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.165464844031163,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.2508205140699,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.336569337907617,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.422711247778109,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.509246174988512,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.596174049911335,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.683494801976465,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.771208359663165,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.859314650492038,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        },
+        {
+            "trafficLights": [],
+            "vehicles": [
+                {
+                    "position": 9.947813601016986,
+                    "road": "Middelheimlaan",
+                    "type": 0
+                }
+            ]
+        }
+    ],
+    "roads": [
+        {
+            "length": 10.0,
+            "name": "Middelheimlaan"
+        }
+    ],
+    "simTime": 0.0166
+}
+                const roadElementTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/roadh.png', { mipmap: true })
+                const roadElementTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/roadv.png', { mipmap: true })
+                const crossRoadTexture = await PIXI.Texture.fromURL("https://img.fuserobotics.io/crossroad.png", { mipmap: true })
+                const roadElementLength = 25
+
+                const personalVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/personalh.png', { mipmap: true })
+                const personalVehicleTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/personalv.png', { mipmap: true })
+
+                const busVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/bush.png', { mipmap: true })
+                const busVehicleTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/busv.png', { mipmap: true })
+
+                const fireTruckVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/fireh.png', { mipmap: true })
+                const fireTruckVehicleTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/firev.png', { mipmap: true })
+
+                const ambulanceVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/ambulanceh.png', { mipmap: true })
+                const ambulanceVehicleTextureVertical = await PIXI.Texture.fromURL('https://img.fuserobotics.io/ambulancev.png', { mipmap: true })
+
+                const policeVehicleTextureHorizontal = await PIXI.Texture.fromURL('https://img.fuserobotics.io/policeh.png', { mipmap: true })
+                const policeVehicleTextureVertical   = await PIXI.Texture.fromURL('https://img.fuserobotics.io/policev.png', { mipmap: true })
+
+                const busStopTexture = await PIXI.Texture.fromURL('https://img.fuserobotics.io/busstop.png', { mipmap: true })
+
+                const vehicleTypes = {
+                    0: [personalVehicleTextureHorizontal, personalVehicleTextureVertical],
+                    1: [busVehicleTextureHorizontal, busVehicleTextureVertical],
+                    2: [fireTruckVehicleTextureHorizontal, fireTruckVehicleTextureVertical],
+                    3: [ambulanceVehicleTextureHorizontal, ambulanceVehicleTextureVertical],
+                    4: [policeVehicleTextureHorizontal, policeVehicleTextureVertical],
+                }
+
+                const app = new PIXI.Application({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                    resolution: window.devicePixelRatio || 1,
+                    antialias: true,
+                    autoResize: true
+                })
+                document.body.appendChild(app.view)
+
+                const viewport = new pixi_viewport.Viewport({
+                    screenWidth: window.innerWidth,
+                    screenHeight: window.innerHeight,
+                    worldWidth: 10_000_000,
+                    worldHeight: 10_000_000,
+
+                    interaction: app.renderer.plugins.interaction, // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
+                })
+
+                app.stage.addChild(viewport)
+                viewport.drag().pinch().wheel().decelerate()
+
+                viewport.sortableChildren = true
+
+                const createCircle = (color, x, y) => {
+                    const circle = new PIXI.Graphics()
+                    circle.beginFill(color)
+                    circle.lineStyle(5, 0xffffff)
+                    circle.arc(0, 0, 50, 0, Math.PI * 2)
+                    circle.position = { x: x, y: y }
+                    return circle
+                }
+
+                const getMaxY = () => {
+                    let maxY = 0
+                    for (const child of viewport.children) {
+                        let y = child.y + Math.max(child.width, child.height)
+                        if (y > maxY) maxY = y
+                    }
+
+                    return maxY
+                }
+
+                // Create a new texture
+                let undrawnRoads = data.roads.filter((road) => !road.drawn)
+                while (undrawnRoads.length > 0) {
+                    placeRoad(data.roads.indexOf(undrawnRoads[0]), { x: 0, y: getMaxY() + 100 }, false)
+                    undrawnRoads = data.roads.filter((road) => !road.drawn)
+                }
+
+                let vehicles = new PIXI.Container();
+                let trafficLights = new PIXI.Container();
+                viewport.addChild(vehicles)
+                viewport.addChild(trafficLights)
+
+                for (const log of data.logs) {
+                    clearVehicles()
+                    clearTrafficLights()
+
+                    for (const vehicle of log.vehicles) drawVehicle(vehicle)
+                    for (const trafficLight of log.trafficLights) drawTrafficLight(trafficLight)
+
+                    await new Promise((r) => setTimeout(r), parseFloat(data.simTime) * 1000)
+                }
+
+                function clearVehicles() {
+                    viewport.removeChild(vehicles)
+                    vehicles = new PIXI.Container()
+                    viewport.addChild(vehicles)
+                }
+
+                function clearTrafficLights() {
+                    viewport.removeChild(trafficLights)
+                    trafficLights = new PIXI.Container()
+                    viewport.addChild(trafficLights)
+                }
+
+                function drawVehicle(vehicle) {
+                    const roadName = vehicle.road
+                    const road = data.roads.find(road => road.name === roadName)
+                    const start = road.start
+
+                    const texture = !road.invert ? vehicleTypes[vehicle.type][0] : vehicleTypes[vehicle.type][1]
+                    const sprite = new PIXI.Sprite(texture)
+                    sprite.scale.set(1.5, 1.5)
+
+                    let x, y
+                    if (road.invert) {
+                        y = start.y + (vehicle.position / roadElementLength) * roadElementTextureVertical.height - sprite.height / 2
+                        x = start.x - sprite.width / 2
+                    } else {
+                        y = start.y - sprite.height / 2
+                        x = start.x + (vehicle.position / roadElementLength) * roadElementTextureHorizontal.width - sprite.width / 2
+                    }
+
+                    sprite.x = x
+                    sprite.y = y
+                    vehicles.addChild(sprite)
+                }
+
+                function drawTrafficLight(trafficLight) {
+                    const roadName = trafficLight.road
+                    const road = data.roads.find(road => road.name === roadName)
+                    const start = road.start
+
+
+                    let x, y
+                    if (road.invert) {
+                        y = start.y + (trafficLight.position / roadElementLength) * roadElementTextureVertical.height
+                        x = start.x - roadElementTextureVertical.width / 2
+                    } else {
+                        y = start.y + roadElementTextureHorizontal.height / 2
+                        x = start.x + (trafficLight.position / roadElementLength) * roadElementTextureHorizontal.width
+                    }
+
+                    const c = createCircle(trafficLight.isGreen ? 0x00ff00 : 0xff0000, x, y)
+                    trafficLights.addChild(c)
+                }
+
+                function drawBusStop(busStop) {
+                    const roadName = busStop.road
+                    const road = data.roads.find(road => road.name === roadName)
+                    const start = road.start
+
+                    const sprite = new PIXI.Sprite(busStopTexture)
+                    sprite.zIndex = 10
+                    sprite.scale.set(0.75, 0.75)
+
+                    let x, y
+                    if (road.invert) {
+                        y = start.y + (busStop.position / roadElementLength) * roadElementTextureVertical.height - sprite.height / 2
+                        x = start.x - sprite.width / 2 + 180
+                    } else {
+                        y = start.y - sprite.height / 2 + 80
+                        x = start.x + (busStop.position / roadElementLength) * roadElementTextureHorizontal.width - sprite.width / 2
+                    }
+
+                    sprite.x = x
+                    sprite.y = y
+                    viewport.addChild(sprite)
+                }
+
+                function placeRoad(roadIndex, start, invert) {
+                    const road = data.roads[roadIndex]
+                    if (road.drawn) return
+
+                    // Create label
+                    const text = new PIXI.Text(road.name, {
+                        fontFamily: 'Arial',
+                        fontSize: 48,
+                        fill: 0x000000,
+                        align: 'left',
+                    })
+
+                    if (invert) {
+                        text.x = start.x - 70
+                        text.y = start.y + 50
+                        text.rotation = Math.PI / 2
+                    } else {
+                        text.x = start.x + 50
+                        text.y = start.y + 70
+                    }
+                    viewport.addChild(text);
+
+                    // Draw road itself
+                    [...Array(road.length / roadElementLength).keys()].forEach((i) => {
+                        let roadElement
+                        if (invert) {
+                            roadElement = new PIXI.Sprite(roadElementTextureVertical)
+
+                            roadElement.y = start.y + i * roadElementTextureVertical.height
+                            roadElement.x = start.x - roadElementTextureVertical.width / 2
+                            roadElement.zIndex = -2
+                        } else {
+                            roadElement = new PIXI.Sprite(roadElementTextureHorizontal)
+
+                            roadElement.y = start.y - roadElementTextureHorizontal.height / 2
+                            roadElement.x = start.x + i * roadElementTextureHorizontal.width
+                            roadElement.zIndex = -2
+                        }
+                        viewport.addChild(roadElement)
+                    })
+                    // Update road metadata
+                    data.roads[roadIndex].drawn = true
+                    data.roads[roadIndex].start = start
+                    data.roads[roadIndex].invert = invert
+
+                    // Fetch all busstops
+                    const relevantBusStops = (data.busStops || []).filter(busStop => busStop.road === road.name)
+                    relevantBusStops.forEach(busStop => drawBusStop(busStop))
+
+                    // Fetch all crossroads
+                    const relevantCrossroads = (data.crossroads || []).filter((crossRoad) => crossRoad.find((r) => road.name === r.name))
+
+                    for (const [road1, road2] of relevantCrossroads) {
+                        const crossRoadOther = road1.name === road.name ? road2 : road1
+                        const crossRoadCurrent = road1.name === road.name ? road1 : road2
+
+                        const otherRoad = data.roads.find((r) => r.name === crossRoadOther.name)
+                        if (otherRoad.drawn) continue
+
+                        if (invert) {
+                            const crossRoadX = start.x
+                            const crossRoadY = start.y + (crossRoadCurrent.position / roadElementLength) * roadElementTextureVertical.height;
+
+                            const c = new PIXI.Sprite(crossRoadTexture)
+                            c.zIndex = -1
+                            c.x = crossRoadX - crossRoadTexture.width / 2 + 1
+                            c.y = crossRoadY - crossRoadTexture.height / 2 - 2
+
+                            viewport.addChild(c)
+
+                            const offsetX = ((otherRoad.length / roadElementLength) * roadElementTextureHorizontal.width * crossRoadOther.position) / otherRoad.length
+                            const offsetY = ((road.length / roadElementLength) * roadElementTextureVertical.height * crossRoadCurrent.position) / road.length
+                            placeRoad(data.roads.indexOf(otherRoad), { x: start.x - offsetX, y: start.y + offsetY }, !invert)
+                        } else {
+                            const crossRoadX = start.x + (crossRoadCurrent.position / roadElementLength) * roadElementTextureHorizontal.width
+                            const crossRoadY = start.y;
+
+                            const c = new PIXI.Sprite(crossRoadTexture)
+                            c.zIndex = -1
+                            c.x = crossRoadX - crossRoadTexture.width / 2 + 1
+                            c.y = crossRoadY - crossRoadTexture.height / 2 - 2
+
+                            viewport.addChild(c)
+
+                            const offsetX = ((road.length / roadElementLength) * roadElementTextureHorizontal.width * crossRoadCurrent.position) / road.length
+                            const offsetY = ((otherRoad.length / roadElementLength) * roadElementTextureVertical.height * crossRoadOther.position) / otherRoad.length
+                            placeRoad(data.roads.indexOf(otherRoad), { x: start.x + offsetX, y: start.y - offsetY }, !invert)
+                        }
+                    }
+                }
+            }
+
+            main().catch(console.log)
+        </script>
+    </body>
+</html>
+
