@@ -121,7 +121,7 @@ TEST(RoadTests, CrossroadMutationHappyDay) {
     Road* road1 = new Road("john", 100.0);
     Road* road2 = new Road("doe", 100.0);
 
-    EXPECT_EQ(road1->getCrossroads().size(), 0);
+    EXPECT_EQ((int) road1->getCrossroads().size(), 0);
 
     Crossroad* crossroad = new Crossroad(new CrossroadDetails{ road1, 25 }, new CrossroadDetails{ road2, 25 });
     road1->addCrossroad(crossroad);
@@ -140,7 +140,7 @@ TEST(RoadTests, CrossroadMutationInvalid) {
 
 TEST(RoadTests, TrafficLightMutationHappyDay) {
     Road road = Road("example", 100.0);
-    EXPECT_EQ(road.getTrafficLights().size(), 0);
+    EXPECT_EQ((int) road.getTrafficLights().size(), 0);
     TrafficLight* light = new TrafficLight(20.0, 10);
     road.addTrafficLight(light);
     EXPECT_EQ(light, road.getTrafficLights()[0]);
