@@ -228,7 +228,7 @@ void Road::tickBusStops() {
                 firstBus = nullptr;
 
             // Start counting once the bus has slowed down enough
-            } else if (bus->getSpeed() < 0.01) busStop->setTimeCount(timeCount + 1);
+            } else if (bus->getSpeed() < 0.01) busStop->incrementTimeCount();
         }
 
         // No busses are driving towards the bus stop, continue to the next bus stop

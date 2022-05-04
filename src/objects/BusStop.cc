@@ -61,3 +61,7 @@ void BusStop::setWaitTime(int w) {
     BusStop::waitTime = w;
     ENSURE(BusStop::waitTime == w, "Wait time was not set properly");
 }
+
+void BusStop::incrementTimeCount() {
+    timeCount++;
+}

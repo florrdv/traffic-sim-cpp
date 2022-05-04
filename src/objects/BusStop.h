@@ -45,6 +45,8 @@ public:
      */
     void setTimeCount(int timeCount);
 
+    void incrementTimeCount();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
     */
