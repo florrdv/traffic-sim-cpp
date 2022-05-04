@@ -189,7 +189,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n REQUIRE(c != nullptr, "Crossroad cannot be nullptr");
-    \n REQUIRE(c->getPositionForRoad(this) > length, "Road not long enough for crossroad");
+    \n REQUIRE(c->getPositionForRoad(this) < length, "Road not long enough for crossroad");
     \n ENSURE(std::find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad was not added properly");
      */
     void addCrossroad(Crossroad *c);
