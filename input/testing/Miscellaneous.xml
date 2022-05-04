@@ -1,37 +1,57 @@
+<!--it 0 -->
 <BAAN>
     <naam>Middelheimlaan</naam>
     <lengte>10</lengte>
 </BAAN>
 
+<!--it 1-->
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
     <positie>-10</positie>
 </VOERTUIG>
 
+<!--it 2-->
 <VOERTUIG>
     <baan>Middelheimlaan</baan>
     <positie>10</positie>
 </VOERTUIG>
 
+<!--it 3-->
 <VERKEERSLICHT>
     <baan>Middelheimlaan</baan>
     <positie>90</positie>
     <cyclus>15</cyclus>
 </VERKEERSLICHT>
 
+<!--it 4-->
 <VOERTUIGGENERATOR>
     <baan>Middelheimlaan</baan>
     <frequentie>3</frequentie>
     <type>politiecombi</type>
 </VOERTUIGGENERATOR>
 
+<!--it 5-->
 <BUSHALTE>
     <baan>Middelheimlaan</baan>
     <positie>90</positie>
     <wachttijd>20</wachttijd>
 </BUSHALTE>
 
+<!-- it 6-->
 <KRUISPUNT>
     <baan positie="250">Middelheimlaan</baan>
     <baan positie="500">Groenenborgerlaan</baan>
 </KRUISPUNT>
+
+<!-- it 7-->
+<KRUISPUNT>
+    <baan positie="250">Middelheimlaan</baan>
+    <baan positie="500">Middelheimlaan</baan>
+</KRUISPUNT>
+
+<!--it 8-->
+<VOERTUIG>
+    <baan>Middelheimlaan</baan>
+    <positie>10</positie>
+    <type>foo</type>
+</VOERTUIG>
