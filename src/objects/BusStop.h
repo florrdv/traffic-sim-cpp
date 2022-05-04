@@ -45,6 +45,11 @@ public:
      */
     void setTimeCount(int timeCount);
 
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    \n ENSURE(timeCount >= 0, "Bus stop time count must be positive");
+    \n ENSURE(timeCountBefore + 1 == timeCount, "Time count was not incremented");
+     */
     void incrementTimeCount();
 
     /**

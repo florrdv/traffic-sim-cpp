@@ -67,7 +67,8 @@ void Road::addTrafficLight(TrafficLight *t) {
     REQUIRE(t->getPosition() < length, "Road not long enough for traffic light");
 
     trafficLights.push_back(t);
-    ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(), "Traffic light was not added properly");
+    ENSURE(std::find(trafficLights.begin(), trafficLights.end(), t) != trafficLights.end(),
+           "Traffic light was not added properly");
 }
 
 
@@ -121,7 +122,8 @@ void Road::cleanup() {
 Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
-    REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(), "Traffic light must be on road");
+    REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(),
+            "Traffic light must be on road");
 
     int trafficLightPosition = trafficLight->getPosition();
     Vehicle *firstVehicle = nullptr;
@@ -196,6 +198,10 @@ void Road::tickTrafficLights() {
         // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->isGreen()) firstVehicle->accelerate();
         else {
+            if (std::find(priorityVehicleTypes.begin(), priorityVehicleTypes.end(), firstVehicle->getType()) !=
+                priorityVehicleTypes.end())
+                continue;
+
             // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
@@ -216,7 +222,7 @@ void Road::tickBusStops() {
         Vehicle *firstBus = getFirstBusToBusStop(busStop);
 
         // Check if there's a bus that can move again
-        Vehicle* bus = busStop->getBus();
+        Vehicle *bus = busStop->getBus();
         if (bus != nullptr) {
             int timeCount = busStop->getTimeCount();
 
@@ -234,7 +240,7 @@ void Road::tickBusStops() {
                 // Make sure the bus is not stopped while it is still leaving
                 firstBus = nullptr;
 
-            // Start counting once the bus has slowed down enough
+                // Start counting once the bus has slowed down enough
             } else if (bus->getSpeed() < 0.01) busStop->incrementTimeCount();
         }
 
@@ -251,7 +257,7 @@ void Road::tickBusStops() {
         }
 
 
-        // Force the bus to decelerate if it's in the deceleration zone
+            // Force the bus to decelerate if it's in the deceleration zone
         else if (distanceToStop < gDecelerationDistance) firstBus->decelerate();
     }
 }
@@ -271,7 +277,7 @@ void Road::tickVehicles(std::ostream &onStream) {
         // Create boolean to keep track of removal
         bool remove = false;
         // Handle crossroads
-        for (Crossroad* crossroad : crossroads) {
+        for (Crossroad *crossroad: crossroads) {
             // Get crossroad position
             double crossroadPosition = crossroad->getPositionForRoad(this);
             if (pAfter >= crossroadPosition && pBefore < crossroadPosition) {
@@ -281,8 +287,8 @@ void Road::tickVehicles(std::ostream &onStream) {
                 // Vehicle has to move roads
                 if (random == 1) {
                     // Get other road info
-                    std::pair<CrossroadDetails*, CrossroadDetails*> details = crossroad->getDetails();
-                    CrossroadDetails* otherDetails = details.first->road == this ? details.second : details.first;
+                    std::pair<CrossroadDetails *, CrossroadDetails *> details = crossroad->getDetails();
+                    CrossroadDetails *otherDetails = details.first->road == this ? details.second : details.first;
 
                     // Move to other road
                     (*vehicle)->setPosition(otherDetails->position);
@@ -360,7 +366,7 @@ void Road::addBusStop(BusStop *b) {
     ENSURE(std::find(busStops.begin(), busStops.end(), b) != busStops.end(), "Bus was not added properly");
 }
 
-Road::Road(std::string n, double l): name(n), length(l) {
+Road::Road(std::string n, double l) : name(n), length(l) {
     REQUIRE(l > 0, "Road length must be strictly positive");
 
     _init = this;

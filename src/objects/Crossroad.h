@@ -50,7 +50,8 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
-    \n ENSURE(EXISTS, "Requested road not found");
+    \n REQUIRE(road != nullptr, "Road cannot be nullptr");
+    \n REQUIRE(road == details.first->road || road == details.second->road, "Road must be part of crossroad");
     */
     int getPositionForRoad(Road* road) const;
 
