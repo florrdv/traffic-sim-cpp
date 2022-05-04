@@ -271,7 +271,7 @@ TEST(RoadTests, GetLeadingVehicleUnknown) {
 
 TEST(RoadTests, SpawnVehicleHappyDay) {
     Road road = Road("example", 100.0);
-    EXPECT_EQ(road.getVehicles().size(), 0);
+    EXPECT_EQ((int) road.getVehicles().size(), 0);
     road.spawnVehicle(VehicleType::Personal);
-    EXPECT_EQ(road.getVehicles().size(), 1);
+    EXPECT_EQ((int) road.getVehicles().size(), 1);
 }
