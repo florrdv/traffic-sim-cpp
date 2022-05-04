@@ -23,6 +23,9 @@ int main() {
 
     sim1.writeOn(std::cout, 180, 2);
 
+    std::ofstream f("out.html");
+    sim2.writeToFile(f, 100);
+    f.close();
 
     return 0;
 }
