@@ -128,8 +128,8 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
     int trafficLightPosition = trafficLight->getPosition();
     Vehicle *firstVehicle = nullptr;
     for (Vehicle *vehicle : vehicles) {
-        if (std::find(priorityVehicleTypes.begin(), priorityVehicleTypes.end(), vehicle->getType()) !=
-                priorityVehicleTypes.end())
+        if (std::find(gPriorityVehicleTypes.begin(), gPriorityVehicleTypes.end(), vehicle->getType()) !=
+                gPriorityVehicleTypes.end())
                 continue;
         
         double distanceToLight = ((double) trafficLightPosition) - vehicle->getPosition();

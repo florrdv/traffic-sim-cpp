@@ -31,7 +31,7 @@ struct VehicleConstant {
     double  gFollowMin;
 };
 
-extern std::vector<VehicleType> priorityVehicleTypes;
+extern std::vector<VehicleType> gPriorityVehicleTypes;
 
 extern std::map<VehicleType, VehicleConstant> gVehicleConstants;
 

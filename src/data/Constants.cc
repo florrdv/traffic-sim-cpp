@@ -63,7 +63,7 @@ std::map<VehicleType, VehicleConstant> gVehicleConstants = {
     }
 };
 
-std::vector<VehicleType> priorityVehicleTypes = {VehicleType::Police, VehicleType::Ambulance, VehicleType::FireTruck};
+std::vector<VehicleType> gPriorityVehicleTypes = {VehicleType::Police, VehicleType::Ambulance, VehicleType::FireTruck};
 
 double gBrakeDistance           = 15;
 double gSimTime                 = 0.0166;
