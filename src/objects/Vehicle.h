@@ -72,6 +72,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
     int getId() const;
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n ENSURE(id_>=0, "Vehicle ID cannot be a negative integer");
@@ -113,12 +114,16 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(acceleration <= accelerationBefore, "Acceleration should not increase while stopping");
     */
     void stop();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
+    \n ENSURE(speedMax <= speedBefore, "Speed should not increase while decelerating");
     */
     void decelerate();
+
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     */
