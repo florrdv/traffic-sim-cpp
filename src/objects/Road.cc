@@ -109,8 +109,8 @@ void Road::cleanup() {
     std::vector<Vehicle *>::iterator vehicle = vehicles.begin();
     while (vehicle != vehicles.end()) {
         if ((*vehicle)->getPosition() > length) {
-            vehicles.erase(vehicle);
             delete (*vehicle);
+            vehicles.erase(vehicle);
         } else ++vehicle;
     }
 }
