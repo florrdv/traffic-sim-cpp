@@ -47,5 +47,6 @@ Crossroad* Crossroad::clone() const {
     CrossroadDetails* details2= new CrossroadDetails{ details.second->road, details.second->position };
 
     Crossroad* crossroad = new Crossroad(details1, details2);
+    ENSURE(crossroad != nullptr, "Clone cannot be nullptr");
     return crossroad;
 }

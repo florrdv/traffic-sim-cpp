@@ -61,6 +61,7 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
+    \n ENSURE(crossroad != nullptr, "Clone cannot be nullptr");
     */
     Crossroad* clone() const;
 
