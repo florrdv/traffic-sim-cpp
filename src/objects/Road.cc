@@ -110,6 +110,7 @@ void Road::cleanup() {
     while (vehicle != vehicles.end()) {
         if ((*vehicle)->getPosition() > length) {
             vehicles.erase(vehicle);
+            delete (*vehicle);
         } else ++vehicle;
     }
 }
