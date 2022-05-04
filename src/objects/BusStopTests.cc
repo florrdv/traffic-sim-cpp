@@ -62,6 +62,13 @@ TEST(BusStopTests, TimeCountMutationNegative) {
     EXPECT_DEATH(busStop.setTimeCount(-20), "positive");
 }
 
+TEST(BusStopTests, TimeCountIncrementHappyDay) {
+    BusStop busStop = BusStop(0.0, 10);
+    EXPECT_EQ(0, busStop.getTimeCount());
+    busStop.incrementTimeCount();
+    EXPECT_EQ(1, busStop.getTimeCount());
+}
+
 TEST(BusStopTests, BusMutationHappyDay) {
     BusStop busStop = BusStop(0.0, 10);
     Vehicle *bus = new Vehicle(0.0, Bus);
