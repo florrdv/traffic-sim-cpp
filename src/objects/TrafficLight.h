@@ -60,12 +60,12 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
-    \n ENSURE(before != after, "Traffic light color was not changed");
     */
     bool isGreen() const;
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
+    \n ENSURE(before != after, "Traffic light color was not changed");
     */
     void toggle();
 
