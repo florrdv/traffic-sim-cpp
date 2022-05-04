@@ -22,7 +22,7 @@ class Entity {
 private:
     Entity* _init;
 
-    double position{};
+    double position = 0;
 
 protected:
     /**

@@ -20,7 +20,7 @@ private:
     VehicleGenerator* _init;
 
     VehicleType type;
-    int frequency{};
+    int frequency = 0;
     int frequencyCount = 0;
 
 public:
@@ -66,6 +66,5 @@ public:
     bool properlyInitialized() const {return _init == this;}
 
 };
-
 
 #endif //TRAFFICSIM_VEHICLEGENERATOR_H
