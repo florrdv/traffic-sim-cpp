@@ -8,13 +8,14 @@
  * File Created: Thursday, 3rd March 2022 3:43:38 pm
  */
 
+#include <cmath>
+#include <limits>
+#include <iostream>
+
 #include "Vehicle.h"
 #include "../lib/DesignByContract.h"
 #include "Crossroad.h"
 #include "Road.h"
-
-#include <cmath>
-#include <iostream>
 
 double Vehicle::getLength() const {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");

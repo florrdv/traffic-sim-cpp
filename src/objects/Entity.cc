@@ -9,6 +9,7 @@
  */
 
 #include <algorithm>
+#include <limits>
 #include "Entity.h"
 #include "../lib/DesignByContract.h"
 

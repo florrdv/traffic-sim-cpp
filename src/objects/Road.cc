@@ -9,6 +9,7 @@
  */
 
 #include <algorithm>
+#include <limits>
 #include "Crossroad.h"
 #include "Road.h"
 #include "../lib/DesignByContract.h"
