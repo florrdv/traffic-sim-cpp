@@ -38,7 +38,8 @@ void Road::setLength(double l) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     ENSURE(l > 0, "Length must be strictly positive");
     Road::length = l;
-    ENSURE(Road::length == l, "Road length was not set properly");
+
+    ENSURE(std::abs(Road::length - l) < std::numeric_limits<double>::epsilon(), "Road length was not set properly");
 }
 
 
@@ -164,7 +165,7 @@ Vehicle *Road::getFirstBusToBusStop(BusStop *busStop) const {
 void Road::spawnVehicle(const VehicleType &type) {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     int countBefore = vehicles.size();
-    
+
     Vehicle *v = new Vehicle(0, type);
     addVehicle(v);
 

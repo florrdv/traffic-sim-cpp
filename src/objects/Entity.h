@@ -35,7 +35,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     \n REQUIRE(p>=0, "Entity position cannot be a negative integer");
-    \n ENSURE(position == p, "Position was not set properly");
+    \n ENSURE(std::abs(position - p) < std::numeric_limits<double>::epsilon(), "Position was not set properly");
     */
     void setPosition(double p);
 

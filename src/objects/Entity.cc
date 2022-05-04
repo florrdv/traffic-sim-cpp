@@ -8,6 +8,7 @@
  * File Created: Thursday, 10th March 2022 5:12:46 pm
  */
 
+#include <algorithm>
 #include "Entity.h"
 #include "../lib/DesignByContract.h"
 
@@ -29,5 +30,6 @@ void Entity::setPosition(double p) {
     REQUIRE(this->properlyInitialized(), "Vehicle was not properly initialized");
     REQUIRE(p>=0, "Entity position must be a positive double");
     position = p;
-    ENSURE(position == p, "Position was not set properly");
+
+    ENSURE(std::abs(position - p) < std::numeric_limits<double>::epsilon(), "Position was not set properly");
 }

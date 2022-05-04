@@ -113,7 +113,7 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Road wasn't initialized properly");
     \n ENSURE(l>0, "Length must be strictly positive");
-    \n ENSURE(Road::length == l, "Road length was not set properly");
+    \n ENSURE(std::abs(Road::length - l) < std::numeric_limits<double>::epsilon(), "Road length was not set properly");
     */
     void setLength(double length);
 
