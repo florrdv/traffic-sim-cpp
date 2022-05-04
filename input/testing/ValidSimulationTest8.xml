@@ -36,8 +36,8 @@
 </VOERTUIG>
 
 <VOERTUIG>
-<baan>Groenenborgerlaan</baan>
-<positie>20</positie>
+    <baan>Groenenborgerlaan</baan>
+    <positie>20</positie>
 </VOERTUIG>
 
 <VOERTUIGGENERATOR>
