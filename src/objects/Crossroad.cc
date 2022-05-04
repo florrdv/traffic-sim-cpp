@@ -18,9 +18,7 @@ int Crossroad::getPositionForRoad(Road* road) const {
     REQUIRE(road == details.first->road || road == details.second->road, "Road must be part of crossroad");
 
     if (details.first->road == road) return details.first->position;
-    if (details.second->road == road) return details.second->position;
-
-    return 0;
+    else return details.second->position;
 }
 
 Crossroad::Crossroad(CrossroadDetails* details1, CrossroadDetails* details2) : details({details1, details2}) {
