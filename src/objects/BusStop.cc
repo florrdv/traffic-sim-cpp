@@ -45,9 +45,17 @@ int BusStop::getTimeCount() const {
 
 void BusStop::setTimeCount(int t) {
     REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
-    ENSURE(t >= 0, "Bus stop wait time must be positive");
+    ENSURE(t >= 0, "Bus stop time count must be positive");
     timeCount = t;
     ENSURE(BusStop::timeCount == t, "Time count was not set properly");
+}
+
+void BusStop::incrementTimeCount() {
+    REQUIRE(this->properlyInitialized(), "Bus stop wasn't initialized properly");
+    int timeCountBefore = timeCount;
+    timeCount++;
+    ENSURE(timeCount >= 0, "Bus stop time count must be positive");
+    ENSURE(timeCountBefore + 1 == timeCount, "Time count was not incremented");
 }
 
 int BusStop::getWaitTime() const {
@@ -61,3 +69,5 @@ void BusStop::setWaitTime(int w) {
     BusStop::waitTime = w;
     ENSURE(BusStop::waitTime == w, "Wait time was not set properly");
 }
+
+
