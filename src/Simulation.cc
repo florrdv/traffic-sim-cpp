@@ -205,6 +205,7 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt, con
 
     // Run simulation and store logs
     std::vector<nlohmann::json> logs = this->simulate(stopAt, null_stream, speedup);;
+    j["logs"] = logs;
 
     // Grab the template
     std::ifstream ifs("../visualizer.html");
