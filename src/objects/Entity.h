@@ -27,7 +27,7 @@ private:
 protected:
     /**
     \n REQUIRE(p>=0, "Entity position cannot be a negative integer")
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
     */
     Entity(double p);
 

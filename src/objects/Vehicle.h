@@ -62,7 +62,7 @@ public:
     // Constructors / destructors
     /**
     \n REQUIRE(position >= 0, "Position has to be positive");
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
      */
     Vehicle(double position, VehicleType t);
 

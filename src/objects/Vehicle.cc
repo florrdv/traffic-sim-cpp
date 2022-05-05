@@ -126,5 +126,5 @@ Vehicle::Vehicle(double position, VehicleType t) : Entity(position), type(t) {
     decelerationFactor = gDecelerationFactor;
 
     _init = this;
-    ENSURE(_init == this, "_init reference must be set");
+    ENSURE(properlyInitialized(), "_init reference must be set");
 }

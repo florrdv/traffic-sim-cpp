@@ -28,7 +28,7 @@ public:
     /**
     \n REQUIRE(position >= 0, "Position has to be positive");
     \n REQUIRE(c > 0, "Cycle count must be strictly positive");
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
     */
     TrafficLight(double position, int c);
 

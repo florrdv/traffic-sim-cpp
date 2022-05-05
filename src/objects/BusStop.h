@@ -29,7 +29,7 @@ public:
     /**
     \n REQUIRE(position >= 0, "Position has to be positive");
     \n REQUIRE(w >= 0, "Wait time has to be positive");
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
      */
     BusStop(double position, int w);
 

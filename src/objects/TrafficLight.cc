@@ -58,5 +58,5 @@ TrafficLight::TrafficLight(double position, int c) : Entity(position), cycle(c) 
     REQUIRE(c > 0, "Cycle count must be strictly positive");
 
     _init = this;
-    ENSURE(_init == this, "_init reference must be set");
+    ENSURE(properlyInitialized(), "_init reference must be set");
 }

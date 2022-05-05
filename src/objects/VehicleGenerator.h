@@ -27,14 +27,14 @@ public:
     // Constructors / destructors
     /**
     \n REQUIRE(f>0, "Frequency must be strictly positive");
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
     */
     VehicleGenerator(int f, VehicleType t);
     
     // General methods
     /**
     \n REQUIRE(this->properlyInitialized(), "VehicleGenerator was not properly initialized");
-    \n ENSURE(_init == this, "_init reference must be set");
+    \n ENSURE(properlyInitialized(), "_init reference must be set");
     */
     int getFrequency() const;
 
