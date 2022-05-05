@@ -44,6 +44,7 @@ std::vector<Road*> Simulation::getRoads() const {
 void Simulation::addRoad(Road* r) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
     REQUIRE(r != nullptr, "Road cannot be nullptr");
+    REQUIRE(find(roads.begin(), roads.end(), r) == roads.end(), "Cannot add road multiple times");
     roads.push_back(r);
     ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
 }
@@ -234,4 +235,14 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     // Write and flush file
     fileStream << header << std::setw(4) << j << footer << std::endl;
     fileStream.flush();
+}
+
+void Simulation::addCrossroad(Crossroad *c) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addCrossroad");
+    REQUIRE(c != nullptr, "Crossroad cannot be nullptr");
+    REQUIRE(find(crossroads.begin(), crossroads.end(), c) == crossroads.end(), "Crossroad cannot be added multiple times");
+
+    crossroads.push_back(c);
+
+    ENSURE(find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad wasn't added to roads vector");
 }

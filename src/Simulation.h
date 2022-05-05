@@ -26,7 +26,8 @@ class Simulation {
 private:
     Simulation* _init; //!use pointer to myself to verify whether I am properly initialized
 
-    std::vector<Road*> roads;
+    std::vector<Road *> roads;
+    std::vector<Crossroad *> crossroads;
     int timestamp = 0;
 
     /**
@@ -49,9 +50,18 @@ public:
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addRoad");
     \n REQUIRE(r != nullptr, "Road cannot be nullptr");
+    \n REQUIRE(find(roads.begin(), roads.end(), r) == roads.end(), "Cannot add road multiple times");
     \n ENSURE(find(roads.begin(), roads.end(), r) != roads.end(), "Road wasn't added to roads vector");
     */
     void addRoad(Road* r);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling addCrossroad");
+    \n REQUIRE(c != nullptr, "Crossroad cannot be nullptr");
+    \n REQUIRE(find(crossroads.begin(), crossroads.end(), c) == crossroads.end(), "Crossroad cannot be added multiple times");
+    \n ENSURE(find(crossroads.begin(), crossroads.end(), c) != crossroads.end(), "Crossroad wasn't added to roads vector");
+    */
+    void addCrossroad(Crossroad* c);
 
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
