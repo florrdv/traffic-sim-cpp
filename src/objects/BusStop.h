@@ -23,7 +23,7 @@ private:
 
     int timeCount = 0;
 
-    int waitTime;
+    int waitTime = 0;
 
 public:
     /**

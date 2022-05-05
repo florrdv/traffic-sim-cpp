@@ -68,19 +68,23 @@ int Simulation::countVehicles() const {
     return amount;
 }
 
-void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedup) {
-    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
+std::vector<nlohmann::json> Simulation::simulate(const double stopAt, std::ostream& onStream, const int speedup) {
+    std::vector<nlohmann::json> logs;
 
     // Loop while there are still vehicles
     // in the simulation
+    double currentTime = 0;
     while (countVehicles() > 0) {
         // Compute the current time and check if we should still
         // be running the simulation. We have a stopAt parameter for tests
         // using the Vehicle Generator feature.
-        double currentTime = timestamp * gSimTime;
-        if (stopAt != 0 && currentTime > stopAt) return;
+        currentTime = timestamp * gSimTime;
+        if (stopAt != 0 && currentTime > stopAt) break;
 
-        // Print the log entry header
+        // Generate logs in case we're dumping to a file
+        logs.push_back(dumpState());
+
+        // Print the log entry header in case of stdout mode
         onStream << "-------------------------------------------" << std::endl;
         onStream << "Time: T+ " << currentTime << "s" << std::endl;
 
@@ -96,8 +100,17 @@ void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedu
         timestamp++;
 
         // Sleep until the next simulation tick
-        std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
+        if (stdout) std::this_thread::sleep_for(std::chrono::milliseconds((int)(gSimTime * 1000 / (speedup*10000))));
     }
+
+    ENSURE(countVehicles() == 0 || (stopAt != 0 && currentTime > stopAt), "Simulation did not finish");
+    return logs;
+}
+
+void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedup) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
+
+    this->simulate(stopAt, onStream, true, speedup);
 }
 
 nlohmann::json Simulation::dumpState() const {

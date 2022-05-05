@@ -82,6 +82,12 @@ public:
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
     */
     void writeToFile(std::ofstream& fileStream, const double stopAt = 0.0);
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
+    \n ENSURE(countVehicles() == 0 || (stopAt != 0 && currentTime > stopAt), "Simulation did not finish");
+    */
+    std::vector<nlohmann::json> simulate(const double stopAt, std::ostream& onStream, const int speedup);
     
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
