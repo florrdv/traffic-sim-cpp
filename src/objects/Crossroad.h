@@ -60,12 +60,6 @@ public:
     */
     std::pair<CrossroadDetails*, CrossroadDetails*> getDetails() const;
 
-    /**
-    \n REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
-    \n ENSURE(crossroad != nullptr, "Clone cannot be nullptr");
-    */
-    Crossroad* clone() const;
-
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
 };

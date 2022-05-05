@@ -40,13 +40,3 @@ std::pair<CrossroadDetails*, CrossroadDetails*> Crossroad::getDetails() const {
     REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
     return details;
 }
-
-Crossroad* Crossroad::clone() const {
-    REQUIRE(this->properlyInitialized(), "Crossroad wasn't initialized properly");
-    CrossroadDetails* details1 = new CrossroadDetails{ details.first->road, details.first->position };
-    CrossroadDetails* details2= new CrossroadDetails{ details.second->road, details.second->position };
-
-    Crossroad* crossroad = new Crossroad(details1, details2);
-    ENSURE(crossroad != nullptr, "Clone cannot be nullptr");
-    return crossroad;
-}

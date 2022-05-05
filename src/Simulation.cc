@@ -34,6 +34,7 @@ Simulation::Simulation() {
 Simulation::~Simulation() {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized when calling destructor");
     for (Road* road : roads) delete road;
+    for (Crossroad* crossroad : crossroads) delete crossroad;
 }
 
 std::vector<Road*> Simulation::getRoads() const {
