@@ -107,10 +107,10 @@ std::vector<nlohmann::json> Simulation::simulate(const double stopAt, std::ostre
     return logs;
 }
 
-void Simulation::writeOn(std::ostream& onStream, const double stopAt, int speedup) {
+void Simulation::writeOn(std::ostream& onStream, const double stopAt, const int speedup) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
-    this->simulate(stopAt, onStream, true, speedup);
+    this->simulate(stopAt, onStream, speedup);
 }
 
 nlohmann::json Simulation::dumpState() const {
@@ -148,7 +148,7 @@ nlohmann::json Simulation::dumpState() const {
     return j;
 }
 
-void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
+void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt, const int speedup) {
     REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
 
     // Serialize all roads
@@ -203,35 +203,8 @@ void Simulation::writeToFile(std::ofstream& fileStream, const double stopAt) {
     NullBuffer null_buffer;
     std::ostream null_stream(&null_buffer);
 
-    // Create log container
-    std::vector<nlohmann::json> logs;
-
-    // Loop while there are still vehicles
-    // in the simulation
-    while (countVehicles() > 0) {
-        // Compute the current time and check if we should still
-        // be running the simulation. We have a stopAt parameter for tests
-        // using the Vehicle Generator feature.
-        double currentTime = timestamp * gSimTime;
-        if (stopAt != 0 && currentTime > stopAt) break;
-
-        logs.push_back(dumpState());
-
-        // Loop over all roads
-        for (Road* road : roads) {
-            // Tick all entities on the road
-            // we have these methods on the Simulation class as they control 
-            // the general flow of the simulation, not the road itself.
-            road->tick(null_stream);
-        }
-
-
-        // Increment relative 
-        timestamp++;
-    }
-
-    // Set logs on master object
-    j["logs"] = logs;
+    // Run simulation and store logs
+    std::vector<nlohmann::json> logs = this->simulate(stopAt, null_stream, speedup);;
 
     // Grab the template
     std::ifstream ifs("../visualizer.html");

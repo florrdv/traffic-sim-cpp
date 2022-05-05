@@ -76,12 +76,12 @@ public:
     /**
     \n ENSURE(properlyInitialized(), "constructor must end in properlyInitialized state");
     */
-    void writeOn(std::ostream& onStream, const double stopAt = 0.0, int speedup = 1);
+    void writeOn(std::ostream& onStream, const double stopAt = 0.0, const int speedup = 1);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
     */
-    void writeToFile(std::ofstream& fileStream, const double stopAt = 0.0);
+    void writeToFile(std::ofstream& fileStream, const double stopAt = 0.0, const int speedup = 1);
 
     /**
     \n REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
