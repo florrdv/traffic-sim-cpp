@@ -101,19 +101,3 @@ TEST(CrossroadTests, CrossroadDetailsGetter) {
     EXPECT_EQ(fetchedDetails.first, detail1);
     EXPECT_EQ(fetchedDetails.second, detail2);
 }
-
-TEST(CrossroadTests, CrossroadClone) {
-    Road *road1 = new Road("foo", 100);
-    Road *road2 = new Road("bar", 80);
-
-    Crossroad *crossroad = new Crossroad(new CrossroadDetails{road1, 10}, new CrossroadDetails{road2, 5});
-    Crossroad *clone = crossroad->clone();
-
-    EXPECT_EQ(clone->getDetails().first->road->getName(), crossroad->getDetails().first->road->getName());
-    EXPECT_EQ(clone->getDetails().second->road->getName(), crossroad->getDetails().second->road->getName());
-
-    EXPECT_EQ(clone->getDetails().first->position, crossroad->getDetails().first->position);
-    EXPECT_EQ(clone->getDetails().second->position, crossroad->getDetails().second->position);
-}
-
-
