@@ -152,7 +152,7 @@
                         x = start.x + (trafficLight.position / roadElementLength) * roadElementTextureHorizontal.width
                     }
 
-                    const c = createCircle(trafficLight.isGreen ? 0x00ff00 : 0xff0000, x, y)
+                    const c = createCircle([0x00ff00, 0xff0000, 0xffa500][trafficLight.state], x, y)
                     trafficLights.addChild(c)
                 }
 
