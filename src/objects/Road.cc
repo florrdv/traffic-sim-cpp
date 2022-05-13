@@ -188,7 +188,7 @@ void Road::tickTrafficLights() {
     for (TrafficLight *trafficLight: trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
         // We should switch our traffic light to orange, let's go ahead and do that
-        if (trafficLight->isGreen() && cycleCount * gSimTime > (trafficLight->getCycle() * 0.90)) trafficLight->setState(TrafficLightState::Orange);
+        if (trafficLight->isGreen() && cycleCount * gSimTime > (trafficLight->getCycle() * (1 - gOrangePercentage))) trafficLight->setState(TrafficLightState::Orange);
         
         // We should fully toggle our traffic light
         else if (cycleCount * gSimTime > trafficLight->getCycle()) {
@@ -214,6 +214,7 @@ void Road::tickTrafficLights() {
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
             // Stop the vehicle if it's in the braking zone
+            // This if statement will never be triggered when dealing with orange lights
             if (distanceToLight < gBrakeDistance) firstVehicle->stop();
             // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();

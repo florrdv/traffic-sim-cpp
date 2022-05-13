@@ -39,6 +39,7 @@ extern double gBrakeDistance;
 extern double gSimTime;
 extern double gDecelerationDistance;
 extern double gDecelerationFactor;
+extern double gOrangePercentage;
 
 static std::string gTestInputFolder = "../input/testing";
 static std::string gTestOutputFolder = "../output/testing";
