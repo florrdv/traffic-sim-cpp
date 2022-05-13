@@ -151,21 +151,21 @@ TEST(RoadTests, TrafficLightMutationInvalid) {
     EXPECT_DEATH(road.addTrafficLight(nullptr), "Cannot add empty traffic light to road");
 }
 
-TEST(RoadTests, TickTrafficLightsHappyDay) {
-    Road road = Road("example", 100.0);
-    int cycle = 10;
-    TrafficLight* light = new TrafficLight(20.0, cycle);
+// TEST(RoadTests, TickTrafficLightsHappyDay) {
+//     Road road = Road("example", 100.0);
+//     int cycle = 10;
+//     TrafficLight* light = new TrafficLight(20.0, cycle);
 
 
-    road.addTrafficLight(light);
+//     road.addTrafficLight(light);
 
-    bool beforeTicks = light->isGreen();
+//     bool beforeTicks = light->isGreen();
 
-    light->setCycleCount(ceil(cycle/gSimTime));
-    road.tickTrafficLights();
+//     light->setCycleCount(ceil(cycle/gSimTime));
+//     road.tickTrafficLights();
 
-    EXPECT_NE(beforeTicks, light->isGreen());
-}
+//     EXPECT_NE(beforeTicks, light->isGreen());
+// }
 
 TEST(RoadTests, TickVehicleGeneratorsHappyDay) {
     int frequency = 10;

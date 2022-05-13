@@ -185,12 +185,19 @@ void Road::tickTrafficLights() {
     // Loop over all traffic lights
     for (TrafficLight *trafficLight: trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
-        // Check if we have to toggle the light
+        // Check traffic light state
         bool isGreen = trafficLight->getState() == TrafficLightState::Green;
+        bool isOrange = trafficLight->getState() == TrafficLightState::Orange;
+
+        // We should switch our traffic light to orange, let's go ahead and do that
         if (isGreen && cycleCount * gSimTime > (trafficLight->getCycle() * 0.90)) trafficLight->setState(TrafficLightState::Orange);
+        
+        // We should fully toggle our traffic light
         else if (cycleCount * gSimTime > trafficLight->getCycle()) {
-            trafficLight->setState(isGreen ? TrafficLightState::Red : TrafficLightState::Green);
+            trafficLight->setState(isGreen || isOrange ? TrafficLightState::Red : TrafficLightState::Green);
              trafficLight->setCycleCount(0);
+
+        // Let's just keep counting
         } else trafficLight->setCycleCount(cycleCount + 1);
 
         // Get the first vehicle relative to the traffic light
