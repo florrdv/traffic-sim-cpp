@@ -136,7 +136,7 @@ nlohmann::json Simulation::dumpState() const {
             nlohmann::json t;
             t["road"] = road->getName();
             t["position"] = trafficLight->getPosition();
-            t["isGreen"] = trafficLight->isGreen();
+            t["state"] = trafficLight->getState();
 
             trafficLightsSerialized.push_back(t);
         }
