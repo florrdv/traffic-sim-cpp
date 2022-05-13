@@ -134,6 +134,7 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight, double minDist
         
         double distanceToLight = ((double) trafficLightPosition) - vehicle->getPosition();
         if (distanceToLight < minDistance) continue;
+        
         if (firstVehicle == nullptr) {
             if (distanceToLight > 0) firstVehicle = vehicle;
             continue;
@@ -200,20 +201,21 @@ void Road::tickTrafficLights() {
         // Get the first vehicle relative to the traffic light
         // To make vehicles decelerate or stop, we just need to perform the action
         // on the first vehicle driving towards the traffic light.
-        Vehicle *firstVehicle = getFirstToTrafficLight(trafficLight);
+        double minDistance = trafficLight->isOrange() ? gBrakeDistance : 0;
+        Vehicle *firstVehicle = getFirstToTrafficLight(trafficLight, minDistance);
 
         // No vehicles are driving towards the traffic light, continue to the next traffic light
         if (firstVehicle == nullptr) continue;
 
         // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->getState() == TrafficLightState::Green) firstVehicle->accelerate();
-        else if (trafficLight->getState() == TrafficLightState::Green){
+        else {
             // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 
             // Stop the vehicle if it's in the braking zone
             if (distanceToLight < gBrakeDistance) firstVehicle->stop();
-                // Force the vehicle to decelerate if it's in the deceleration zone
+            // Force the vehicle to decelerate if it's in the deceleration zone
             else if (distanceToLight < gDecelerationDistance) firstVehicle->decelerate();
         }
     }
