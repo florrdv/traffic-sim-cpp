@@ -186,10 +186,11 @@ void Road::tickTrafficLights() {
     for (TrafficLight *trafficLight: trafficLights) {
         int cycleCount = trafficLight->getCycleCount();
         // Check if we have to toggle the light
-        bool shouldToggle = cycleCount * gSimTime > trafficLight->getCycle();
-        if (shouldToggle) {
-            trafficLight->toggle();
-            trafficLight->setCycleCount(0);
+        bool isGreen = trafficLight->getState() == TrafficLightState::Green;
+        if (isGreen && cycleCount * gSimTime > (trafficLight->getCycle() * 0.90)) trafficLight->setState(TrafficLightState::Orange);
+        else if (cycleCount * gSimTime > trafficLight->getCycle()) {
+            trafficLight->setState(isGreen ? TrafficLightState::Red : TrafficLightState::Green);
+             trafficLight->setCycleCount(0);
         } else trafficLight->setCycleCount(cycleCount + 1);
 
         // Get the first vehicle relative to the traffic light
@@ -200,7 +201,7 @@ void Road::tickTrafficLights() {
         if (firstVehicle == nullptr) continue;
 
         // If the traffic light is green, all vehicles should accelerate
-        if (trafficLight->isGreen()) firstVehicle->accelerate();
+        if (trafficLight->getState() == TrafficLightState::Green) firstVehicle->accelerate();
         else {
             // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
