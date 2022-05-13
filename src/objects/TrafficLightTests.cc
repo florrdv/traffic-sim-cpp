@@ -63,15 +63,19 @@ TEST(TrafficLightTests, CycleMutationNegative) {
 TEST(TrafficLightTests, StateMutationHappyDay) {
     TrafficLight light = TrafficLight(0.0, 10);
     EXPECT_EQ(light.getState(), TrafficLightState::Red);
+    EXPECT_TRUE(light.isRed());
 
     light.setState(TrafficLightState::Green);
     EXPECT_EQ(light.getState(), TrafficLightState::Green);
+    EXPECT_TRUE(light.isGreen());
 
     light.setState(TrafficLightState::Orange);
     EXPECT_EQ(light.getState(), TrafficLightState::Orange);
+    EXPECT_TRUE(light.isOrange());
 
     light.setState(TrafficLightState::Red);
     EXPECT_EQ(light.getState(), TrafficLightState::Red);
+    EXPECT_TRUE(light.isRed());
 }
 
 TEST(TrafficLightTests, CycleCountMutationHappyDay) {
