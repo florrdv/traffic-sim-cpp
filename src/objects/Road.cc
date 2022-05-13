@@ -119,7 +119,7 @@ void Road::cleanup() {
 }
 
 
-Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
+Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight, double minDistance) const {
     REQUIRE(this->properlyInitialized(), "Road was not properly initialized");
     REQUIRE(trafficLight != nullptr, "Traffic light cannot be nullptr");
     REQUIRE(std::find(trafficLights.begin(), trafficLights.end(), trafficLight) != trafficLights.end(),
@@ -133,6 +133,7 @@ Vehicle *Road::getFirstToTrafficLight(TrafficLight *trafficLight) const {
                 continue;
         
         double distanceToLight = ((double) trafficLightPosition) - vehicle->getPosition();
+        if (distanceToLight < minDistance) continue;
         if (firstVehicle == nullptr) {
             if (distanceToLight > 0) firstVehicle = vehicle;
             continue;
