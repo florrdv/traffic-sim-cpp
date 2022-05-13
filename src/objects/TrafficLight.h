@@ -14,6 +14,12 @@
 #include <string>
 #include "Entity.h"
 
+enum TrafficLightState {
+    Green,
+    Red,
+    Orange
+};
+
 class TrafficLight: public Entity {
 private:
     TrafficLight* _init;
