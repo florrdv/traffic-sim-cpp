@@ -34,9 +34,9 @@ void TrafficLight::setState(TrafficLightState newState) {
 }
 
 
-bool TrafficLight::isGreen() const {
+TrafficLightState TrafficLight::getState() const {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
-    return green;
+    return state;
 }
 
 void TrafficLight::setCycleCount(int count) {
