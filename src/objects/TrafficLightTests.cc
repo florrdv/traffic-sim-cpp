@@ -60,12 +60,18 @@ TEST(TrafficLightTests, CycleMutationNegative) {
     EXPECT_DEATH(light.setCycle(-20), "strictly positive");
 }
 
-TEST(TrafficLightTests, ToggleHappyDay) {
+TEST(TrafficLightTests, StateMutationHappyDay) {
     TrafficLight light = TrafficLight(0.0, 10);
-    bool beforeToggle = light.isGreen();
-    EXPECT_EQ(beforeToggle, false);
-    light.toggle();
-    EXPECT_NE(beforeToggle, light.isGreen());
+    EXPECT_EQ(light.getState(), TrafficLightState::Red);
+
+    light.setState(TrafficLightState::Green);
+    EXPECT_EQ(light.getState(), TrafficLightState::Green);
+
+    light.setState(TrafficLightState::Orange);
+    EXPECT_EQ(light.getState(), TrafficLightState::Orange);
+
+    light.setState(TrafficLightState::Red);
+    EXPECT_EQ(light.getState(), TrafficLightState::Red);
 }
 
 TEST(TrafficLightTests, CycleCountMutationHappyDay) {
