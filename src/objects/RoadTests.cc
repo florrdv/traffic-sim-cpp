@@ -155,20 +155,20 @@ TEST(RoadTests, TickTrafficLightsHappyDay) {
     Road road = Road("example", 100.0);
     int cycle = 10;
     TrafficLight* light = new TrafficLight(20.0, cycle);
-
+    double cycleTickCount = cycle/gSimTime;
 
     road.addTrafficLight(light);
     EXPECT_TRUE(light->isRed());
 
-    light->setCycleCount(ceil(cycle/gSimTime));
+    light->setCycleCount(ceil(cycleTickCount));
     road.tickTrafficLights();
     EXPECT_TRUE(light->isGreen());
 
-    light->setCycleCount(ceil(cycle/gSimTime * 0.90));
+    light->setCycleCount(ceil(cycleTickCount * (1 - gOrangePercentage)));
     road.tickTrafficLights();
     EXPECT_TRUE(light->isOrange());
 
-    light->setCycleCount(ceil(cycle/gSimTime * 0.10));
+    light->setCycleCount(ceil(cycleTickCount * gOrangePercentage));
     road.tickTrafficLights();
     EXPECT_TRUE(light->isOrange());
 }
