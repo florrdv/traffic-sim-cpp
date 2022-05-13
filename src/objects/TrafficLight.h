@@ -71,9 +71,9 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
-    \n ENSURE(before != after, "Traffic light color was not changed");
+    \n ENSURE(state == newState, "Traffic light color was not changed");
     */
-    void setState(TrafficLightState state);
+    void setState(TrafficLightState newState);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }

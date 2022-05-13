@@ -25,14 +25,12 @@ void TrafficLight::setCycle(int c) {
 }
 
 
-void TrafficLight::toggle() {
+void TrafficLight::setState(TrafficLightState newState) {
     REQUIRE(this->properlyInitialized(), "Traffic light was not properly initialized");
     
-    bool before = green;
-    green = !green;
-    bool after = green;
+    state = newState;
 
-    ENSURE(before != after, "Traffic light color was not changed");
+    ENSURE(state == newState, "Traffic light color was not changed");
 }
 
 
