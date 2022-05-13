@@ -25,7 +25,7 @@ private:
     TrafficLight* _init;
 
     int cycle = 0;
-    bool green=false;
+    TrafficLightState state = TrafficLightState::Red;
 
     int cycleCount = 0;
 
@@ -73,7 +73,7 @@ public:
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(before != after, "Traffic light color was not changed");
     */
-    void toggle();
+    void setState(TrafficLightState state);
 
     // Safety specific
     bool properlyInitialized() const { return _init == this; }
