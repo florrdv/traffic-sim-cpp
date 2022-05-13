@@ -204,12 +204,13 @@ void Road::tickTrafficLights() {
         // To make vehicles decelerate or stop, we just need to perform the action
         // on the first vehicle driving towards the traffic light.
         Vehicle *firstVehicle = getFirstToTrafficLight(trafficLight);
+
         // No vehicles are driving towards the traffic light, continue to the next traffic light
         if (firstVehicle == nullptr) continue;
 
         // If the traffic light is green, all vehicles should accelerate
         if (trafficLight->getState() == TrafficLightState::Green) firstVehicle->accelerate();
-        else {
+        else if (trafficLight->getState() == TrafficLightState::Green){
             // The light is red, let's check the distance from the first vehicle to the traffic light
             double distanceToLight = trafficLight->getPosition() - firstVehicle->getPosition();
 

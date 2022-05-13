@@ -71,6 +71,21 @@ public:
 
     /**
     \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
+    */
+    bool isGreen() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
+    */
+    bool isRed() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
+    */
+    bool isOrange() const;
+
+    /**
+    \n REQUIRE(this->properlyInitialized(), "TrafficLight wasn't initialized properly");
     \n ENSURE(state == newState, "Traffic light color was not changed");
     */
     void setState(TrafficLightState newState);
