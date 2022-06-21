@@ -69,4 +69,4 @@ double gBrakeDistance           = 15;
 double gSimTime                 = 0.0166;
 double gDecelerationDistance    = 50;
 double gDecelerationFactor      = 0.4;
-double gOrangePercentage              = 0.10;
+double gOrangePercentage        = 0.10;

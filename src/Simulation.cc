@@ -69,6 +69,7 @@ int Simulation::countVehicles() const {
 }
 
 std::vector<nlohmann::json> Simulation::simulate(const double stopAt, std::ostream& onStream, const int speedup) {
+    REQUIRE(this->properlyInitialized(), "Simulation wasn't initialized properly");
     std::vector<nlohmann::json> logs;
 
     // Loop while there are still vehicles
