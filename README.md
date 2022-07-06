@@ -108,7 +108,6 @@ a vehicle that needs to stop has its acceleration decreased in the following man
 - Vanilla JavaScript <img src="images/icons/JavaScript.svg" width="15">
 - JSON  <img src="images/icons/json.png" width="15">
 - XML <img src="images/icons/XML.svg" width="15">
-- PhotoShop <img src="images/icons/Photoshop.svg" width="15">
 
 ## Course
 
@@ -117,9 +116,9 @@ University of Antwerp
 
 ## Credits
 
-Professor [Serge Demeyer](https://github.com/sergedemeyer) and assistant Brent van Bladel
+- Professor [Serge Demeyer](https://github.com/sergedemeyer) and assistant Brent van Bladel
 
-[vehicle and road tiles used in visualization]
+- [vehicle and road tiles used in visualization]
 
 ## License
 
