@@ -1,10 +1,10 @@
 <BAAN>
-    <naam>Middelheimlaan</naam>
+    <naam>Broadway</naam>
     <lengte>600</lengte>
 </BAAN>
 
 <BAAN>
-    <naam>Floraliënlaan</naam>
+    <naam>Centre St</naam>
     <lengte>200</lengte>
 </BAAN>
 
@@ -14,33 +14,33 @@
 </BAAN>
 
 <BAAN>
-    <naam>Groenenborglaan</naam>
+    <naam>Worth St</naam>
     <lengte>400</lengte>
 </BAAN>
 
 <BAAN>
-    <naam>Lindendreef</naam>
+    <naam>Thomas St</naam>
     <lengte>300</lengte>
 </BAAN>
 
 <KRUISPUNT>
-    <baan positie="150">Middelheimlaan</baan>
+    <baan positie="150">Broadway</baan>
     <baan positie="100">Beukenlaan</baan>
 </KRUISPUNT>
 
 <KRUISPUNT>
-    <baan positie="350">Middelheimlaan</baan>
-    <baan positie="75">Floraliënlaan</baan>
+    <baan positie="350">Broadway</baan>
+    <baan positie="75">Centre St</baan>
 </KRUISPUNT>
 
 <KRUISPUNT>
     <baan positie="350">Beukenlaan</baan>
-    <baan positie="100">Groenenborglaan</baan>
+    <baan positie="100">Worth St</baan>
 </KRUISPUNT>
 
 <KRUISPUNT>
-    <baan positie="150">Floraliënlaan</baan>
-    <baan positie="75">Lindendreef</baan>
+    <baan positie="150">Centre St</baan>
+    <baan positie="75">Thomas St</baan>
 </KRUISPUNT>
 
 <VERKEERSLICHT>
@@ -50,25 +50,25 @@
 </VERKEERSLICHT>
 
 <VERKEERSLICHT>
-    <baan>Middelheimlaan</baan>
+    <baan>Broadway</baan>
     <positie>130</positie>
     <cyclus>30</cyclus>
 </VERKEERSLICHT>
 
 <VERKEERSLICHT>
-    <baan>Floraliënlaan</baan>
+    <baan>Centre St</baan>
     <positie>140</positie>
     <cyclus>60</cyclus>
 </VERKEERSLICHT>
 
 <VOERTUIGGENERATOR>
-    <baan>Lindendreef</baan>
+    <baan>Thomas St</baan>
     <frequentie>15</frequentie>
     <type>ziekenwagen</type>
 </VOERTUIGGENERATOR>
 
 <VOERTUIGGENERATOR>
-    <baan>Middelheimlaan</baan>
+    <baan>Broadway</baan>
     <frequentie>2</frequentie>
     <type>auto</type>
 </VOERTUIGGENERATOR>
@@ -92,25 +92,25 @@
 </VOERTUIG>
 
 <VOERTUIG>
-    <baan>Lindendreef</baan>
+    <baan>Thomas St</baan>
     <positie>10</positie>
     <type>ziekenwagen</type>
 </VOERTUIG>
 
 <VOERTUIG>
-    <baan>Floraliënlaan</baan>
+    <baan>Centre St</baan>
     <positie>10</positie>
     <type>bus</type>
 </VOERTUIG>
 
 <BUSHALTE>
-    <baan>Floraliënlaan</baan>
+    <baan>Centre St</baan>
     <positie>60</positie>
     <wachttijd>10</wachttijd>
 </BUSHALTE>
 
 <BUSHALTE>
-    <baan>Middelheimlaan</baan>
+    <baan>Broadway</baan>
     <positie>400</positie>
     <wachttijd>10</wachttijd>
 </BUSHALTE>
