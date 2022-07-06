@@ -9,7 +9,7 @@
 </BAAN>
 
 <BAAN>
-    <naam>Beukenlaan</naam>
+    <naam>Reade St</naam>
     <lengte>400</lengte>
 </BAAN>
 
@@ -25,7 +25,7 @@
 
 <KRUISPUNT>
     <baan positie="150">Broadway</baan>
-    <baan positie="100">Beukenlaan</baan>
+    <baan positie="100">Reade St</baan>
 </KRUISPUNT>
 
 <KRUISPUNT>
@@ -34,7 +34,7 @@
 </KRUISPUNT>
 
 <KRUISPUNT>
-    <baan positie="350">Beukenlaan</baan>
+    <baan positie="350">Reade St</baan>
     <baan positie="100">Worth St</baan>
 </KRUISPUNT>
 
@@ -44,7 +44,7 @@
 </KRUISPUNT>
 
 <VERKEERSLICHT>
-    <baan>Beukenlaan</baan>
+    <baan>Reade St</baan>
     <positie>90</positie>
     <cyclus>60</cyclus>
 </VERKEERSLICHT>
@@ -69,24 +69,24 @@
 
 <VOERTUIGGENERATOR>
     <baan>Broadway</baan>
-    <frequentie>2</frequentie>
+    <frequentie>4</frequentie>
     <type>auto</type>
 </VOERTUIGGENERATOR>
 
 <VOERTUIG>
-    <baan>Beukenlaan</baan>
+    <baan>Reade St</baan>
     <positie>10</positie>
     <type>brandweerwagen</type>
 </VOERTUIG>
 
 <VOERTUIG>
-    <baan>Beukenlaan</baan>
+    <baan>Reade St</baan>
     <positie>20</positie>
     <type>brandweerwagen</type>
 </VOERTUIG>
 
 <VOERTUIG>
-    <baan>Beukenlaan</baan>
+    <baan>Reade St</baan>
     <positie>30</positie>
     <type>politiecombi</type>
 </VOERTUIG>
@@ -103,6 +103,12 @@
     <type>bus</type>
 </VOERTUIG>
 
+<VOERTUIG>
+    <baan>Reade St</baan>
+    <positie>0</positie>
+    <type>bus</type>
+</VOERTUIG>
+
 <BUSHALTE>
     <baan>Centre St</baan>
     <positie>60</positie>
@@ -111,6 +117,7 @@
 
 <BUSHALTE>
     <baan>Broadway</baan>
-    <positie>400</positie>
+    <positie>200</positie>
     <wachttijd>10</wachttijd>
 </BUSHALTE>
+
