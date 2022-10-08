@@ -93,7 +93,7 @@ The project also supports a GUI in the browser. The program will generate an `ou
 
 <div><img src="demo/visualizer.gif" /></div>
 
-## Behind the screens
+## Behind the scenes
 
 ### Calculations
 
