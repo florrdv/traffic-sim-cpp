@@ -46,20 +46,20 @@ e.g.
 
 We currently support the following vehicle types:
 
-- car
-- bus
-- priority vehicle types:
-    - fire truck
-    - ambulance
-    - police car
+- Car
+- Bus
+- Priority vehicles:
+    - Fire truck
+    - Ambulance
+    - Police car
 
-The main differences between these vehicle types is that they all have different characteristics, that is - max speed,
-brake distance etc. <br/>
-Other than that, busses stop at bus stops and priority vehicle types can go through red lights.
+These vehicles all have different characteristics, including but not limited to speed, brake distance and traffic priority. This means that priority vehicles are allowed to run red lights.
+
+In addition to that, busses also stop at their designated bus stops.
 
 ### Output
 
-There's two output formats supported, namely:
+We currently support two output formats, explained below.
 
 #### Terminal
 
@@ -89,8 +89,7 @@ Vehicle 3
 
 #### Visualizer
 
-The project also supports a GUI in the browser. The `html` file will be found in `./cmake-build-debug/out.html` after running.
-Open the `out.html` file in the browser for a visual overview.
+The project also supports a GUI in the browser. The program will generate an `out.hmtl` file which can be opened in your desired browser for a visual representation of the simulation.
 
 <div><img src="demo/visualizer.gif" /></div>
 
@@ -98,7 +97,7 @@ Open the `out.html` file in the browser for a visual overview.
 
 ### Calculations
 
-Using the fixed values ...
+Using the following fixed values:
 
 | variable name        | value  |
 | -------------------- | ------ |
@@ -107,7 +106,7 @@ Using the fixed values ...
 | brakeDistance        | 15     |
 | decelerationFactor   | 0.4    |
 
-... all the other variables needed are calculated using physics formulas.
+All other values are calculated using their respective physics formulas.
 
 e.g.
 a vehicle that needs to stop has its acceleration decreased in the following manner:
