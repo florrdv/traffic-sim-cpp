@@ -59,7 +59,7 @@ Other than that, busses stop at bus stops and priority vehicle types can go thro
 
 ### Output
 
-There's two output formats supported.
+There's two output formats supported, namely:
 
 #### Terminal
 
@@ -92,6 +92,8 @@ Vehicle 3
 The project also supports a GUI in the browser. The `html` file will be found in `./cmake-build-debug/out.html` after running.
 Open the `out.html` file in the browser for a visual overview.
 
+<div><img src="demo/visualizer.gif" /></div>
+
 ## Behind the screens
 
 ### Calculations
@@ -111,27 +113,6 @@ e.g.
 a vehicle that needs to stop has its acceleration decreased in the following manner:
 
 ![equation1](images/equation.svg)
-
-## Tools used
-
-- C++ <img src="images/icons/CPP.svg" width="15">
-- GoogleTest <img src="images/icons/gtest.svg" width="15">
-- HTML <img src="images/icons/HTML.svg" width="15">
-- PixiJS <img src="images/icons/pixijs.svg" width="30">
-- Vanilla JavaScript <img src="images/icons/JavaScript.svg" width="15">
-- JSON  <img src="images/icons/json.png" width="15">
-- XML <img src="images/icons/XML.svg" width="15">
-
-## Course
-
-Project Software Engineering
-University of Antwerp
-
-## Credits
-
-- Professor [Serge Demeyer](https://github.com/sergedemeyer) and assistant Brent van Bladel
-
-- [vehicle and road tiles used in visualization]
 
 ## License
 
