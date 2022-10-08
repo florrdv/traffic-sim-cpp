@@ -111,7 +111,7 @@ All other values are calculated using their respective physics formulas.
 e.g.
 a vehicle that needs to stop has its acceleration decreased in the following manner:
 
-![equation1](images/equation.svg)
+![equation1](demo/equation.svg)
 
 ## License
 
