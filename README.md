@@ -1,15 +1,28 @@
-# PSE Traffic Simulator
+<h1 align="center">traffic-sim-cpp</h1>
 
-## Description
+<p style="text-align: center;"><em>A project by Achraf Yandouzi and Flor Ronsmans De Vry for the Project Software Engineering course at the University of Antwerp.</em></p>
 
-### A basic traffic simulation made as a project for a course at the University of Antwerp.
+___
 
-![html visualizer](images/htmlVisualizer.gif)
+## Project description
+A traffic simulation program in C++ with a focus on clean, maintainable, well-tested code.
 
-The main goal of the course was to teach proper coding conventions. That's why all functionality has been properly
-tested using the Google Test framework.
+## Testing
+All functionality in this respository is covered by over 150 unit and integration tests written using the GoogleTest framework.
 
-Some of the other conventions are using the prefix `g` for constants, using proper inheritance etc.
+## Technologies used
+- C++ programming language
+- GoogleTest
+- Pugixml
+- nlohmann/json
+- PixiJS
+
+## Conventions followed
+- Hollywood principle
+- Iterative design
+- Well-designed contracts
+- Input testing / domain testing / output testing
+- Well-documented code
 
 ## Usage
 
@@ -17,7 +30,7 @@ Some of the other conventions are using the prefix `g` for constants, using prop
 
 Taking an `xml` file as an input, the project reads the initial state of traffic.
 
-In this `xml` file, all roads, vehicles, vehicle generators, traffic lights, bus stops and crossroads initial
+In this `xml` file all roads, vehicles, vehicle generators, traffic lights, bus stops and crossroads initial
 specifications are specified.
 
 e.g.

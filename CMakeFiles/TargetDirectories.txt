@@ -1,4 +1,0 @@
-/home/achraf/CLionProjects/pse-traffic-sim/CMakeFiles/rebuild_cache.dir
-/home/achraf/CLionProjects/pse-traffic-sim/CMakeFiles/edit_cache.dir
-/home/achraf/CLionProjects/pse-traffic-sim/CMakeFiles/TrafficSimTests.dir
-/home/achraf/CLionProjects/pse-traffic-sim/CMakeFiles/TrafficSim.dir
